@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledButton = (Button: React.FC<NButton.IProps>) => styled(
-	Button,
+	Button
 )`
 	border-radius: 5px;
 	outline: none;
@@ -12,11 +12,11 @@ export const StyledButton = (Button: React.FC<NButton.IProps>) => styled(
 
 	${({ color, theme, variant }: NButton.IProps) => {
 		if (color === 'primary') {
-			let primaryColor = theme.pc;
+			const primaryColor = theme.pc;
 			if (variant === 'filled') {
 				return {
 					background: primaryColor,
-					color: theme.lc,
+					color: theme.wc,
 				};
 			}
 			if (variant === 'outlined') {
@@ -28,8 +28,8 @@ export const StyledButton = (Button: React.FC<NButton.IProps>) => styled(
 			}
 		}
 		if (color === 'secondary') {
-			let secondaryColor = theme.sc;
-			let darkGrayColor = theme.dgc;
+			const secondaryColor = theme.sc;
+			const darkGrayColor = theme.dgc;
 			if (variant === 'filled') {
 				return {
 					background: secondaryColor,

@@ -6,7 +6,7 @@ const colors = {
 	dc: '#252525',
 	dsc: '#555555',
 	dgc: '#A5A5A5',
-	lc: '#FAFAFA',
+	gc: '#E5E5E5',
 };
 
 export default colors;

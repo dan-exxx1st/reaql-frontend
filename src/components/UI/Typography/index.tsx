@@ -38,5 +38,8 @@ export default styled(Typography)`
 		const { lineHeight } = theme;
 		return lineHeight[variant];
 	}};
+	color: ${({ theme, color }) => {
+		return color ? theme[color] : '#000000';
+	}};
 	margin: 0;
 `;

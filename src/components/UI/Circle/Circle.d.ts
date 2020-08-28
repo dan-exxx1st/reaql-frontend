@@ -3,7 +3,7 @@ declare namespace NCircle {
 	interface IProps {
 		color: ColorType;
 		iconName?: IconName;
-		text?: string;
+		text?: string | number;
 		width?: string;
 		height?: string;
 	}

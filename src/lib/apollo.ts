@@ -34,8 +34,6 @@ function createApolloClient(context?: ResolverContext) {
 
 export function initializeApollo(
 	initialState: any = null,
-	// Pages with Next.js data fetching methods, like `getStaticProps`, can send
-	// a custom context which will be used by `SchemaLink` to server render pages
 	context?: ResolverContext
 ) {
 	const _apolloClient = apolloClient ?? createApolloClient(context);
