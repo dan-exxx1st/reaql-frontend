@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextField /> Snapshots Primary text field with large size to match snapshot 1`] = `
+.c0 {
+  font-family: 'Roboto',sans-serif;
+  padding-left: 10px;
+  border: 1px solid #00ADFF;
+  border-radius: 5px;
+  outline: none;
+  color: #252525;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 19px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  height: 40px;
+}
+
+<input
+  className="c0"
+  onChange={[Function]}
+  value="TextField snapshot"
+/>
+`;
+
+exports[`<TextField /> Snapshots Primary text field with medium size to match snapshot 1`] = `
+.c0 {
+  font-family: 'Roboto',sans-serif;
+  padding-left: 10px;
+  border: 1px solid #00ADFF;
+  border-radius: 5px;
+  outline: none;
+  color: #252525;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  height: 35px;
+}
+
+<input
+  className="c0"
+  onChange={[Function]}
+  value="TextField snapshot"
+/>
+`;
+
+exports[`<TextField /> Snapshots Primary text field with small size to match snapshot 1`] = `
+.c0 {
+  font-family: 'Roboto',sans-serif;
+  padding-left: 10px;
+  border: 1px solid #00ADFF;
+  border-radius: 5px;
+  outline: none;
+  color: #252525;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 14px;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
+  height: 30px;
+}
+
+<input
+  className="c0"
+  onChange={[Function]}
+  value="TextField snapshot"
+/>
+`;
+
+exports[`<TextField /> Snapshots Secondary text field with large size to match snapshot 1`] = `
+.c0 {
+  font-family: 'Roboto',sans-serif;
+  padding-left: 10px;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  outline: none;
+  color: #555555;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 19px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  height: 40px;
+}
+
+<input
+  className="c0"
+  onChange={[Function]}
+  value="TextField snapshot"
+/>
+`;
+
+exports[`<TextField /> Snapshots Secondary text field with medium size to match snapshot 1`] = `
+.c0 {
+  font-family: 'Roboto',sans-serif;
+  padding-left: 10px;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  outline: none;
+  color: #555555;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  height: 35px;
+}
+
+<input
+  className="c0"
+  onChange={[Function]}
+  value="TextField snapshot"
+/>
+`;
+
+exports[`<TextField /> Snapshots Secondary text field with small size to match snapshot 1`] = `
+.c0 {
+  font-family: 'Roboto',sans-serif;
+  padding-left: 10px;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  outline: none;
+  color: #555555;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 14px;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
+  height: 30px;
+}
+
+<input
+  className="c0"
+  onChange={[Function]}
+  value="TextField snapshot"
+/>
+`;

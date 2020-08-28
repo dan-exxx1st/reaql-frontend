@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> Snapshots Primary filled button to match snapshot without effects 1`] = `
+.c1 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  margin: 0;
+}
+
+.c0 {
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-family: 'Roboto',sans-serif;
+  padding: 7px 26px;
+  cursor: pointer;
+  background: #00ADFF;
+  color: #FAFAFA;
+}
+
+.c0:hover {
+  box-shadow: 1px 1px 10px rgb(10,10,10,0.25);
+}
+
+<button
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    To match snapshot button
+  </p>
+</button>
+`;
+
+exports[`<Button /> Snapshots Primary outlined button to match snapshot without effects 1`] = `
+.c1 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  margin: 0;
+}
+
+.c0 {
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-family: 'Roboto',sans-serif;
+  padding: 7px 26px;
+  cursor: pointer;
+  border: 1px solid #00ADFF;
+  background: none;
+  color: #00ADFF;
+}
+
+.c0:hover {
+  box-shadow: 1px 1px 10px rgb(10,10,10,0.25);
+}
+
+<button
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    To match snapshot button
+  </p>
+</button>
+`;
+
+exports[`<Button /> Snapshots Secondary filled button to match snapshot without effects 1`] = `
+.c1 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  margin: 0;
+}
+
+.c0 {
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-family: 'Roboto',sans-serif;
+  padding: 7px 26px;
+  cursor: pointer;
+  background: #E6E6E6;
+  color: #A5A5A5;
+}
+
+.c0:hover {
+  box-shadow: 1px 1px 10px rgb(10,10,10,0.1);
+}
+
+<button
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    To match snapshot button
+  </p>
+</button>
+`;
+
+exports[`<Button /> Snapshots Secondary outlined button to match snapshot without effects 1`] = `
+.c1 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  margin: 0;
+}
+
+.c0 {
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-family: 'Roboto',sans-serif;
+  padding: 7px 26px;
+  cursor: pointer;
+  border: 1px solid #E6E6E6;
+  color: #A5A5A5;
+  background: none;
+}
+
+.c0:hover {
+  box-shadow: 1px 1px 10px rgb(10,10,10,0.1);
+}
+
+<button
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    To match snapshot button
+  </p>
+</button>
+`;
