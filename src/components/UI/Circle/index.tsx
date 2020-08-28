@@ -13,7 +13,9 @@ const Circle: FC<NCircle.IProps> = ({ iconName, text, ...otherProps }) => {
 				alignItems="center"
 				{...otherProps}
 			>
-				<Typography variant="caption2">{text}</Typography>
+				<Typography variant="caption2" {...otherProps}>
+					{text}
+				</Typography>
 			</StyledCircle>
 		);
 	}

@@ -8,6 +8,6 @@ export default {
 
 export const DefaultCircle = () => (
 	<Wrapper>
-		<Circle text="3" color="primary" width="20px" height="20px" />
+		<Circle text="3" color="primary" />
 	</Wrapper>
 );

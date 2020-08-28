@@ -15,31 +15,31 @@ export const StyledTextField = (
 		let fontSize, fontWeight, lineHeight, letterSpacing, height: string;
 
 		switch (fieldSize) {
-			case 'small': {
-				fontSize = '12px';
-				fontWeight = 'normal';
-				lineHeight = '14px';
-				letterSpacing = '0.4px';
-				height = '30px';
-				break;
-			}
+		case 'small': {
+			fontSize = '12px';
+			fontWeight = 'normal';
+			lineHeight = '14px';
+			letterSpacing = '0.4px';
+			height = '30px';
+			break;
+		}
 
-			case 'large': {
-				fontSize = '16px';
-				fontWeight = 'normal';
-				lineHeight = '19px';
-				letterSpacing = '0.5px';
-				height = '40px';
-				break;
-			}
+		case 'large': {
+			fontSize = '16px';
+			fontWeight = 'normal';
+			lineHeight = '19px';
+			letterSpacing = '0.5px';
+			height = '40px';
+			break;
+		}
 
-			default: {
-				fontSize = '14px';
-				fontWeight = 'normal';
-				lineHeight = '16px';
-				letterSpacing = '0.25px';
-				height = '35px';
-			}
+		default: {
+			fontSize = '14px';
+			fontWeight = 'normal';
+			lineHeight = '16px';
+			letterSpacing = '0.25px';
+			height = '35px';
+		}
 		}
 
 		return `font-size:${fontSize}; 

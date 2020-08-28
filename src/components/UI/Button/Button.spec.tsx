@@ -9,25 +9,25 @@ describe('<Button />', () => {
 			const wrapper = mountWithTheme(
 				<Button variant="filled" color="primary">
 					To match snapshot button
-				</Button>,
+				</Button>
 			);
 			expect(wrapper).toMatchSnapshot();
 			expect(wrapper).toHaveStyleRule('background', colorTheme.pc);
-			expect(wrapper).toHaveStyleRule('color', colorTheme.lc);
+			expect(wrapper).toHaveStyleRule('color', colorTheme.wc);
 		});
 
 		it('Primary outlined button to match snapshot without effects', () => {
 			const wrapper = mountWithTheme(
 				<Button variant="outlined" color="primary">
 					To match snapshot button
-				</Button>,
+				</Button>
 			);
 			expect(wrapper).toMatchSnapshot();
 			expect(wrapper).toHaveStyleRule('background', 'none');
 			expect(wrapper).toHaveStyleRule('color', colorTheme.pc);
 			expect(wrapper).toHaveStyleRule(
 				'border',
-				`1px solid ${colorTheme.pc}`,
+				`1px solid ${colorTheme.pc}`
 			);
 		});
 
@@ -35,7 +35,7 @@ describe('<Button />', () => {
 			const wrapper = mountWithTheme(
 				<Button variant="filled" color="secondary">
 					To match snapshot button
-				</Button>,
+				</Button>
 			);
 			expect(wrapper).toMatchSnapshot();
 			expect(wrapper).toHaveStyleRule('background', colorTheme.sc);
@@ -47,13 +47,13 @@ describe('<Button />', () => {
 			const wrapper = mountWithTheme(
 				<Button variant="outlined" color="secondary">
 					To match snapshot button
-				</Button>,
+				</Button>
 			);
 			expect(wrapper).toMatchSnapshot();
 			expect(wrapper).toHaveStyleRule('background', 'none');
 			expect(wrapper).toHaveStyleRule(
 				'border',
-				`1px solid ${colorTheme.sc}`,
+				`1px solid ${colorTheme.sc}`
 			);
 		});
 	});
@@ -62,7 +62,7 @@ describe('<Button />', () => {
 		const wrapper = mountWithTheme(
 			<Button variant="filled" color="primary">
 				Default button
-			</Button>,
+			</Button>
 		);
 		expect(wrapper).toHaveStyleRule('background', colorTheme.pc);
 	});
@@ -72,7 +72,7 @@ describe('<Button />', () => {
 		const wrapper = mountWithTheme(
 			<Button variant="filled" color="primary" onClick={mockFunction}>
 				Should click
-			</Button>,
+			</Button>
 		);
 		wrapper.simulate('click');
 		expect(mockFunction).toBeCalled();

@@ -4,3 +4,4 @@ export { default as SkeletonLoader } from './SkeletonLoader';
 export { default as TextField } from './TextField';
 export { default as Typography } from './Typography';
 export { default as Wrapper } from './Wrapper';
+export { default as CheckMark } from './CheckMark';
