@@ -9,6 +9,7 @@ exports[`<Typography /> Typography variant body-2 to match snapshot 1`] = `
   -moz-letter-spacing: 0.25px;
   -ms-letter-spacing: 0.25px;
   letter-spacing: 0.25px;
+  color: #000000;
   margin: 0;
 }
 

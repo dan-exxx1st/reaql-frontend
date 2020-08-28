@@ -9,6 +9,7 @@ exports[`<Button /> Snapshots Primary filled button to match snapshot without ef
   -moz-letter-spacing: 0.25px;
   -ms-letter-spacing: 0.25px;
   letter-spacing: 0.25px;
+  color: #000000;
   margin: 0;
 }
 
@@ -47,6 +48,7 @@ exports[`<Button /> Snapshots Primary outlined button to match snapshot without 
   -moz-letter-spacing: 0.25px;
   -ms-letter-spacing: 0.25px;
   letter-spacing: 0.25px;
+  color: #000000;
   margin: 0;
 }
 
@@ -86,6 +88,7 @@ exports[`<Button /> Snapshots Secondary filled button to match snapshot without 
   -moz-letter-spacing: 0.25px;
   -ms-letter-spacing: 0.25px;
   letter-spacing: 0.25px;
+  color: #000000;
   margin: 0;
 }
 
@@ -124,6 +127,7 @@ exports[`<Button /> Snapshots Secondary outlined button to match snapshot withou
   -moz-letter-spacing: 0.25px;
   -ms-letter-spacing: 0.25px;
   letter-spacing: 0.25px;
+  color: #000000;
   margin: 0;
 }
 
