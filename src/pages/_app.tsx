@@ -6,13 +6,13 @@ import Themes from 'config/styled';
 import { ThemeProvider } from 'styled-components';
 
 export default function App({ Component, pageProps }: AppProps) {
-	const apolloClient = useApollo(pageProps.initialApolloState);
+    const apolloClient = useApollo(pageProps.initialApolloState);
 
-	return (
-		<ApolloProvider client={apolloClient}>
-			<ThemeProvider theme={Themes}>
-				<Component {...pageProps} />
-			</ThemeProvider>
-		</ApolloProvider>
-	);
+    return (
+        <ApolloProvider client={apolloClient}>
+            <ThemeProvider theme={Themes}>
+                <Component {...pageProps} />
+            </ThemeProvider>
+        </ApolloProvider>
+    );
 }

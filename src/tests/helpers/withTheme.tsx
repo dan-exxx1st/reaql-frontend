@@ -8,24 +8,24 @@ import themes from 'config/styled';
 type ChildType = JSX.Element | JSX.Element[];
 
 interface IProps {
-	children: ChildType;
+    children: ChildType;
 }
 
 const ThemeProviderWithThemes = ({ children }: IProps) => {
-	return <ThemeProvider theme={themes}>{children}</ThemeProvider>;
+    return <ThemeProvider theme={themes}>{children}</ThemeProvider>;
 };
 
 const shallowWithTheme = (children: ChildType) => {
-	return shallow(
-		<ThemeProviderWithThemes>{children}</ThemeProviderWithThemes>,
-	);
+    return shallow(
+        <ThemeProviderWithThemes>{children}</ThemeProviderWithThemes>
+    );
 };
 
 const mountWithTheme = (children: ChildType) => {
-	const mountedComponent = mount(
-		<ThemeProviderWithThemes>{children}</ThemeProviderWithThemes>,
-	);
-	return mountedComponent;
+    const mountedComponent = mount(
+        <ThemeProviderWithThemes>{children}</ThemeProviderWithThemes>
+    );
+    return mountedComponent;
 };
 
 export { shallowWithTheme, mountWithTheme };
