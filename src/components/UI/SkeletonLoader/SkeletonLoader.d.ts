@@ -1,5 +1,5 @@
 declare namespace NSkeletonLoader {
-	interface IProps {
-		variant?: 'avatar';
-	}
+    interface IProps {
+        variant?: 'avatar';
+    }
 }

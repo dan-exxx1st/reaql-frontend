@@ -1,5 +1,23 @@
-# TypeScript and GraphQL Example
+# Reaql - messenger created by React & Golang.
 
-One of the strengths of GraphQL is [enforcing data types on runtime](https://graphql.github.io/graphql-spec/June2018/#sec-Value-Completion). Further, TypeScript and [GraphQL Code Generator](https://graphql-code-generator.com/) (graphql-codegen) make it safer by typing data statically, so you can write truly type-protected code with rich IDE assists.
+This repository for client side. [Here is link to a server side](https://github.com/exs1st/reaql-backend)
 
-This template extends [Apollo Server and Client Example](https://github.com/vercel/next.js/tree/canary/examples/api-routes-apollo-server-and-client#readme) by rewriting in TypeScript and integrating [graphql-let](https://github.com/piglovesyou/graphql-let#readme), which runs [TypeScript React Apollo](https://graphql-code-generator.com/docs/plugins/typescript-react-apollo) in [graphql-codegen](https://github.com/dotansimha/graphql-code-generator#readme) under the hood.
+## Description
+
+This project was bootstrapped with [Nextjs](https://github.com/vercel/next.js) on client side.
+
+---
+
+### Details
+
+In client was be added a following technology:
+
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [Apollo Client](https://www.apollographql.com/docs/react/).
+-   [Styled-components](https://styled-components.com/)
+
+For testing client side was be added:
+
+-   [Enzyme](https://enzymejs.github.io/enzyme/)
+-   [Jest styled components](https://github.com/styled-components/jest-styled-components)
+-   [Storybook](https://storybook.js.org/)
