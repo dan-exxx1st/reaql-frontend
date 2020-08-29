@@ -1,11 +1,11 @@
 import React from 'react';
-import Typography from '.';
+import { Typography } from 'components/UI';
 import { mountWithTheme, shallowWithTheme } from 'tests/helpers/withTheme';
 
 describe('<Typography />', () => {
 	it('Typography variant body-2 to match snapshot', () => {
 		const wrapper = mountWithTheme(
-			<Typography variant="body2">Body 2 to match snapshot</Typography>,
+			<Typography variant="body2">Body 2 to match snapshot</Typography>
 		);
 		expect(wrapper).toMatchSnapshot();
 	});
@@ -13,7 +13,7 @@ describe('<Typography />', () => {
 	it('should render passed text', () => {
 		const bodyTwoText = 'Body 2 text';
 		const wrapper = shallowWithTheme(
-			<Typography variant="body2">{bodyTwoText}</Typography>,
+			<Typography variant="body2">{bodyTwoText}</Typography>
 		);
 		expect(wrapper.childAt(0).props().children).toEqual(bodyTwoText);
 	});

@@ -1,5 +1,5 @@
 import React from 'react';
-import TextField from '.';
+import { TextField } from 'components/UI';
 import { mountWithTheme } from 'tests/helpers/withTheme';
 
 describe('<TextField />', () => {
@@ -10,7 +10,7 @@ describe('<TextField />', () => {
 					color="primary"
 					fieldSize="large"
 					value="TextField snapshot"
-				/>,
+				/>
 			);
 			expect(wrapper).toMatchSnapshot();
 		});
@@ -20,7 +20,7 @@ describe('<TextField />', () => {
 					color="primary"
 					fieldSize="medium"
 					value="TextField snapshot"
-				/>,
+				/>
 			);
 			expect(wrapper).toMatchSnapshot();
 		});
@@ -30,7 +30,7 @@ describe('<TextField />', () => {
 					color="primary"
 					fieldSize="small"
 					value="TextField snapshot"
-				/>,
+				/>
 			);
 			expect(wrapper).toMatchSnapshot();
 		});
@@ -40,7 +40,7 @@ describe('<TextField />', () => {
 					color="secondary"
 					fieldSize="large"
 					value="TextField snapshot"
-				/>,
+				/>
 			);
 			expect(wrapper).toMatchSnapshot();
 		});
@@ -50,7 +50,7 @@ describe('<TextField />', () => {
 					color="secondary"
 					fieldSize="medium"
 					value="TextField snapshot"
-				/>,
+				/>
 			);
 			expect(wrapper).toMatchSnapshot();
 		});
@@ -60,7 +60,7 @@ describe('<TextField />', () => {
 					color="secondary"
 					fieldSize="small"
 					value="TextField snapshot"
-				/>,
+				/>
 			);
 			expect(wrapper).toMatchSnapshot();
 		});
@@ -73,7 +73,7 @@ describe('<TextField />', () => {
 				color="primary"
 				fieldSize="small"
 				onChange={changeValue}
-			/>,
+			/>
 		);
 		wrapper.simulate('change');
 		expect(changeValue).toBeCalled();

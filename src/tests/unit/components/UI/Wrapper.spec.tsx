@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallowWithTheme, mountWithTheme } from 'tests/helpers/withTheme';
-import Wrapper from '.';
+import { Wrapper } from 'components/UI';
 
 describe('<Wrapper />', () => {
 	describe('Snapshots', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '.';
+import { Button } from 'components/UI';
 import { colorTheme } from 'config/styled';
 import { mountWithTheme } from 'tests/helpers/withTheme';
 
