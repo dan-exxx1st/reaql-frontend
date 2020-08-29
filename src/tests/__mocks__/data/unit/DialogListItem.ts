@@ -32,3 +32,12 @@ export const DialogListDataWithReadMessaage: NDialogListItem.IProps = {
     unread_message_count: 11,
     sended_message_status: 'readed',
 };
+
+export const DialogListDataWithoutLastMessageDate: NDialogListItem.IProps = {
+    id: '3',
+    name: 'James Daniel',
+    avatar_src: '',
+    last_message: '',
+    unread_message_count: 11,
+    sended_message_status: 'readed',
+};

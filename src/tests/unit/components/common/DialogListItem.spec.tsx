@@ -2,7 +2,12 @@ import React from 'react';
 import { mountWithTheme, shallowWithTheme } from 'tests/helpers/withTheme';
 
 import { DialogListItem } from 'components';
-import { DialogListDataWithAvatar } from 'tests/__mocks__/data/unit/DialogListItem';
+import {
+    DialogListDataWithAvatar,
+    DialogListDataWithReadMessaage,
+    DialogListDataWithoutAvatar,
+    DialogListDataWithoutLastMessageDate,
+} from 'tests/__mocks__/data/unit/DialogListItem';
 
 describe('<DialogListItem />', () => {
     describe('Snapshots', () => {
@@ -14,7 +19,13 @@ describe('<DialogListItem />', () => {
         });
         it('DialogListItem without avatar and with recived message to match snapshot', () => {
             const wrapper = mountWithTheme(
-                <DialogListItem {...DialogListDataWithAvatar} />
+                <DialogListItem {...DialogListDataWithoutAvatar} />
+            );
+            expect(wrapper).toMatchSnapshot();
+        });
+        it('DialogListItem without avatar and with readed message to match snapshot', () => {
+            const wrapper = mountWithTheme(
+                <DialogListItem {...DialogListDataWithReadMessaage} />
             );
             expect(wrapper).toMatchSnapshot();
         });
@@ -24,9 +35,9 @@ describe('<DialogListItem />', () => {
             );
             expect(wrapper).toMatchSnapshot();
         });
-        it('DialogListItem without avatar and with readed message to match snapshot', () => {
+        it('DialogListItem without last_message to match snapshot', () => {
             const wrapper = mountWithTheme(
-                <DialogListItem {...DialogListDataWithAvatar} />
+                <DialogListItem {...DialogListDataWithoutLastMessageDate} />
             );
             expect(wrapper).toMatchSnapshot();
         });

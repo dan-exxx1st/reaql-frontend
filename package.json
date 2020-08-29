@@ -12,7 +12,7 @@
         "build-storybook": "build-storybook",
         "test": "jest",
         "test:watch": "jest --watchAll",
-        "test:coverage": "yarn test --runInBand --coverage --collectCoverageFrom=src/**/*.{ts,tsx} --collectCoverageFrom=!src/**/*.stories.{ts,tsx} --collectCoverageFrom=!src/lib/**/* --collectCoverageFrom=!src/config/**/*  --collectCoverageFrom=!src/**/*.{types,d}.{ts,tsx}",
+        "test:coverage": "yarn test --runInBand --coverage --collectCoverageFrom=src/**/*.{ts,tsx} --collectCoverageFrom=!src/**/*.stories.{ts,tsx} --collectCoverageFrom=!src/lib/**/* --collectCoverageFrom=!src/config/**/* --collectCoverageFrom=!src/lib --collectCoverageFrom=!src/**/*.{types,d}.{ts,tsx}",
         "lint": "eslint \"src/**/*.{ts,tsx}\" --fix",
         "pretify": "prettier --config=./.prettierrc --write ./src"
     },
