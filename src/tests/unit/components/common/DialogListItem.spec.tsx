@@ -3,7 +3,6 @@ import { mountWithTheme, shallowWithTheme } from 'tests/helpers/withTheme';
 
 import { DialogListItem } from 'components';
 import { DialogListDataWithAvatar } from 'tests/__mocks__/data/unit/DialogListItem';
-import { useDive } from 'tests/helpers';
 
 describe('<DialogListItem />', () => {
     describe('Snapshots', () => {
@@ -37,7 +36,9 @@ describe('<DialogListItem />', () => {
         const wrapper = shallowWithTheme(
             <DialogListItem {...DialogListDataWithAvatar} />
         );
-        const ListItem = useDive(wrapper);
-        console.log(ListItem);
+
+        expect(wrapper.dive().find('DialogListItem').props().name).toEqual(
+            DialogListDataWithAvatar.name
+        );
     });
 });

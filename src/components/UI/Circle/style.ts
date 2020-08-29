@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Wrapper } from '..';
+import Wrapper from '../Wrapper';
 
 export const StyledCircle = styled(Wrapper)<NCircle.IProps>`
     border-radius: 50%;
