@@ -26,5 +26,6 @@ declare namespace NWrapper {
         margin?: string;
         width?: string;
         height?: string;
+        padding?: string;
     }
 }

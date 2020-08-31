@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledWrapper = styled.div<NWrapper.IProps>`
-    padding: 0;
+    padding: ${({ padding }) => (padding ? padding : 0)};
+    margin: ${({ margin }) => (margin ? margin : 0)};
     display: flex;
     flex-wrap: ${({ flexWrap }) => flexWrap && flexWrap};
     flex-direction: ${({ flexDirection }) => flexDirection || 'row'};
@@ -11,7 +12,6 @@ export const StyledWrapper = styled.div<NWrapper.IProps>`
         alignContent ? alignContent : 'flex-start'};
     align-items: ${({ alignItems }) =>
         alignItems ? alignItems : 'flex-start'};
-    margin: ${({ margin }) => (margin ? margin : 0)};
     width: ${({ width }) => (width ? width : 'auto')};
     height: ${({ height }) => (height ? height : 'auto')};
 `;

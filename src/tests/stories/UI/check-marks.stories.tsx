@@ -1,7 +1,7 @@
 import React from 'react';
 import { CheckMark, Wrapper } from 'components/UI';
 export default {
-    title: 'CheckMarks',
+    title: 'UI/Check marks',
 };
 
 export const CheckMarkDouble = () => (

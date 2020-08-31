@@ -7,3 +7,4 @@ export { default as Typography } from './Typography';
 export { default as Wrapper } from './Wrapper';
 export { default as CheckMark } from './CheckMark';
 export { default as Icon } from './Icon';
+export { default as Emoji } from './Emoji';

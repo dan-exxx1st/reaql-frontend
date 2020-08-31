@@ -1,5 +1,5 @@
 import React from 'react';
-import DialogListItem from '../../components/DialogListItem';
+import { DialogListItem } from 'components';
 import { Wrapper } from 'components/UI';
 import {
     DialogListDataWithAvatar,
@@ -8,7 +8,7 @@ import {
 } from 'tests/__mocks__/data/unit/DialogListItem';
 
 export default {
-    title: 'Dialog list item',
+    title: 'Common/Dialog list item',
 };
 
 export const DefaultDialogListItem = () => (

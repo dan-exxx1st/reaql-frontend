@@ -1,17 +1,34 @@
 import React, { FC } from 'react';
-import PersonIcon from 'assets/images/icons/Person.svg';
 import { StyledIcons } from './style';
 
-const Icon: FC<NIcon.IProps> = ({ iconName }) => {
+import PersonIcon from 'assets/images/icons/Person.svg';
+import AnimalIcon from 'assets/images/icons/Animal.svg';
+import FoodIcon from 'assets/images/icons/Food.svg';
+import PeopleIcon from 'assets/images/icons/People.svg';
+
+const Icon: FC<NIcon.IProps> = ({ iconName, ...otherProps }) => {
     let srcIcon = '';
     switch (iconName) {
         case 'person': {
             srcIcon = PersonIcon;
             break;
         }
+        case 'animal': {
+            srcIcon = AnimalIcon;
+            break;
+        }
+        case 'food': {
+            srcIcon = FoodIcon;
+            break;
+        }
+
+        case 'people': {
+            srcIcon = PeopleIcon;
+            break;
+        }
     }
 
-    return <StyledIcons src={srcIcon} alt="Icon component" />;
+    return <StyledIcons src={srcIcon} alt="Icon component" {...otherProps} />;
 };
 
 export default Icon;

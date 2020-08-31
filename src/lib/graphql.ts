@@ -11,22 +11,12 @@ export type Scalars = {
     Float: number;
 };
 
-export type IMutation = {
-    __typename?: 'Mutation';
-    createTodo: ITodo;
-};
-
-export type IMutationCreateTodoArgs = {
-    text: Scalars['String'];
-};
-
 export type IQuery = {
     __typename?: 'Query';
-    todos: Array<ITodo>;
+    emojies: Array<Maybe<Scalars['String']>>;
 };
 
-export type ITodo = {
-    __typename?: 'Todo';
-    id: Scalars['ID'];
-    text: Scalars['String'];
+export type IQueryEmojiesArgs = {
+    first: Scalars['Int'];
+    after: Scalars['Int'];
 };
