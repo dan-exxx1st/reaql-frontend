@@ -42,6 +42,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
 
 .c0 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,13 +64,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: auto;
 }
 
 .c2 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -88,13 +89,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: 100%;
   height: 40px;
 }
 
 .c3 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -113,13 +114,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: 40px;
 }
 
 .c4 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -138,13 +139,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: auto;
 }
 
 .c7 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -163,13 +164,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: 40px;
 }
 
 .c10 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,7 +189,6 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
-  margin: 0;
   width: auto;
   height: 40px;
 }
@@ -347,6 +347,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
 
 .c0 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -368,13 +369,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: auto;
 }
 
 .c2 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -393,13 +394,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: 100%;
   height: 40px;
 }
 
 .c3 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -418,13 +419,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: 40px;
 }
 
 .c4 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -443,13 +444,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: auto;
 }
 
 .c7 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -468,13 +469,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: 40px;
 }
 
 .c10 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -493,13 +494,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
-  margin: 0;
   width: auto;
   height: 40px;
 }
 
 .c12 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -518,7 +519,6 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   width: auto;
   height: auto;
 }
@@ -673,6 +673,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
 
 .c0 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -694,13 +695,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: auto;
 }
 
 .c2 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -719,13 +720,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: 100%;
   height: 40px;
 }
 
 .c3 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -744,13 +745,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: 40px;
 }
 
 .c4 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -769,13 +770,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: auto;
 }
 
 .c7 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -794,13 +795,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: 40px;
 }
 
 .c10 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -819,7 +820,6 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
-  margin: 0;
   width: auto;
   height: 40px;
 }
@@ -978,6 +978,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
 
 .c0 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -999,13 +1000,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: auto;
 }
 
 .c2 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1024,13 +1025,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: 100%;
   height: 40px;
 }
 
 .c3 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1049,13 +1050,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: 40px;
 }
 
 .c4 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1074,13 +1075,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: auto;
 }
 
 .c7 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1099,13 +1100,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: 40px;
 }
 
 .c10 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1124,13 +1125,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
-  margin: 0;
   width: auto;
   height: 40px;
 }
 
 .c12 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1149,7 +1150,6 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   width: auto;
   height: auto;
 }
@@ -1316,6 +1316,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
 
 .c0 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1337,13 +1338,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: auto;
 }
 
 .c2 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1362,13 +1363,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: 100%;
   height: 40px;
 }
 
 .c3 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1387,13 +1388,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: 40px;
 }
 
 .c4 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1412,13 +1413,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: auto;
 }
 
 .c7 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1437,13 +1438,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  margin: 0;
   width: auto;
   height: 40px;
 }
 
 .c10 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1462,13 +1463,13 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
-  margin: 0;
   width: auto;
   height: 40px;
 }
 
 .c12 {
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1487,7 +1488,6 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   width: auto;
   height: auto;
 }
