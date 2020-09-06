@@ -6,5 +6,6 @@ declare namespace NTextField {
         className?: string;
         fieldSize: 'small' | 'medium' | 'large';
         color: ColorType;
+        editable?: boolean;
     }
 }

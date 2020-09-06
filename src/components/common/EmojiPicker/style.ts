@@ -5,6 +5,7 @@ export const StyledEmojiPicker = styled.div`
     width: 250px;
     height: 250px;
     padding: 10px;
+    padding-bottom: 0;
 
     border: ${({ theme }) => `1px solid ${theme.plc}`};
     border-radius: 5px;

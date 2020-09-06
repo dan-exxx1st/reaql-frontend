@@ -3,6 +3,8 @@ import { StyledEmoji } from './style';
 
 interface IProps {
     emoji: string | null;
+    margin?: string;
+    width?: string;
 }
 
 const Emoji: FC<IProps> = ({ emoji, ...otherProps }) => {

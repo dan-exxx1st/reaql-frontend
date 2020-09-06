@@ -70,6 +70,32 @@ export const DefaultTextField = () => {
                     />
                 </Wrapper>
             </Wrapper>
+            <Wrapper>
+                <Wrapper margin="20px">
+                    <TextField
+                        fieldSize="large"
+                        value="Text11"
+                        color="primary"
+                        editable
+                    />
+                </Wrapper>
+                <Wrapper margin="20px">
+                    <TextField
+                        fieldSize="medium"
+                        value="Text11111111111111111111111111111111111111111111111111111111111111111123"
+                        color="primary"
+                        editable
+                    />
+                </Wrapper>
+                <Wrapper margin="20px">
+                    <TextField
+                        fieldSize="small"
+                        value="Text11"
+                        color="primary"
+                        editable
+                    />
+                </Wrapper>
+            </Wrapper>
         </Wrapper>
     );
 };

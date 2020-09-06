@@ -16,7 +16,7 @@ const EmojiPicker: FC = () => {
             }
         `,
         {
-            variables: { first: 10, after: 0 },
+            variables: { first: 60, after: 0 },
         }
     );
 
