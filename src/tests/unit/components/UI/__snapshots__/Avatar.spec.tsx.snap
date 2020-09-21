@@ -63,7 +63,7 @@ exports[`<Avatar /> Snapshots Avatar with a image to match snapshot 1`] = `
 >
   <Styled(Avatar)
     alt="Avatar without image"
-    src="avatar_mock.jpg"
+    src="https://yandex.ru/images/search?text=foto&pos=3&img_url=https%3A%2F%2Fget.wallhere.com%2Fphoto%2F2700x1800-px-building-castle-forest-Hohenzollern-landscape-1077207.jpg&rpt=simage"
   />
 </ThemeProvider>
 `;

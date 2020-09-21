@@ -8,7 +8,6 @@ const TextField: FC<NTextField.IProps> = ({
     editable = false,
 }) => {
     const onChangeText = (event: ChangeEvent<HTMLInputElement>) => {
-        console.log(event.target.innerText);
         if (onChange) {
             const value = event.target.value;
             onChange(value);
