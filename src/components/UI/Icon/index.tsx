@@ -5,6 +5,7 @@ import PersonIcon from 'assets/images/icons/Person.svg';
 import AnimalIcon from 'assets/images/icons/Animal.svg';
 import FoodIcon from 'assets/images/icons/Food.svg';
 import PeopleIcon from 'assets/images/icons/People.svg';
+import SearchIcon from 'assets/images/icons/SearchIcon.svg';
 
 const Icon: FC<NIcon.IProps> = ({ iconName, ...otherProps }) => {
     let srcIcon = '';
@@ -24,6 +25,11 @@ const Icon: FC<NIcon.IProps> = ({ iconName, ...otherProps }) => {
 
         case 'people': {
             srcIcon = PeopleIcon;
+            break;
+        }
+
+        case 'search': {
+            srcIcon = SearchIcon;
             break;
         }
     }

@@ -3,6 +3,10 @@ import { mountWithTheme, shallowWithTheme } from 'tests/helpers/withTheme';
 
 import Avatar from 'components/UI/Avatar';
 
+jest.mock('config/helpers', () => ({
+    useLoaded: jest.fn().mockReturnValue('loaded'),
+}));
+
 describe('<Avatar />', () => {
     describe('Snapshots', () => {
         it('Avatar without a image to match snapshot', () => {
@@ -11,6 +15,7 @@ describe('<Avatar />', () => {
             );
             expect(wrapper).toMatchSnapshot();
         });
+
         it('Avatar with a image to match snapshot', () => {
             const wrapper = shallowWithTheme(
                 <Avatar
@@ -18,7 +23,6 @@ describe('<Avatar />', () => {
                     alt="Avatar without image"
                 />
             );
-
             expect(wrapper).toMatchSnapshot();
         });
     });

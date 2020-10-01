@@ -16,8 +16,13 @@ export const StyledTextField = (
 
     cursor: text;
 
-    ${({ fieldSize, editable }) => {
-        let fontSize, fontWeight, lineHeight, letterSpacing, width: string;
+    ${({ fieldSize, width, icon }) => {
+        let fontSize,
+            fontWeight,
+            lineHeight,
+            letterSpacing,
+            customWidth: string;
+        const customRightPadding = icon && '34px';
 
         switch (fieldSize) {
             case 'small': {
@@ -25,7 +30,7 @@ export const StyledTextField = (
                 fontWeight = 'normal';
                 lineHeight = '14px';
                 letterSpacing = '0.4px';
-                width = '170px';
+                customWidth = '170px';
                 break;
             }
 
@@ -34,7 +39,7 @@ export const StyledTextField = (
                 fontWeight = 'normal';
                 lineHeight = '19px';
                 letterSpacing = '0.5px';
-                width = '220px';
+                customWidth = '220px';
                 break;
             }
 
@@ -43,24 +48,26 @@ export const StyledTextField = (
                 fontWeight = 'normal';
                 lineHeight = '16px';
                 letterSpacing = '0.25px';
-                width = '190px';
+                customWidth = '190px';
             }
         }
 
-        if (!editable) {
-            width = 'auto';
-        }
-
+        customWidth = width ? width : customWidth;
         return `
         font-size:${fontSize}; 
         font-weight:${fontWeight}; 
         line-height:${lineHeight}; 
         letter-spacing:${letterSpacing}; 
-        width:${width};
+        width:${customWidth};
+        padding-right:${customRightPadding};
         `;
     }};
 
-    & > img {
-        vertical-align: middle;
+    & ~ img {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 12px;
+        right: 32px;
     }
 `;
