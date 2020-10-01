@@ -2,7 +2,10 @@ import React from 'react';
 import { mountWithTheme, shallowWithTheme } from 'tests/helpers/withTheme';
 
 import Avatar from 'components/UI/Avatar';
-import { AvatarMock } from 'tests/__mocks__/data/unit/Avatar';
+
+jest.mock('config/helpers', () => ({
+    useLoaded: jest.fn().mockReturnValue('loaded'),
+}));
 
 describe('<Avatar />', () => {
     describe('Snapshots', () => {
@@ -12,11 +15,14 @@ describe('<Avatar />', () => {
             );
             expect(wrapper).toMatchSnapshot();
         });
+
         it('Avatar with a image to match snapshot', () => {
             const wrapper = shallowWithTheme(
-                <Avatar src={AvatarMock} alt="Avatar without image" />
+                <Avatar
+                    src="https://yandex.ru/images/search?text=foto&pos=3&img_url=https%3A%2F%2Fget.wallhere.com%2Fphoto%2F2700x1800-px-building-castle-forest-Hohenzollern-landscape-1077207.jpg&rpt=simage"
+                    alt="Avatar without image"
+                />
             );
-
             expect(wrapper).toMatchSnapshot();
         });
     });

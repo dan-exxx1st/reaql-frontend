@@ -3,20 +3,20 @@ import styled from 'styled-components';
 import { skeletonLoaderAvatarKeyFrames } from 'config/styled/animations';
 
 export const StyledSkeletonLoader = styled.div<NSkeletonLoader.IProps>`
-    ${({ variant }) => {
+    ${({ variant, width, height }) => {
         switch (variant) {
             case 'avatar': {
                 return {
-                    width: '40px',
-                    height: '40px',
+                    width: width ? width : '40px',
+                    height: height ? height : '40px',
                     borderRadius: '50%',
                 };
             }
 
             default: {
                 return {
-                    width: '100px',
-                    height: '20px',
+                    width: width ? width : '100px',
+                    height: height ? height : '20px',
                 };
             }
         }

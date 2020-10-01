@@ -1,1 +1,1 @@
-export { default as DialogListItem } from './DialogListItem';
+export { default as DialogListItem } from './common/DialogListItem';
