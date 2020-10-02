@@ -223,7 +223,12 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
 
 .c1 {
   width: 420px;
-  margin-top: 15px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.c1:hover {
+  background: rgba(164,226,255,0.1);
 }
 
 <div
@@ -527,6 +532,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  cursor: auto;
   color: #FAFAFA;
   background: #00ADFF;
 }
@@ -556,7 +562,12 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
 
 .c1 {
   width: 420px;
-  margin-top: 15px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.c1:hover {
+  background: rgba(164,226,255,0.1);
 }
 
 <div
@@ -854,7 +865,12 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
 
 .c1 {
   width: 420px;
-  margin-top: 15px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.c1:hover {
+  background: rgba(164,226,255,0.1);
 }
 
 <div
@@ -1158,6 +1174,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  cursor: auto;
   color: #FAFAFA;
   background: #00ADFF;
 }
@@ -1187,7 +1204,12 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
 
 .c1 {
   width: 420px;
-  margin-top: 15px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.c1:hover {
+  background: rgba(164,226,255,0.1);
 }
 
 <div
@@ -1496,6 +1518,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  cursor: auto;
   color: #FAFAFA;
   background: #00ADFF;
 }
@@ -1525,7 +1548,12 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
 
 .c1 {
   width: 420px;
-  margin-top: 15px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.c1:hover {
+  background: rgba(164,226,255,0.1);
 }
 
 <div

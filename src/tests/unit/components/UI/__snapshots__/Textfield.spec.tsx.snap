@@ -1,8 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextField /> Snapshots Primary text field with large size to match snapshot 1`] = `
-Array [
-  .c0 {
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
   word-break: break-all;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -26,7 +50,7 @@ Array [
   padding-right: undefined;
 }
 
-.c0 ~ img {
+.c1 ~ img {
   width: 20px;
   height: 20px;
   position: relative;
@@ -34,18 +58,44 @@ Array [
   right: 32px;
 }
 
-<input
-    className="c0"
+<div
+  className="c0"
+>
+  <input
+    className="c1"
     onChange={[Function]}
     value="TextField snapshot"
-  />,
-  "",
-]
+  />
+</div>
 `;
 
 exports[`<TextField /> Snapshots Primary text field with medium size to match snapshot 1`] = `
-Array [
-  .c0 {
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
   word-break: break-all;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -69,7 +119,7 @@ Array [
   padding-right: undefined;
 }
 
-.c0 ~ img {
+.c1 ~ img {
   width: 20px;
   height: 20px;
   position: relative;
@@ -77,18 +127,44 @@ Array [
   right: 32px;
 }
 
-<input
-    className="c0"
+<div
+  className="c0"
+>
+  <input
+    className="c1"
     onChange={[Function]}
     value="TextField snapshot"
-  />,
-  "",
-]
+  />
+</div>
 `;
 
 exports[`<TextField /> Snapshots Primary text field with small size to match snapshot 1`] = `
-Array [
-  .c0 {
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
   word-break: break-all;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -112,7 +188,7 @@ Array [
   padding-right: undefined;
 }
 
-.c0 ~ img {
+.c1 ~ img {
   width: 20px;
   height: 20px;
   position: relative;
@@ -120,18 +196,44 @@ Array [
   right: 32px;
 }
 
-<input
-    className="c0"
+<div
+  className="c0"
+>
+  <input
+    className="c1"
     onChange={[Function]}
     value="TextField snapshot"
-  />,
-  "",
-]
+  />
+</div>
 `;
 
 exports[`<TextField /> Snapshots Secondary text field with large size to match snapshot 1`] = `
-Array [
-  .c0 {
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
   word-break: break-all;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -155,7 +257,7 @@ Array [
   padding-right: undefined;
 }
 
-.c0 ~ img {
+.c1 ~ img {
   width: 20px;
   height: 20px;
   position: relative;
@@ -163,18 +265,44 @@ Array [
   right: 32px;
 }
 
-<input
-    className="c0"
+<div
+  className="c0"
+>
+  <input
+    className="c1"
     onChange={[Function]}
     value="TextField snapshot"
-  />,
-  "",
-]
+  />
+</div>
 `;
 
 exports[`<TextField /> Snapshots Secondary text field with medium size to match snapshot 1`] = `
-Array [
-  .c0 {
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
   word-break: break-all;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -198,7 +326,7 @@ Array [
   padding-right: undefined;
 }
 
-.c0 ~ img {
+.c1 ~ img {
   width: 20px;
   height: 20px;
   position: relative;
@@ -206,18 +334,44 @@ Array [
   right: 32px;
 }
 
-<input
-    className="c0"
+<div
+  className="c0"
+>
+  <input
+    className="c1"
     onChange={[Function]}
     value="TextField snapshot"
-  />,
-  "",
-]
+  />
+</div>
 `;
 
 exports[`<TextField /> Snapshots Secondary text field with small size to match snapshot 1`] = `
-Array [
-  .c0 {
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
   word-break: break-all;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -241,7 +395,7 @@ Array [
   padding-right: undefined;
 }
 
-.c0 ~ img {
+.c1 ~ img {
   width: 20px;
   height: 20px;
   position: relative;
@@ -249,11 +403,13 @@ Array [
   right: 32px;
 }
 
-<input
-    className="c0"
+<div
+  className="c0"
+>
+  <input
+    className="c1"
     onChange={[Function]}
     value="TextField snapshot"
-  />,
-  "",
-]
+  />
+</div>
 `;

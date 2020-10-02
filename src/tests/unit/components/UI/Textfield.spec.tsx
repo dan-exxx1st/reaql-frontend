@@ -75,7 +75,7 @@ describe('<TextField />', () => {
                 onChange={changeValue}
             />
         );
-        wrapper.simulate('change');
+        wrapper.find('input').simulate('change');
         expect(changeValue).toBeCalled();
     });
 });

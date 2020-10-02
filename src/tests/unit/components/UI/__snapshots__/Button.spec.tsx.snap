@@ -9,7 +9,6 @@ exports[`<Button /> Snapshots Primary filled button to match snapshot without ef
   -moz-letter-spacing: 0.25px;
   -ms-letter-spacing: 0.25px;
   letter-spacing: 0.25px;
-  color: #000000;
   margin: 0;
 }
 
@@ -20,6 +19,7 @@ exports[`<Button /> Snapshots Primary filled button to match snapshot without ef
   font-family: 'Roboto',sans-serif;
   padding: 7px 26px;
   cursor: pointer;
+  max-height: 50px;
   background: #00ADFF;
   color: #FAFAFA;
 }
@@ -48,7 +48,6 @@ exports[`<Button /> Snapshots Primary outlined button to match snapshot without 
   -moz-letter-spacing: 0.25px;
   -ms-letter-spacing: 0.25px;
   letter-spacing: 0.25px;
-  color: #000000;
   margin: 0;
 }
 
@@ -59,6 +58,7 @@ exports[`<Button /> Snapshots Primary outlined button to match snapshot without 
   font-family: 'Roboto',sans-serif;
   padding: 7px 26px;
   cursor: pointer;
+  max-height: 50px;
   border: 1px solid #00ADFF;
   background: none;
   color: #00ADFF;
@@ -88,7 +88,6 @@ exports[`<Button /> Snapshots Secondary filled button to match snapshot without 
   -moz-letter-spacing: 0.25px;
   -ms-letter-spacing: 0.25px;
   letter-spacing: 0.25px;
-  color: #000000;
   margin: 0;
 }
 
@@ -99,6 +98,7 @@ exports[`<Button /> Snapshots Secondary filled button to match snapshot without 
   font-family: 'Roboto',sans-serif;
   padding: 7px 26px;
   cursor: pointer;
+  max-height: 50px;
   background: #E6E6E6;
   color: #A5A5A5;
 }
@@ -127,7 +127,6 @@ exports[`<Button /> Snapshots Secondary outlined button to match snapshot withou
   -moz-letter-spacing: 0.25px;
   -ms-letter-spacing: 0.25px;
   letter-spacing: 0.25px;
-  color: #000000;
   margin: 0;
 }
 
@@ -138,6 +137,7 @@ exports[`<Button /> Snapshots Secondary outlined button to match snapshot withou
   font-family: 'Roboto',sans-serif;
   padding: 7px 26px;
   cursor: pointer;
+  max-height: 50px;
   border: 1px solid #E6E6E6;
   color: #A5A5A5;
   background: none;
