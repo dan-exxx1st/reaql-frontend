@@ -85,7 +85,7 @@ const DialogListItem: FC<NDialogListItem.IProps> = ({
                             <Wrapper>
                                 <CheckMark
                                     isDouble={isDoubleCheckMark}
-                                    isActive={isActiveCheckMark}
+                                    isChecked={isActiveCheckMark}
                                 />
                             </Wrapper>
                         )}

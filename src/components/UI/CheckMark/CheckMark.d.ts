@@ -1,6 +1,6 @@
 declare namespace NCheckMark {
     interface IProps {
-        isActive: boolean;
+        isChecked: boolean;
         isDouble: boolean;
     }
 }

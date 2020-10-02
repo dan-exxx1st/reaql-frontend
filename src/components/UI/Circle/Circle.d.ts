@@ -6,5 +6,6 @@ declare namespace NCircle {
         text?: string | number;
         width?: string;
         height?: string;
+        cursor?: string;
     }
 }

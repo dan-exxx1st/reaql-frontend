@@ -14,5 +14,10 @@ export const BottomLineStyled = styled.div`
 
 export default styled(Wrapper)`
     width: 420px;
-    margin-top: 15px;
+    padding-top: 15px;
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(164, 226, 255, 0.1);
+    }
 `;

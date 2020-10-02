@@ -1,4 +1,5 @@
 import React from 'react';
+import { storiesOf } from '@storybook/react';
 import { DialogListItem } from 'components';
 import { Wrapper } from 'components/UI';
 import {
@@ -7,14 +8,10 @@ import {
     DialogListDataWithReadMessaage,
 } from 'tests/__mocks__/data/unit/DialogListItem';
 
-export default {
-    title: 'Common/Dialog list item',
-};
-
-export const DefaultDialogListItem = () => (
+storiesOf('Common/ DialogListItem', module).add('default', () => (
     <Wrapper flexDirection="column">
         <DialogListItem {...DialogListDataWithoutAvatar} />
         <DialogListItem {...DialogListDataWithAvatar} />
         <DialogListItem {...DialogListDataWithReadMessaage} />
     </Wrapper>
-);
+));

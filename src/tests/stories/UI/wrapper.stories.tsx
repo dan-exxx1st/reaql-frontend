@@ -1,10 +1,7 @@
 import React from 'react';
+import { storiesOf } from '@storybook/react';
 import { Wrapper } from 'components/UI';
 
-export default {
-    title: 'UI/Wrapper',
-};
-
-export const WrapperFlex = () => (
-    <Wrapper flexDirection="column">Wrapper</Wrapper>
-);
+storiesOf('UI/ Wrapper', module).add('default', () => (
+    <Wrapper flexDirection="column">Default wrapper</Wrapper>
+));

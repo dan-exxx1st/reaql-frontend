@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
+import { storiesOf } from '@storybook/react';
 import { TextField, Wrapper } from 'components/UI';
 
-export default {
-    title: 'UI/Text field',
-};
-
-export const DefaultTextField = () => {
-    const [smallText, setSmallText] = useState('Small text field');
-    const [mediumText, setMediumText] = useState('Medium text field');
-    const [largeText, setLargeText] = useState('Large text field');
-    const [withIconText, setWithIconText] = useState('With icon text');
-    return (
-        <Wrapper flexDirection="column">
+storiesOf('UI/ Text field', module)
+    .add('with primary color', () => {
+        const [smallText, setSmallText] = useState('Small text field');
+        const [mediumText, setMediumText] = useState('Medium text field');
+        const [largeText, setLargeText] = useState('Large text field');
+        return (
             <Wrapper alignItems="center">
                 <Wrapper margin="20px">
                     <TextField
@@ -42,7 +38,15 @@ export const DefaultTextField = () => {
                     />
                 </Wrapper>
             </Wrapper>
-            <Wrapper>
+        );
+    })
+    .add('with secondary color', () => {
+        const [smallText, setSmallText] = useState('Small text field');
+        const [mediumText, setMediumText] = useState('Medium text field');
+        const [largeText, setLargeText] = useState('Large text field');
+
+        return (
+            <Wrapper alignItems="center">
                 <Wrapper margin="20px">
                     <TextField
                         fieldSize="large"
@@ -71,41 +75,21 @@ export const DefaultTextField = () => {
                     />
                 </Wrapper>
             </Wrapper>
-            <Wrapper>
-                <Wrapper margin="20px">
-                    <TextField
-                        fieldSize="large"
-                        value="Text11"
-                        color="primary"
-                    />
-                </Wrapper>
-                <Wrapper margin="20px">
-                    <TextField
-                        fieldSize="medium"
-                        value="Text11111111111111111111111111111111111111111111111111111111111111111123"
-                        color="primary"
-                    />
-                </Wrapper>
-                <Wrapper margin="20px">
-                    <TextField
-                        fieldSize="small"
-                        value="Text11"
-                        color="primary"
-                    />
-                </Wrapper>
+        );
+    })
+    .add('with icons', () => {
+        const [withIconText, setWithIconText] = useState('Large text field');
+
+        return (
+            <Wrapper margin="20px" alignItems="center">
+                <TextField
+                    fieldSize="large"
+                    value={withIconText}
+                    onChange={setWithIconText}
+                    color="primary"
+                    icon="search"
+                    width="416px"
+                />
             </Wrapper>
-            <Wrapper>
-                <Wrapper margin="20px">
-                    <TextField
-                        fieldSize="large"
-                        value={withIconText}
-                        onChange={setWithIconText}
-                        color="primary"
-                        icon="search"
-                        width="416px"
-                    />
-                </Wrapper>
-            </Wrapper>
-        </Wrapper>
-    );
-};
+        );
+    });

@@ -1,5 +1,5 @@
 import React, { FC, ChangeEvent } from 'react';
-import { Icon } from '..';
+import { Icon, Wrapper } from '..';
 import { StyledTextField } from './style';
 
 const TextField: FC<NTextField.IProps> = ({
@@ -10,21 +10,20 @@ const TextField: FC<NTextField.IProps> = ({
 }) => {
     const onChangeText = (event: ChangeEvent<HTMLInputElement>) => {
         if (onChange) {
-            console.log(event.target.value);
             const value = event.target.value;
             onChange(value);
         }
     };
 
     return (
-        <>
+        <Wrapper>
             <input
                 className={className}
                 onChange={onChangeText}
                 value={value}
             />
             {icon && <Icon iconName={icon} />}
-        </>
+        </Wrapper>
     );
 };
 

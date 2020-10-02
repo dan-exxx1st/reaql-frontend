@@ -9,6 +9,7 @@ export const StyledButton = (Button: React.FC<NButton.IProps>) => styled(
     font-family: 'Roboto', sans-serif;
     padding: 7px 26px;
     cursor: pointer;
+    max-height: 50px;
 
     ${({ color, theme, variant }: NButton.IProps) => {
         if (color === 'primary') {
