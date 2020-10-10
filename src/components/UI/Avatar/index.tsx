@@ -3,19 +3,24 @@ import { useLoaded } from 'config/helpers';
 import { Icon, SkeletonLoader } from '..';
 import { StyledImage, StyledAvatar } from './style';
 
-const Avatar: FC<NAvatar.IProps> = ({ src, alt }) => {
+const Avatar: FC<NAvatar.IProps> = ({ src, alt, className = '' }) => {
     let children = null;
     const loaded = useLoaded({ src });
     const hasImgNotFailing = src && loaded !== 'error';
     if (hasImgNotFailing) {
         children =
             loaded === 'loaded' ? (
-                <StyledImage src={src} alt={alt} loading="lazy" />
+                <StyledImage
+                    className={className}
+                    src={src}
+                    alt={alt}
+                    loading="lazy"
+                />
             ) : (
-                <SkeletonLoader variant="avatar" />
+                <SkeletonLoader className={className} variant="avatar" />
             );
     } else {
-        children = <Icon iconName="person" />;
+        children = <Icon className={className} iconName="person" />;
     }
     return <>{children}</>;
 };

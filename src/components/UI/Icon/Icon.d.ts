@@ -4,5 +4,6 @@ declare namespace NIcon {
         iconName: IconName;
         width?: string;
         height?: string;
+        className?: string;
     }
 }

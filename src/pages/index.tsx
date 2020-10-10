@@ -1,13 +1,12 @@
 import React from 'react';
 import { initializeApollo } from 'lib/apollo';
-import { Typography, Avatar } from 'components/UI';
+import UserHeader from 'components/common/UserHeader';
 
 const Index = () => {
     return (
         <div>
             <h1>Index page</h1>
-            <Typography variant="h1">Typography text</Typography>
-            <Avatar />
+            <UserHeader />
         </div>
     );
 };

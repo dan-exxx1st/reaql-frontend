@@ -7,7 +7,8 @@ import FoodIcon from 'assets/images/icons/Food.svg';
 import PeopleIcon from 'assets/images/icons/People.svg';
 import SearchIcon from 'assets/images/icons/SearchIcon.svg';
 import NewChatIcon from 'assets/images/icons/NewChat.svg';
-import ThreeDotsIcon from 'assets/images/icons/ThreeDots.svg';
+import ThreeDotsWhiteIcon from 'assets/images/icons/ThreeDotsWhite.svg';
+import ThreeDotsGreyIcon from 'assets/images/icons/ThreeDotsGray.svg';
 
 const Icon: FC<NIcon.IProps> = ({ iconName, ...otherProps }) => {
     let srcIcon = '';
@@ -40,8 +41,13 @@ const Icon: FC<NIcon.IProps> = ({ iconName, ...otherProps }) => {
             break;
         }
 
-        case 'threeDots': {
-            srcIcon = ThreeDotsIcon;
+        case 'threeDotsWhite': {
+            srcIcon = ThreeDotsWhiteIcon;
+            break;
+        }
+
+        case 'threeDotsGrey': {
+            srcIcon = ThreeDotsGreyIcon;
             break;
         }
     }

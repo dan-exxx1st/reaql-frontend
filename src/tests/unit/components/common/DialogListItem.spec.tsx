@@ -1,7 +1,7 @@
 import React from 'react';
 import { mountWithTheme, shallowWithTheme } from 'tests/helpers/withTheme';
 
-import { DialogListItem } from 'components';
+import { DialogListItem } from 'components/common';
 import {
     DialogListDataWithAvatar,
     DialogListDataWithReadMessaage,

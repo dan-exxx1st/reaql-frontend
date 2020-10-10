@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { DialogListItem } from 'components';
+import { DialogListItem } from 'components/common';
 import { Wrapper } from 'components/UI';
 import {
     DialogListDataWithAvatar,

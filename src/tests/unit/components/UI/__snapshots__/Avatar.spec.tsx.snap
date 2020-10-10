@@ -81,9 +81,18 @@ exports[`<Avatar /> Snapshots Avatar without a image to match snapshot 1`] = `
   margin: 0;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
 <img
   alt="Icon component"
-  className="c0"
+  className="c0 c1"
   src="Person.svg"
 />
 `;

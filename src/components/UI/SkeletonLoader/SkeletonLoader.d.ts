@@ -3,5 +3,6 @@ declare namespace NSkeletonLoader {
         variant?: 'avatar' | 'block';
         width?: string;
         height?: string;
+        className?: string;
     }
 }

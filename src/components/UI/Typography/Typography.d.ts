@@ -1,6 +1,7 @@
 declare namespace NTypography {
     import { KeyStringType, ColorType } from 'lib/types';
     import themes from 'config/styled';
+    import color from 'config/styled/colors';
 
     type TVariant =
         | 'h1'
@@ -29,7 +30,7 @@ declare namespace NTypography {
         className?: string;
         variant: TVariant;
         component?: TComponent;
-        color?: string;
+        color?: typeof colors;
         theme: typeof themes;
     }
 }

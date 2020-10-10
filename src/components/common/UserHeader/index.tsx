@@ -1,25 +1,22 @@
-import React from 'react';
-import StyledUserHeader from './style';
-import { Avatar, Circle, Typography, Wrapper } from 'components/UI';
+import React, { FC } from 'react';
+import { StyledAvatar, StyledUserHeader, StyledCircle } from './style';
+import { Typography, Wrapper } from 'components/UI';
 
-const UserHeader = () => {
+const UserHeader: FC<NUserHeader.IProps> = ({ className = '' }) => {
     return (
-        <Wrapper>
-            <Avatar /> <Typography variant="body1">Daniil Parfenov</Typography>
-            <Circle
-                color="primary"
-                iconName="newChat"
-                width="30px"
-                height="30px"
-                cursor="pointer"
-            />
-            <Circle
-                color="primary"
-                iconName="threeDots"
-                width="30px"
-                height="30px"
-                cursor="pointer"
-            />
+        <Wrapper
+            justifyContent="space-between"
+            alignItems="center"
+            className={className}
+        >
+            <Wrapper alignItems="center">
+                <StyledAvatar />
+                <Typography variant="h6">Daniil Parfenov</Typography>
+            </Wrapper>
+            <Wrapper alignItems="center">
+                <StyledCircle color="primary" iconName="newChat" />
+                <StyledCircle color="primary" iconName="threeDotsWhite" />
+            </Wrapper>
         </Wrapper>
     );
 };
