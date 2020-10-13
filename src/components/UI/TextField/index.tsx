@@ -1,12 +1,13 @@
-import React, { FC, ChangeEvent } from 'react';
-import { Icon, Wrapper } from '..';
-import { StyledTextField } from './style';
+import React, { ChangeEvent, FC } from 'react';
+import { Icon } from '..';
+import { StyledTextField, StyledWrapper } from './style';
 
 const TextField: FC<NTextField.IProps> = ({
     onChange,
     value,
     className = '',
     icon = '',
+    ...otherProps
 }) => {
     const onChangeText = (event: ChangeEvent<HTMLInputElement>) => {
         if (onChange) {
@@ -16,15 +17,16 @@ const TextField: FC<NTextField.IProps> = ({
     };
 
     return (
-        <Wrapper>
-            <input
-                className={className}
+        <StyledWrapper className={className} withIcon={icon}>
+            <StyledTextField
                 onChange={onChangeText}
                 value={value}
+                icon={icon}
+                {...otherProps}
             />
             {icon && <Icon iconName={icon} />}
-        </Wrapper>
+        </StyledWrapper>
     );
 };
 
-export default StyledTextField(TextField);
+export default TextField;

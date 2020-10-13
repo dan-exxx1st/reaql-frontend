@@ -7,7 +7,11 @@ const DialogHeader = () => {
         <StyledDialogHeader justifyContent="space-between">
             <Wrapper>
                 <StyledAvatar />
-                <Wrapper flexDirection="column">
+                <Wrapper
+                    flexDirection="column"
+                    justifyContent="space-between"
+                    height="40px"
+                >
                     <Typography variant="body1" color="dc">
                         Desirae Schleifer
                     </Typography>

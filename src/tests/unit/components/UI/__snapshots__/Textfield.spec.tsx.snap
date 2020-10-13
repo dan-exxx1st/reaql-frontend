@@ -2,28 +2,7 @@
 
 exports[`<TextField /> Snapshots Primary text field with large size to match snapshot 1`] = `
 .c0 {
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  width: auto;
-  height: auto;
+  position: static;
 }
 
 .c1 {
@@ -47,15 +26,19 @@ exports[`<TextField /> Snapshots Primary text field with large size to match sna
   -ms-letter-spacing: 0.5px;
   letter-spacing: 0.5px;
   width: 220px;
-  padding-right: undefined;
+  height: auto;
+  padding-right: 0;
 }
 
 .c1 ~ img {
   width: 20px;
   height: 20px;
-  position: relative;
-  top: 12px;
-  right: 32px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 <div
@@ -63,6 +46,7 @@ exports[`<TextField /> Snapshots Primary text field with large size to match sna
 >
   <input
     className="c1"
+    color="primary"
     onChange={[Function]}
     value="TextField snapshot"
   />
@@ -71,28 +55,7 @@ exports[`<TextField /> Snapshots Primary text field with large size to match sna
 
 exports[`<TextField /> Snapshots Primary text field with medium size to match snapshot 1`] = `
 .c0 {
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  width: auto;
-  height: auto;
+  position: static;
 }
 
 .c1 {
@@ -116,15 +79,19 @@ exports[`<TextField /> Snapshots Primary text field with medium size to match sn
   -ms-letter-spacing: 0.25px;
   letter-spacing: 0.25px;
   width: 190px;
-  padding-right: undefined;
+  height: auto;
+  padding-right: 0;
 }
 
 .c1 ~ img {
   width: 20px;
   height: 20px;
-  position: relative;
-  top: 12px;
-  right: 32px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 <div
@@ -132,6 +99,7 @@ exports[`<TextField /> Snapshots Primary text field with medium size to match sn
 >
   <input
     className="c1"
+    color="primary"
     onChange={[Function]}
     value="TextField snapshot"
   />
@@ -140,28 +108,7 @@ exports[`<TextField /> Snapshots Primary text field with medium size to match sn
 
 exports[`<TextField /> Snapshots Primary text field with small size to match snapshot 1`] = `
 .c0 {
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  width: auto;
-  height: auto;
+  position: static;
 }
 
 .c1 {
@@ -185,15 +132,19 @@ exports[`<TextField /> Snapshots Primary text field with small size to match sna
   -ms-letter-spacing: 0.4px;
   letter-spacing: 0.4px;
   width: 170px;
-  padding-right: undefined;
+  height: auto;
+  padding-right: 0;
 }
 
 .c1 ~ img {
   width: 20px;
   height: 20px;
-  position: relative;
-  top: 12px;
-  right: 32px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 <div
@@ -201,6 +152,7 @@ exports[`<TextField /> Snapshots Primary text field with small size to match sna
 >
   <input
     className="c1"
+    color="primary"
     onChange={[Function]}
     value="TextField snapshot"
   />
@@ -209,28 +161,7 @@ exports[`<TextField /> Snapshots Primary text field with small size to match sna
 
 exports[`<TextField /> Snapshots Secondary text field with large size to match snapshot 1`] = `
 .c0 {
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  width: auto;
-  height: auto;
+  position: static;
 }
 
 .c1 {
@@ -254,15 +185,19 @@ exports[`<TextField /> Snapshots Secondary text field with large size to match s
   -ms-letter-spacing: 0.5px;
   letter-spacing: 0.5px;
   width: 220px;
-  padding-right: undefined;
+  height: auto;
+  padding-right: 0;
 }
 
 .c1 ~ img {
   width: 20px;
   height: 20px;
-  position: relative;
-  top: 12px;
-  right: 32px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 <div
@@ -270,6 +205,7 @@ exports[`<TextField /> Snapshots Secondary text field with large size to match s
 >
   <input
     className="c1"
+    color="secondary"
     onChange={[Function]}
     value="TextField snapshot"
   />
@@ -278,28 +214,7 @@ exports[`<TextField /> Snapshots Secondary text field with large size to match s
 
 exports[`<TextField /> Snapshots Secondary text field with medium size to match snapshot 1`] = `
 .c0 {
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  width: auto;
-  height: auto;
+  position: static;
 }
 
 .c1 {
@@ -323,15 +238,19 @@ exports[`<TextField /> Snapshots Secondary text field with medium size to match 
   -ms-letter-spacing: 0.25px;
   letter-spacing: 0.25px;
   width: 190px;
-  padding-right: undefined;
+  height: auto;
+  padding-right: 0;
 }
 
 .c1 ~ img {
   width: 20px;
   height: 20px;
-  position: relative;
-  top: 12px;
-  right: 32px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 <div
@@ -339,6 +258,7 @@ exports[`<TextField /> Snapshots Secondary text field with medium size to match 
 >
   <input
     className="c1"
+    color="secondary"
     onChange={[Function]}
     value="TextField snapshot"
   />
@@ -347,28 +267,7 @@ exports[`<TextField /> Snapshots Secondary text field with medium size to match 
 
 exports[`<TextField /> Snapshots Secondary text field with small size to match snapshot 1`] = `
 .c0 {
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  width: auto;
-  height: auto;
+  position: static;
 }
 
 .c1 {
@@ -392,15 +291,19 @@ exports[`<TextField /> Snapshots Secondary text field with small size to match s
   -ms-letter-spacing: 0.4px;
   letter-spacing: 0.4px;
   width: 170px;
-  padding-right: undefined;
+  height: auto;
+  padding-right: 0;
 }
 
 .c1 ~ img {
   width: 20px;
   height: 20px;
-  position: relative;
-  top: 12px;
-  right: 32px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 <div
@@ -408,6 +311,7 @@ exports[`<TextField /> Snapshots Secondary text field with small size to match s
 >
   <input
     className="c1"
+    color="secondary"
     onChange={[Function]}
     value="TextField snapshot"
   />

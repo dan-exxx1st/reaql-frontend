@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const StyledUserHeader = (UserHeader: FC) => styled(UserHeader)`
     max-width: 416px;
     border-right: 1px solid ${({ theme }) => theme.gc};
-    padding: 25px;
+    padding: 15px;
 `;
 
 export const StyledAvatar = styled(Avatar)`

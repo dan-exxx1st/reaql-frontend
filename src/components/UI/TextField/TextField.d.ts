@@ -8,5 +8,7 @@ declare namespace NTextField {
         color: ColorType;
         icon?: IconName;
         width?: string;
+        height?: string;
+        wrapperWidth?: string;
     }
 }
