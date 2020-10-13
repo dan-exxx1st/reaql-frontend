@@ -1,5 +1,5 @@
-declare namespace NDialogListItem {
-    type SendedMessage = 'sended' | 'received' | 'readed';
+declare namespace NContactItem {
+    import { SendedMessage } from 'lib/types';
 
     interface IProps {
         id: string;

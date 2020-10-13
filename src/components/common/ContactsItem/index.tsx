@@ -5,7 +5,7 @@ import StyledDialogListItem, {
 } from './style';
 import { Wrapper, Avatar, Typography, CheckMark, Circle } from 'components/UI';
 
-const DialogListItem: FC<NDialogListItem.IProps> = ({
+const ContactItem: FC<NContactItem.IProps> = ({
     avatar_src,
     name,
     last_message,
@@ -98,4 +98,4 @@ const DialogListItem: FC<NDialogListItem.IProps> = ({
     );
 };
 
-export default DialogListItem;
+export default ContactItem;

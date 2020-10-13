@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended message to match snapshot 1`] = `
+exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended message to match snapshot 1`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -307,7 +307,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
 </div>
 `;
 
-exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with readed message to match snapshot 1`] = `
+exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed message to match snapshot 1`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -660,7 +660,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
 </div>
 `;
 
-exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with readed message to match snapshot 2`] = `
+exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed message to match snapshot 2`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -967,7 +967,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
 </div>
 `;
 
-exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with recived message to match snapshot 1`] = `
+exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived message to match snapshot 1`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1320,7 +1320,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
 </div>
 `;
 
-exports[`<DialogListItem /> Snapshots DialogListItem without last_message to match snapshot 1`] = `
+exports[`<ContactItem /> Snapshots ContactItem without last_message to match snapshot 1`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
