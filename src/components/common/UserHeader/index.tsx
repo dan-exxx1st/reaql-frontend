@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import { StyledAvatar, StyledUserHeader, StyledCircle } from './style';
 import { Typography, Wrapper } from 'components/UI';
+import { IUserHeaderProps } from 'lib/types/components/common';
 
-const UserHeader: FC<NUserHeader.IProps> = ({ className = '' }) => {
+const UserHeader: FC<IUserHeaderProps> = ({ className = '' }) => {
     return (
         <Wrapper
             justifyContent="space-between"

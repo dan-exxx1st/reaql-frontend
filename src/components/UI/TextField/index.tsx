@@ -7,6 +7,7 @@ const TextField: FC<NTextField.IProps> = ({
     value,
     className = '',
     icon = '',
+    placeholder = '',
     ...otherProps
 }) => {
     const onChangeText = (event: ChangeEvent<HTMLInputElement>) => {
@@ -22,6 +23,7 @@ const TextField: FC<NTextField.IProps> = ({
                 onChange={onChangeText}
                 value={value}
                 icon={icon}
+                placeholder={placeholder}
                 {...otherProps}
             />
             {icon && <Icon iconName={icon} />}

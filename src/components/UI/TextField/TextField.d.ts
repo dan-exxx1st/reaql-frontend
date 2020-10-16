@@ -10,5 +10,6 @@ declare namespace NTextField {
         width?: string;
         height?: string;
         wrapperWidth?: string;
+        placeholder?: string;
     }
 }

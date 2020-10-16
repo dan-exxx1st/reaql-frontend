@@ -8,7 +8,7 @@ import {
     ContactItemDataWithReadMessaage,
 } from 'tests/__mocks__/data/unit/ContactItem';
 
-storiesOf('Common/ ContactItem', module).add('default', () => (
+storiesOf('Common/ Contact item', module).add('default', () => (
     <Wrapper flexDirection="column">
         <ContactItem {...ContactItemDataWithAvatar} />
         <ContactItem {...ContactItemDataWithoutAvatar} />

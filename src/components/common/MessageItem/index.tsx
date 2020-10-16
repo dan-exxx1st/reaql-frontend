@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import {
     StyledMessageAvatar,
     StyledMessageItem,
@@ -9,8 +9,9 @@ import {
     StyledMessageTopWrapper,
     StyledMessageCheckMark,
 } from './style';
+import { IMessageItemProps } from 'lib/types/components/common';
 
-const MessageItem = ({ sended_message_status }: NMessageItem.IProps) => (
+const MessageItem: FC<IMessageItemProps> = ({ sended_message_status }) => (
     <StyledMessageItem>
         <StyledMessageAvatar alt="Desirae" />
         <StyledMessageBodyWrapper>
@@ -24,6 +25,9 @@ const MessageItem = ({ sended_message_status }: NMessageItem.IProps) => (
 
                 {sended_message_status === 'sended' && (
                     <StyledMessageCheckMark isChecked={false} isDouble={true} />
+                )}
+                {sended_message_status === 'readed' && (
+                    <StyledMessageCheckMark isChecked={true} isDouble={true} />
                 )}
             </StyledMessageTopWrapper>
 

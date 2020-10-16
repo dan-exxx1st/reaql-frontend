@@ -48,6 +48,7 @@ exports[`<TextField /> Snapshots Primary text field with large size to match sna
     className="c1"
     color="primary"
     onChange={[Function]}
+    placeholder=""
     value="TextField snapshot"
   />
 </div>
@@ -101,6 +102,7 @@ exports[`<TextField /> Snapshots Primary text field with medium size to match sn
     className="c1"
     color="primary"
     onChange={[Function]}
+    placeholder=""
     value="TextField snapshot"
   />
 </div>
@@ -154,6 +156,7 @@ exports[`<TextField /> Snapshots Primary text field with small size to match sna
     className="c1"
     color="primary"
     onChange={[Function]}
+    placeholder=""
     value="TextField snapshot"
   />
 </div>
@@ -207,6 +210,7 @@ exports[`<TextField /> Snapshots Secondary text field with large size to match s
     className="c1"
     color="secondary"
     onChange={[Function]}
+    placeholder=""
     value="TextField snapshot"
   />
 </div>
@@ -260,6 +264,7 @@ exports[`<TextField /> Snapshots Secondary text field with medium size to match 
     className="c1"
     color="secondary"
     onChange={[Function]}
+    placeholder=""
     value="TextField snapshot"
   />
 </div>
@@ -313,6 +318,7 @@ exports[`<TextField /> Snapshots Secondary text field with small size to match s
     className="c1"
     color="secondary"
     onChange={[Function]}
+    placeholder=""
     value="TextField snapshot"
   />
 </div>

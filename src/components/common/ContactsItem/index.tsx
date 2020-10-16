@@ -4,8 +4,9 @@ import StyledDialogListItem, {
     BottomLineStyled,
 } from './style';
 import { Wrapper, Avatar, Typography, CheckMark, Circle } from 'components/UI';
+import { IContactsItemProps } from 'lib/types/components/common';
 
-const ContactItem: FC<NContactItem.IProps> = ({
+const ContactItem: FC<IContactsItemProps> = ({
     avatar_src,
     name,
     last_message,

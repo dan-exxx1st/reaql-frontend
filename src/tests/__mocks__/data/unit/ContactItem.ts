@@ -1,9 +1,10 @@
 import moment from 'moment';
 import WomanAvatar from 'assets/images/WomanAvatar.png';
+import { IContactsItemProps } from 'lib/types/components/common';
 
 const currentDate = moment('13:50', 'hh:mm').format('HH:mm');
 
-export const ContactItemDataWithoutAvatar: NContactItem.IProps = {
+export const ContactItemDataWithoutAvatar: IContactsItemProps = {
     id: '1',
     name: 'Jaydon Bator',
     avatar_src: '',
@@ -13,7 +14,7 @@ export const ContactItemDataWithoutAvatar: NContactItem.IProps = {
     sended_message_status: 'sended',
 };
 
-export const ContactItemDataWithAvatar: NContactItem.IProps = {
+export const ContactItemDataWithAvatar: IContactsItemProps = {
     id: '2',
     name: 'Desirae Schleifer',
     avatar_src: WomanAvatar,
@@ -23,7 +24,7 @@ export const ContactItemDataWithAvatar: NContactItem.IProps = {
     sended_message_status: 'received',
 };
 
-export const ContactItemDataWithReadMessaage: NContactItem.IProps = {
+export const ContactItemDataWithReadMessaage: IContactsItemProps = {
     id: '3',
     name: 'James Daniel',
     avatar_src: '',
@@ -33,7 +34,7 @@ export const ContactItemDataWithReadMessaage: NContactItem.IProps = {
     sended_message_status: 'readed',
 };
 
-export const ContactItemDataWithoutLastMessageDate: NContactItem.IProps = {
+export const ContactItemDataWithoutLastMessageDate: IContactsItemProps = {
     id: '3',
     name: 'James Daniel',
     avatar_src: '',
