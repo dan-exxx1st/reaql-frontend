@@ -11,31 +11,31 @@ import {
 
 describe('<ContactItem />', () => {
     describe('Snapshots', () => {
-        it('ContactItem with avatar and with sended message to match snapshot', () => {
+        it('ContactItem with avatar and with sended message', () => {
             const wrapper = mountWithTheme(
                 <ContactItem {...ContactItemDataWithAvatar} />
             );
             expect(wrapper).toMatchSnapshot();
         });
-        it('ContactItem without avatar and with recived message to match snapshot', () => {
+        it('ContactItem without avatar and with recived message', () => {
             const wrapper = mountWithTheme(
                 <ContactItem {...ContactItemDataWithoutAvatar} />
             );
             expect(wrapper).toMatchSnapshot();
         });
-        it('ContactItem without avatar and with readed message to match snapshot', () => {
+        it('ContactItem without avatar and with readed message', () => {
             const wrapper = mountWithTheme(
                 <ContactItem {...ContactItemDataWithReadMessaage} />
             );
             expect(wrapper).toMatchSnapshot();
         });
-        it('ContactItem without avatar and with readed message to match snapshot', () => {
+        it('ContactItem without avatar and with readed message', () => {
             const wrapper = mountWithTheme(
                 <ContactItem {...ContactItemDataWithAvatar} />
             );
             expect(wrapper).toMatchSnapshot();
         });
-        it('ContactItem without last_message to match snapshot', () => {
+        it('ContactItem without last_message', () => {
             const wrapper = mountWithTheme(
                 <ContactItem {...ContactItemDataWithoutLastMessageDate} />
             );

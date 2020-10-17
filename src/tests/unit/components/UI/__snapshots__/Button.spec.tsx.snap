@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> Snapshots Primary filled button to match snapshot without effects 1`] = `
+exports[`<Button /> Snapshots Primary filled button without effects 1`] = `
 .c1 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
@@ -34,12 +34,12 @@ exports[`<Button /> Snapshots Primary filled button to match snapshot without ef
   <p
     className="c1"
   >
-    To match snapshot button
+    button
   </p>
 </button>
 `;
 
-exports[`<Button /> Snapshots Primary outlined button to match snapshot without effects 1`] = `
+exports[`<Button /> Snapshots Primary outlined button without effects 1`] = `
 .c1 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
@@ -74,12 +74,12 @@ exports[`<Button /> Snapshots Primary outlined button to match snapshot without 
   <p
     className="c1"
   >
-    To match snapshot button
+    button
   </p>
 </button>
 `;
 
-exports[`<Button /> Snapshots Secondary filled button to match snapshot without effects 1`] = `
+exports[`<Button /> Snapshots Secondary filled button without effects 1`] = `
 .c1 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
@@ -113,12 +113,12 @@ exports[`<Button /> Snapshots Secondary filled button to match snapshot without 
   <p
     className="c1"
   >
-    To match snapshot button
+    button
   </p>
 </button>
 `;
 
-exports[`<Button /> Snapshots Secondary outlined button to match snapshot without effects 1`] = `
+exports[`<Button /> Snapshots Secondary outlined button without effects 1`] = `
 .c1 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
@@ -153,7 +153,7 @@ exports[`<Button /> Snapshots Secondary outlined button to match snapshot withou
   <p
     className="c1"
   >
-    To match snapshot button
+    button
   </p>
 </button>
 `;

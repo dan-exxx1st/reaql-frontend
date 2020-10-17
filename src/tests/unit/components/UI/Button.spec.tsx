@@ -5,10 +5,10 @@ import { mountWithTheme } from 'tests/helpers/withTheme';
 
 describe('<Button />', () => {
     describe('Snapshots', () => {
-        it('Primary filled button to match snapshot without effects', () => {
+        it('Primary filled button without effects', () => {
             const wrapper = mountWithTheme(
                 <Button variant="filled" color="primary">
-                    To match snapshot button
+                    button
                 </Button>
             );
             expect(wrapper).toMatchSnapshot();
@@ -16,10 +16,10 @@ describe('<Button />', () => {
             expect(wrapper).toHaveStyleRule('color', colorTheme.wc);
         });
 
-        it('Primary outlined button to match snapshot without effects', () => {
+        it('Primary outlined button without effects', () => {
             const wrapper = mountWithTheme(
                 <Button variant="outlined" color="primary">
-                    To match snapshot button
+                    button
                 </Button>
             );
             expect(wrapper).toMatchSnapshot();
@@ -31,10 +31,10 @@ describe('<Button />', () => {
             );
         });
 
-        it('Secondary filled button to match snapshot without effects', () => {
+        it('Secondary filled button without effects', () => {
             const wrapper = mountWithTheme(
                 <Button variant="filled" color="secondary">
-                    To match snapshot button
+                    button
                 </Button>
             );
             expect(wrapper).toMatchSnapshot();
@@ -43,18 +43,20 @@ describe('<Button />', () => {
             expect(wrapper).toHaveStyleRule('border', 'none');
         });
 
-        it('Secondary outlined button to match snapshot without effects', () => {
+        it('Secondary outlined button without effects', () => {
             const wrapper = mountWithTheme(
                 <Button variant="outlined" color="secondary">
-                    To match snapshot button
+                    button
                 </Button>
             );
-            expect(wrapper).toMatchSnapshot();
+
             expect(wrapper).toHaveStyleRule('background', 'none');
             expect(wrapper).toHaveStyleRule(
                 'border',
                 `1px solid ${colorTheme.sc}`
             );
+            expect(wrapper).toHaveStyleRule('color', colorTheme.dgc);
+            expect(wrapper).toMatchSnapshot();
         });
     });
 
@@ -70,7 +72,12 @@ describe('<Button />', () => {
     it('Button should use onClick event', () => {
         const mockFunction = jest.fn();
         const wrapper = mountWithTheme(
-            <Button variant="filled" color="primary" onClick={mockFunction}>
+            <Button
+                variant="filled"
+                color="primary"
+                onClick={mockFunction}
+                className="custom-class"
+            >
                 Should click
             </Button>
         );

@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Circle /> Snapshots Should render circle with icon 1`] = `
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+.c2 {
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c1 {
+  border-radius: 50%;
+  background: #E6E6E6;
+  color: #A5A5A5;
+}
+
+.c3 {
+  width: 17px;
+  height: 17px;
+}
+
+<div
+  className="c0 c1"
+  color="secondary"
+>
+  <img
+    alt="Icon component"
+    className="c2 c3"
+    src="SearchIcon.svg"
+  />
+</div>
+`;
+
+exports[`<Circle /> Snapshots Should render circle with primary color 1`] = `
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
+  border-radius: 50%;
+  color: #FAFAFA;
+  background: #00ADFF;
+}
+
+<div
+  className="c0 c1"
+  color="primary"
+>
+  No icon or text in Circle!
+</div>
+`;
+
+exports[`<Circle /> Snapshots Should render circle with secondary color 1`] = `
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
+  border-radius: 50%;
+  background: #E6E6E6;
+  color: #A5A5A5;
+}
+
+<div
+  className="c0 c1"
+  color="secondary"
+>
+  No icon or text in Circle!
+</div>
+`;

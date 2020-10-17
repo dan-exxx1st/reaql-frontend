@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { Typography, Icon } from '..';
-import { StyledCircle } from './style';
+import { Typography } from '..';
+import { StyledCircle, StyledIcon } from './style';
 import { ICircleProps } from 'lib/types/components/UI';
 
 const Circle: FC<ICircleProps> = ({ iconName, text, ...otherProps }) => {
@@ -12,7 +12,7 @@ const Circle: FC<ICircleProps> = ({ iconName, text, ...otherProps }) => {
                 {...otherProps}
             >
                 {iconName ? (
-                    <Icon iconName={iconName} width="17px" height="17px" />
+                    <StyledIcon iconName={iconName} />
                 ) : (
                     <Typography variant="caption2" {...otherProps}>
                         {text}

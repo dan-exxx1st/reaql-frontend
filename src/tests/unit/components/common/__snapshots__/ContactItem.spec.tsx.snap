@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended message to match snapshot 1`] = `
+exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended message 1`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -307,7 +307,7 @@ exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended messa
 </div>
 `;
 
-exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed message to match snapshot 1`] = `
+exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed message 1`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -546,18 +546,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
   height: auto;
 }
 
-.c14 {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  cursor: auto;
-  color: #FAFAFA;
-  background: #00ADFF;
-}
-
 .c6 {
-  width: 40px;
-  height: 40px;
   outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -565,6 +554,12 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
   user-select: none;
   padding: 0;
   margin: 0;
+}
+
+.c14 {
+  border-radius: 50%;
+  color: #FAFAFA;
+  background: #00ADFF;
 }
 
 .c5 {
@@ -660,7 +655,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
 </div>
 `;
 
-exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed message to match snapshot 2`] = `
+exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed message 2`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -967,7 +962,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
 </div>
 `;
 
-exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived message to match snapshot 1`] = `
+exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived message 1`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1206,18 +1201,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived m
   height: auto;
 }
 
-.c14 {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  cursor: auto;
-  color: #FAFAFA;
-  background: #00ADFF;
-}
-
 .c6 {
-  width: 40px;
-  height: 40px;
   outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1225,6 +1209,12 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived m
   user-select: none;
   padding: 0;
   margin: 0;
+}
+
+.c14 {
+  border-radius: 50%;
+  color: #FAFAFA;
+  background: #00ADFF;
 }
 
 .c5 {
@@ -1320,7 +1310,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived m
 </div>
 `;
 
-exports[`<ContactItem /> Snapshots ContactItem without last_message to match snapshot 1`] = `
+exports[`<ContactItem /> Snapshots ContactItem without last_message 1`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1559,18 +1549,7 @@ exports[`<ContactItem /> Snapshots ContactItem without last_message to match sna
   height: auto;
 }
 
-.c14 {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  cursor: auto;
-  color: #FAFAFA;
-  background: #00ADFF;
-}
-
 .c6 {
-  width: 40px;
-  height: 40px;
   outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1578,6 +1557,12 @@ exports[`<ContactItem /> Snapshots ContactItem without last_message to match sna
   user-select: none;
   padding: 0;
   margin: 0;
+}
+
+.c14 {
+  border-radius: 50%;
+  color: #FAFAFA;
+  background: #00ADFF;
 }
 
 .c5 {

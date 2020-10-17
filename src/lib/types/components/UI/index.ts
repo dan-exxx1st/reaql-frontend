@@ -34,8 +34,6 @@ export interface ICircleProps {
 
 export interface IIconProps {
     iconName: IconName;
-    width?: string;
-    height?: string;
     className?: string;
 }
 
@@ -47,7 +45,7 @@ export interface ISkeletonLoaderProps {
 }
 
 export interface ITextFieldProps {
-    onChange?: (text: string) => void;
+    onChange?: any;
     value?: string;
     className?: string;
     fieldSize: 'small' | 'medium' | 'large';

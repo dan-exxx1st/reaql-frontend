@@ -3,9 +3,9 @@ import { Typography } from 'components/UI';
 import { mountWithTheme, shallowWithTheme } from 'tests/helpers/withTheme';
 
 describe('<Typography />', () => {
-    it('Typography variant body-2 to match snapshot', () => {
+    it('Typography variant body-2', () => {
         const wrapper = mountWithTheme(
-            <Typography variant="body2">Body 2 to match snapshot</Typography>
+            <Typography variant="body2">Body 2</Typography>
         );
         expect(wrapper).toMatchSnapshot();
     });

@@ -2,12 +2,10 @@ import styled from 'styled-components';
 import { ICircleProps } from 'lib/types/components/UI';
 
 import Wrapper from '../Wrapper';
+import Icon from '../Icon';
 
 export const StyledCircle = styled(Wrapper)<ICircleProps>`
     border-radius: 50%;
-    width: ${({ width }) => (width ? width : '20px')};
-    height: ${({ height }) => (height ? height : '20px')};
-    cursor: ${({ cursor }) => (cursor ? cursor : 'auto')};
     ${({ color, theme }) => {
         switch (color) {
             case 'primary': {
@@ -24,4 +22,9 @@ export const StyledCircle = styled(Wrapper)<ICircleProps>`
             }
         }
     }};
+`;
+
+export const StyledIcon = styled(Icon)`
+    width: 17px;
+    height: 17px;
 `;

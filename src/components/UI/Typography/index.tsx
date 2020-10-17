@@ -17,7 +17,7 @@ const DefaultVariantMapping: KeyStringType = {
 };
 
 const Typography: FC<ITypographyProps> = ({
-    className = '',
+    className,
     children,
     component,
     variant,

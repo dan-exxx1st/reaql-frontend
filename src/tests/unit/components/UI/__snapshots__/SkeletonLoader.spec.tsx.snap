@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SkeletonLoader /> Snapshots Should render correctly for avatar with custom settings 1`] = `
+.c0 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #eee;
+  background-image: linear-gradient( to right, #eee 0%, #ccc 40%, #ddd 40%, #eee 100% );
+  background-repeat: no-repeat;
+  -webkit-animation: gdZBtx 1s linear infinite forwards;
+  animation: gdZBtx 1s linear infinite forwards;
+}
+
+<div
+  className="c0"
+  height="30px"
+  width="30px"
+/>
+`;
+
+exports[`<SkeletonLoader /> Snapshots Should render correctly for avatar with default settings 1`] = `
+.c0 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #eee;
+  background-image: linear-gradient( to right, #eee 0%, #ccc 40%, #ddd 40%, #eee 100% );
+  background-repeat: no-repeat;
+  -webkit-animation: gdZBtx 1s linear infinite forwards;
+  animation: gdZBtx 1s linear infinite forwards;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`<SkeletonLoader /> Snapshots Should render correctly for block with default settings 1`] = `
+.c0 {
+  width: 100px;
+  height: 20px;
+  background: #eee;
+  background-image: linear-gradient( to right, #eee 0%, #ccc 40%, #ddd 40%, #eee 100% );
+  background-repeat: no-repeat;
+  -webkit-animation: gdZBtx 1s linear infinite forwards;
+  animation: gdZBtx 1s linear infinite forwards;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`<SkeletonLoader /> Snapshots Should render correctly for block with default settings 2`] = `
+.c0 {
+  width: 30px;
+  height: 30px;
+  background: #eee;
+  background-image: linear-gradient( to right, #eee 0%, #ccc 40%, #ddd 40%, #eee 100% );
+  background-repeat: no-repeat;
+  -webkit-animation: gdZBtx 1s linear infinite forwards;
+  animation: gdZBtx 1s linear infinite forwards;
+}
+
+<div
+  className="c0"
+  height="30px"
+  width="30px"
+/>
+`;

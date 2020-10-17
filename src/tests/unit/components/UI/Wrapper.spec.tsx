@@ -20,6 +20,7 @@ describe('<Wrapper />', () => {
                 alignContent="center"
                 alignItems="center"
                 margin="5px"
+                padding="15px"
             >
                 Correctly wraper
             </Wrapper>

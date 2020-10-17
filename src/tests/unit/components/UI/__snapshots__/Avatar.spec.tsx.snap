@@ -1,77 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Avatar /> Snapshots Avatar with a image to match snapshot 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "dc": "#252525",
-      "dgc": "#A5A5A5",
-      "dsc": "#555555",
-      "ff": "Roboto",
-      "fontSizes": Object {
-        "body1": "16px",
-        "body2": "14px;",
-        "caption1": "12px",
-        "caption2": "12px",
-        "h1": "96px",
-        "h2": "60px",
-        "h3": "48px",
-        "h4": "34px",
-        "h5": "24px",
-        "h6": "20px",
-      },
-      "fontWeights": Object {
-        "body1": "normal",
-        "body2": "normal",
-        "caption1": "normal",
-        "caption2": "bold",
-        "h1": "300",
-        "h2": "300",
-        "h3": "normal",
-        "h4": "normal",
-        "h5": "normal",
-        "h6": "500",
-      },
-      "gc": "#E5E5E5",
-      "letterSpacing": Object {
-        "body1": "0.5px",
-        "body2": "0.25px",
-        "caption1": "0.4px",
-        "caption2": "0.4px",
-        "h1": "-1.5px",
-        "h2": "-0.5px",
-        "h3": "0.25px",
-        "h6": "0.15px",
-      },
-      "lineHeight": Object {
-        "body1": "19px",
-        "caption1": "14px",
-        "caption2": "14px",
-        "h1": "112px",
-        "h2": "70px",
-        "h3": "56px",
-        "h4": "40px",
-        "h5": "28px",
-        "h6": "23px",
-      },
-      "pc": "#00ADFF",
-      "plc": "#A4E2FF",
-      "sc": "#E6E6E6",
-      "wc": "#FAFAFA",
-    }
-  }
->
-  <Styled(Avatar)
-    alt="Avatar without image"
-    src="https://yandex.ru/images/search?text=foto&pos=3&img_url=https%3A%2F%2Fget.wallhere.com%2Fphoto%2F2700x1800-px-building-castle-forest-Hohenzollern-landscape-1077207.jpg&rpt=simage"
-  />
-</ThemeProvider>
-`;
-
-exports[`<Avatar /> Snapshots Avatar without a image to match snapshot 1`] = `
+exports[`<Avatar /> Snapshots Avatar with a image 1`] = `
 .c0 {
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+  background: #eee;
+  background-image: linear-gradient( to right, #eee 0%, #ccc 40%, #ddd 40%, #eee 100% );
+  background-repeat: no-repeat;
+  -webkit-animation: gdZBtx 1s linear infinite forwards;
+  animation: gdZBtx 1s linear infinite forwards;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+<div
+  className="c0 c1"
+/>
+`;
+
+exports[`<Avatar /> Snapshots Avatar without a image 1`] = `
+.c0 {
   outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
