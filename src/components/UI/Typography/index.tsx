@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import StyledTypography from './style';
 import { KeyStringType } from 'lib/types';
+import { ITypographyProps } from 'lib/types/components/UI';
 
 const DefaultVariantMapping: KeyStringType = {
     h1: 'h1',
@@ -15,7 +16,7 @@ const DefaultVariantMapping: KeyStringType = {
     caption2: 'p',
 };
 
-const Typography: FC<NTypography.IProps> = ({
+const Typography: FC<ITypographyProps> = ({
     className = '',
     children,
     component,

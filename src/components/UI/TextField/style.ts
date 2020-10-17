@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { ITextFieldProps } from 'lib/types/components/UI';
 
 export const StyledWrapper = styled.div<any>`
     position: ${({ withIcon }) => (withIcon ? 'relative' : 'static')};
 `;
 
-export const StyledTextField = styled.input<any & NTextField.IProps>`
+export const StyledTextField = styled.input<ITextFieldProps>`
     word-break: break-all;
     user-select: none;
     font-family: 'Roboto', sans-serif;

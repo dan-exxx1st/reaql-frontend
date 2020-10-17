@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 export const StyledDialogHeader = styled(Wrapper)`
     width: 100%;
-    max-width: 976px;
-    padding: 30px 20px;
+    max-width: calc(976px - 40px);
 `;
 
 export const StyledAvatar = styled(Avatar)`

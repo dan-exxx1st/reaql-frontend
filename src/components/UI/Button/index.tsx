@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import Typography from '../Typography';
 import { StyledButton } from './style';
+import { IButtonProps } from 'lib/types/components/UI';
 
-const Button: FC<NButton.IProps> = ({
+const Button: FC<IButtonProps> = ({
     className = '',
     children,
     onClick,

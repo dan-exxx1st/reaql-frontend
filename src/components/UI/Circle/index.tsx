@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import { Typography, Icon } from '..';
 import { StyledCircle } from './style';
+import { ICircleProps } from 'lib/types/components/UI';
 
-const Circle: FC<NCircle.IProps> = ({ iconName, text, ...otherProps }) => {
+const Circle: FC<ICircleProps> = ({ iconName, text, ...otherProps }) => {
     if (text || iconName) {
         return (
             <StyledCircle

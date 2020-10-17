@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { IAvatarProps } from 'lib/types/components/UI';
 
 export const StyledImage = styled.img`
     width: 40px;
@@ -6,9 +7,7 @@ export const StyledImage = styled.img`
     border-radius: 50%;
 `;
 
-export const StyledAvatar = (Avatar: React.FC<NAvatar.IProps>) => styled(
-    Avatar
-)<NAvatar.IProps>`
+export const StyledAvatar = (Avatar: React.FC<IAvatarProps>) => styled(Avatar)`
     display: flex;
 
     width: 40px;

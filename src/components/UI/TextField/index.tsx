@@ -1,12 +1,13 @@
 import React, { ChangeEvent, FC } from 'react';
 import { Icon } from '..';
 import { StyledTextField, StyledWrapper } from './style';
+import { ITextFieldProps } from 'lib/types/components/UI';
 
-const TextField: FC<NTextField.IProps> = ({
+const TextField: FC<ITextFieldProps> = ({
     onChange,
     value,
     className = '',
-    icon = '',
+    icon,
     placeholder = '',
     ...otherProps
 }) => {

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { ICircleProps } from 'lib/types/components/UI';
 
 import Wrapper from '../Wrapper';
 
-export const StyledCircle = styled(Wrapper)<NCircle.IProps>`
+export const StyledCircle = styled(Wrapper)<ICircleProps>`
     border-radius: 50%;
     width: ${({ width }) => (width ? width : '20px')};
     height: ${({ height }) => (height ? height : '20px')};
