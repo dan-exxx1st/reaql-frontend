@@ -4,8 +4,9 @@ import StyledDialogListItem, {
     BottomLineStyled,
 } from './style';
 import { Wrapper, Avatar, Typography, CheckMark, Circle } from 'components/UI';
+import { IContactsItemProps } from 'lib/types/components/common';
 
-const DialogListItem: FC<NDialogListItem.IProps> = ({
+const ContactItem: FC<IContactsItemProps> = ({
     avatar_src,
     name,
     last_message,
@@ -85,7 +86,7 @@ const DialogListItem: FC<NDialogListItem.IProps> = ({
                             <Wrapper>
                                 <CheckMark
                                     isDouble={isDoubleCheckMark}
-                                    isActive={isActiveCheckMark}
+                                    isChecked={isActiveCheckMark}
                                 />
                             </Wrapper>
                         )}
@@ -98,4 +99,4 @@ const DialogListItem: FC<NDialogListItem.IProps> = ({
     );
 };
 
-export default DialogListItem;
+export default ContactItem;

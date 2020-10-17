@@ -1,12 +1,9 @@
 import * as React from 'react';
+import { storiesOf } from '@storybook/react';
 import { Typography, Wrapper } from 'components/UI';
 
-export default {
-    title: 'UI/Typography',
-};
-
-export const Titles = () => {
-    return (
+storiesOf('UI/ Typography', module)
+    .add('titles', () => (
         <Wrapper flexDirection="column">
             <Wrapper margin="20px">
                 <Typography variant="h1">H1 Title</Typography>
@@ -27,11 +24,8 @@ export const Titles = () => {
                 <Typography variant="h6">H6 Title</Typography>
             </Wrapper>
         </Wrapper>
-    );
-};
-
-export const Other = () => {
-    return (
+    ))
+    .add('text', () => (
         <Wrapper flexDirection="column">
             <Wrapper margin="20px">
                 <Typography variant="body1">Body 1</Typography>
@@ -46,5 +40,4 @@ export const Other = () => {
                 <Typography variant="caption2">Caption 2</Typography>
             </Wrapper>
         </Wrapper>
-    );
-};
+    ));

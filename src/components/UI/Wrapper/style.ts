@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { IWrapperProps } from 'lib/types/components/UI';
 
-export const StyledWrapper = styled.div<NWrapper.IProps>`
+export const StyledWrapper = styled.div<IWrapperProps>`
     padding: ${({ padding }) => (padding ? padding : 0)};
     margin: ${({ margin }) => (margin ? margin : 0)};
     display: flex;

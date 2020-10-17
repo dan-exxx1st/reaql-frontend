@@ -1,8 +1,11 @@
 import styled from 'styled-components';
+import { ITextFieldProps } from 'lib/types/components/UI';
 
-export const StyledTextField = (
-    TextField: React.FC<NTextField.IProps>
-) => styled(TextField)`
+export const StyledWrapper = styled.div<any>`
+    position: ${({ withIcon }) => (withIcon ? 'relative' : 'static')};
+`;
+
+export const StyledTextField = styled.input<ITextFieldProps>`
     word-break: break-all;
     user-select: none;
     font-family: 'Roboto', sans-serif;
@@ -16,13 +19,15 @@ export const StyledTextField = (
 
     cursor: text;
 
-    ${({ fieldSize, width, icon }) => {
+    ${({ fieldSize, width, icon, height }) => {
         let fontSize,
             fontWeight,
             lineHeight,
             letterSpacing,
             customWidth: string;
-        const customRightPadding = icon && '34px';
+
+        const customRightPadding = icon ? '40px' : '0',
+            customHeight = height ? height : 'auto';
 
         switch (fieldSize) {
             case 'small': {
@@ -53,12 +58,14 @@ export const StyledTextField = (
         }
 
         customWidth = width ? width : customWidth;
+
         return `
         font-size:${fontSize}; 
         font-weight:${fontWeight}; 
         line-height:${lineHeight}; 
         letter-spacing:${letterSpacing}; 
         width:${customWidth};
+        height:${customHeight};
         padding-right:${customRightPadding};
         `;
     }};
@@ -66,8 +73,9 @@ export const StyledTextField = (
     & ~ img {
         width: 20px;
         height: 20px;
-        position: relative;
-        top: 12px;
-        right: 32px;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
     }
 `;

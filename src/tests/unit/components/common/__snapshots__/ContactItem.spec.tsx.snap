@@ -1,7 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended message to match snapshot 1`] = `
-.c8 {
+exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended message to match snapshot 1`] = `
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.c9 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -14,7 +23,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
   margin: 0;
 }
 
-.c9 {
+.c10 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -27,7 +36,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
   margin: 0;
 }
 
-.c11 {
+.c12 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -143,7 +152,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
   height: auto;
 }
 
-.c7 {
+.c8 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -168,7 +177,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
   height: 40px;
 }
 
-.c10 {
+.c11 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -204,7 +213,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
   animation: gdZBtx 1s linear infinite forwards;
 }
 
-.c12 {
+.c13 {
   fill: #A5A5A5;
   width: 20px;
   height: 13px;
@@ -214,7 +223,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
   margin-right: 20px;
 }
 
-.c13 {
+.c14 {
   width: 100%;
   height: 1px;
   background: #E5E5E5;
@@ -223,7 +232,12 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
 
 .c1 {
   width: 420px;
-  margin-top: 15px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.c1:hover {
+  background: rgba(164,226,255,0.1);
 }
 
 <div
@@ -242,31 +256,31 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
         className="c4 c5"
       >
         <div
-          className="c6"
+          className="c6 c7"
         />
       </div>
       <div
-        className="c7"
+        className="c8"
         height="40px"
       >
         <p
-          className="c8"
+          className="c9"
         >
           Desirae Schleifer
         </p>
         <p
-          className="c9"
+          className="c10"
         >
           Hi. I\`m have avatar.
         </p>
       </div>
     </div>
     <div
-      className="c10"
+      className="c11"
       height="40px"
     >
       <p
-        className="c11"
+        className="c12"
       >
         13:50
       </p>
@@ -277,7 +291,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
           className="c4"
         >
           <svg
-            className="c12"
+            className="c13"
           >
             <path
               d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
@@ -288,13 +302,22 @@ exports[`<DialogListItem /> Snapshots DialogListItem with avatar and with sended
     </div>
   </div>
   <div
-    className="c13"
+    className="c14"
   />
 </div>
 `;
 
-exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with readed message to match snapshot 1`] = `
-.c8 {
+exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed message to match snapshot 1`] = `
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.c9 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -307,7 +330,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   margin: 0;
 }
 
-.c9 {
+.c10 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -320,7 +343,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   margin: 0;
 }
 
-.c11 {
+.c12 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -333,7 +356,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   margin: 0;
 }
 
-.c14 {
+.c15 {
   font-family: 'Roboto',sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -448,7 +471,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   height: auto;
 }
 
-.c7 {
+.c8 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -473,7 +496,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   height: 40px;
 }
 
-.c10 {
+.c11 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -498,7 +521,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   height: 40px;
 }
 
-.c12 {
+.c13 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -523,10 +546,11 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   height: auto;
 }
 
-.c13 {
+.c14 {
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  cursor: auto;
   color: #FAFAFA;
   background: #00ADFF;
 }
@@ -547,7 +571,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   margin-right: 20px;
 }
 
-.c15 {
+.c16 {
   width: 100%;
   height: 1px;
   background: #E5E5E5;
@@ -556,7 +580,12 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
 
 .c1 {
   width: 420px;
-  margin-top: 15px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.c1:hover {
+  background: rgba(164,226,255,0.1);
 }
 
 <div
@@ -576,32 +605,32 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
       >
         <img
           alt="Icon component"
-          className="c6"
+          className="c6 c7"
           src="Person.svg"
         />
       </div>
       <div
-        className="c7"
+        className="c8"
         height="40px"
       >
         <p
-          className="c8"
+          className="c9"
         >
           James Daniel
         </p>
         <p
-          className="c9"
+          className="c10"
         >
           :D
         </p>
       </div>
     </div>
     <div
-      className="c10"
+      className="c11"
       height="40px"
     >
       <p
-        className="c11"
+        className="c12"
       >
         13:50
       </p>
@@ -612,11 +641,11 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
           className="c4"
         >
           <div
-            className="c12 c13"
+            className="c13 c14"
             color="primary"
           >
             <p
-              className="c14"
+              className="c15"
             >
               9+
             </p>
@@ -626,13 +655,22 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
     </div>
   </div>
   <div
-    className="c15"
+    className="c16"
   />
 </div>
 `;
 
-exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with readed message to match snapshot 2`] = `
-.c8 {
+exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed message to match snapshot 2`] = `
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.c9 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -645,7 +683,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   margin: 0;
 }
 
-.c9 {
+.c10 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -658,7 +696,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   margin: 0;
 }
 
-.c11 {
+.c12 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -774,7 +812,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   height: auto;
 }
 
-.c7 {
+.c8 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -799,7 +837,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   height: 40px;
 }
 
-.c10 {
+.c11 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -835,7 +873,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   animation: gdZBtx 1s linear infinite forwards;
 }
 
-.c12 {
+.c13 {
   fill: #A5A5A5;
   width: 20px;
   height: 13px;
@@ -845,7 +883,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
   margin-right: 20px;
 }
 
-.c13 {
+.c14 {
   width: 100%;
   height: 1px;
   background: #E5E5E5;
@@ -854,7 +892,12 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
 
 .c1 {
   width: 420px;
-  margin-top: 15px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.c1:hover {
+  background: rgba(164,226,255,0.1);
 }
 
 <div
@@ -873,31 +916,31 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
         className="c4 c5"
       >
         <div
-          className="c6"
+          className="c6 c7"
         />
       </div>
       <div
-        className="c7"
+        className="c8"
         height="40px"
       >
         <p
-          className="c8"
+          className="c9"
         >
           Desirae Schleifer
         </p>
         <p
-          className="c9"
+          className="c10"
         >
           Hi. I\`m have avatar.
         </p>
       </div>
     </div>
     <div
-      className="c10"
+      className="c11"
       height="40px"
     >
       <p
-        className="c11"
+        className="c12"
       >
         13:50
       </p>
@@ -908,7 +951,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
           className="c4"
         >
           <svg
-            className="c12"
+            className="c13"
           >
             <path
               d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
@@ -919,13 +962,22 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rea
     </div>
   </div>
   <div
-    className="c13"
+    className="c14"
   />
 </div>
 `;
 
-exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with recived message to match snapshot 1`] = `
-.c8 {
+exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived message to match snapshot 1`] = `
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.c9 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -938,7 +990,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   margin: 0;
 }
 
-.c9 {
+.c10 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -951,7 +1003,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   margin: 0;
 }
 
-.c11 {
+.c12 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -964,7 +1016,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   margin: 0;
 }
 
-.c14 {
+.c15 {
   font-family: 'Roboto',sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -1079,7 +1131,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   height: auto;
 }
 
-.c7 {
+.c8 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -1104,7 +1156,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   height: 40px;
 }
 
-.c10 {
+.c11 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -1129,7 +1181,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   height: 40px;
 }
 
-.c12 {
+.c13 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -1154,10 +1206,11 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   height: auto;
 }
 
-.c13 {
+.c14 {
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  cursor: auto;
   color: #FAFAFA;
   background: #00ADFF;
 }
@@ -1178,7 +1231,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
   margin-right: 20px;
 }
 
-.c15 {
+.c16 {
   width: 100%;
   height: 1px;
   background: #E5E5E5;
@@ -1187,7 +1240,12 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
 
 .c1 {
   width: 420px;
-  margin-top: 15px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.c1:hover {
+  background: rgba(164,226,255,0.1);
 }
 
 <div
@@ -1207,32 +1265,32 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
       >
         <img
           alt="Icon component"
-          className="c6"
+          className="c6 c7"
           src="Person.svg"
         />
       </div>
       <div
-        className="c7"
+        className="c8"
         height="40px"
       >
         <p
-          className="c8"
+          className="c9"
         >
           Jaydon Bator
         </p>
         <p
-          className="c9"
+          className="c10"
         >
           Hi. It appears that i lose my avatar :(
         </p>
       </div>
     </div>
     <div
-      className="c10"
+      className="c11"
       height="40px"
     >
       <p
-        className="c11"
+        className="c12"
       >
         13:50
       </p>
@@ -1243,11 +1301,11 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
           className="c4"
         >
           <div
-            className="c12 c13"
+            className="c13 c14"
             color="primary"
           >
             <p
-              className="c14"
+              className="c15"
             >
               3
             </p>
@@ -1257,13 +1315,22 @@ exports[`<DialogListItem /> Snapshots DialogListItem without avatar and with rec
     </div>
   </div>
   <div
-    className="c15"
+    className="c16"
   />
 </div>
 `;
 
-exports[`<DialogListItem /> Snapshots DialogListItem without last_message to match snapshot 1`] = `
-.c8 {
+exports[`<ContactItem /> Snapshots ContactItem without last_message to match snapshot 1`] = `
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.c9 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -1276,7 +1343,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   margin: 0;
 }
 
-.c9 {
+.c10 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -1289,7 +1356,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   margin: 0;
 }
 
-.c11 {
+.c12 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -1302,7 +1369,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   margin: 0;
 }
 
-.c14 {
+.c15 {
   font-family: 'Roboto',sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -1417,7 +1484,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   height: auto;
 }
 
-.c7 {
+.c8 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -1442,7 +1509,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   height: 40px;
 }
 
-.c10 {
+.c11 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -1467,7 +1534,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   height: 40px;
 }
 
-.c12 {
+.c13 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -1492,10 +1559,11 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   height: auto;
 }
 
-.c13 {
+.c14 {
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  cursor: auto;
   color: #FAFAFA;
   background: #00ADFF;
 }
@@ -1516,7 +1584,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
   margin-right: 20px;
 }
 
-.c15 {
+.c16 {
   width: 100%;
   height: 1px;
   background: #E5E5E5;
@@ -1525,7 +1593,12 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
 
 .c1 {
   width: 420px;
-  margin-top: 15px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.c1:hover {
+  background: rgba(164,226,255,0.1);
 }
 
 <div
@@ -1545,30 +1618,30 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
       >
         <img
           alt="Icon component"
-          className="c6"
+          className="c6 c7"
           src="Person.svg"
         />
       </div>
       <div
-        className="c7"
+        className="c8"
         height="40px"
       >
         <p
-          className="c8"
+          className="c9"
         >
           James Daniel
         </p>
         <p
-          className="c9"
+          className="c10"
         />
       </div>
     </div>
     <div
-      className="c10"
+      className="c11"
       height="40px"
     >
       <p
-        className="c11"
+        className="c12"
       />
       <div
         className="c4"
@@ -1577,11 +1650,11 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
           className="c4"
         >
           <div
-            className="c12 c13"
+            className="c13 c14"
             color="primary"
           >
             <p
-              className="c14"
+              className="c15"
             >
               9+
             </p>
@@ -1591,7 +1664,7 @@ exports[`<DialogListItem /> Snapshots DialogListItem without last_message to mat
     </div>
   </div>
   <div
-    className="c15"
+    className="c16"
   />
 </div>
 `;

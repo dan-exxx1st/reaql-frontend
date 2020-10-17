@@ -1,8 +1,7 @@
 import React from 'react';
+import { storiesOf } from '@storybook/react';
 import { SkeletonLoader } from 'components/UI';
 
-export default {
-    title: 'UI/Skeleton loader',
-};
-
-export const AvatarLoader = () => <SkeletonLoader variant="avatar" />;
+storiesOf('UI/ Skeleton loader', module)
+    .add('avatar', () => <SkeletonLoader variant="avatar" />)
+    .add('block', () => <SkeletonLoader variant="block" />);

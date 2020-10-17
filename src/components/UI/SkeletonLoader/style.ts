@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 import { skeletonLoaderAvatarKeyFrames } from 'config/styled/animations';
+import { ISkeletonLoaderProps } from 'lib/types/components/UI';
 
-export const StyledSkeletonLoader = styled.div<NSkeletonLoader.IProps>`
+export const StyledSkeletonLoader = styled.div<ISkeletonLoaderProps>`
     ${({ variant, width, height }) => {
         switch (variant) {
             case 'avatar': {

@@ -1,31 +1,35 @@
-import React, { FC, ChangeEvent } from 'react';
+import React, { ChangeEvent, FC } from 'react';
 import { Icon } from '..';
-import { StyledTextField } from './style';
+import { StyledTextField, StyledWrapper } from './style';
+import { ITextFieldProps } from 'lib/types/components/UI';
 
-const TextField: FC<NTextField.IProps> = ({
+const TextField: FC<ITextFieldProps> = ({
     onChange,
     value,
     className = '',
-    icon = '',
+    icon,
+    placeholder = '',
+    ...otherProps
 }) => {
     const onChangeText = (event: ChangeEvent<HTMLInputElement>) => {
         if (onChange) {
-            console.log(event.target.value);
             const value = event.target.value;
             onChange(value);
         }
     };
 
     return (
-        <>
-            <input
-                className={className}
+        <StyledWrapper className={className} withIcon={icon}>
+            <StyledTextField
                 onChange={onChangeText}
                 value={value}
+                icon={icon}
+                placeholder={placeholder}
+                {...otherProps}
             />
             {icon && <Icon iconName={icon} />}
-        </>
+        </StyledWrapper>
     );
 };
 
-export default StyledTextField(TextField);
+export default TextField;

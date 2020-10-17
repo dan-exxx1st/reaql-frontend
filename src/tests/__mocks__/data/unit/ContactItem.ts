@@ -1,9 +1,10 @@
 import moment from 'moment';
 import WomanAvatar from 'assets/images/WomanAvatar.png';
+import { IContactsItemProps } from 'lib/types/components/common';
 
 const currentDate = moment('13:50', 'hh:mm').format('HH:mm');
 
-export const DialogListDataWithoutAvatar: NDialogListItem.IProps = {
+export const ContactItemDataWithoutAvatar: IContactsItemProps = {
     id: '1',
     name: 'Jaydon Bator',
     avatar_src: '',
@@ -13,7 +14,7 @@ export const DialogListDataWithoutAvatar: NDialogListItem.IProps = {
     sended_message_status: 'sended',
 };
 
-export const DialogListDataWithAvatar: NDialogListItem.IProps = {
+export const ContactItemDataWithAvatar: IContactsItemProps = {
     id: '2',
     name: 'Desirae Schleifer',
     avatar_src: WomanAvatar,
@@ -23,7 +24,7 @@ export const DialogListDataWithAvatar: NDialogListItem.IProps = {
     sended_message_status: 'received',
 };
 
-export const DialogListDataWithReadMessaage: NDialogListItem.IProps = {
+export const ContactItemDataWithReadMessaage: IContactsItemProps = {
     id: '3',
     name: 'James Daniel',
     avatar_src: '',
@@ -33,7 +34,7 @@ export const DialogListDataWithReadMessaage: NDialogListItem.IProps = {
     sended_message_status: 'readed',
 };
 
-export const DialogListDataWithoutLastMessageDate: NDialogListItem.IProps = {
+export const ContactItemDataWithoutLastMessageDate: IContactsItemProps = {
     id: '3',
     name: 'James Daniel',
     avatar_src: '',

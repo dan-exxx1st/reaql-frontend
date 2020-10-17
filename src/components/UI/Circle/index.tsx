@@ -1,20 +1,23 @@
 import React, { FC } from 'react';
 import { Typography, Icon } from '..';
 import { StyledCircle } from './style';
+import { ICircleProps } from 'lib/types/components/UI';
 
-const Circle: FC<NCircle.IProps> = ({ iconName, text, ...otherProps }) => {
-    if (iconName) {
-        return <Icon iconName={iconName} />;
-    } else if (text) {
+const Circle: FC<ICircleProps> = ({ iconName, text, ...otherProps }) => {
+    if (text || iconName) {
         return (
             <StyledCircle
                 justifyContent="center"
                 alignItems="center"
                 {...otherProps}
             >
-                <Typography variant="caption2" {...otherProps}>
-                    {text}
-                </Typography>
+                {iconName ? (
+                    <Icon iconName={iconName} width="17px" height="17px" />
+                ) : (
+                    <Typography variant="caption2" {...otherProps}>
+                        {text}
+                    </Typography>
+                )}
             </StyledCircle>
         );
     }

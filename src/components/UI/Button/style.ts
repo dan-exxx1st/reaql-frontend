@@ -1,16 +1,16 @@
 import styled from 'styled-components';
+import { IButtonProps } from 'lib/types/components/UI';
 
-export const StyledButton = (Button: React.FC<NButton.IProps>) => styled(
-    Button
-)`
+export const StyledButton = (Button: React.FC<IButtonProps>) => styled(Button)`
     border-radius: 5px;
     outline: none;
     border: none;
     font-family: 'Roboto', sans-serif;
     padding: 7px 26px;
     cursor: pointer;
+    max-height: 50px;
 
-    ${({ color, theme, variant }: NButton.IProps) => {
+    ${({ color, theme, variant }: IButtonProps) => {
         if (color === 'primary') {
             const primaryColor = theme.pc;
             if (variant === 'filled') {
@@ -47,7 +47,7 @@ export const StyledButton = (Button: React.FC<NButton.IProps>) => styled(
     }};
 
     &:hover {
-        ${({ color }: NButton.IProps) => {
+        ${({ color }: IButtonProps) => {
             if (color === 'primary') {
                 return {
                     boxShadow: '1px 1px 10px rgb(10, 10, 10, 0.25)',
