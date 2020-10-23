@@ -1,5 +1,5 @@
-import Theme from 'config/styled';
 import { MouseEventHandler } from 'react';
+import Theme from 'config/styled';
 import { ColorType, IconName } from 'lib/types';
 import { TypographyVariantType, TypographyComponentType } from 'lib/types/ui';
 
@@ -29,6 +29,7 @@ export interface ICircleProps {
     width?: string;
     height?: string;
     cursor?: string;
+    className?: string;
     onClick?: () => void;
 }
 

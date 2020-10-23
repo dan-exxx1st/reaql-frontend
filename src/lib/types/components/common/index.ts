@@ -6,6 +6,8 @@ export interface IUserHeaderProps {
 
 export interface IMessageSearchProps {
     onClick?: () => void;
+    value?: string;
+    onChange?: (value: string) => void;
 }
 
 export interface IMessageItemProps {

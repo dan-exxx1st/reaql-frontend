@@ -3,12 +3,18 @@ import { Typography } from '..';
 import { StyledCircle, StyledIcon } from './style';
 import { ICircleProps } from 'lib/types/components/UI';
 
-const Circle: FC<ICircleProps> = ({ iconName, text, ...otherProps }) => {
+const Circle: FC<ICircleProps> = ({
+    iconName,
+    text,
+    className,
+    ...otherProps
+}) => {
     if (text || iconName) {
         return (
             <StyledCircle
                 justifyContent="center"
                 alignItems="center"
+                className={className}
                 {...otherProps}
             >
                 {iconName ? (
@@ -23,7 +29,9 @@ const Circle: FC<ICircleProps> = ({ iconName, text, ...otherProps }) => {
     }
 
     return (
-        <StyledCircle {...otherProps}>No icon or text in Circle!</StyledCircle>
+        <StyledCircle className={className} {...otherProps}>
+            No icon or text in Circle!
+        </StyledCircle>
     );
 };
 

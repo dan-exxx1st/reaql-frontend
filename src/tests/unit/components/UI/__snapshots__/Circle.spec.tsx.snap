@@ -37,7 +37,21 @@ exports[`<Circle /> Snapshots Should render circle with icon 1`] = `
 }
 
 .c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-radius: 50%;
+  width: 20px;
+  height: 20px;
   background: #E6E6E6;
   color: #A5A5A5;
 }
@@ -86,7 +100,21 @@ exports[`<Circle /> Snapshots Should render circle with primary color 1`] = `
 }
 
 .c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-radius: 50%;
+  width: 20px;
+  height: 20px;
   color: #FAFAFA;
   background: #00ADFF;
 }
@@ -126,7 +154,21 @@ exports[`<Circle /> Snapshots Should render circle with secondary color 1`] = `
 }
 
 .c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-radius: 50%;
+  width: 20px;
+  height: 20px;
   background: #E6E6E6;
   color: #A5A5A5;
 }

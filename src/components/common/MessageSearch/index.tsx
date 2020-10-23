@@ -1,4 +1,4 @@
-import React, { FC, SyntheticEvent } from 'react';
+import React, { FC, SyntheticEvent, ChangeEvent } from 'react';
 import {
     StyledMessageSearchWrapper,
     StyledMessageSearchTextField,
@@ -6,12 +6,21 @@ import {
 } from './style';
 import { IMessageSearchProps } from 'lib/types/components/common';
 
-const MessageSearch: FC<IMessageSearchProps> = ({ onClick }) => {
+const MessageSearch: FC<IMessageSearchProps> = ({
+    onClick,
+    value,
+    onChange,
+}) => {
     const _handleClick = (e: SyntheticEvent) => {
         e.preventDefault();
         if (onClick) {
             onClick();
         }
+    };
+
+    const _handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value;
+        if (onChange) onChange(value);
     };
 
     return (
@@ -20,6 +29,8 @@ const MessageSearch: FC<IMessageSearchProps> = ({ onClick }) => {
                 fieldSize="medium"
                 color="secondary"
                 placeholder="Search message history"
+                value={value}
+                onChange={_handleChange}
             />
             <StyledMessageSearchCancelButton
                 variant="filled"
