@@ -1,6 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TextField /> Snapshots Primary text field with large size to match snapshot 1`] = `
+exports[`<TextField /> Snapshots Primary text field with custom width and height 1`] = `
+.c0 {
+  position: static;
+}
+
+.c1 {
+  word-break: break-all;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Roboto',sans-serif;
+  padding: 10px;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  outline: none;
+  color: #555555;
+  cursor: text;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 14px;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
+  width: 25px;
+  height: 25px;
+  padding-right: 0;
+}
+
+.c1 ~ img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    color="secondary"
+    height="25px"
+    onChange={[Function]}
+    width="25px"
+  />
+</div>
+`;
+
+exports[`<TextField /> Snapshots Primary text field with icon 1`] = `
+.c2 {
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c0 {
+  position: relative;
+}
+
+.c1 {
+  word-break: break-all;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Roboto',sans-serif;
+  padding: 10px;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  outline: none;
+  color: #555555;
+  cursor: text;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 14px;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
+  width: 170px;
+  height: auto;
+  padding-right: 40px;
+}
+
+.c1 ~ img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    color="secondary"
+    onChange={[Function]}
+  />
+  <img
+    alt="Icon component"
+    className="c2"
+    src="SearchIcon.svg"
+  />
+</div>
+`;
+
+exports[`<TextField /> Snapshots Primary text field with large size  1`] = `
 .c0 {
   position: static;
 }
@@ -48,13 +169,12 @@ exports[`<TextField /> Snapshots Primary text field with large size to match sna
     className="c1"
     color="primary"
     onChange={[Function]}
-    placeholder=""
     value="TextField snapshot"
   />
 </div>
 `;
 
-exports[`<TextField /> Snapshots Primary text field with medium size to match snapshot 1`] = `
+exports[`<TextField /> Snapshots Primary text field with medium size 1`] = `
 .c0 {
   position: static;
 }
@@ -102,13 +222,12 @@ exports[`<TextField /> Snapshots Primary text field with medium size to match sn
     className="c1"
     color="primary"
     onChange={[Function]}
-    placeholder=""
     value="TextField snapshot"
   />
 </div>
 `;
 
-exports[`<TextField /> Snapshots Primary text field with small size to match snapshot 1`] = `
+exports[`<TextField /> Snapshots Primary text field with small size  1`] = `
 .c0 {
   position: static;
 }
@@ -156,13 +275,12 @@ exports[`<TextField /> Snapshots Primary text field with small size to match sna
     className="c1"
     color="primary"
     onChange={[Function]}
-    placeholder=""
     value="TextField snapshot"
   />
 </div>
 `;
 
-exports[`<TextField /> Snapshots Secondary text field with large size to match snapshot 1`] = `
+exports[`<TextField /> Snapshots Secondary text field with large size 1`] = `
 .c0 {
   position: static;
 }
@@ -210,13 +328,12 @@ exports[`<TextField /> Snapshots Secondary text field with large size to match s
     className="c1"
     color="secondary"
     onChange={[Function]}
-    placeholder=""
     value="TextField snapshot"
   />
 </div>
 `;
 
-exports[`<TextField /> Snapshots Secondary text field with medium size to match snapshot 1`] = `
+exports[`<TextField /> Snapshots Secondary text field with medium size 1`] = `
 .c0 {
   position: static;
 }
@@ -264,13 +381,12 @@ exports[`<TextField /> Snapshots Secondary text field with medium size to match 
     className="c1"
     color="secondary"
     onChange={[Function]}
-    placeholder=""
     value="TextField snapshot"
   />
 </div>
 `;
 
-exports[`<TextField /> Snapshots Secondary text field with small size to match snapshot 1`] = `
+exports[`<TextField /> Snapshots Secondary text field with small size 1`] = `
 .c0 {
   position: static;
 }
@@ -318,7 +434,6 @@ exports[`<TextField /> Snapshots Secondary text field with small size to match s
     className="c1"
     color="secondary"
     onChange={[Function]}
-    placeholder=""
     value="TextField snapshot"
   />
 </div>

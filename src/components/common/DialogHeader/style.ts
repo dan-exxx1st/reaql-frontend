@@ -15,4 +15,5 @@ export const StyledCircle = styled(Circle)`
     height: 40px;
     background: rgba(230, 230, 230, 0.4);
     margin-left: 20px;
+    cursor: pointer;
 `;

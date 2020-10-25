@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Typography /> Typography variant body-2 to match snapshot 1`] = `
+exports[`<Typography /> Typography variant body-2 1`] = `
 .c0 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
@@ -16,6 +16,6 @@ exports[`<Typography /> Typography variant body-2 to match snapshot 1`] = `
 <p
   className="c0"
 >
-  Body 2 to match snapshot
+  Body 2
 </p>
 `;

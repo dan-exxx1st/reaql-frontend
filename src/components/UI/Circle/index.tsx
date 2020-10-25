@@ -1,18 +1,24 @@
 import React, { FC } from 'react';
-import { Typography, Icon } from '..';
-import { StyledCircle } from './style';
+import { Typography } from '..';
+import { StyledCircle, StyledIcon } from './style';
 import { ICircleProps } from 'lib/types/components/UI';
 
-const Circle: FC<ICircleProps> = ({ iconName, text, ...otherProps }) => {
+const Circle: FC<ICircleProps> = ({
+    iconName,
+    text,
+    className,
+    ...otherProps
+}) => {
     if (text || iconName) {
         return (
             <StyledCircle
                 justifyContent="center"
                 alignItems="center"
+                className={className}
                 {...otherProps}
             >
                 {iconName ? (
-                    <Icon iconName={iconName} width="17px" height="17px" />
+                    <StyledIcon iconName={iconName} />
                 ) : (
                     <Typography variant="caption2" {...otherProps}>
                         {text}
@@ -23,7 +29,9 @@ const Circle: FC<ICircleProps> = ({ iconName, text, ...otherProps }) => {
     }
 
     return (
-        <StyledCircle {...otherProps}>No icon or text in Circle!</StyledCircle>
+        <StyledCircle className={className} {...otherProps}>
+            No icon or text in Circle!
+        </StyledCircle>
     );
 };
 

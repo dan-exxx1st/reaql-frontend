@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserHeader /> Snapshots Should render correctly 1`] = `
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.c6 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  -webkit-letter-spacing: 0.15px;
+  -moz-letter-spacing: 0.15px;
+  -ms-letter-spacing: 0.15px;
+  letter-spacing: 0.15px;
+  line-height: 23px;
+  color: #000000;
+  margin: 0;
+}
+
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+.c2 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+.c7 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+.c3 {
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #FAFAFA;
+  background: #00ADFF;
+}
+
+.c10 {
+  width: 17px;
+  height: 17px;
+}
+
+.c5 {
+  margin-right: 30px;
+}
+
+.c9 {
+  cursor: pointer;
+  margin-left: 25px;
+  width: 30px;
+  height: 30px;
+}
+
+.c1 {
+  max-width: 416px;
+  border-right: 1px solid #E5E5E5;
+  padding: 15px;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2"
+  >
+    <img
+      alt="Icon component"
+      className="c3 c4 c5"
+      src="Person.svg"
+    />
+    <h6
+      className="c6"
+    >
+      Daniil Parfenov
+    </h6>
+  </div>
+  <div
+    className="c2"
+  >
+    <div
+      className="c7 c8 c9"
+      color="primary"
+    >
+      <img
+        alt="Icon component"
+        className="c3 c10"
+        src="NewChat.svg"
+      />
+    </div>
+    <div
+      className="c7 c8 c9"
+      color="primary"
+    >
+      <img
+        alt="Icon component"
+        className="c3 c10"
+        src="ThreeDotsWhite.svg"
+      />
+    </div>
+  </div>
+</div>
+`;

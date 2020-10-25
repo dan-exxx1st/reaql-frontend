@@ -2,7 +2,9 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import { ITypographyProps } from 'lib/types/components/UI';
 
-export default (Typography: FC<ITypographyProps>) => styled(Typography)`
+const StyledTypography = (Typography: FC<ITypographyProps>) => styled(
+    Typography
+)`
     font-family: 'Roboto', sans-serif;
     font-weight: ${({ variant, theme }: ITypographyProps) =>
         theme.fontWeights[variant]};
@@ -19,3 +21,5 @@ export default (Typography: FC<ITypographyProps>) => styled(Typography)`
     }};
     margin: 0;
 `;
+
+export default StyledTypography;

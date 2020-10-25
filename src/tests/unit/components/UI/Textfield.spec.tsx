@@ -1,10 +1,10 @@
 import React from 'react';
 import { TextField } from 'components/UI';
-import { mountWithTheme } from 'tests/helpers/withTheme';
+import { mountWithTheme, shallowWithTheme } from 'tests/helpers/withTheme';
 
 describe('<TextField />', () => {
     describe('Snapshots', () => {
-        it('Primary text field with large size to match snapshot', () => {
+        it('Primary text field with large size ', () => {
             const wrapper = mountWithTheme(
                 <TextField
                     color="primary"
@@ -14,7 +14,7 @@ describe('<TextField />', () => {
             );
             expect(wrapper).toMatchSnapshot();
         });
-        it('Primary text field with medium size to match snapshot', () => {
+        it('Primary text field with medium size', () => {
             const wrapper = mountWithTheme(
                 <TextField
                     color="primary"
@@ -24,7 +24,7 @@ describe('<TextField />', () => {
             );
             expect(wrapper).toMatchSnapshot();
         });
-        it('Primary text field with small size to match snapshot', () => {
+        it('Primary text field with small size ', () => {
             const wrapper = mountWithTheme(
                 <TextField
                     color="primary"
@@ -34,7 +34,7 @@ describe('<TextField />', () => {
             );
             expect(wrapper).toMatchSnapshot();
         });
-        it('Secondary text field with large size to match snapshot', () => {
+        it('Secondary text field with large size', () => {
             const wrapper = mountWithTheme(
                 <TextField
                     color="secondary"
@@ -44,7 +44,7 @@ describe('<TextField />', () => {
             );
             expect(wrapper).toMatchSnapshot();
         });
-        it('Secondary text field with medium size to match snapshot', () => {
+        it('Secondary text field with medium size', () => {
             const wrapper = mountWithTheme(
                 <TextField
                     color="secondary"
@@ -54,12 +54,31 @@ describe('<TextField />', () => {
             );
             expect(wrapper).toMatchSnapshot();
         });
-        it('Secondary text field with small size to match snapshot', () => {
+        it('Secondary text field with small size', () => {
             const wrapper = mountWithTheme(
                 <TextField
                     color="secondary"
                     fieldSize="small"
                     value="TextField snapshot"
+                />
+            );
+            expect(wrapper).toMatchSnapshot();
+        });
+
+        it('Primary text field with icon', () => {
+            const wrapper = mountWithTheme(
+                <TextField color="secondary" fieldSize="small" icon="search" />
+            );
+            expect(wrapper).toMatchSnapshot();
+        });
+
+        it('Primary text field with custom width and height', () => {
+            const wrapper = mountWithTheme(
+                <TextField
+                    color="secondary"
+                    fieldSize="small"
+                    width="25px"
+                    height="25px"
                 />
             );
             expect(wrapper).toMatchSnapshot();
@@ -67,15 +86,36 @@ describe('<TextField />', () => {
     });
 
     it('Should change value in text field', () => {
-        const changeValue = jest.fn();
-        const wrapper = mountWithTheme(
+        let wrapperValue = 'Initial value';
+        const changeValue = (value: string) => {
+            wrapperValue = value;
+        };
+
+        const wrapper = shallowWithTheme(
             <TextField
                 color="primary"
                 fieldSize="small"
                 onChange={changeValue}
+                value={wrapperValue}
             />
         );
-        wrapper.find('input').simulate('change');
-        expect(changeValue).toBeCalled();
+
+        wrapper.dive().find('TextField').simulate('change', 'Changed value');
+        expect(wrapperValue).toEqual('Changed value');
+    });
+
+    it('Should called change event', () => {
+        const changeEvent = jest.fn();
+
+        const wrapper = shallowWithTheme(
+            <TextField
+                color="primary"
+                fieldSize="small"
+                onChange={changeEvent}
+            />
+        );
+
+        wrapper.dive().find('TextField').simulate('change');
+        expect(changeEvent).toBeCalledTimes(1);
     });
 });

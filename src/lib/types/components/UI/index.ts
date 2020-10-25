@@ -1,5 +1,5 @@
-import Theme from 'config/styled';
 import { MouseEventHandler } from 'react';
+import Theme from 'config/styled';
 import { ColorType, IconName } from 'lib/types';
 import { TypographyVariantType, TypographyComponentType } from 'lib/types/ui';
 
@@ -29,13 +29,12 @@ export interface ICircleProps {
     width?: string;
     height?: string;
     cursor?: string;
+    className?: string;
     onClick?: () => void;
 }
 
 export interface IIconProps {
     iconName: IconName;
-    width?: string;
-    height?: string;
     className?: string;
 }
 
@@ -47,7 +46,7 @@ export interface ISkeletonLoaderProps {
 }
 
 export interface ITextFieldProps {
-    onChange?: (text: string) => void;
+    onChange?: (value: string) => void;
     value?: string;
     className?: string;
     fieldSize: 'small' | 'medium' | 'large';

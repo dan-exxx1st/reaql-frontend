@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MessageSearch /> Snapshots Should render correctly 1`] = `
+.c6 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  margin: 0;
+}
+
+.c5 {
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-family: 'Roboto',sans-serif;
+  padding: 7px 26px;
+  cursor: pointer;
+  max-height: 50px;
+  background: #E6E6E6;
+  color: #A5A5A5;
+}
+
+.c5:hover {
+  box-shadow: 1px 1px 10px rgb(10,10,10,0.1);
+}
+
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c2 {
+  position: static;
+}
+
+.c4 {
+  word-break: break-all;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Roboto',sans-serif;
+  padding: 10px;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  outline: none;
+  color: #555555;
+  cursor: text;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  width: 190px;
+  height: auto;
+  padding-right: 0;
+}
+
+.c4 ~ img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c1 {
+  width: 100%;
+  max-width: 976px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  margin-right: 20px;
+  width: calc(100% - 120px);
+}
+
+.c3 > input {
+  width: calc(100% - 20px);
+  padding: 7px 10px;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2 c3"
+  >
+    <input
+      className="c4"
+      color="secondary"
+      onChange={[Function]}
+      placeholder="Search message history"
+    />
+  </div>
+  <button
+    className="c5"
+  >
+    <p
+      className="c6"
+    >
+      Cancel
+    </p>
+  </button>
+</div>
+`;

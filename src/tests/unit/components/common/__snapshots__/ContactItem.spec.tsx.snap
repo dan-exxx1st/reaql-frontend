@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended message to match snapshot 1`] = `
+exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended message 1`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -282,7 +282,7 @@ exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended messa
       <p
         className="c12"
       >
-        13:50
+        12:00 am
       </p>
       <div
         className="c4"
@@ -307,7 +307,7 @@ exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended messa
 </div>
 `;
 
-exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed message to match snapshot 1`] = `
+exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed message 1`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -356,7 +356,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
   margin: 0;
 }
 
-.c15 {
+.c16 {
   font-family: 'Roboto',sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -546,18 +546,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
   height: auto;
 }
 
-.c14 {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  cursor: auto;
-  color: #FAFAFA;
-  background: #00ADFF;
-}
-
 .c6 {
-  width: 40px;
-  height: 40px;
   outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -567,15 +556,40 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
   margin: 0;
 }
 
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #FAFAFA;
+  background: #00ADFF;
+}
+
 .c5 {
   margin-right: 20px;
 }
 
-.c16 {
+.c17 {
   width: 100%;
   height: 1px;
   background: #E5E5E5;
   margin-top: 15px;
+}
+
+.c15 {
+  width: 20px;
+  height: 20px;
 }
 
 .c1 {
@@ -632,7 +646,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
       <p
         className="c12"
       >
-        13:50
+        12:00 am
       </p>
       <div
         className="c4"
@@ -641,11 +655,11 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
           className="c4"
         >
           <div
-            className="c13 c14"
+            className="c13 c14 c15"
             color="primary"
           >
             <p
-              className="c15"
+              className="c16"
             >
               9+
             </p>
@@ -655,12 +669,12 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
     </div>
   </div>
   <div
-    className="c16"
+    className="c17"
   />
 </div>
 `;
 
-exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed message to match snapshot 2`] = `
+exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed message 2`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -942,7 +956,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
       <p
         className="c12"
       >
-        13:50
+        12:00 am
       </p>
       <div
         className="c4"
@@ -967,7 +981,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
 </div>
 `;
 
-exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived message to match snapshot 1`] = `
+exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived message 1`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1016,7 +1030,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived m
   margin: 0;
 }
 
-.c15 {
+.c16 {
   font-family: 'Roboto',sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -1206,18 +1220,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived m
   height: auto;
 }
 
-.c14 {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  cursor: auto;
-  color: #FAFAFA;
-  background: #00ADFF;
-}
-
 .c6 {
-  width: 40px;
-  height: 40px;
   outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1227,15 +1230,40 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived m
   margin: 0;
 }
 
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #FAFAFA;
+  background: #00ADFF;
+}
+
 .c5 {
   margin-right: 20px;
 }
 
-.c16 {
+.c17 {
   width: 100%;
   height: 1px;
   background: #E5E5E5;
   margin-top: 15px;
+}
+
+.c15 {
+  width: 20px;
+  height: 20px;
 }
 
 .c1 {
@@ -1292,7 +1320,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived m
       <p
         className="c12"
       >
-        13:50
+        12:00 am
       </p>
       <div
         className="c4"
@@ -1301,11 +1329,11 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived m
           className="c4"
         >
           <div
-            className="c13 c14"
+            className="c13 c14 c15"
             color="primary"
           >
             <p
-              className="c15"
+              className="c16"
             >
               3
             </p>
@@ -1315,12 +1343,12 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived m
     </div>
   </div>
   <div
-    className="c16"
+    className="c17"
   />
 </div>
 `;
 
-exports[`<ContactItem /> Snapshots ContactItem without last_message to match snapshot 1`] = `
+exports[`<ContactItem /> Snapshots ContactItem without last_message 1`] = `
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1369,7 +1397,7 @@ exports[`<ContactItem /> Snapshots ContactItem without last_message to match sna
   margin: 0;
 }
 
-.c15 {
+.c16 {
   font-family: 'Roboto',sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -1559,18 +1587,7 @@ exports[`<ContactItem /> Snapshots ContactItem without last_message to match sna
   height: auto;
 }
 
-.c14 {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  cursor: auto;
-  color: #FAFAFA;
-  background: #00ADFF;
-}
-
 .c6 {
-  width: 40px;
-  height: 40px;
   outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1580,15 +1597,40 @@ exports[`<ContactItem /> Snapshots ContactItem without last_message to match sna
   margin: 0;
 }
 
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #FAFAFA;
+  background: #00ADFF;
+}
+
 .c5 {
   margin-right: 20px;
 }
 
-.c16 {
+.c17 {
   width: 100%;
   height: 1px;
   background: #E5E5E5;
   margin-top: 15px;
+}
+
+.c15 {
+  width: 20px;
+  height: 20px;
 }
 
 .c1 {
@@ -1650,11 +1692,11 @@ exports[`<ContactItem /> Snapshots ContactItem without last_message to match sna
           className="c4"
         >
           <div
-            className="c13 c14"
+            className="c13 c14 c15"
             color="primary"
           >
             <p
-              className="c15"
+              className="c16"
             >
               9+
             </p>
@@ -1664,7 +1706,7 @@ exports[`<ContactItem /> Snapshots ContactItem without last_message to match sna
     </div>
   </div>
   <div
-    className="c16"
+    className="c17"
   />
 </div>
 `;

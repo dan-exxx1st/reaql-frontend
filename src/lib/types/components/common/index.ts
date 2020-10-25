@@ -1,18 +1,6 @@
 import { SendedMessage } from 'lib/types';
 
-export interface IUserHeaderProps {
-    className?: string;
-}
-
-export interface IMessageSearchProps {
-    onClick?: () => void;
-}
-
-export interface IMessageItemProps {
-    sended_message_status?: SendedMessage;
-}
-
-export interface IContactsItemProps {
+export type ContactType = {
     id: string;
     name: string;
     avatar_src?: string;
@@ -20,4 +8,39 @@ export interface IContactsItemProps {
     last_message_date?: string;
     unread_message_count?: number;
     sended_message_status?: SendedMessage;
+};
+
+export type MessageType = {
+    id: string;
+    user_name: string;
+    message_date?: any;
+    message_text?: string;
+    message_status?: SendedMessage;
+};
+
+export interface IUserHeaderProps {
+    className?: string;
+}
+
+export interface IMessageSearchProps {
+    onClick?: () => void;
+    value?: string;
+    onChange?: (value: string) => void;
+}
+
+export type IMessageItemProps = MessageType;
+
+export type IContactsItemProps = ContactType;
+
+export interface IMessageListProps {
+    messages?: IMessageItemProps[];
+}
+
+export interface IContactListProps {
+    contacts?: ContactType[];
+}
+
+export interface IDialogTextFieldProps {
+    value?: string;
+    onChange?: (value: string) => void;
 }

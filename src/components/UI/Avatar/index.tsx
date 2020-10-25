@@ -4,7 +4,7 @@ import { Icon, SkeletonLoader } from '..';
 import { StyledImage, StyledAvatar } from './style';
 import { IAvatarProps } from 'lib/types/components/UI';
 
-const Avatar: FC<IAvatarProps> = ({ src, alt, className = '' }) => {
+const Avatar: FC<IAvatarProps> = ({ src, alt, className }) => {
     let children = null;
     const loaded = useLoaded({ src });
     const hasImgNotFailing = src && loaded !== 'error';

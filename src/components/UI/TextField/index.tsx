@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC } from 'react';
+import React, { FC } from 'react';
 import { Icon } from '..';
 import { StyledTextField, StyledWrapper } from './style';
 import { ITextFieldProps } from 'lib/types/components/UI';
@@ -6,22 +6,21 @@ import { ITextFieldProps } from 'lib/types/components/UI';
 const TextField: FC<ITextFieldProps> = ({
     onChange,
     value,
-    className = '',
+    className,
     icon,
-    placeholder = '',
+    placeholder,
     ...otherProps
 }) => {
-    const onChangeText = (event: ChangeEvent<HTMLInputElement>) => {
+    const _handleOnChange = (event: any) => {
         if (onChange) {
             const value = event.target.value;
             onChange(value);
         }
     };
-
     return (
         <StyledWrapper className={className} withIcon={icon}>
             <StyledTextField
-                onChange={onChangeText}
+                onChange={_handleOnChange}
                 value={value}
                 icon={icon}
                 placeholder={placeholder}
