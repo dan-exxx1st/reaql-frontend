@@ -1,0 +1,660 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MessageItem /> Snapshots Should render correctly 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.c6 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  line-height: 19px;
+  color: #000000;
+  margin: 0;
+}
+
+.c8 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
+  line-height: 14px;
+  color: #000000;
+  margin: 0;
+}
+
+.c10 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  color: #000000;
+  margin: 0;
+}
+
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c3 {
+  margin-right: 15px;
+}
+
+.c7 {
+  margin-right: 10px;
+  color: #252525;
+}
+
+.c9 {
+  color: #A5A5A5;
+}
+
+.c11 {
+  color: #000000;
+}
+
+.c4 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.c5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0 "
+>
+  <img
+    alt="Icon component"
+    className="c1 c2 c3"
+    src="Person.svg"
+  />
+  <div
+    className="c0 c4"
+  >
+    <div
+      className="c0 c5"
+    >
+      <p
+        className="c6 c7"
+      >
+        Test User
+      </p>
+      <p
+        className="c8 c9"
+      >
+        10:00 AM
+      </p>
+    </div>
+    <p
+      className="c10 c11"
+    >
+      Test message
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<MessageItem /> Snapshots Should render correctly with readed message status 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.c6 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  line-height: 19px;
+  color: #000000;
+  margin: 0;
+}
+
+.c8 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
+  line-height: 14px;
+  color: #000000;
+  margin: 0;
+}
+
+.c12 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  color: #000000;
+  margin: 0;
+}
+
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c10 {
+  fill: #00ADFF;
+  width: 20px;
+  height: 13px;
+}
+
+.c3 {
+  margin-right: 15px;
+}
+
+.c11 {
+  margin-left: 10px;
+}
+
+.c7 {
+  margin-right: 10px;
+  color: #252525;
+}
+
+.c9 {
+  color: #A5A5A5;
+}
+
+.c13 {
+  color: #000000;
+}
+
+.c4 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.c5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0 "
+>
+  <img
+    alt="Icon component"
+    className="c1 c2 c3"
+    src="Person.svg"
+  />
+  <div
+    className="c0 c4"
+  >
+    <div
+      className="c0 c5"
+    >
+      <p
+        className="c6 c7"
+      >
+        Test User
+      </p>
+      <p
+        className="c8 c9"
+      >
+        10:00 AM
+      </p>
+      <svg
+        className="c10 c11"
+      >
+        <path
+          d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
+        />
+      </svg>
+    </div>
+    <p
+      className="c12 c13"
+    >
+      Test message
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<MessageItem /> Snapshots Should render correctly with received message status 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.c6 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  line-height: 19px;
+  color: #000000;
+  margin: 0;
+}
+
+.c8 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
+  line-height: 14px;
+  color: #000000;
+  margin: 0;
+}
+
+.c12 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  color: #000000;
+  margin: 0;
+}
+
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c10 {
+  fill: #A5A5A5;
+  width: 20px;
+  height: 13px;
+}
+
+.c3 {
+  margin-right: 15px;
+}
+
+.c11 {
+  margin-left: 10px;
+}
+
+.c7 {
+  margin-right: 10px;
+  color: #252525;
+}
+
+.c9 {
+  color: #A5A5A5;
+}
+
+.c13 {
+  color: #000000;
+}
+
+.c4 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.c5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0 "
+>
+  <img
+    alt="Icon component"
+    className="c1 c2 c3"
+    src="Person.svg"
+  />
+  <div
+    className="c0 c4"
+  >
+    <div
+      className="c0 c5"
+    >
+      <p
+        className="c6 c7"
+      >
+        Test User
+      </p>
+      <p
+        className="c8 c9"
+      >
+        10:00 AM
+      </p>
+      <svg
+        className="c10 c11"
+      >
+        <path
+          d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
+        />
+      </svg>
+    </div>
+    <p
+      className="c12 c13"
+    >
+      Test message
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<MessageItem /> Snapshots Should render correctly with sended message status 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.c6 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  line-height: 19px;
+  color: #000000;
+  margin: 0;
+}
+
+.c8 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
+  line-height: 14px;
+  color: #000000;
+  margin: 0;
+}
+
+.c12 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  color: #000000;
+  margin: 0;
+}
+
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c10 {
+  fill: #A5A5A5;
+  width: 20px;
+  height: 13px;
+}
+
+.c3 {
+  margin-right: 15px;
+}
+
+.c11 {
+  margin-left: 10px;
+}
+
+.c7 {
+  margin-right: 10px;
+  color: #252525;
+}
+
+.c9 {
+  color: #A5A5A5;
+}
+
+.c13 {
+  color: #000000;
+}
+
+.c4 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.c5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0 "
+>
+  <img
+    alt="Icon component"
+    className="c1 c2 c3"
+    src="Person.svg"
+  />
+  <div
+    className="c0 c4"
+  >
+    <div
+      className="c0 c5"
+    >
+      <p
+        className="c6 c7"
+      >
+        Test User
+      </p>
+      <p
+        className="c8 c9"
+      >
+        10:00 AM
+      </p>
+      <svg
+        className="c10 c11"
+      >
+        <path
+          d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
+        />
+      </svg>
+    </div>
+    <p
+      className="c12 c13"
+    >
+      Test message
+    </p>
+  </div>
+</div>
+`;

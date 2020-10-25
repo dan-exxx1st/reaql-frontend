@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 import { Circle, Wrapper } from 'components/UI';
 
-export const StyledContactsItemAvatarWrapper = styled(Wrapper)`
+export const StyledContactItemAvatarWrapper = styled(Wrapper)`
     margin-right: 20px;
 `;
 
-export const StyledContactsItemBottomLine = styled.div`
+export const StyledContactItemBottomLine = styled.div`
     width: 100%;
     height: 1px;
     background: ${({ theme }) => theme.gc};
     margin-top: 15px;
 `;
 
-export const StyledContactsItemCircle = styled(Circle)`
+export const StyledContactItemCircle = styled(Circle)`
     width: 20px;
     height: 20px;
 `;

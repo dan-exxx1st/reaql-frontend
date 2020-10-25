@@ -282,7 +282,7 @@ exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended messa
       <p
         className="c12"
       >
-        13:50
+        12:00 am
       </p>
       <div
         className="c4"
@@ -646,7 +646,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
       <p
         className="c12"
       >
-        13:50
+        12:00 am
       </p>
       <div
         className="c4"
@@ -956,7 +956,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
       <p
         className="c12"
       >
-        13:50
+        12:00 am
       </p>
       <div
         className="c4"
@@ -1320,7 +1320,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived m
       <p
         className="c12"
       >
-        13:50
+        12:00 am
       </p>
       <div
         className="c4"

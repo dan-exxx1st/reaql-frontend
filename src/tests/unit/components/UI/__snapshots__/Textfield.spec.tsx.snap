@@ -49,8 +49,6 @@ exports[`<TextField /> Snapshots Primary text field with custom width and height
     color="secondary"
     height="25px"
     onChange={[Function]}
-    placeholder=""
-    value=""
     width="25px"
   />
 </div>
@@ -114,8 +112,6 @@ exports[`<TextField /> Snapshots Primary text field with icon 1`] = `
     className="c1"
     color="secondary"
     onChange={[Function]}
-    placeholder=""
-    value=""
   />
   <img
     alt="Icon component"
@@ -173,7 +169,6 @@ exports[`<TextField /> Snapshots Primary text field with large size  1`] = `
     className="c1"
     color="primary"
     onChange={[Function]}
-    placeholder=""
     value="TextField snapshot"
   />
 </div>
@@ -227,7 +222,6 @@ exports[`<TextField /> Snapshots Primary text field with medium size 1`] = `
     className="c1"
     color="primary"
     onChange={[Function]}
-    placeholder=""
     value="TextField snapshot"
   />
 </div>
@@ -281,7 +275,6 @@ exports[`<TextField /> Snapshots Primary text field with small size  1`] = `
     className="c1"
     color="primary"
     onChange={[Function]}
-    placeholder=""
     value="TextField snapshot"
   />
 </div>
@@ -335,7 +328,6 @@ exports[`<TextField /> Snapshots Secondary text field with large size 1`] = `
     className="c1"
     color="secondary"
     onChange={[Function]}
-    placeholder=""
     value="TextField snapshot"
   />
 </div>
@@ -389,7 +381,6 @@ exports[`<TextField /> Snapshots Secondary text field with medium size 1`] = `
     className="c1"
     color="secondary"
     onChange={[Function]}
-    placeholder=""
     value="TextField snapshot"
   />
 </div>
@@ -443,7 +434,6 @@ exports[`<TextField /> Snapshots Secondary text field with small size 1`] = `
     className="c1"
     color="secondary"
     onChange={[Function]}
-    placeholder=""
     value="TextField snapshot"
   />
 </div>

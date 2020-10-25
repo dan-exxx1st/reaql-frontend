@@ -5,11 +5,6 @@ exports[`<Avatar /> Snapshots Avatar with a image 1`] = `
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #eee;
-  background-image: linear-gradient( to right, #eee 0%, #ccc 40%, #ddd 40%, #eee 100% );
-  background-repeat: no-repeat;
-  -webkit-animation: gdZBtx 1s linear infinite forwards;
-  animation: gdZBtx 1s linear infinite forwards;
 }
 
 .c1 {
@@ -21,8 +16,11 @@ exports[`<Avatar /> Snapshots Avatar with a image 1`] = `
   height: 40px;
 }
 
-<div
+<img
+  alt="Avatar with image"
   className="c0 c1"
+  loading="lazy"
+  src="https://yandex.ru/images/search?text=foto&pos=3&img_url=https%3A%2F%2Fget.wallhere.com%2Fphoto%2F2700x1800-px-building-castle-forest-Hohenzollern-landscape-1077207.jpg&rpt=simage"
 />
 `;
 

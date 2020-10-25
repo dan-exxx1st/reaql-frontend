@@ -1,8 +1,8 @@
 import React, { FC, useEffect, useState } from 'react';
 import StyledDialogListItem, {
-    StyledContactsItemAvatarWrapper,
-    StyledContactsItemCircle,
-    StyledContactsItemBottomLine,
+    StyledContactItemAvatarWrapper,
+    StyledContactItemCircle,
+    StyledContactItemBottomLine,
 } from './style';
 import { Wrapper, Avatar, Typography, CheckMark } from 'components/UI';
 import { IContactsItemProps } from 'lib/types/components/common';
@@ -49,9 +49,9 @@ const ContactItem: FC<IContactsItemProps> = ({
         <StyledDialogListItem flexWrap="wrap">
             <Wrapper height="40px" width="100%" justifyContent="space-between">
                 <Wrapper height="40px">
-                    <StyledContactsItemAvatarWrapper>
+                    <StyledContactItemAvatarWrapper>
                         <Avatar src={avatar_src} alt="Avatar image" />
-                    </StyledContactsItemAvatarWrapper>
+                    </StyledContactItemAvatarWrapper>
                     <Wrapper
                         height="40px"
                         flexDirection="column"
@@ -78,7 +78,7 @@ const ContactItem: FC<IContactsItemProps> = ({
                     <Wrapper>
                         {undreadMessageCountText ? (
                             <Wrapper>
-                                <StyledContactsItemCircle
+                                <StyledContactItemCircle
                                     color="primary"
                                     text={undreadMessageCountText}
                                 />
@@ -95,7 +95,7 @@ const ContactItem: FC<IContactsItemProps> = ({
                 </Wrapper>
             </Wrapper>
 
-            <StyledContactsItemBottomLine />
+            <StyledContactItemBottomLine />
         </StyledDialogListItem>
     );
 };

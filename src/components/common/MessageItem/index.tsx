@@ -11,28 +11,39 @@ import {
 } from './style';
 import { IMessageItemProps } from 'lib/types/components/common';
 
-const MessageItem: FC<IMessageItemProps> = ({ sended_message_status }) => (
+const MessageItem: FC<IMessageItemProps> = ({
+    message_status,
+    message_text,
+    user_name,
+    message_date,
+}) => (
     <StyledMessageItem>
         <StyledMessageAvatar alt="Desirae" />
         <StyledMessageBodyWrapper>
             <StyledMessageTopWrapper>
                 <StyledMessageUserName variant="body1">
-                    Desirae Schleifer
+                    {user_name}
                 </StyledMessageUserName>
                 <StyledMessageTime variant="caption1">
-                    10:00 am
+                    {message_date}
                 </StyledMessageTime>
 
-                {sended_message_status === 'sended' && (
+                {message_status === 'sended' && (
+                    <StyledMessageCheckMark
+                        isChecked={false}
+                        isDouble={false}
+                    />
+                )}
+                {message_status === 'received' && (
                     <StyledMessageCheckMark isChecked={false} isDouble={true} />
                 )}
-                {sended_message_status === 'readed' && (
+                {message_status === 'readed' && (
                     <StyledMessageCheckMark isChecked={true} isDouble={true} />
                 )}
             </StyledMessageTopWrapper>
 
             <StyledMessageText variant="body2">
-                Hi. I’m fine, thanks. How are you, too?
+                {message_text}
             </StyledMessageText>
         </StyledMessageBodyWrapper>
     </StyledMessageItem>

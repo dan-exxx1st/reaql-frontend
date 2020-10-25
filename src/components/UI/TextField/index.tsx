@@ -4,17 +4,23 @@ import { StyledTextField, StyledWrapper } from './style';
 import { ITextFieldProps } from 'lib/types/components/UI';
 
 const TextField: FC<ITextFieldProps> = ({
-    onChange = () => {},
-    value = '',
-    className = '',
+    onChange,
+    value,
+    className,
     icon,
-    placeholder = '',
+    placeholder,
     ...otherProps
 }) => {
+    const _handleOnChange = (event: any) => {
+        if (onChange) {
+            const value = event.target.value;
+            onChange(value);
+        }
+    };
     return (
         <StyledWrapper className={className} withIcon={icon}>
             <StyledTextField
-                onChange={onChange}
+                onChange={_handleOnChange}
                 value={value}
                 icon={icon}
                 placeholder={placeholder}

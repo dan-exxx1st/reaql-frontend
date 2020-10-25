@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DialogHeaderBackdrop /> Snapshots Should render correctly 1`] = `
+.c5 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  color: #000000;
+  margin: 0;
+}
+
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px solid #E5E5E5;
+  max-width: 200px;
+  border-radius: 5px;
+}
+
+.c4 {
+  margin-right: 10px;
+}
+
+.c6 {
+  color: #00ADFF;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: calc(100% - 15px);
+  padding: 5px 5px 5px 10px;
+}
+
+.c3:hover {
+  background: #f5f5f5;
+}
+
+.c2 {
+  position: absolute;
+  top: -12px;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 12px solid #E5E5E5;
+}
+
+<div
+  className="c0 c1"
+>
+  <img
+    className="c2"
+  />
+  <div
+    className="c0 c3"
+  >
+    <img
+      className="c4"
+      src="BluePlus.svg"
+    />
+    <p
+      className="c5 c6"
+    >
+      Add members
+    </p>
+  </div>
+  <div
+    className="c0 c3"
+  >
+    <img
+      className="c4"
+      src="BlueSearch.svg"
+    />
+    <p
+      className="c5 c6"
+    >
+      Search message history
+    </p>
+  </div>
+  <div
+    className="c0 c3"
+  >
+    <img
+      className="c4"
+      src="BlueTrash.svg"
+    />
+    <p
+      className="c5 c6"
+    >
+      Clear message history
+    </p>
+  </div>
+</div>
+`;

@@ -46,7 +46,7 @@ export interface ISkeletonLoaderProps {
 }
 
 export interface ITextFieldProps {
-    onChange?: any;
+    onChange?: (value: string) => void;
     value?: string;
     className?: string;
     fieldSize: 'small' | 'medium' | 'large';

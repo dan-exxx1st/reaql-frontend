@@ -1,13 +1,14 @@
 import React from 'react';
 import { initializeApollo } from 'lib/apollo';
-import UserHeader from 'components/common/UserHeader';
+
+import HomePage from './Home';
+import { Wrapper } from 'components/UI';
 
 const Index = () => {
     return (
-        <div>
-            <h1>Index page</h1>
-            <UserHeader />
-        </div>
+        <Wrapper>
+            <HomePage />
+        </Wrapper>
     );
 };
 
