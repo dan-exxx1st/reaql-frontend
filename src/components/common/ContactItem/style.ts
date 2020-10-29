@@ -17,8 +17,9 @@ export const StyledContactItemCircle = styled(Circle)`
     height: 20px;
 `;
 
+export const StyledContactItemRightWrapper = styled(Wrapper)``;
+
 export default styled(Wrapper)`
-    width: 420px;
     padding-top: 15px;
     cursor: pointer;
 

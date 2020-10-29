@@ -7,7 +7,7 @@ export type ContactType = {
     last_message?: string;
     last_message_date?: string;
     unread_message_count?: number;
-    sended_message_status?: SendedMessage;
+    message_status?: SendedMessage;
 };
 
 export type MessageType = {
@@ -38,6 +38,7 @@ export interface IMessageListProps {
 
 export interface IContactListProps {
     contacts?: ContactType[];
+    className?: string;
 }
 
 export interface IDialogTextFieldProps {

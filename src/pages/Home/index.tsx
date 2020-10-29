@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
     StyledHomeWrapper,
     StyledHomeSidebar,
@@ -12,13 +13,21 @@ import {
     StyledHomeDialogTextField,
 } from './style';
 
+import { ContactListData } from 'tests/__mocks__/data/unit/ContactItem'; //!Delete after connect to Graphql API
+
 const HomePage = () => {
     return (
         <StyledHomeWrapper>
             <StyledHomeSidebar>
                 <StyledHomeUserHeader />
-                <StyledHomeContactsSearch color="secondary" fieldSize="large" />
-                <StyledHomeContacts />
+                <StyledHomeContactsSearch
+                    color="secondary"
+                    fieldSize="large"
+                    icon="search"
+                    placeholder="Search"
+                    width="100%"
+                />
+                <StyledHomeContacts contacts={ContactListData} />
             </StyledHomeSidebar>
             <StyledHomeDialog>
                 <StyledHomeDialogHeader />

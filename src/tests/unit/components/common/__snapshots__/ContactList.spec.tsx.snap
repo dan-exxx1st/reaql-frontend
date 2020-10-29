@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ContactList /> Snapshots Should render correctly 1`] = `
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10,7 +10,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   height: 40px;
 }
 
-.c9 {
+.c10 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -23,7 +23,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   margin: 0;
 }
 
-.c10 {
+.c11 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -36,7 +36,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   margin: 0;
 }
 
-.c12 {
+.c13 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -49,7 +49,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   margin: 0;
 }
 
-.c16 {
+.c21 {
   font-family: 'Roboto',sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -86,7 +86,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   height: auto;
 }
 
-.c1 {
+.c2 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -114,7 +114,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   height: auto;
 }
 
-.c3 {
+.c4 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -139,7 +139,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   height: 40px;
 }
 
-.c4 {
+.c5 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -164,7 +164,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   height: 40px;
 }
 
-.c8 {
+.c9 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -189,7 +189,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   height: 40px;
 }
 
-.c11 {
+.c12 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -214,7 +214,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   height: 40px;
 }
 
-.c13 {
+.c18 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -239,7 +239,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   height: auto;
 }
 
-.c6 {
+.c7 {
   outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -249,7 +249,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   margin: 0;
 }
 
-.c14 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -269,78 +269,107 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   background: #00ADFF;
 }
 
-.c5 {
-  margin-right: 20px;
+.c16 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #eee;
+  background-image: linear-gradient( to right, #eee 0%, #ccc 40%, #ddd 40%, #eee 100% );
+  background-repeat: no-repeat;
+  -webkit-animation: gdZBtx 1s linear infinite forwards;
+  animation: gdZBtx 1s linear infinite forwards;
+}
+
+.c14 {
+  fill: #A5A5A5;
+  width: 20px;
+  height: 13px;
 }
 
 .c17 {
+  fill: #00ADFF;
+  width: 20px;
+  height: 13px;
+}
+
+.c6 {
+  margin-right: 20px;
+}
+
+.c15 {
   width: 100%;
   height: 1px;
   background: #E5E5E5;
   margin-top: 15px;
 }
 
-.c15 {
+.c20 {
   width: 20px;
   height: 20px;
 }
 
-.c2 {
+.c3 {
   width: 420px;
   padding-top: 15px;
   cursor: pointer;
 }
 
-.c2:hover {
+.c3:hover {
   background: rgba(164,226,255,0.1);
 }
 
+.c1 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 <div
-  className="c0 "
+  className="c0 c1"
 >
   <div
-    className="c1 c2"
+    className="c2 c3"
   >
     <div
-      className="c3"
+      className="c4"
       height="40px"
       width="100%"
     >
       <div
-        className="c4"
+        className="c5"
         height="40px"
       >
         <div
-          className="c0 c5"
+          className="c0 c6"
         >
           <img
             alt="Icon component"
-            className="c6 c7"
+            className="c7 c8"
             src="Person.svg"
           />
         </div>
         <div
-          className="c8"
+          className="c9"
           height="40px"
         >
           <p
-            className="c9"
-          >
-            Test User 1
-          </p>
-          <p
             className="c10"
           >
-            Last message #1
+            Jaydon Bator
+          </p>
+          <p
+            className="c11"
+          >
+            Hi. It appears that i lose my avatar :(
           </p>
         </div>
       </div>
       <div
-        className="c11"
+        className="c12"
         height="40px"
       >
         <p
-          className="c12"
+          className="c13"
         >
           12:00 am
         </p>
@@ -350,12 +379,207 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
           <div
             className="c0"
           >
+            <svg
+              className="c14"
+            >
+              <path
+                d="M5.67738 10.2586L14.7785 0L16 1.37556L5.67738 13L0.868774 7.58495L2.09888 6.21908L5.67738 10.2586Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c15"
+    />
+  </div>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4"
+      height="40px"
+      width="100%"
+    >
+      <div
+        className="c5"
+        height="40px"
+      >
+        <div
+          className="c0 c6"
+        >
+          <div
+            className="c16 c8"
+          />
+        </div>
+        <div
+          className="c9"
+          height="40px"
+        >
+          <p
+            className="c10"
+          >
+            Desirae Schleifer
+          </p>
+          <p
+            className="c11"
+          >
+            Hi. I\`m have avatar.
+          </p>
+        </div>
+      </div>
+      <div
+        className="c12"
+        height="40px"
+      >
+        <p
+          className="c13"
+        >
+          12:00 am
+        </p>
+        <div
+          className="c0"
+        >
+          <div
+            className="c0"
+          >
+            <svg
+              className="c14"
+            >
+              <path
+                d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c15"
+    />
+  </div>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4"
+      height="40px"
+      width="100%"
+    >
+      <div
+        className="c5"
+        height="40px"
+      >
+        <div
+          className="c0 c6"
+        >
+          <img
+            alt="Icon component"
+            className="c7 c8"
+            src="Person.svg"
+          />
+        </div>
+        <div
+          className="c9"
+          height="40px"
+        >
+          <p
+            className="c10"
+          >
+            James Daniel
+          </p>
+          <p
+            className="c11"
+          >
+            :D
+          </p>
+        </div>
+      </div>
+      <div
+        className="c12"
+        height="40px"
+      >
+        <p
+          className="c13"
+        >
+          12:00 am
+        </p>
+        <div
+          className="c0"
+        >
+          <div
+            className="c0"
+          >
+            <svg
+              className="c17"
+            >
+              <path
+                d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c15"
+    />
+  </div>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4"
+      height="40px"
+      width="100%"
+    >
+      <div
+        className="c5"
+        height="40px"
+      >
+        <div
+          className="c0 c6"
+        >
+          <img
+            alt="Icon component"
+            className="c7 c8"
+            src="Person.svg"
+          />
+        </div>
+        <div
+          className="c9"
+          height="40px"
+        >
+          <p
+            className="c10"
+          >
+            James Daniel
+          </p>
+          <p
+            className="c11"
+          />
+        </div>
+      </div>
+      <div
+        className="c12"
+        height="40px"
+      >
+        <p
+          className="c13"
+        />
+        <div
+          className="c0"
+        >
+          <div
+            className="c0"
+          >
             <div
-              className="c13 c14 c15"
+              className="c18 c19 c20"
               color="primary"
             >
               <p
-                className="c16"
+                className="c21"
               >
                 9+
               </p>
@@ -365,73 +589,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
       </div>
     </div>
     <div
-      className="c17"
-    />
-  </div>
-  <div
-    className="c1 c2"
-  >
-    <div
-      className="c3"
-      height="40px"
-      width="100%"
-    >
-      <div
-        className="c4"
-        height="40px"
-      >
-        <div
-          className="c0 c5"
-        >
-          <img
-            alt="Icon component"
-            className="c6 c7"
-            src="Person.svg"
-          />
-        </div>
-        <div
-          className="c8"
-          height="40px"
-        >
-          <p
-            className="c9"
-          >
-            Test User 2
-          </p>
-          <p
-            className="c10"
-          />
-        </div>
-      </div>
-      <div
-        className="c11"
-        height="40px"
-      >
-        <p
-          className="c12"
-        />
-        <div
-          className="c0"
-        >
-          <div
-            className="c0"
-          >
-            <div
-              className="c13 c14 c15"
-              color="primary"
-            >
-              <p
-                className="c16"
-              >
-                2
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="c17"
+      className="c15"
     />
   </div>
 </div>
