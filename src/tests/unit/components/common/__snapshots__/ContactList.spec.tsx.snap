@@ -309,7 +309,6 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
 }
 
 .c3 {
-  width: 420px;
   padding-top: 15px;
   cursor: pointer;
 }
@@ -365,7 +364,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
         </div>
       </div>
       <div
-        className="c12"
+        className="c12 "
         height="40px"
       >
         <p
@@ -430,7 +429,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
         </div>
       </div>
       <div
-        className="c12"
+        className="c12 "
         height="40px"
       >
         <p
@@ -497,7 +496,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
         </div>
       </div>
       <div
-        className="c12"
+        className="c12 "
         height="40px"
       >
         <p
@@ -562,7 +561,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
         </div>
       </div>
       <div
-        className="c12"
+        className="c12 "
         height="40px"
       >
         <p

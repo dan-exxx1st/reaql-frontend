@@ -231,7 +231,6 @@ exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended messa
 }
 
 .c1 {
-  width: 420px;
   padding-top: 15px;
   cursor: pointer;
 }
@@ -276,7 +275,7 @@ exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended messa
       </div>
     </div>
     <div
-      className="c11"
+      className="c11 "
       height="40px"
     >
       <p
@@ -537,7 +536,6 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
 }
 
 .c1 {
-  width: 420px;
   padding-top: 15px;
   cursor: pointer;
 }
@@ -584,7 +582,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
       </div>
     </div>
     <div
-      className="c11"
+      className="c11 "
       height="40px"
     >
       <p
@@ -846,7 +844,6 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
 }
 
 .c1 {
-  width: 420px;
   padding-top: 15px;
   cursor: pointer;
 }
@@ -891,7 +888,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
       </div>
     </div>
     <div
-      className="c11"
+      className="c11 "
       height="40px"
     >
       <p
@@ -1152,7 +1149,6 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived m
 }
 
 .c1 {
-  width: 420px;
   padding-top: 15px;
   cursor: pointer;
 }
@@ -1199,7 +1195,7 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived m
       </div>
     </div>
     <div
-      className="c11"
+      className="c11 "
       height="40px"
     >
       <p
@@ -1516,7 +1512,6 @@ exports[`<ContactItem /> Snapshots ContactItem without last_message 1`] = `
 }
 
 .c1 {
-  width: 420px;
   padding-top: 15px;
   cursor: pointer;
 }
@@ -1561,7 +1556,7 @@ exports[`<ContactItem /> Snapshots ContactItem without last_message 1`] = `
       </div>
     </div>
     <div
-      className="c11"
+      className="c11 "
       height="40px"
     >
       <p
