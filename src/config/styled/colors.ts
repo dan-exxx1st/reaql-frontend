@@ -7,6 +7,7 @@ const colors = {
     dsc: '#555555',
     dgc: '#A5A5A5',
     gc: '#E5E5E5',
+    lbc: '#E8F3F6',
 };
 
 export default colors;

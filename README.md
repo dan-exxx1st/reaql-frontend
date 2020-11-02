@@ -1,4 +1,4 @@
-# Reaql - messenger created by React & Golang.
+# Reaql - messenger created by React & Golang
 
 This repository for client side. [Here is link to a server side](https://github.com/exs1st/reaql-backend).
 [Link to application design created in Figma](https://www.figma.com/file/Ljfclt0U7cAfXRd6m87OB0/Web-chat)

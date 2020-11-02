@@ -49,6 +49,18 @@ exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended messa
   margin: 0;
 }
 
+.c16 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
+  line-height: 14px;
+  margin: 0;
+}
+
 .c0 {
   padding: 0;
   margin: 0;
@@ -202,6 +214,51 @@ exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended messa
   height: 40px;
 }
 
+.c13 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #FAFAFA;
+  background: #00ADFF;
+}
+
 .c6 {
   width: 40px;
   height: 40px;
@@ -213,26 +270,20 @@ exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended messa
   animation: gdZBtx 1s linear infinite forwards;
 }
 
-.c13 {
-  fill: #A5A5A5;
-  width: 20px;
-  height: 13px;
-}
-
 .c5 {
   margin-right: 20px;
 }
 
-.c14 {
-  width: 100%;
-  height: 1px;
-  background: #E5E5E5;
-  margin-top: 15px;
+.c15 {
+  width: 20px;
+  height: 20px;
 }
 
 .c1 {
-  padding-top: 15px;
+  width: calc(100% - 40px);
+  padding: 12.5px 20px;
   cursor: pointer;
+  border-bottom: 1px solid #E5E5E5;
 }
 
 .c1:hover {
@@ -289,20 +340,20 @@ exports[`<ContactItem /> Snapshots ContactItem with avatar and with sended messa
         <div
           className="c4"
         >
-          <svg
-            className="c13"
+          <div
+            className="c13 c14 c15"
+            color="primary"
           >
-            <path
-              d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
-            />
-          </svg>
+            <p
+              className="c16"
+            >
+              7
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div
-    className="c14"
-  />
 </div>
 `;
 
@@ -528,16 +579,11 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
   margin-right: 20px;
 }
 
-.c14 {
-  width: 100%;
-  height: 1px;
-  background: #E5E5E5;
-  margin-top: 15px;
-}
-
 .c1 {
-  padding-top: 15px;
+  width: calc(100% - 40px);
+  padding: 12.5px 20px;
   cursor: pointer;
+  border-bottom: 1px solid #E5E5E5;
 }
 
 .c1:hover {
@@ -607,9 +653,6 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
       </div>
     </div>
   </div>
-  <div
-    className="c14"
-  />
 </div>
 `;
 
@@ -659,6 +702,18 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
   letter-spacing: 0.4px;
   line-height: 14px;
   color: #A5A5A5;
+  margin: 0;
+}
+
+.c16 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
+  line-height: 14px;
   margin: 0;
 }
 
@@ -815,6 +870,51 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
   height: 40px;
 }
 
+.c13 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #FAFAFA;
+  background: #00ADFF;
+}
+
 .c6 {
   width: 40px;
   height: 40px;
@@ -826,26 +926,20 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
   animation: gdZBtx 1s linear infinite forwards;
 }
 
-.c13 {
-  fill: #A5A5A5;
-  width: 20px;
-  height: 13px;
-}
-
 .c5 {
   margin-right: 20px;
 }
 
-.c14 {
-  width: 100%;
-  height: 1px;
-  background: #E5E5E5;
-  margin-top: 15px;
+.c15 {
+  width: 20px;
+  height: 20px;
 }
 
 .c1 {
-  padding-top: 15px;
+  width: calc(100% - 40px);
+  padding: 12.5px 20px;
   cursor: pointer;
+  border-bottom: 1px solid #E5E5E5;
 }
 
 .c1:hover {
@@ -902,20 +996,20 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with readed me
         <div
           className="c4"
         >
-          <svg
-            className="c13"
+          <div
+            className="c13 c14 c15"
+            color="primary"
           >
-            <path
-              d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
-            />
-          </svg>
+            <p
+              className="c16"
+            >
+              7
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div
-    className="c14"
-  />
 </div>
 `;
 
@@ -1141,16 +1235,11 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived m
   margin-right: 20px;
 }
 
-.c14 {
-  width: 100%;
-  height: 1px;
-  background: #E5E5E5;
-  margin-top: 15px;
-}
-
 .c1 {
-  padding-top: 15px;
+  width: calc(100% - 40px);
+  padding: 12.5px 20px;
   cursor: pointer;
+  border-bottom: 1px solid #E5E5E5;
 }
 
 .c1:hover {
@@ -1220,9 +1309,6 @@ exports[`<ContactItem /> Snapshots ContactItem without avatar and with recived m
       </div>
     </div>
   </div>
-  <div
-    className="c14"
-  />
 </div>
 `;
 
@@ -1499,21 +1585,16 @@ exports[`<ContactItem /> Snapshots ContactItem without last_message 1`] = `
   margin-right: 20px;
 }
 
-.c17 {
-  width: 100%;
-  height: 1px;
-  background: #E5E5E5;
-  margin-top: 15px;
-}
-
 .c15 {
   width: 20px;
   height: 20px;
 }
 
 .c1 {
-  padding-top: 15px;
+  width: calc(100% - 40px);
+  padding: 12.5px 20px;
   cursor: pointer;
+  border-bottom: 1px solid #E5E5E5;
 }
 
 .c1:hover {
@@ -1582,8 +1663,5 @@ exports[`<ContactItem /> Snapshots ContactItem without last_message 1`] = `
       </div>
     </div>
   </div>
-  <div
-    className="c17"
-  />
 </div>
 `;

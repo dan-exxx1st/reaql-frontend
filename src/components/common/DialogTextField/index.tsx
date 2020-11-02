@@ -16,9 +16,13 @@ import MicrophoneIcon from 'assets/images/icons/Microphone.svg';
 import AddFileIcon from 'assets/images/icons/AddFile.svg';
 import SendMessageIcon from 'assets/images/icons/SendMessage.svg';
 
-const DialogTextField: FC<IDialogTextFieldProps> = ({ value, onChange }) => {
+const DialogTextField: FC<IDialogTextFieldProps> = ({
+    value,
+    onChange,
+    className,
+}) => {
     return (
-        <StyledDialogTextField>
+        <StyledDialogTextField className={className}>
             <StyledEmojiIcon src={SmileIcon} alt="Smile icon" />
             <StyledTextField
                 color="secondary"

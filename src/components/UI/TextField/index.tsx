@@ -19,6 +19,7 @@ const TextField: FC<ITextFieldProps> = ({
     return (
         <StyledWrapper className={className} withIcon={icon}>
             <StyledTextField
+                maxLength={255}
                 onChange={_handleOnChange}
                 value={value}
                 icon={icon}

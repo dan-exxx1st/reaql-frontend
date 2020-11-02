@@ -14,7 +14,7 @@ const MessageSearch: FC<IMessageSearchProps> = ({
     return (
         <StyledMessageSearchWrapper>
             <StyledMessageSearchTextField
-                fieldSize="medium"
+                fieldSize="large"
                 color="secondary"
                 placeholder="Search message history"
                 value={value}

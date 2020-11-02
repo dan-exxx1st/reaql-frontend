@@ -18,7 +18,7 @@ export const ContactItemDataWithAvatar: ContactType = {
     avatar_src: WomanAvatar,
     last_message: 'Hi. I`m have avatar.',
     last_message_date: GenerateDate,
-    unread_message_count: 0,
+    unread_message_count: 7,
     message_status: 'received',
 };
 

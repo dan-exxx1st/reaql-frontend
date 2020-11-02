@@ -33,6 +33,7 @@ exports[`<Wrapper /> Snapshots Should render a wrapper correctly with default st
         "h6": "500",
       },
       "gc": "#E5E5E5",
+      "lbc": "#E8F3F6",
       "letterSpacing": Object {
         "body1": "0.5px",
         "body2": "0.25px",

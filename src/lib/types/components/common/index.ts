@@ -43,5 +43,10 @@ export interface IContactListProps {
 
 export interface IDialogTextFieldProps {
     value?: string;
+    className?: string;
     onChange?: (value: string) => void;
+}
+
+export interface IDialogHeaderProps {
+    className?: string;
 }

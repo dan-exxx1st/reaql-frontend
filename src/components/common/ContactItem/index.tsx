@@ -2,7 +2,6 @@ import React, { FC, useEffect, useState } from 'react';
 import StyledDialogListItem, {
     StyledContactItemAvatarWrapper,
     StyledContactItemCircle,
-    StyledContactItemBottomLine,
     StyledContactItemRightWrapper,
 } from './style';
 import { Wrapper, Avatar, Typography, CheckMark } from 'components/UI';
@@ -97,8 +96,6 @@ const ContactItem: FC<IContactsItemProps> = ({
                     </Wrapper>
                 </StyledContactItemRightWrapper>
             </Wrapper>
-
-            <StyledContactItemBottomLine />
         </StyledDialogListItem>
     );
 };

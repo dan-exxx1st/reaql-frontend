@@ -49,7 +49,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   margin: 0;
 }
 
-.c21 {
+.c19 {
   font-family: 'Roboto',sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -214,7 +214,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   height: 40px;
 }
 
-.c18 {
+.c16 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -249,7 +249,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   margin: 0;
 }
 
-.c19 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -269,7 +269,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   background: #00ADFF;
 }
 
-.c16 {
+.c15 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -286,7 +286,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   height: 13px;
 }
 
-.c17 {
+.c20 {
   fill: #00ADFF;
   width: 20px;
   height: 13px;
@@ -296,21 +296,16 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
   margin-right: 20px;
 }
 
-.c15 {
-  width: 100%;
-  height: 1px;
-  background: #E5E5E5;
-  margin-top: 15px;
-}
-
-.c20 {
+.c18 {
   width: 20px;
   height: 20px;
 }
 
 .c3 {
-  padding-top: 15px;
+  width: calc(100% - 40px);
+  padding: 12.5px 20px;
   cursor: pointer;
+  border-bottom: 1px solid #E5E5E5;
 }
 
 .c3:hover {
@@ -389,9 +384,6 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
         </div>
       </div>
     </div>
-    <div
-      className="c15"
-    />
   </div>
   <div
     className="c2 c3"
@@ -409,7 +401,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
           className="c0 c6"
         >
           <div
-            className="c16 c8"
+            className="c15 c8"
           />
         </div>
         <div
@@ -443,20 +435,20 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
           <div
             className="c0"
           >
-            <svg
-              className="c14"
+            <div
+              className="c16 c17 c18"
+              color="primary"
             >
-              <path
-                d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
-              />
-            </svg>
+              <p
+                className="c19"
+              >
+                7
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div
-      className="c15"
-    />
   </div>
   <div
     className="c2 c3"
@@ -511,7 +503,7 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
             className="c0"
           >
             <svg
-              className="c17"
+              className="c20"
             >
               <path
                 d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
@@ -521,9 +513,6 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
         </div>
       </div>
     </div>
-    <div
-      className="c15"
-    />
   </div>
   <div
     className="c2 c3"
@@ -574,11 +563,11 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
             className="c0"
           >
             <div
-              className="c18 c19 c20"
+              className="c16 c17 c18"
               color="primary"
             >
               <p
-                className="c21"
+                className="c19"
               >
                 9+
               </p>
@@ -587,9 +576,6 @@ exports[`<ContactList /> Snapshots Should render correctly 1`] = `
         </div>
       </div>
     </div>
-    <div
-      className="c15"
-    />
   </div>
 </div>
 `;

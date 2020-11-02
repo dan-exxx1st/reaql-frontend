@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
+
 import { Typography, Wrapper } from 'components/UI';
 import { MessageSearch } from '..';
+
 import { StyledAvatar, StyledCircle, StyledDialogHeader } from './style';
 
-const DialogHeader = () => {
+import { IDialogHeaderProps } from 'lib/types/components/common';
+
+const DialogHeader: FC<IDialogHeaderProps> = ({ className }) => {
     const [isShowMessageSearch, setIsShowMessageSearch] = useState(false);
 
     const _handleToggleMessageSearch = () => {
@@ -11,7 +15,10 @@ const DialogHeader = () => {
     };
 
     return (
-        <StyledDialogHeader justifyContent="space-between">
+        <StyledDialogHeader
+            className={className}
+            justifyContent="space-between"
+        >
             {isShowMessageSearch ? (
                 <MessageSearch onClick={_handleToggleMessageSearch} />
             ) : (
