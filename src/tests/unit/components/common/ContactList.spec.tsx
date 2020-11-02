@@ -3,7 +3,7 @@ import React from 'react';
 import { mountWithTheme } from 'tests/helpers/withTheme';
 
 import { ContactList } from 'components/common';
-import { ContactListData } from 'tests/__mocks__/data/unit';
+import { ContactListData } from 'tests/__mocks__/data/unit/ContactItem';
 
 describe('<ContactList />', () => {
     describe('Snapshots', () => {

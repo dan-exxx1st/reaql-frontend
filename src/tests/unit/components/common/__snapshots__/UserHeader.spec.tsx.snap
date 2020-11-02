@@ -146,7 +146,6 @@ exports[`<UserHeader /> Snapshots Should render correctly 1`] = `
 
 .c1 {
   max-width: 416px;
-  border-right: 1px solid #E5E5E5;
   padding: 15px;
 }
 

@@ -10,6 +10,8 @@ export const StyledMessageSearchWrapper = styled(Wrapper)`
 export const StyledMessageSearchTextField = styled(TextField)`
     margin-right: 20px;
     width: calc(100% - 120px);
+    height: 40px;
+
     & > input {
         width: calc(100% - 20px);
         padding: 7px 10px;

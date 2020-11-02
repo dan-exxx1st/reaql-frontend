@@ -1,14 +1,14 @@
 import React from 'react';
 import { initializeApollo } from 'lib/apollo';
+import { StyledIndexWrapper } from 'config/styled/MainPageStyle';
 
 import HomePage from './Home';
-import { Wrapper } from 'components/UI';
 
 const Index = () => {
     return (
-        <Wrapper>
+        <StyledIndexWrapper>
             <HomePage />
-        </Wrapper>
+        </StyledIndexWrapper>
     );
 };
 

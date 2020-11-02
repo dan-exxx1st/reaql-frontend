@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from 'react';
 import StyledDialogListItem, {
     StyledContactItemAvatarWrapper,
     StyledContactItemCircle,
-    StyledContactItemBottomLine,
+    StyledContactItemRightWrapper,
 } from './style';
 import { Wrapper, Avatar, Typography, CheckMark } from 'components/UI';
 import { IContactsItemProps } from 'lib/types/components/common';
@@ -13,14 +13,14 @@ const ContactItem: FC<IContactsItemProps> = ({
     last_message,
     last_message_date,
     unread_message_count,
-    sended_message_status,
+    message_status,
 }) => {
     const [isDoubleCheckMark, setIsDoubleCheckMark] = useState(false);
     const [isActiveCheckMark, setIsActiveCheckMark] = useState(false);
     const [undreadMessageCountText, setUnreadMessageCountText] = useState('');
 
     useEffect(() => {
-        switch (sended_message_status) {
+        switch (message_status) {
             case 'sended': {
                 setIsDoubleCheckMark(false);
                 setIsActiveCheckMark(false);
@@ -29,10 +29,12 @@ const ContactItem: FC<IContactsItemProps> = ({
 
             case 'received': {
                 setIsDoubleCheckMark(true);
+                setIsActiveCheckMark(false);
                 break;
             }
 
             case 'readed': {
+                setIsDoubleCheckMark(true);
                 setIsActiveCheckMark(true);
             }
         }
@@ -65,7 +67,7 @@ const ContactItem: FC<IContactsItemProps> = ({
                         </Typography>
                     </Wrapper>
                 </Wrapper>
-                <Wrapper
+                <StyledContactItemRightWrapper
                     flexDirection="column"
                     height="40px"
                     justifyContent="space-between"
@@ -92,10 +94,8 @@ const ContactItem: FC<IContactsItemProps> = ({
                             </Wrapper>
                         )}
                     </Wrapper>
-                </Wrapper>
+                </StyledContactItemRightWrapper>
             </Wrapper>
-
-            <StyledContactItemBottomLine />
         </StyledDialogListItem>
     );
 };

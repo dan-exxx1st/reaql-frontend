@@ -13,13 +13,13 @@ const TextField: FC<ITextFieldProps> = ({
 }) => {
     const _handleOnChange = (event: any) => {
         if (onChange) {
-            const value = event.target.value;
-            onChange(value);
+            onChange(event.target.value);
         }
     };
     return (
         <StyledWrapper className={className} withIcon={icon}>
             <StyledTextField
+                maxLength={255}
                 onChange={_handleOnChange}
                 value={value}
                 icon={icon}
