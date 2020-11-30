@@ -56,6 +56,7 @@ export interface ITextFieldProps {
     height?: string;
     wrapperWidth?: string;
     placeholder?: string;
+    type?: string;
 }
 
 export interface ITypographyProps {

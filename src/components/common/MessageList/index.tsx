@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { IMessageListProps } from 'lib/types/components/common';
 import { StyledMessageListItem, StyledMessageListWrapper } from './style';
 
-const MessageList: FC<IMessageListProps> = ({ messages }) => {
+const MessageList: FC<IMessageListProps> = ({ messages, className }) => {
     return (
-        <StyledMessageListWrapper>
+        <StyledMessageListWrapper className={className}>
             {messages &&
                 messages.map((message) => (
                     <StyledMessageListItem key={message.id} {...message} />

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DialogHeaderBackdrop /> Snapshots Should render correctly 1`] = `
-.c5 {
+.c4 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 14px;
@@ -48,15 +48,15 @@ exports[`<DialogHeaderBackdrop /> Snapshots Should render correctly 1`] = `
   border-radius: 5px;
 }
 
-.c4 {
+.c3 {
   margin-right: 10px;
 }
 
-.c6 {
+.c5 {
   color: #00ADFF;
 }
 
-.c3 {
+.c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -66,62 +66,48 @@ exports[`<DialogHeaderBackdrop /> Snapshots Should render correctly 1`] = `
   padding: 5px 5px 5px 10px;
 }
 
-.c3:hover {
+.c2:hover {
   background: #f5f5f5;
-}
-
-.c2 {
-  position: absolute;
-  top: -12px;
-  right: 12px;
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 12px solid #E5E5E5;
 }
 
 <div
   className="c0 c1"
 >
-  <img
-    className="c2"
-  />
   <div
-    className="c0 c3"
+    className="c0 c2"
   >
     <img
-      className="c4"
+      className="c3"
       src="BluePlus.svg"
     />
     <p
-      className="c5 c6"
+      className="c4 c5"
     >
       Add members
     </p>
   </div>
   <div
-    className="c0 c3"
+    className="c0 c2"
   >
     <img
-      className="c4"
+      className="c3"
       src="BlueSearch.svg"
     />
     <p
-      className="c5 c6"
+      className="c4 c5"
     >
       Search message history
     </p>
   </div>
   <div
-    className="c0 c3"
+    className="c0 c2"
   >
     <img
-      className="c4"
+      className="c3"
       src="BlueTrash.svg"
     />
     <p
-      className="c5 c6"
+      className="c4 c5"
     >
       Clear message history
     </p>

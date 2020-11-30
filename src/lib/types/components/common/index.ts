@@ -28,12 +28,15 @@ export interface IMessageSearchProps {
     onChange?: (value: string) => void;
 }
 
-export type IMessageItemProps = MessageType;
+export interface IMessageItemProps extends MessageType {
+    className?: string;
+}
 
 export type IContactsItemProps = ContactType;
 
 export interface IMessageListProps {
     messages?: IMessageItemProps[];
+    className?: string;
 }
 
 export interface IContactListProps {
@@ -42,11 +45,18 @@ export interface IContactListProps {
 }
 
 export interface IDialogTextFieldProps {
-    value?: string;
     className?: string;
-    onChange?: (value: string) => void;
 }
 
 export interface IDialogHeaderProps {
     className?: string;
+}
+
+export interface ISignUpFormProps {
+    email: string;
+    name: string;
+    surname: string;
+    password: string;
+    changeFormValues: (field: string, value: string) => void;
+    handleSubmit: () => void;
 }

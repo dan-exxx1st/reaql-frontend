@@ -9,6 +9,7 @@ const TextField: FC<ITextFieldProps> = ({
     className,
     icon,
     placeholder,
+    type,
     ...otherProps
 }) => {
     const _handleOnChange = (event: any) => {
@@ -24,6 +25,7 @@ const TextField: FC<ITextFieldProps> = ({
                 value={value}
                 icon={icon}
                 placeholder={placeholder}
+                type={type || 'text'}
                 {...otherProps}
             />
             {icon && <Icon iconName={icon} />}

@@ -125,6 +125,7 @@ exports[`<MessageSearch /> Snapshots Should render correctly 1`] = `
       maxLength={255}
       onChange={[Function]}
       placeholder="Search message history"
+      type="text"
     />
   </div>
   <button

@@ -1,4 +1,4 @@
-const plugins =
+const envPlugins =
     process.env.NODE_ENV !== 'test'
         ? [
               '@babel/plugin-transform-runtime',
@@ -19,5 +19,5 @@ module.exports = {
         '@babel/preset-env',
         '@babel/preset-react',
     ],
-    plugins,
+    plugins: [...envPlugins, '@babel/plugin-proposal-class-properties'],
 };

@@ -4,7 +4,6 @@ import {
     StyledDialogHeaderBackdropIcon,
     StyledDialogHeaderBackdropText,
     StyledDialogHeaderBackdropListWrapper,
-    StyledDialogHeaderBackdropTriangle,
 } from './style';
 
 import PlusIcon from 'assets/images/icons/BluePlus.svg';
@@ -13,7 +12,6 @@ import TrashIcon from 'assets/images/icons/BlueTrash.svg';
 
 const DialogHeaderBackdrop = () => (
     <StyledDialogHeaderBackdropWrapper>
-        <StyledDialogHeaderBackdropTriangle />
         <StyledDialogHeaderBackdropListWrapper>
             <StyledDialogHeaderBackdropIcon src={PlusIcon} />
             <StyledDialogHeaderBackdropText variant="body2">

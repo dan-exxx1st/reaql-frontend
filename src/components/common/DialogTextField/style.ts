@@ -29,14 +29,17 @@ export const StyledEmojiIcon = styled.img`
 
 export const StyledMicrophoneIcon = styled.img`
     margin-right: 20px;
+    user-select: none;
 `;
 
 export const StyledAddFileIcon = styled.img`
     margin-right: 20px;
+    user-select: none;
 `;
 
 export const StyledSendMessageIcon = styled.img`
     margin-right: 20px;
+    user-select: none;
 `;
 
 export const StyledRightIconsWrapper = styled(Wrapper)`

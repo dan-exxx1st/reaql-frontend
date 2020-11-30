@@ -13,12 +13,13 @@ export type ResolverContext = {
 function createIsomorphLink(context: ResolverContext = {}) {
     if (typeof window === 'undefined') {
         const { SchemaLink } = require('apollo-link-schema');
-        const schema = require('./graphql');
+        const schema = require('./graphql/types');
         return new SchemaLink({ schema, context });
     } else {
         const { HttpLink } = require('apollo-link-http');
+
         return new HttpLink({
-            uri: 'http://localhost:8080/query',
+            uri: 'http://localhost:8080/graphql',
             credentials: 'same-origin',
         });
     }
