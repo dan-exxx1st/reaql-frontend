@@ -16,8 +16,9 @@ const MessageItem: FC<IMessageItemProps> = ({
     message_text,
     user_name,
     message_date,
+    className,
 }) => (
-    <StyledMessageItem>
+    <StyledMessageItem className={className}>
         <StyledMessageAvatar alt="Desirae" />
         <StyledMessageBodyWrapper>
             <StyledMessageTopWrapper>

@@ -27,14 +27,3 @@ export const StyledDialogHeaderBackdropListWrapper = styled(Wrapper)`
         background: #f5f5f5;
     }
 `;
-
-export const StyledDialogHeaderBackdropTriangle = styled.img`
-    position: absolute;
-    top: -12px;
-    right: 12px;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 12px solid ${({ theme }) => theme.gc};
-`;

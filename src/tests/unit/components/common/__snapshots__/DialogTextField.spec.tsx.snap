@@ -94,14 +94,26 @@ exports[`<DialogTextField /> Snapshots Should render correctly 1`] = `
 
 .c7 {
   margin-right: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .c8 {
   margin-right: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .c9 {
   margin-right: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .c6 {
@@ -120,6 +132,7 @@ exports[`<DialogTextField /> Snapshots Should render correctly 1`] = `
   <img
     alt="Smile icon"
     className="c2"
+    draggable={false}
     src="Smile.svg"
   />
   <div
@@ -130,6 +143,9 @@ exports[`<DialogTextField /> Snapshots Should render correctly 1`] = `
       color="secondary"
       maxLength={255}
       onChange={[Function]}
+      placeholder="Write you message..."
+      type="text"
+      value=""
     />
   </div>
   <div
@@ -138,16 +154,19 @@ exports[`<DialogTextField /> Snapshots Should render correctly 1`] = `
     <img
       alt="Microphone icon"
       className="c7"
+      draggable={false}
       src="Microphone.svg"
     />
     <img
       alt="Add file icon"
       className="c8"
+      draggable={false}
       src="AddFile.svg"
     />
     <img
       alt="Send message icon"
       className="c9"
+      draggable={false}
       src="SendMessage.svg"
     />
   </div>

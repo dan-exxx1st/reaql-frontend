@@ -11,3 +11,6 @@ export { default as MessageItem } from './MessageItem';
 
 export { default as ContactList } from './ContactList';
 export { default as MessageList } from './MessageList';
+
+export { default as SignInForm } from './SignInForm';
+export { default as SignUpForm } from './SignUpForm';

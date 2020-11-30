@@ -6,6 +6,7 @@ import {
     ContactList,
     DialogHeader,
     DialogTextField,
+    MessageList,
 } from 'components/common';
 
 export const StyledHomeWrapper = styled(Wrapper)`
@@ -22,7 +23,7 @@ export const StyledHomeWrapper = styled(Wrapper)`
 export const StyledHomeSidebar = styled(Wrapper)`
     max-width: 466px;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 40px);
     flex-direction: column;
     border-right: 1px solid ${({ theme }) => theme.gc};
 `;
@@ -87,13 +88,18 @@ export const StyledHomeDialogContentWrapper = styled(Wrapper)`
 `;
 
 export const StyledHomeDialogMessageWrapper = styled(Wrapper)`
-    width: 100%;
-    height: calc(100% - 90px);
+    width: calc(100% - 80px);
+    height: calc(100% - 130px);
     position: absolute;
-    top: 0;
-    left: 0;
-    background: #323232;
+    top: 20px;
+    left: 20px;
+    background: ${({ theme }) => theme.wc};
+    border-radius: 3px;
+    padding: 20px 20px 0 20px;
+    flex-direction: column-reverse;
 `;
+
+export const StyledMessageList = styled(MessageList)``;
 
 export const StyledHomeDialogTextField = styled(DialogTextField)`
     width: 100%;
