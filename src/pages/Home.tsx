@@ -1,7 +1,4 @@
 import React, { useContext, useEffect } from 'react';
-import { NextPage } from 'next';
-import { useRouter } from 'next/router';
-
 import {
     StyledHomeContacts,
     StyledHomeContactsSearch,
@@ -21,9 +18,9 @@ import AuthContext from 'helpers/contexts/authContext';
 import { MessageListData } from 'tests/__mocks__/data/unit'; //!Delete after connect to Graphql API
 import { ContactListData } from 'tests/__mocks__/data/unit/ContactItem'; //!Delete after connect to Graphql API
 
-const HomePage: NextPage = () => {
+const HomePage = () => {
     const isAuth = useContext(AuthContext);
-    const router = useRouter();
+    const router: any = {}; //!CHANGE
 
     useEffect(() => {
         if (!isAuth) {
@@ -54,11 +51,6 @@ const HomePage: NextPage = () => {
             </StyledHomeDialog>
         </StyledHomeWrapper>
     );
-};
-
-HomePage.getInitialProps = async ({ res }) => {
-    console.log(res?.getHeaders());
-    return {};
 };
 
 export default HomePage;

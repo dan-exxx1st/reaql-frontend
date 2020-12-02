@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 
@@ -8,7 +7,7 @@ import { StyledSignUpWrapper } from './styles/SignUp';
 import { SIGN_UP } from 'lib/graphql/mutations/auth';
 import { Mutation } from 'lib/graphql/types';
 
-const SignUpPage: NextPage = () => {
+const SignUpPage = () => {
     const [state, setState] = useState({
         email: '',
         name: '',

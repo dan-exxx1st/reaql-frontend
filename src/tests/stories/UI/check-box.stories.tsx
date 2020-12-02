@@ -6,9 +6,8 @@ storiesOf('UI/ Check box', module)
     .add('default', () => {
         const [value, setValue] = useState(false);
 
-        return <CheckBox value={value} onChange={setValue} />;
-    })
-    .add('checked', () => {
-        return <CheckBox value={true} />;
+        const changeValue = () => setValue(!value);
+
+        return <CheckBox onClick={changeValue} />;
     })
     .add('with text', () => <CheckBox text="Some text for check box" />);

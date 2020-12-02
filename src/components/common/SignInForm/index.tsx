@@ -1,5 +1,4 @@
 import React, { FC, useState } from 'react';
-import { useRouter } from 'next/router';
 
 import { ISignInFormProps } from 'lib/types/components/common';
 
@@ -21,7 +20,7 @@ const SignInForm: FC<ISignInFormProps> = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const router = useRouter();
+    const router: any = {}; //!CHANGE
 
     const _handleSignUpRedirect = () => {
         router.push('/signup');
