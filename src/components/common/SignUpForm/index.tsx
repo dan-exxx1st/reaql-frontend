@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { ISignUpFormProps } from 'lib/types/components/common';
 
@@ -24,6 +25,11 @@ const SignInForm: FC<ISignUpFormProps> = (props) => {
     } = props;
 
     const [confirmPasswordValue, setConfirmPasswordValue] = useState('');
+    const history = useHistory();
+
+    const _handleSignInClick = () => {
+        history.push('/signin');
+    };
 
     return (
         <StyledSignUpForm>
@@ -86,7 +92,11 @@ const SignInForm: FC<ISignUpFormProps> = (props) => {
                     Create account
                 </StyledSignUpFormConfirmBtn>
 
-                <StyledSignUpFormLoginBtn color="secondary" variant="outlined">
+                <StyledSignUpFormLoginBtn
+                    color="secondary"
+                    variant="outlined"
+                    onClick={_handleSignInClick}
+                >
                     Login in
                 </StyledSignUpFormLoginBtn>
             </StyledSignUpBottomBtnWrapper>

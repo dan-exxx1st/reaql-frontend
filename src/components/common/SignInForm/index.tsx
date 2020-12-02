@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { ISignInFormProps } from 'lib/types/components/common';
 
@@ -20,10 +21,10 @@ const SignInForm: FC<ISignInFormProps> = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const router: any = {}; //!CHANGE
+    const history = useHistory();
 
     const _handleSignUpRedirect = () => {
-        router.push('/signup');
+        history.push('/signup');
     };
 
     const _handleLogin = () => {
@@ -32,7 +33,7 @@ const SignInForm: FC<ISignInFormProps> = (props) => {
 
     return (
         <StyledSignInFormWrapper>
-            <StyledSignInFormTitle variant="h3">
+            <StyledSignInFormTitle variant="h4">
                 Sign in account
             </StyledSignInFormTitle>
             <StyledSignInFormTextField

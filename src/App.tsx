@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { ApolloProvider } from '@apollo/client';
 import { ThemeProvider } from 'styled-components';
 
@@ -8,7 +8,7 @@ import { StyledIndexWrapper } from 'helpers/styled/MainPageStyle';
 import { CreateApolloClient } from 'lib/graphql/apollo';
 import Theme from 'helpers/styled';
 
-import { HomePage } from './pages';
+import Router from 'pages/Router';
 
 const App = () => {
     const apolloClient = CreateApolloClient();
@@ -17,7 +17,9 @@ const App = () => {
             <ThemeProvider theme={Theme}>
                 <StyledIndexWrapper>
                     <AuthContext.Provider value={checkAuth()}>
-                        <HomePage />
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <Router />
+                        </Suspense>
                     </AuthContext.Provider>
                 </StyledIndexWrapper>
             </ThemeProvider>
