@@ -17,7 +17,7 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "test": "cross-env NODE_PATH=./src react-scripts test",
+        "test": "react-scripts test",
         "test:watch": "npm run test --watchAll",
         "test:coverage": "npm run test --runInBand --coverage --collectCoverageFrom=src/**/*.{ts,tsx} --collectCoverageFrom=!src/**/*.stories.{ts,tsx} --collectCoverageFrom=!src/lib/**/* --collectCoverageFrom=!src/config/**/* --collectCoverageFrom=!src/lib --collectCoverageFrom=!src/**/*.{types,d}.{ts,tsx}",
         "test:coverage:watch": "npm run test:coverage --watchAll",
@@ -60,7 +60,7 @@
         "@testing-library/user-event": "^12.3.0",
         "@types/enzyme": "^3.10.8",
         "@types/enzyme-adapter-react-16": "^1.0.6",
-        "@types/jest": "^26.0.16",
+        "@types/jest": "^26.0.10",
         "@types/node": "^12.19.8",
         "@types/react": "^16.14.0",
         "@types/react-dom": "^16.9.10",
