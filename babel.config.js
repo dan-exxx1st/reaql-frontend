@@ -5,11 +5,11 @@ const envPlugins =
               [
                   'styled-components',
                   {
-                      ssr: true,
                       displayName: true,
                       preprocess: false,
                   },
               ],
+              '@babel/plugin-proposal-class-properties',
           ]
         : [];
 
@@ -19,5 +19,5 @@ module.exports = {
         '@babel/preset-env',
         '@babel/preset-react',
     ],
-    plugins: [...envPlugins, '@babel/plugin-proposal-class-properties'],
+    plugins: envPlugins,
 };

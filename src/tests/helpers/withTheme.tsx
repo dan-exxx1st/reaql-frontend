@@ -22,10 +22,7 @@ const shallowWithTheme = (children: ChildType) => {
 };
 
 const mountWithTheme = (children: ChildType) => {
-    const mountedComponent = mount(
-        <ThemeProviderWithThemes>{children}</ThemeProviderWithThemes>
-    );
-    return mountedComponent;
+    return mount(<ThemeProviderWithThemes>{children}</ThemeProviderWithThemes>);
 };
 
 export { shallowWithTheme, mountWithTheme };

@@ -11,6 +11,7 @@ describe('<Button />', () => {
                     button
                 </Button>
             );
+
             expect(wrapper).toMatchSnapshot();
             expect(wrapper).toHaveStyleRule('background', colorTheme.pc);
             expect(wrapper).toHaveStyleRule('color', colorTheme.wc);
