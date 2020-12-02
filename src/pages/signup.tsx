@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 
 import { SignUpForm } from 'components/common';
-import { StyledSignUpWrapper } from './style';
+import { StyledSignUpWrapper } from './styles/SignUp';
 
 import { SIGN_UP } from 'lib/graphql/mutations/auth';
 import { Mutation } from 'lib/graphql/types';

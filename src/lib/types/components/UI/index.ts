@@ -1,5 +1,5 @@
 import { MouseEventHandler } from 'react';
-import Theme from 'config/styled';
+import Theme from 'helpers/styled';
 import { ColorType, IconName } from 'lib/types';
 import { TypographyVariantType, TypographyComponentType } from 'lib/types/ui';
 
@@ -68,3 +68,8 @@ export interface ITypographyProps {
 }
 
 export type { IWrapperProps } from './WrapperTypes';
+
+export interface ICheckBoxProps {
+    onClick?: () => void;
+    text?: string;
+}

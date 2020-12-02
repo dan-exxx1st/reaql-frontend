@@ -1,15 +1,20 @@
-import React from 'react';
-import { initializeApollo } from 'lib/apollo';
-import { StyledIndexWrapper } from 'config/styled/MainPageStyle';
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { initializeApollo } from 'lib/graphql/apollo';
 
-import SignUpPage from './SignUp';
+import { checkAuth } from 'helpers/authHelper';
 
 const Index = () => {
-    return (
-        <StyledIndexWrapper>
-            <SignUpPage />
-        </StyledIndexWrapper>
-    );
+    const router = useRouter();
+    useEffect(() => {
+        const isAuth = checkAuth();
+        if (!isAuth) {
+            router.push('/signin');
+        } else {
+            router.push('/home');
+        }
+    }, []);
+    return <div></div>;
 };
 
 export async function getStaticProps() {

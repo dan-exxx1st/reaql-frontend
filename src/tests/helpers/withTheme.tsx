@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { shallow, mount } from 'enzyme';
 
-import themes from 'config/styled';
+import themes from 'helpers/styled';
 
 type ChildType = JSX.Element | JSX.Element[];
 

@@ -1,23 +1,35 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { NextPage } from 'next';
+import { useRouter } from 'next/router';
 
 import {
-    StyledHomeWrapper,
-    StyledHomeSidebar,
-    StyledHomeDialog,
-    StyledHomeUserHeader,
-    StyledHomeContactsSearch,
     StyledHomeContacts,
-    StyledHomeDialogHeader,
+    StyledHomeContactsSearch,
+    StyledHomeDialog,
     StyledHomeDialogContentWrapper,
+    StyledHomeDialogHeader,
     StyledHomeDialogMessageWrapper,
     StyledHomeDialogTextField,
+    StyledHomeSidebar,
+    StyledHomeUserHeader,
+    StyledHomeWrapper,
     StyledMessageList,
-} from './style';
+} from './styles/Home';
 
-import { ContactListData } from 'tests/__mocks__/data/unit/ContactItem'; //!Delete after connect to Graphql API
+import AuthContext from 'helpers/contexts/authContext';
+
 import { MessageListData } from 'tests/__mocks__/data/unit'; //!Delete after connect to Graphql API
+import { ContactListData } from 'tests/__mocks__/data/unit/ContactItem'; //!Delete after connect to Graphql API
 
-const HomePage = () => {
+const HomePage: NextPage = () => {
+    const isAuth = useContext(AuthContext);
+    const router = useRouter();
+
+    useEffect(() => {
+        if (!isAuth) {
+            router.push('/signin');
+        }
+    }, []);
     return (
         <StyledHomeWrapper>
             <StyledHomeSidebar>
@@ -42,6 +54,11 @@ const HomePage = () => {
             </StyledHomeDialog>
         </StyledHomeWrapper>
     );
+};
+
+HomePage.getInitialProps = async ({ res }) => {
+    console.log(res?.getHeaders());
+    return {};
 };
 
 export default HomePage;

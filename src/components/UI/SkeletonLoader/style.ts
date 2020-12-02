@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { skeletonLoaderAvatarKeyFrames } from 'config/styled/animations';
+import { skeletonLoaderAvatarKeyFrames } from 'helpers/styled/animations';
 import { ISkeletonLoaderProps } from 'lib/types/components/UI';
 
 export const StyledSkeletonLoader = styled.div<ISkeletonLoaderProps>`
