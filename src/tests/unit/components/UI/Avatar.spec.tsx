@@ -1,5 +1,5 @@
 import React from 'react';
-import * as helpers from 'config/helpers';
+import * as helpers from 'helpers';
 import { mountWithTheme } from 'tests/helpers/withTheme';
 
 import Avatar from 'components/UI/Avatar';

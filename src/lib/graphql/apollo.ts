@@ -1,7 +1,9 @@
 import { IncomingMessage, ServerResponse } from 'http';
 import { useMemo } from 'react';
 import { ApolloClient } from 'apollo-client';
+import { setContext } from '@apollo/client/link/context';
 import { InMemoryCache, NormalizedCacheObject } from 'apollo-cache-inmemory';
+import { getAuthTokens } from 'helpers/authHelper';
 
 let apolloClient: ApolloClient<NormalizedCacheObject> | undefined;
 
@@ -13,22 +15,36 @@ export type ResolverContext = {
 function createIsomorphLink(context: ResolverContext = {}) {
     if (typeof window === 'undefined') {
         const { SchemaLink } = require('apollo-link-schema');
-        const schema = require('./graphql/types');
+        const schema = require('./types');
         return new SchemaLink({ schema, context });
     } else {
         const { HttpLink } = require('apollo-link-http');
-
-        return new HttpLink({
+        const httpLink = new HttpLink({
             uri: 'http://localhost:8080/graphql',
             credentials: 'same-origin',
         });
+        const link = authLink.concat(httpLink);
+        return link;
     }
 }
 
+const authLink = setContext((_, { headers }) => {
+    // get the authentication token from local storage if it exists
+    const { accessToken } = getAuthTokens();
+    // return the headers to the context so httpLink can read them
+    return {
+        headers: {
+            ...headers,
+            authorization: accessToken ? `Bearer ${accessToken}` : '',
+        },
+    };
+});
+
 function createApolloClient(context?: ResolverContext) {
+    const link = createIsomorphLink(context);
     return new ApolloClient({
         ssrMode: typeof window === 'undefined',
-        link: createIsomorphLink(context),
+        link,
         cache: new InMemoryCache(),
     });
 }

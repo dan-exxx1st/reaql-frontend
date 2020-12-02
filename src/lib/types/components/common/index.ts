@@ -1,4 +1,5 @@
 import { SendedMessage } from 'lib/types';
+import Theme from 'helpers/styled';
 
 export type ContactType = {
     id: string;
@@ -59,4 +60,13 @@ export interface ISignUpFormProps {
     password: string;
     changeFormValues: (field: string, value: string) => void;
     handleSubmit: () => void;
+    theme?: typeof Theme;
+}
+
+export interface ISignInFormProps {
+    _handleSignIn: (payload: {
+        email: string;
+        password: string;
+        rememberMe: boolean;
+    }) => void;
 }

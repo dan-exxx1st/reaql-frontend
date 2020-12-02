@@ -32,6 +32,7 @@ exports[`<Wrapper /> Snapshots Should render a wrapper correctly with default st
         "h5": "normal",
         "h6": "500",
       },
+      "formBoxShadow": "5px 5px 15px rgba(37, 37, 37, 0.1)",
       "gc": "#E5E5E5",
       "lbc": "#E8F3F6",
       "letterSpacing": Object {

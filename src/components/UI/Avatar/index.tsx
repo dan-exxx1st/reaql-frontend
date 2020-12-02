@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { useLoaded } from 'config/helpers';
+import { useLoaded } from 'helpers';
 import { Icon, SkeletonLoader } from '..';
 import { StyledImage, StyledAvatar } from './style';
 import { IAvatarProps } from 'lib/types/components/UI';

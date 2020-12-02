@@ -8,7 +8,7 @@ export const StyledSignUpForm = styled(Wrapper)`
     max-width: 450px;
     background: ${({ theme }) => theme.wc};
     border-radius: 5px;
-    box-shadow: 4px 5px 10px rgba(37, 37, 37, 0.15);
+    box-shadow: ${({ theme }) => theme.formBoxShadow};
 `;
 
 export const StyledSignUpBottomBtnWrapper = styled(Wrapper)`

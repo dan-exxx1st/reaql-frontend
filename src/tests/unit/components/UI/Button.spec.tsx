@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'components/UI';
-import { colorTheme } from 'config/styled';
+import { colorTheme } from 'helpers/styled';
 import { mountWithTheme } from 'tests/helpers/withTheme';
 
 describe('<Button />', () => {
