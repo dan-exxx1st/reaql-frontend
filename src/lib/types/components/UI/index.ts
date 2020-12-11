@@ -36,6 +36,7 @@ export interface ICircleProps {
 export interface IIconProps {
     iconName: IconName;
     className?: string;
+    onClick?: () => void;
 }
 
 export interface ISkeletonLoaderProps {
@@ -72,4 +73,9 @@ export type { IWrapperProps } from './WrapperTypes';
 export interface ICheckBoxProps {
     onClick?: () => void;
     text?: string;
+}
+
+export interface ISystemMessageProps {
+    variant: 'success' | 'warning' | 'error' | 'info';
+    className?: string;
 }

@@ -1,9 +1,10 @@
-import { Avatar, Circle } from 'components/UI';
-import { FC } from 'react';
 import styled from 'styled-components';
 
-export const StyledUserHeader = (UserHeader: FC) => styled(UserHeader)`
-    max-width: 416px;
+import { Avatar, Circle, Wrapper } from 'components/UI';
+
+export const StyledUserHeader = styled(Wrapper)`
+    width: calc(100% - 30px);
+    max-width: 446px;
     padding: 15px;
 `;
 

@@ -21,6 +21,7 @@ export type MessageType = {
 
 export interface IUserHeaderProps {
     className?: string;
+    setSearchUserOpened?: (val: boolean) => void;
 }
 
 export interface IMessageSearchProps {

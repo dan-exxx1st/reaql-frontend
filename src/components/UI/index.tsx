@@ -8,3 +8,4 @@ export { default as Wrapper } from './Wrapper';
 export { default as CheckMark } from './CheckMark';
 export { default as Icon } from './Icon';
 export { default as CheckBox } from './CheckBox';
+export { default as SystemMessage } from './SystemMessage';

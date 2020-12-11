@@ -21,7 +21,7 @@ export type User = {
     email: Scalars['String'];
     name: Scalars['String'];
     surname: Scalars['String'];
-    avatar?: Maybe<Scalars['String']>;
+    avatar: Scalars['String'];
     createdAt: Scalars['String'];
     updatedAt: Scalars['String'];
 };
@@ -56,16 +56,21 @@ export type DialogProps = {
 export type UserAndSession = {
     __typename?: 'UserAndSession';
     user: User;
-    session: Session;
+    session?: Maybe<Session>;
 };
 
 export type Query = {
     __typename?: 'Query';
     user: User;
+    findUsersByEmail: Array<User>;
     dialogs: Array<Maybe<Dialog>>;
 };
 
 export type QueryUserArgs = {
+    email: Scalars['String'];
+};
+
+export type QueryFindUsersByEmailArgs = {
     email: Scalars['String'];
 };
 
@@ -83,6 +88,7 @@ export type SignUpInput = {
 export type SignInInput = {
     email: Scalars['String'];
     password: Scalars['String'];
+    rememberUser: Scalars['Boolean'];
 };
 
 export type CreateDialogInput = {

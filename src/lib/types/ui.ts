@@ -7,7 +7,8 @@ export type IconName =
     | 'newChat'
     | 'threeDots'
     | 'threeDotsWhite'
-    | 'threeDotsGrey';
+    | 'threeDotsGrey'
+    | 'bluePlus';
 
 export type ColorType = 'primary' | 'secondary';
 

@@ -29,6 +29,7 @@ module.exports = {
         '@typescript-eslint/no-empty-function': 0,
         'react/prop-types': 0,
         '@typescript-eslint/triple-slash-reference': 'off',
+        'react/display-name': 'off',
     },
     settings: {
         react: {

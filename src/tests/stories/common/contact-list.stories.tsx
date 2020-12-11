@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactList } from 'components/common';
+import ContactList from 'components/common/ContactList';
 import { storiesOf } from '@storybook/react';
 import { ContactListData } from 'tests/__mocks__/data/unit/ContactItem';
 

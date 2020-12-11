@@ -7,6 +7,16 @@ module.exports = {
         '@storybook/addon-links',
         '@storybook/preset-create-react-app',
     ],
+    typescript: {
+        reactDocgen: 'react-docgen-typescript',
+        reactDocgenTypescriptOptions: {
+            compilerOptions: {
+                allowSyntheticDefaultImports: false,
+                esModuleInterop: false,
+                noEmit: false,
+            },
+        },
+    },
     webpackFinal: async (config) => {
         config.module.rules.push({
             test: /\.(ts|tsx)$/,

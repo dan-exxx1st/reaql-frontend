@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 
-import { TextField, Wrapper } from 'components/UI';
-import {
-    UserHeader,
-    ContactList,
-    DialogHeader,
-    DialogTextField,
-    MessageList,
-} from 'components/common';
+import { Wrapper } from 'components/UI';
+import { DialogHeader, DialogTextField, MessageList } from 'components/common';
 
 export const StyledHomeWrapper = styled(Wrapper)`
     background: ${({ theme }) => theme.wc};
@@ -17,53 +11,6 @@ export const StyledHomeWrapper = styled(Wrapper)`
     width: 100%;
     height: calc(100vh - 40px);
     margin: 5px;
-`;
-
-// Sidebar components styles
-export const StyledHomeSidebar = styled(Wrapper)`
-    max-width: 466px;
-    width: 100%;
-    height: calc(100vh - 40px);
-    flex-direction: column;
-    border-right: 1px solid ${({ theme }) => theme.gc};
-`;
-
-export const StyledHomeUserHeader = styled(UserHeader)`
-    width: calc(100% - 40px);
-    padding: 20px;
-    max-width: 466px;
-`;
-
-export const StyledHomeContactsSearch = styled(TextField)`
-    margin: 19px;
-    margin-top: 0;
-
-    width: calc(100% - 40px);
-
-    & > input {
-        width: calc(100% - 50px);
-    }
-`;
-
-export const StyledHomeContacts = styled(ContactList)`
-    border-top: 1px solid ${({ theme }) => theme.gc};
-    overflow-y: scroll;
-
-    width: 100%;
-
-    ::-webkit-scrollbar-track {
-        background-color: ${({ theme }) => theme.wc};
-    }
-
-    ::-webkit-scrollbar-thumb {
-        border-radius: 1px;
-        background-color: ${({ theme }) => theme.gc};
-        height: 100px;
-    }
-
-    ::-webkit-scrollbar {
-        width: 5px;
-    }
 `;
 
 //Dialog components styles
@@ -103,4 +50,14 @@ export const StyledMessageList = styled(MessageList)``;
 
 export const StyledHomeDialogTextField = styled(DialogTextField)`
     width: 100%;
+`;
+
+export const StyledHomeSearchUserModalWrapper = styled(Wrapper)`
+    position: absolute;
+    background: rgba(85, 85, 85, 0.7);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
 `;

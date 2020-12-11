@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DialogHeader /> Snapshots Should click to the circle 1`] = `
-<Styled(Wrapper)
+.c0 {
+  width: 100%;
+  max-width: calc(976px - 40px);
+}
+
+<Wrapper
+  className="c0"
   justifyContent="space-between"
 >
   <Wrapper>
@@ -36,7 +42,7 @@ exports[`<DialogHeader /> Snapshots Should click to the circle 1`] = `
       iconName="threeDotsGrey"
     />
   </Wrapper>
-</Styled(Wrapper)>
+</Wrapper>
 `;
 
 exports[`<DialogHeader /> Snapshots Should render correctly 1`] = `

@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { Redirect, useHistory } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import useAuth from 'helpers/useAuth';
+import { checkAuth } from 'helpers/authHelper';
+import { SAVE_USER, UserContext } from 'helpers/contexts/userContext';
+
+import { SIGN_UP } from 'lib/graphql/mutations/auth';
+import { Mutation } from 'lib/graphql/types';
 
 import { SignUpForm } from 'components/common';
 import { StyledSignUpWrapper } from './styles/SignUp';
 
-import { SIGN_UP } from 'lib/graphql/mutations/auth';
-import { Mutation } from 'lib/graphql/types';
-import { Redirect } from 'react-router-dom';
-
 const SignUpPage = () => {
-    const auth = useAuth();
+    const auth = checkAuth();
 
     if (!auth) {
         const [state, setState] = useState({
@@ -20,8 +21,9 @@ const SignUpPage = () => {
             surname: '',
             password: '',
         });
-
+        const history = useHistory();
         const [signUp] = useMutation<Mutation>(SIGN_UP);
+        const { dispatch } = useContext(UserContext);
 
         const changeFormValues = (field: string, value: string) => {
             setState({
@@ -40,6 +42,8 @@ const SignUpPage = () => {
                 const { session, user } = signUp;
                 localStorage.setItem('user', JSON.stringify(user));
                 localStorage.setItem('session', JSON.stringify(session));
+                if (dispatch) dispatch({ type: SAVE_USER, payload: user });
+                history.push('/home');
             }
         };
 
