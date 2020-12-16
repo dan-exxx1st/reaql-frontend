@@ -62,7 +62,7 @@ export type UserAndSession = {
 export type Query = {
     __typename?: 'Query';
     user: User;
-    findUsersByEmail: Array<User>;
+    searchUsers: Array<User>;
     dialogs: Array<Maybe<Dialog>>;
 };
 
@@ -70,8 +70,9 @@ export type QueryUserArgs = {
     email: Scalars['String'];
 };
 
-export type QueryFindUsersByEmailArgs = {
+export type QuerySearchUsersArgs = {
     email: Scalars['String'];
+    selfEmail?: Maybe<Scalars['String']>;
 };
 
 export type QueryDialogsArgs = {

@@ -26,7 +26,7 @@ const UserItem: FC<IProps> = (props) => {
                 </StyledUserItemText>
             </StyledUserItemLeft>
             <StyledUserItemIcon
-                onClick={() => onClick && onClick(id)}
+                onClick={() => (onClick ? onClick(id) : null)}
                 iconName="bluePlus"
             />
         </StyledUserItemWrapper>

@@ -1,8 +1,15 @@
-import React, { FC, useEffect, useRef, useState } from 'react';
-import { useQuery } from '@apollo/client';
+import React, { FC, useContext, useEffect, useRef, useState } from 'react';
+import { useMutation, useQuery } from '@apollo/client';
 
-import { GET_USERS_BY_EMAIL } from 'lib/graphql/queries/user';
-import { Query } from 'lib/graphql/types';
+import { SEARCH_USERS } from 'lib/graphql/queries/user';
+import { CREATE_DIALOG_MUTATION } from 'lib/graphql/mutations/dialog';
+import {
+    CreateDialogInput,
+    Dialog_User_Roles,
+    Mutation,
+    Query,
+} from 'lib/graphql/types';
+import { UserContext } from 'helpers/contexts/userContext';
 
 import UserItem from '../UserItem';
 
@@ -12,6 +19,7 @@ import {
     StyledUserSearchModalUsersWrapper,
     StyledUserSearchModalWrapper,
 } from './style';
+import { useHistory } from 'react-router-dom';
 
 interface IProps {
     setSearchUserOpened?: (val: boolean) => void;
@@ -20,13 +28,18 @@ interface IProps {
 
 const UserSearchModal: FC<IProps> = (props) => {
     const { searchUserOpened, setSearchUserOpened } = props;
+    const { state: UserState } = useContext(UserContext);
+    const history = useHistory();
 
     const modalRef = useRef(null);
     const [searchEmail, setSearchEmail] = useState('');
 
-    const { data } = useQuery<Query>(GET_USERS_BY_EMAIL, {
-        variables: { email: searchEmail },
+    const { data } = useQuery<Query>(SEARCH_USERS, {
+        variables: { email: searchEmail, selfEmail: UserState?.user?.email },
     });
+    const [createDialog, { error: CreateDialogError }] = useMutation<Mutation>(
+        CREATE_DIALOG_MUTATION
+    );
 
     const _handleCloseModal = (e: MouseEvent) => {
         const block = modalRef.current;
@@ -43,8 +56,22 @@ const UserSearchModal: FC<IProps> = (props) => {
         }
     };
 
-    const _handleCreateDialog = (id: string) => {
-        console.log('clicked', id);
+    const _handleCreateDialog = async (id: string) => {
+        if (UserState && UserState.user) {
+            const { user } = UserState;
+            const users: CreateDialogInput[] = [
+                { userId: user.id, role: Dialog_User_Roles.Admin },
+                { userId: id, role: Dialog_User_Roles.User },
+            ];
+            const { data } = await createDialog({
+                variables: { input: users },
+            });
+
+            if (!CreateDialogError) {
+                setSearchUserOpened && setSearchUserOpened(false);
+                history.push(`/home?dialog=${data?.createDialog?.id}`);
+            }
+        }
     };
 
     useEffect(() => {
@@ -71,8 +98,8 @@ const UserSearchModal: FC<IProps> = (props) => {
                     />
                     <StyledUserSearchModalUsersWrapper>
                         {data &&
-                            data.findUsersByEmail &&
-                            data.findUsersByEmail.map((user) => (
+                            data.searchUsers &&
+                            data.searchUsers.map((user) => (
                                 <UserItem
                                     key={user.id}
                                     onClick={_handleCreateDialog}

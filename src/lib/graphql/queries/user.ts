@@ -14,13 +14,14 @@ export const GET_USER = gql`
     }
 `;
 
-export const GET_USERS_BY_EMAIL = gql`
-    query UsersByEmail($email: String!) {
-        findUsersByEmail(email: $email) {
+export const SEARCH_USERS = gql`
+    query SEARCH_USERS($email: String!, $selfEmail: String!) {
+        searchUsers(email: $email, selfEmail: $selfEmail) {
             id
             email
             name
             surname
+            avatar
         }
     }
 `;
