@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { TextField, Wrapper } from 'components/UI';
 import UserHeader from '../UserHeader';
-import ContactList from '../ContactList';
+import DialogList from '../DialogList';
 
 export const StyledSidebarWrapper = styled(Wrapper)`
     max-width: 466px;
@@ -12,12 +12,12 @@ export const StyledSidebarWrapper = styled(Wrapper)`
     border-right: 1px solid ${({ theme }) => theme.gc};
 `;
 
-export const StyledHomeUserHeader = styled(UserHeader)`
+export const StyledSidebarUserHeader = styled(UserHeader)`
     width: 100%;
     padding: 10px 0;
 `;
 
-export const StyledHomeContactsSearch = styled(TextField)`
+export const StyledSidebarDialogsSearch = styled(TextField)`
     padding: 0 15px;
     margin-bottom: 20px;
     width: calc(100% - 30px);
@@ -31,7 +31,7 @@ export const StyledHomeContactsSearch = styled(TextField)`
     }
 `;
 
-export const StyledHomeContacts = styled(ContactList)`
+export const StyledSidebarDialogs = styled(DialogList)`
     border-top: 1px solid ${({ theme }) => theme.gc};
     overflow-y: scroll;
 

@@ -99,13 +99,15 @@ const UserSearchModal: FC<IProps> = (props) => {
                     <StyledUserSearchModalUsersWrapper>
                         {data &&
                             data.searchUsers &&
-                            data.searchUsers.map((user) => (
-                                <UserItem
-                                    key={user.id}
-                                    onClick={_handleCreateDialog}
-                                    {...user}
-                                />
-                            ))}
+                            data.searchUsers.map((user) =>
+                                user ? (
+                                    <UserItem
+                                        key={user.id}
+                                        onClick={_handleCreateDialog}
+                                        {...user}
+                                    />
+                                ) : null
+                            )}
                     </StyledUserSearchModalUsersWrapper>
                 </StyledUserSearchModalWrapper>
             </div>

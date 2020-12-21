@@ -1,15 +1,6 @@
 import { SendedMessage } from 'lib/types';
 import Theme from 'helpers/styled';
-
-export type ContactType = {
-    id: string;
-    name: string;
-    avatar_src?: string;
-    last_message?: string;
-    last_message_date?: string;
-    unread_message_count?: number;
-    message_status?: SendedMessage;
-};
+import { Dialog, Maybe, Message_Statuses } from 'lib/graphql/types';
 
 export type MessageType = {
     id: string;
@@ -34,15 +25,24 @@ export interface IMessageItemProps extends MessageType {
     className?: string;
 }
 
-export type IContactsItemProps = ContactType;
+export interface IDialogsItemProps {
+    id: string;
+    name: string;
+    surname: string;
+    avatar: string;
+    unreadMessages: number | null | undefined;
+    lastMessageStatus: Message_Statuses | null | undefined;
+    lastMessage: string | null | undefined;
+    lastMessageDate: string | null | undefined;
+}
 
 export interface IMessageListProps {
     messages?: IMessageItemProps[];
     className?: string;
 }
 
-export interface IContactListProps {
-    contacts?: ContactType[];
+export interface IDialogListProps {
+    dialogs?: Maybe<Dialog[]>;
     className?: string;
 }
 

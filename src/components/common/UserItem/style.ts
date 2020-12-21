@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { Avatar, Icon, Typography, Wrapper } from 'components/UI';
 
 export const StyledUserItemWrapper = styled(Wrapper)`
-    padding: 10px 2.5px;
+    padding: 10px 0;
 
-    width: calc(100% - 5px);
+    width: 100%;
     border-bottom: 1px solid ${({ theme }) => theme.plc};
 
     justify-content: space-between;
@@ -25,7 +25,7 @@ export const StyledUserItemLeft = styled(Wrapper)`
 `;
 
 export const StyledUserItemAvatar = styled(Avatar)`
-    margin-right: 20px;
+    margin-right: 10px;
 `;
 
 export const StyledUserItemText = styled(Typography)`
@@ -34,6 +34,6 @@ export const StyledUserItemText = styled(Typography)`
 `;
 
 export const StyledUserItemIcon = styled(Icon)`
-    margin-right: 10px;
+    margin-right: 2px;
     cursor: pointer;
 `;

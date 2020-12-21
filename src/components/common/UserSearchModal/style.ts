@@ -6,8 +6,7 @@ export const StyledUserSearchModalWrapper = styled(Wrapper)`
     background: #fafafa;
     box-shadow: 0px 0px 15px #555555;
     border-radius: 5px;
-    max-width: 300px;
-    width: calc(100% - 40px);
+    width: 360px;
     padding: 20px;
     flex-direction: column;
 `;
@@ -17,7 +16,7 @@ export const StyledUserSearchModalTitle = styled(Typography)`
 `;
 
 export const StyledUserSearchModalTextField = styled(TextField)`
-    width: 100%;
+    width: calc(100% - 12px);
     margin-bottom: 20px;
 
     & > input {

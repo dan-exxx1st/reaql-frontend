@@ -7,11 +7,8 @@ import {
     StyledUserItemIcon,
 } from './style';
 
-interface IProps {
-    id: string;
-    name: string;
-    surname: string;
-    avatar?: string;
+import { User } from 'lib/graphql/types';
+interface IProps extends User {
     onClick?: (id: string) => void;
 }
 

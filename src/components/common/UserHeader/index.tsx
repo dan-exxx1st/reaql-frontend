@@ -29,7 +29,7 @@ const UserHeader: FC<IUserHeaderProps> = ({
                     <Wrapper alignItems="center">
                         <StyledAvatar />
                         <Typography variant="h6">
-                            {name} {surname}
+                            {`${name} ${surname}`}
                         </Typography>
                     </Wrapper>
                     <Wrapper alignItems="center">

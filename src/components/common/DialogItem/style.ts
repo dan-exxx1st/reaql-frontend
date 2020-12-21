@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 import { Circle, Wrapper } from 'components/UI';
 
-export const StyledContactItemAvatarWrapper = styled(Wrapper)`
+export const StyledDialogItemAvatarWrapper = styled(Wrapper)`
     margin-right: 20px;
 `;
 
-export const StyledContactItemCircle = styled(Circle)`
+export const StyledDialogItemCircle = styled(Circle)`
     width: 20px;
     height: 20px;
 `;
 
-export const StyledContactItemRightWrapper = styled(Wrapper)``;
+export const StyledDialogItemRightWrapper = styled(Wrapper)``;
 
 export default styled(Wrapper)`
     width: calc(100% - 40px);

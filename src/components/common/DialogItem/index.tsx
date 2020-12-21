@@ -1,46 +1,60 @@
 import React, { FC, useEffect, useState } from 'react';
 import StyledDialogListItem, {
-    StyledContactItemAvatarWrapper,
-    StyledContactItemCircle,
-    StyledContactItemRightWrapper,
+    StyledDialogItemAvatarWrapper,
+    StyledDialogItemCircle,
+    StyledDialogItemRightWrapper,
 } from './style';
 import { Wrapper, Avatar, Typography, CheckMark } from 'components/UI';
-import { IContactsItemProps } from 'lib/types/components/common';
+import { IDialogsItemProps } from 'lib/types/components/common';
+import { Message_Statuses } from 'lib/graphql/types';
+import { useHistory } from 'react-router-dom';
 
-const ContactItem: FC<IContactsItemProps> = ({
-    avatar_src,
-    name,
-    last_message,
-    last_message_date,
-    unread_message_count,
-    message_status,
-}) => {
+const DialogItem: FC<IDialogsItemProps> = (props) => {
+    const {
+        id,
+        lastMessageStatus,
+        unreadMessages,
+        avatar,
+        name,
+        surname,
+        lastMessage,
+        lastMessageDate,
+    } = props;
+
+    const history = useHistory();
+
     const [isDoubleCheckMark, setIsDoubleCheckMark] = useState(false);
     const [isActiveCheckMark, setIsActiveCheckMark] = useState(false);
     const [undreadMessageCountText, setUnreadMessageCountText] = useState('');
 
+    const _handleClick = () => {
+        history.push(`?dialog=${id}`);
+    };
+
     useEffect(() => {
-        switch (message_status) {
-            case 'sended': {
-                setIsDoubleCheckMark(false);
-                setIsActiveCheckMark(false);
-                break;
-            }
+        if (lastMessageStatus) {
+            switch (lastMessageStatus) {
+                case Message_Statuses.Sended: {
+                    setIsDoubleCheckMark(false);
+                    setIsActiveCheckMark(false);
+                    break;
+                }
 
-            case 'received': {
-                setIsDoubleCheckMark(true);
-                setIsActiveCheckMark(false);
-                break;
-            }
+                case Message_Statuses.Recived: {
+                    setIsDoubleCheckMark(true);
+                    setIsActiveCheckMark(false);
+                    break;
+                }
 
-            case 'readed': {
-                setIsDoubleCheckMark(true);
-                setIsActiveCheckMark(true);
+                case Message_Statuses.Readed: {
+                    setIsDoubleCheckMark(true);
+                    setIsActiveCheckMark(true);
+                }
             }
         }
-        if (unread_message_count) {
-            if (unread_message_count > 0 && unread_message_count < 10) {
-                setUnreadMessageCountText(unread_message_count.toString());
+        if (unreadMessages) {
+            if (unreadMessages > 0 && unreadMessages < 10) {
+                setUnreadMessageCountText(unreadMessages.toString());
             } else {
                 setUnreadMessageCountText('9+');
             }
@@ -48,39 +62,39 @@ const ContactItem: FC<IContactsItemProps> = ({
     }, []);
 
     return (
-        <StyledDialogListItem flexWrap="wrap">
+        <StyledDialogListItem flexWrap="wrap" onClick={_handleClick}>
             <Wrapper height="40px" width="100%" justifyContent="space-between">
                 <Wrapper height="40px">
-                    <StyledContactItemAvatarWrapper>
-                        <Avatar src={avatar_src} alt="Avatar image" />
-                    </StyledContactItemAvatarWrapper>
+                    <StyledDialogItemAvatarWrapper>
+                        <Avatar src={avatar} alt="Avatar image" />
+                    </StyledDialogItemAvatarWrapper>
                     <Wrapper
                         height="40px"
                         flexDirection="column"
                         justifyContent="space-between"
                     >
                         <Typography variant="body1" color="dc">
-                            {name}
+                            {`${name} ${surname}`}
                         </Typography>
                         <Typography variant="caption1" color="dsc">
-                            {last_message}
+                            {lastMessage}
                         </Typography>
                     </Wrapper>
                 </Wrapper>
-                <StyledContactItemRightWrapper
+                <StyledDialogItemRightWrapper
                     flexDirection="column"
                     height="40px"
                     justifyContent="space-between"
                     alignItems="flex-end"
                 >
                     <Typography variant="caption1" color="dgc">
-                        {last_message_date?.toString()}
+                        {lastMessageDate?.toString()}
                     </Typography>
 
                     <Wrapper>
                         {undreadMessageCountText ? (
                             <Wrapper>
-                                <StyledContactItemCircle
+                                <StyledDialogItemCircle
                                     color="primary"
                                     text={undreadMessageCountText}
                                 />
@@ -94,10 +108,10 @@ const ContactItem: FC<IContactsItemProps> = ({
                             </Wrapper>
                         )}
                     </Wrapper>
-                </StyledContactItemRightWrapper>
+                </StyledDialogItemRightWrapper>
             </Wrapper>
         </StyledDialogListItem>
     );
 };
 
-export default ContactItem;
+export default DialogItem;
