@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "@apollo/client": "^3.3.2",
+        "@apollo/client": "3.2.4",
         "@babel/core": "7.12.3",
         "@pmmmwh/react-refresh-webpack-plugin": "0.4.2",
         "@svgr/webpack": "5.4.0",
@@ -75,9 +75,9 @@
     "scripts": {
         "start": "node scripts/start.js",
         "build": "node scripts/build.js",
-        "test": "jest",
-        "test:watch": "jest --watchAll",
-        "test:coverage": "jest --runInBand --coverage --collectCoverageFrom=src/**/*.{ts,tsx} --collectCoverageFrom=!src/**/*.stories.{ts,tsx} --collectCoverageFrom=!src/lib/**/* --collectCoverageFrom=!src/config/**/* --collectCoverageFrom=!src/lib --collectCoverageFrom=!src/**/*.{types,d}.{ts,tsx}",
+        "test": "NODE_PATH=./src jest",
+        "test:watch": "NODE_PATH=./src jest --watchAll",
+        "test:coverage": "NODE_PATH=./src jest --runInBand --coverage --collectCoverageFrom=src/**/*.{ts,tsx} --collectCoverageFrom=!src/**/*.stories.{ts,tsx} --collectCoverageFrom=!src/lib/**/* --collectCoverageFrom=!src/config/**/* --collectCoverageFrom=!src/lib --collectCoverageFrom=!src/**/*.{types,d}.{ts,tsx}",
         "test:coverage:watch": "npm run test:coverage --watchAll",
         "storybook": "start-storybook -p 6006 -s public",
         "build-storybook": "build-storybook -s public",
@@ -157,7 +157,6 @@
             "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
         ],
         "testEnvironment": "jsdom",
-        "testRunner": "/home/exs1st/projects/reaql-frontend/node_modules/jest-circus/runner.js",
         "transform": {
             "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
             "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
