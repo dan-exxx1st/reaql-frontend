@@ -1,8 +1,8 @@
 import React from 'react';
-import ContactList from 'components/common/ContactList';
+import DialogList from 'components/common/DialogList';
 import { storiesOf } from '@storybook/react';
-import { ContactListData } from 'tests/__mocks__/data/unit/ContactItem';
+import { DialogListData } from 'tests/__mocks__/data/unit/DialogItem';
 
-storiesOf('Common/ Contact list', module).add('default', () => (
-    <ContactList contacts={ContactListData} />
+storiesOf('Common/ Dialog list', module).add('default', () => (
+    <DialogList dialogs={DialogListData} />
 ));

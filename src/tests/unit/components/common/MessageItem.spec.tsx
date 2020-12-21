@@ -1,12 +1,13 @@
 import React from 'react';
 import { MessageItem } from 'components/common';
-import { mountWithTheme } from 'tests/helpers/withTheme';
+
 import { MessageItemData } from 'tests/__mocks__/data/unit';
+import { mountWithApolloAndStyled } from 'tests/helpers/withApollo';
 
 describe('<MessageItem />', () => {
     describe('Snapshots', () => {
         it('Should render correctly', () => {
-            const wrapper = mountWithTheme(
+            const wrapper = mountWithApolloAndStyled(
                 <MessageItem {...MessageItemData} />
             );
 
@@ -14,7 +15,7 @@ describe('<MessageItem />', () => {
         });
 
         it('Should render correctly with sended message status', () => {
-            const wrapper = mountWithTheme(
+            const wrapper = mountWithApolloAndStyled(
                 <MessageItem {...MessageItemData} message_status="sended" />
             );
 
@@ -22,7 +23,7 @@ describe('<MessageItem />', () => {
         });
 
         it('Should render correctly with received message status', () => {
-            const wrapper = mountWithTheme(
+            const wrapper = mountWithApolloAndStyled(
                 <MessageItem {...MessageItemData} message_status="received" />
             );
 
@@ -30,7 +31,7 @@ describe('<MessageItem />', () => {
         });
 
         it('Should render correctly with readed message status', () => {
-            const wrapper = mountWithTheme(
+            const wrapper = mountWithApolloAndStyled(
                 <MessageItem {...MessageItemData} message_status="readed" />
             );
 

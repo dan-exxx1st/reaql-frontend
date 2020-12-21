@@ -1,17 +1,17 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { ContactItem } from 'components/common';
+import { DialogItem } from 'components/common';
 import { Wrapper } from 'components/UI';
 import {
-    ContactItemDataWithAvatar,
-    ContactItemDataWithoutAvatar,
-    ContactItemDataWithReadMessaage,
-} from 'tests/__mocks__/data/unit/ContactItem';
+    DialogItemDataWithAvatar,
+    DialogItemDataWithoutAvatar,
+    DialogItemDataWithReadMessaage,
+} from 'tests/__mocks__/data/unit/DialogItem';
 
-storiesOf('Common/ Contact item', module).add('default', () => (
+storiesOf('Common/ Dialog item', module).add('default', () => (
     <Wrapper flexDirection="column">
-        <ContactItem {...ContactItemDataWithAvatar} />
-        <ContactItem {...ContactItemDataWithoutAvatar} />
-        <ContactItem {...ContactItemDataWithReadMessaage} />
+        <DialogItem {...DialogItemDataWithAvatar} />
+        <DialogItem {...DialogItemDataWithoutAvatar} />
+        <DialogItem {...DialogItemDataWithReadMessaage} />
     </Wrapper>
 ));

@@ -1,12 +1,13 @@
 import React from 'react';
 import { MessageList } from 'components/common';
-import { mountWithTheme } from 'tests/helpers/withTheme';
+import { mountWithApolloAndStyled } from 'tests/helpers/withApollo';
+
 import { MessageListData } from 'tests/__mocks__/data/unit';
 
 describe('<MessageList />', () => {
     describe('Snapshots', () => {
         it('Should render correctly', () => {
-            const wrapper = mountWithTheme(
+            const wrapper = mountWithApolloAndStyled(
                 <MessageList messages={MessageListData} />
             );
 

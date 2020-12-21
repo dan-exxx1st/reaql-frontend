@@ -1,8 +1,8 @@
 import WomanAvatar from 'assets/images/WomanAvatar.png';
-import { ContactType } from 'lib/types/components/common';
+import { DialogType } from 'lib/types/components/common';
 import { GenerateDate } from 'tests/helpers';
 
-export const ContactItemDataWithoutAvatar: ContactType = {
+export const DialogItemDataWithoutAvatar: DialogType = {
     id: '1',
     name: 'Jaydon Bator',
     avatar_src: '',
@@ -12,7 +12,7 @@ export const ContactItemDataWithoutAvatar: ContactType = {
     message_status: 'sended',
 };
 
-export const ContactItemDataWithAvatar: ContactType = {
+export const DialogItemDataWithAvatar: DialogType = {
     id: '2',
     name: 'Desirae Schleifer',
     avatar_src: WomanAvatar,
@@ -22,7 +22,7 @@ export const ContactItemDataWithAvatar: ContactType = {
     message_status: 'received',
 };
 
-export const ContactItemDataWithReadMessaage: ContactType = {
+export const DialogItemDataWithReadMessaage: DialogType = {
     id: '3',
     name: 'James Daniel',
     avatar_src: '',
@@ -32,7 +32,7 @@ export const ContactItemDataWithReadMessaage: ContactType = {
     message_status: 'readed',
 };
 
-export const ContactItemDataWithoutLastMessageDate: ContactType = {
+export const DialogItemDataWithoutLastMessageDate: DialogType = {
     id: '4',
     name: 'James Daniel',
     avatar_src: '',
@@ -41,9 +41,9 @@ export const ContactItemDataWithoutLastMessageDate: ContactType = {
     message_status: 'readed',
 };
 
-export const ContactListData: ContactType[] = [
-    ContactItemDataWithoutAvatar,
-    ContactItemDataWithAvatar,
-    ContactItemDataWithReadMessaage,
-    ContactItemDataWithoutLastMessageDate,
+export const DialogListData: DialogType[] = [
+    DialogItemDataWithoutAvatar,
+    DialogItemDataWithAvatar,
+    DialogItemDataWithReadMessaage,
+    DialogItemDataWithoutLastMessageDate,
 ];

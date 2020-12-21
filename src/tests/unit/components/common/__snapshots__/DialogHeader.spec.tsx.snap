@@ -1,50 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DialogHeader /> Snapshots Should click to the circle 1`] = `
-.c0 {
-  width: 100%;
-  max-width: calc(976px - 40px);
-}
-
-<Wrapper
-  className="c0"
-  justifyContent="space-between"
->
-  <Wrapper>
-    <Styled(Styled(Avatar)) />
-    <Wrapper
-      flexDirection="column"
-      height="40px"
-      justifyContent="space-between"
-    >
-      <Styled(Typography)
-        color="dc"
-        variant="body1"
-      >
-        Desirae Schleifer
-      </Styled(Typography)>
-      <Styled(Typography)
-        color="dgc"
-        variant="caption1"
-      >
-        Today at 3:30 pm
-      </Styled(Typography)>
-    </Wrapper>
-  </Wrapper>
-  <Wrapper>
-    <Styled(Circle)
-      color="secondary"
-      iconName="search"
-      onClick={[Function]}
-    />
-    <Styled(Circle)
-      color="secondary"
-      iconName="threeDotsGrey"
-    />
-  </Wrapper>
-</Wrapper>
-`;
-
 exports[`<DialogHeader /> Snapshots Should render correctly 1`] = `
 .c4 {
   display: -webkit-box;
