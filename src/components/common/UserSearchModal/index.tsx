@@ -1,5 +1,5 @@
 import React, { FC, useContext, useEffect, useRef, useState } from 'react';
-import { useMutation, useQuery } from '@apollo/client';
+import { useLazyQuery, useMutation } from '@apollo/client';
 
 import { SEARCH_USERS } from 'lib/graphql/queries/user';
 import { CREATE_DIALOG_MUTATION } from 'lib/graphql/mutations/dialog';
@@ -34,9 +34,7 @@ const UserSearchModal: FC<IProps> = (props) => {
     const modalRef = useRef(null);
     const [searchEmail, setSearchEmail] = useState('');
 
-    const { data } = useQuery<Query>(SEARCH_USERS, {
-        variables: { email: searchEmail, selfEmail: UserState?.user?.email },
-    });
+    const [getUsers, { data }] = useLazyQuery<Query>(SEARCH_USERS);
     const [createDialog, { error: CreateDialogError }] = useMutation<Mutation>(
         CREATE_DIALOG_MUTATION
     );
@@ -54,6 +52,13 @@ const UserSearchModal: FC<IProps> = (props) => {
         if (email !== searchEmail) {
             setSearchEmail(email);
         }
+
+        getUsers({
+            variables: {
+                email: searchEmail,
+                selfEmail: UserState?.user?.email,
+            },
+        });
     };
 
     const _handleCreateDialog = async (id: string) => {

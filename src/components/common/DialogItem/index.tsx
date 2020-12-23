@@ -99,14 +99,15 @@ const DialogItem: FC<IDialogsItemProps> = (props) => {
                                     text={undreadMessageCountText}
                                 />
                             </Wrapper>
-                        ) : (
+                        ) : null}
+                        {lastMessageStatus ? (
                             <Wrapper>
                                 <CheckMark
                                     isDouble={isDoubleCheckMark}
                                     isChecked={isActiveCheckMark}
                                 />
                             </Wrapper>
-                        )}
+                        ) : null}
                     </Wrapper>
                 </StyledDialogItemRightWrapper>
             </Wrapper>

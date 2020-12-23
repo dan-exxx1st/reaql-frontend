@@ -14,7 +14,8 @@ import {
 } from './styles/Home';
 
 import { checkAuth } from 'helpers/authHelper';
-import { SideBar, UserSearchModal } from 'components/common';
+import { UserSearchModal } from 'components/common';
+import { SideBarWithData } from 'components/data';
 
 const HomePage = () => {
     const auth = checkAuth();
@@ -39,7 +40,9 @@ const HomePage = () => {
                     </StyledHomeSearchUserModalWrapper>
                 )}
                 <StyledHomeWrapper>
-                    <SideBar setSearchUserOpened={setSearchUserOpened} />
+                    <SideBarWithData
+                        setSearchUserOpened={setSearchUserOpened}
+                    />
 
                     {dialogId && (
                         <StyledHomeDialog>

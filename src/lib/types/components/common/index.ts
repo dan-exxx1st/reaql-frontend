@@ -1,6 +1,7 @@
 import { SendedMessage } from 'lib/types';
 import Theme from 'helpers/styled';
 import { Dialog, Maybe, Message_Statuses } from 'lib/graphql/types';
+import { ISideBarWithDataProps } from '../data';
 
 export type MessageType = {
     id: string;
@@ -70,4 +71,9 @@ export interface ISignInFormProps {
         password: string;
         rememberMe: boolean;
     }) => void;
+}
+
+export interface ISideBarProps extends ISideBarWithDataProps {
+    dialogs?: Dialog[];
+    subscribeToNewDialogs?: () => void;
 }

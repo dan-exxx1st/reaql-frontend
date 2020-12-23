@@ -40,8 +40,8 @@ export type Dialog = {
     id: Scalars['ID'];
     users: Array<Maybe<User>>;
     dialogProps: Array<Maybe<DialogProps>>;
-    lastMessage: Maybe<Scalars['String']>;
-    lastMessageDate: Maybe<Scalars['String']>;
+    lastMessage?: Maybe<Scalars['String']>;
+    lastMessageDate?: Maybe<Scalars['String']>;
     group: Scalars['Boolean'];
 };
 
@@ -50,20 +50,21 @@ export type DialogProps = {
     id: Scalars['ID'];
     user: User;
     userRole: Dialog_User_Roles;
-    unreadMessages: Maybe<Scalars['Int']>;
-    lastMessageStatus: Maybe<Message_Statuses>;
+    unreadMessages?: Maybe<Scalars['Int']>;
+    lastMessageStatus?: Maybe<Message_Statuses>;
 };
 
 export type UserAndSession = {
     __typename?: 'UserAndSession';
     user: User;
-    session: Maybe<Session>;
+    session?: Maybe<Session>;
 };
 
 export type Query = {
     __typename?: 'Query';
     user: User;
     searchUsers: Array<Maybe<User>>;
+    dialog: Dialog;
     dialogs: Array<Dialog>;
 };
 
@@ -74,6 +75,10 @@ export type QueryUserArgs = {
 export type QuerySearchUsersArgs = {
     email: Scalars['String'];
     selfEmail: Scalars['String'];
+};
+
+export type QueryDialogArgs = {
+    dialogId: Scalars['String'];
 };
 
 export type QueryDialogsArgs = {
@@ -103,7 +108,7 @@ export type Mutation = {
     signUp: UserAndSession;
     signIn: UserAndSession;
     refreshSession: Session;
-    createDialog: Maybe<Dialog>;
+    createDialog?: Maybe<Dialog>;
 };
 
 export type MutationSignUpArgs = {

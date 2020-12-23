@@ -40,9 +40,13 @@ const SignUpPage = () => {
             if (data) {
                 const { signUp } = data;
                 const { session, user } = signUp;
-                localStorage.setItem('user', JSON.stringify(user));
+
                 localStorage.setItem('session', JSON.stringify(session));
-                if (dispatch) dispatch({ type: SAVE_USER, payload: user });
+                if (dispatch)
+                    dispatch({
+                        type: SAVE_USER,
+                        payload: { user, rememberMe: true },
+                    });
                 history.push('/home');
             }
         };

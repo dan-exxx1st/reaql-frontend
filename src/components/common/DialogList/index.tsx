@@ -20,22 +20,30 @@ const DialogList: FC<IDialogListProps> = ({ dialogs, ...otherProps }) => {
                         users,
                         lastMessage,
                         lastMessageDate,
-                        // group,
+                        dialogProps,
+                        group,
                     } = dialog;
 
                     const filteredUsers = users.filter(
                         (user) => user?.id !== state?.user?.id
                     );
                     if (filteredUsers.length == 1 && users[0]) {
-                        const dialogProps = dialog.dialogProps.find(
+                        const userDialogProps = dialogProps.find(
                             (props) => props?.user.id === state?.user?.id
                         );
-                        if (dialogProps) {
+                        if (userDialogProps) {
                             const {
                                 unreadMessages,
                                 lastMessageStatus,
-                            } = dialogProps;
-                            const { name, surname, avatar } = users[0];
+                            } = userDialogProps;
+                            const {
+                                name,
+                                surname,
+                                avatar: UserAvatar,
+                            } = users[0];
+
+                            const avatar = !group ? UserAvatar : '';
+
                             const data: IDialogsItemProps = {
                                 id,
                                 name,

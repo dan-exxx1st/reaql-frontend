@@ -14,7 +14,7 @@ const UserHeader: FC<IUserHeaderProps> = ({
 
     if (state && state.user) {
         const { user } = state;
-        const { name, surname } = user;
+        const { name, surname, avatar } = user;
 
         const _handleNewDialogClick = () =>
             setSearchUserOpened && setSearchUserOpened(true);
@@ -27,7 +27,7 @@ const UserHeader: FC<IUserHeaderProps> = ({
                     className={className}
                 >
                     <Wrapper alignItems="center">
-                        <StyledAvatar />
+                        <StyledAvatar src={avatar} />
                         <Typography variant="h6">
                             {`${name} ${surname}`}
                         </Typography>

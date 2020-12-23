@@ -31,10 +31,13 @@ const SignInPage = () => {
                 const { signIn } = data;
                 const { user, session } = signIn;
                 if (rememberMe) {
-                    localStorage.setItem('user', JSON.stringify(user));
                     localStorage.setItem('session', JSON.stringify(session));
                 }
-                if (dispatch) dispatch({ type: SAVE_USER, payload: user });
+                if (dispatch)
+                    dispatch({
+                        type: SAVE_USER,
+                        payload: { user, rememberMe },
+                    });
                 history.push('/home');
             }
         };

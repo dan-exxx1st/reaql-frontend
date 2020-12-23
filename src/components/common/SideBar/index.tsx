@@ -1,5 +1,4 @@
-import React, { FC, useContext } from 'react';
-import { useQuery } from '@apollo/client';
+import React, { FC, useEffect } from 'react';
 
 import {
     StyledSidebarWrapper,
@@ -8,21 +7,14 @@ import {
     StyledSidebarDialogs,
 } from './style';
 
-import { GET_DIALOGS } from 'lib/graphql/queries/dialog';
-import { UserContext } from 'helpers/contexts/userContext';
-import { Query } from 'lib/graphql/types';
+import { ISideBarProps } from 'lib/types/components/common';
 
-interface IProps {
-    setSearchUserOpened?: (val: boolean) => void;
-}
+const SideBar: FC<ISideBarProps> = (props) => {
+    const { setSearchUserOpened, dialogs, subscribeToNewDialogs } = props;
 
-const SideBar: FC<IProps> = (props) => {
-    const { setSearchUserOpened } = props;
-    const { state: UserState } = useContext(UserContext);
-
-    const { data } = useQuery<Query>(GET_DIALOGS, {
-        variables: { userId: UserState?.user?.id },
-    });
+    useEffect(() => {
+        if (subscribeToNewDialogs) subscribeToNewDialogs();
+    }, []);
 
     return (
         <StyledSidebarWrapper>
@@ -36,9 +28,7 @@ const SideBar: FC<IProps> = (props) => {
                 placeholder="Search"
                 width="100%"
             />
-            {data && data.dialogs ? (
-                <StyledSidebarDialogs dialogs={data?.dialogs} />
-            ) : null}
+            {dialogs ? <StyledSidebarDialogs dialogs={dialogs} /> : null}
         </StyledSidebarWrapper>
     );
 };
