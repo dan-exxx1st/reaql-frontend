@@ -26,4 +26,5 @@ export interface IWrapperProps {
     width?: string;
     height?: string;
     padding?: string;
+    onClick?: () => void;
 }

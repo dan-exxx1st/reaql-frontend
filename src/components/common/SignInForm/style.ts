@@ -16,8 +16,10 @@ export const StyledSignInFormWrapper = styled(Wrapper)`
 
 export const StyledSignFormElementsWrapper = styled(Wrapper)`
     width: 100%;
+    align-items: center;
 
     justify-content: space-between;
+    flex-wrap: wrap;
 
     &:last-child {
         margin-top: 40px;

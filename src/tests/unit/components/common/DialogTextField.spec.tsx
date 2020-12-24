@@ -1,11 +1,11 @@
 import React from 'react';
 import { DialogTextField } from 'components/common';
-import { mountWithTheme } from 'tests/helpers/withTheme';
+import { mountWithApolloAndStyled } from 'tests/helpers/withApollo';
 
 describe('<DialogTextField />', () => {
     describe('Snapshots', () => {
         it('Should render correctly', () => {
-            const wrapper = mountWithTheme(<DialogTextField />);
+            const wrapper = mountWithApolloAndStyled(<DialogTextField />);
 
             expect(wrapper).toMatchSnapshot();
         });

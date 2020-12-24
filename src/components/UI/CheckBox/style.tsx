@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Wrapper, Typography } from '..';
 
 export const StyledCheckBoxWrapper = styled(Wrapper)`
-    align-content: center;
+    align-items: center;
 `;
 
 export const StyledCheckBoxText = styled(Typography)`
@@ -11,6 +11,7 @@ export const StyledCheckBoxText = styled(Typography)`
 `;
 
 export const StyledCheckBoxLabel = styled.label`
+    height: 10px;
     display: block;
     position: relative;
     padding-left: 35px;

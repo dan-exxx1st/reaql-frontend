@@ -4,28 +4,14 @@ import { ThemeProvider } from 'styled-components';
 import { shallow, mount } from 'enzyme';
 
 import themes from 'helpers/styled';
-
-type ChildType = JSX.Element | JSX.Element[];
-
-interface IProps {
-    children: ChildType;
-}
-
-const ThemeProviderWithThemes = ({ children }: IProps) => {
-    return <ThemeProvider theme={themes}>{children}</ThemeProvider>;
-};
+import { ChildType } from '.';
 
 const shallowWithTheme = (children: ChildType) => {
-    return shallow(
-        <ThemeProviderWithThemes>{children}</ThemeProviderWithThemes>
-    );
+    return shallow(<ThemeProvider theme={themes}>{children}</ThemeProvider>);
 };
 
 const mountWithTheme = (children: ChildType) => {
-    const mountedComponent = mount(
-        <ThemeProviderWithThemes>{children}</ThemeProviderWithThemes>
-    );
-    return mountedComponent;
+    return mount(<ThemeProvider theme={themes}>{children}</ThemeProvider>);
 };
 
 export { shallowWithTheme, mountWithTheme };

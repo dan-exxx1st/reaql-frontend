@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Wrapper /> Snapshots Should render a wrapper correctly with default styles 1`] = `
-<Component
-  theme={
+<ContextProvider
+  value={
     Object {
       "dc": "#252525",
       "dgc": "#A5A5A5",
@@ -66,5 +66,5 @@ exports[`<Wrapper /> Snapshots Should render a wrapper correctly with default st
   <Wrapper>
     Correctly wraper
   </Wrapper>
-</Component>
+</ContextProvider>
 `;

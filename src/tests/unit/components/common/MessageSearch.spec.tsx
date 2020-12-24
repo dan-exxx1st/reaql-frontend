@@ -1,11 +1,14 @@
 import React from 'react';
 import { MessageSearch } from 'components/common';
-import { mountWithTheme, shallowWithTheme } from 'tests/helpers/withTheme';
+import {
+    mountWithApolloAndStyled,
+    shallowWithApolloAndStyled,
+} from 'tests/helpers/withApollo';
 
 describe('<MessageSearch />', () => {
     describe('Snapshots', () => {
         it('Should render correctly', () => {
-            const wrapper = mountWithTheme(<MessageSearch />);
+            const wrapper = mountWithApolloAndStyled(<MessageSearch />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -13,11 +16,14 @@ describe('<MessageSearch />', () => {
 
     it('Should use onClick event', () => {
         const onClickEvent = jest.fn();
-        const wrapper = shallowWithTheme(
+        const wrapper = shallowWithApolloAndStyled(
             <MessageSearch onClick={onClickEvent} />
         );
 
         wrapper
+            .dive()
+            .dive()
+            .dive()
             .dive()
             .dive()
             .dive()

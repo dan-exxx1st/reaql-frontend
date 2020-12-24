@@ -10,6 +10,7 @@ import SearchIcon from 'assets/images/icons/SearchIcon.svg';
 import NewChatIcon from 'assets/images/icons/NewChat.svg';
 import ThreeDotsWhiteIcon from 'assets/images/icons/ThreeDotsWhite.svg';
 import ThreeDotsGreyIcon from 'assets/images/icons/ThreeDotsGray.svg';
+import BluePlus from 'assets/images/icons/BluePlus.svg';
 
 const Icon: FC<IIconProps> = ({ iconName, ...otherProps }) => {
     let srcIcon = '';
@@ -49,6 +50,11 @@ const Icon: FC<IIconProps> = ({ iconName, ...otherProps }) => {
 
         case 'threeDotsGrey': {
             srcIcon = ThreeDotsGreyIcon;
+            break;
+        }
+
+        case 'bluePlus': {
+            srcIcon = BluePlus;
             break;
         }
     }

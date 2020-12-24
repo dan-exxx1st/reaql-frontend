@@ -1,15 +1,7 @@
 import { SendedMessage } from 'lib/types';
 import Theme from 'helpers/styled';
-
-export type ContactType = {
-    id: string;
-    name: string;
-    avatar_src?: string;
-    last_message?: string;
-    last_message_date?: string;
-    unread_message_count?: number;
-    message_status?: SendedMessage;
-};
+import { Dialog, Maybe, Message_Statuses } from 'lib/graphql/types';
+import { ISideBarWithDataProps } from '../data';
 
 export type MessageType = {
     id: string;
@@ -21,6 +13,7 @@ export type MessageType = {
 
 export interface IUserHeaderProps {
     className?: string;
+    setSearchUserOpened?: (val: boolean) => void;
 }
 
 export interface IMessageSearchProps {
@@ -33,15 +26,24 @@ export interface IMessageItemProps extends MessageType {
     className?: string;
 }
 
-export type IContactsItemProps = ContactType;
+export interface IDialogsItemProps {
+    id: string;
+    name: string;
+    surname: string;
+    avatar: string;
+    unreadMessages: number | null | undefined;
+    lastMessageStatus: Message_Statuses | null | undefined;
+    lastMessage: string | null | undefined;
+    lastMessageDate: string | null | undefined;
+}
 
 export interface IMessageListProps {
     messages?: IMessageItemProps[];
     className?: string;
 }
 
-export interface IContactListProps {
-    contacts?: ContactType[];
+export interface IDialogListProps {
+    dialogs?: Maybe<Dialog[]>;
     className?: string;
 }
 
@@ -69,4 +71,9 @@ export interface ISignInFormProps {
         password: string;
         rememberMe: boolean;
     }) => void;
+}
+
+export interface ISideBarProps extends ISideBarWithDataProps {
+    dialogs?: Dialog[];
+    subscribeToNewDialogs?: () => void;
 }
