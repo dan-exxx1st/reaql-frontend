@@ -25,6 +25,8 @@ describe('<MessageSearch />', () => {
             .dive()
             .dive()
             .dive()
+            .dive()
+            .dive()
             .find('Styled(Styled(Button))')
             .simulate('click');
 

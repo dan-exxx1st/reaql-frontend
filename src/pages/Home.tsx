@@ -13,16 +13,17 @@ import {
     StyledMessageList,
 } from './styles/Home';
 
-import { checkAuth } from 'helpers/authHelper';
+import { CheckAuth } from 'helpers/authHelper';
 import { UserSearchModal } from 'components/common';
 import { SideBarWithData } from 'components/data';
+import withUserLoad from 'components/hoc/withUserLoad';
 
 const HomePage = () => {
-    const auth = checkAuth();
+    const auth = CheckAuth();
     const [searchUserOpened, setSearchUserOpened] = useState(false);
+    const { search } = useLocation();
 
     if (auth) {
-        const { search } = useLocation();
         const params = parse(search);
 
         const dialogId = Object.entries(params)
@@ -63,4 +64,4 @@ const HomePage = () => {
     return <Redirect to="/signin" />;
 };
 
-export default HomePage;
+export default withUserLoad(HomePage);

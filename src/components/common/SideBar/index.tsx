@@ -14,7 +14,7 @@ const SideBar: FC<ISideBarProps> = (props) => {
 
     useEffect(() => {
         if (subscribeToNewDialogs) subscribeToNewDialogs();
-    }, []);
+    }, [subscribeToNewDialogs]);
 
     return (
         <StyledSidebarWrapper>

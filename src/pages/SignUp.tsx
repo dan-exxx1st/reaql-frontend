@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Redirect, useHistory } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { checkAuth } from 'helpers/authHelper';
+import { CheckAuth, setUserAndSession } from 'helpers/authHelper';
 import { SAVE_USER, UserContext } from 'helpers/contexts/userContext';
 
 import { SIGN_UP } from 'lib/graphql/mutations/auth';
@@ -12,19 +12,18 @@ import { SignUpForm } from 'components/common';
 import { StyledSignUpWrapper } from './styles/SignUp';
 
 const SignUpPage = () => {
-    const auth = checkAuth();
+    const auth = CheckAuth();
+    const [state, setState] = useState({
+        email: '',
+        name: '',
+        surname: '',
+        password: '',
+    });
+    const history = useHistory();
+    const [signUp] = useMutation<Mutation>(SIGN_UP);
+    const { dispatch } = useContext(UserContext);
 
     if (!auth) {
-        const [state, setState] = useState({
-            email: '',
-            name: '',
-            surname: '',
-            password: '',
-        });
-        const history = useHistory();
-        const [signUp] = useMutation<Mutation>(SIGN_UP);
-        const { dispatch } = useContext(UserContext);
-
         const changeFormValues = (field: string, value: string) => {
             setState({
                 ...state,
@@ -41,11 +40,12 @@ const SignUpPage = () => {
                 const { signUp } = data;
                 const { session, user } = signUp;
 
-                localStorage.setItem('session', JSON.stringify(session));
+                setUserAndSession({ user, session });
+
                 if (dispatch)
                     dispatch({
                         type: SAVE_USER,
-                        payload: { user, rememberMe: true },
+                        payload: { user },
                     });
                 history.push('/home');
             }

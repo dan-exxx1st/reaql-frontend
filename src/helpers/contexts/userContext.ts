@@ -5,7 +5,7 @@ export const SAVE_USER = 'SAVE_USER';
 
 export interface SaveUser {
     type: typeof SAVE_USER;
-    payload: { user: User; rememberMe?: boolean };
+    payload: { user: User };
 }
 
 export type UserReducerActions = SaveUser;
@@ -20,9 +20,8 @@ export const UserReducer = (
 ) => {
     switch (action.type) {
         case SAVE_USER: {
-            const { user, rememberMe } = action.payload;
-            rememberMe &&
-                localStorage.setItem('user', JSON.stringify(action.payload));
+            const { user } = action.payload;
+
             return {
                 ...state,
                 user,
@@ -34,12 +33,7 @@ export const UserReducer = (
 };
 
 export function useUserReducer(): IUserContext {
-    let initialState: IUserReducerState = {};
-    const userInLocalStorage = localStorage.getItem('user');
-    if (userInLocalStorage) {
-        const user = JSON.parse(userInLocalStorage);
-        initialState = { user };
-    }
+    const initialState: IUserReducerState = {};
 
     const [state, dispatch] = useReducer(UserReducer, initialState);
 

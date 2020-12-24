@@ -59,7 +59,7 @@ const DialogItem: FC<IDialogsItemProps> = (props) => {
                 setUnreadMessageCountText('9+');
             }
         }
-    }, []);
+    }, [lastMessageStatus, unreadMessages]);
 
     return (
         <StyledDialogListItem flexWrap="wrap" onClick={_handleClick}>

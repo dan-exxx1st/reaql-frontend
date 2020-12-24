@@ -1,10 +1,10 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 
-import { checkAuth } from 'helpers/authHelper';
+import { CheckAuth } from 'helpers/authHelper';
 
 const IndexPage = () => {
-    const auth = checkAuth();
+    const auth = CheckAuth();
 
     if (auth) {
         return <Redirect to="/home" />;

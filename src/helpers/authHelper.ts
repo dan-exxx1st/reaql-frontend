@@ -1,8 +1,8 @@
-import { Session } from 'lib/graphql/types';
+import { Session, User } from 'lib/graphql/types';
 import { useContext } from 'react';
 import { UserContext } from './contexts/userContext';
 
-export const checkAuth = () => {
+export const CheckAuth = () => {
     const { state } = useContext(UserContext);
     const sessionString = localStorage.getItem('session');
     if (sessionString || state?.user?.email) {
@@ -23,10 +23,23 @@ export const getAuthTokens = () => {
 };
 
 export const setSession = (session: Session) => {
-    const sessionString = JSON.stringify(session);
+    const sessionData = {
+        accessToken: session.accessToken,
+        refreshToken: session.refreshToken,
+    };
+    const sessionString = JSON.stringify(sessionData);
     localStorage.setItem('session', sessionString);
 };
 
 export const clearSession = () => {
     localStorage.removeItem('session');
+};
+
+export const setUserAndSession = (payload: {
+    user: User;
+    session?: Session | null;
+}) => {
+    const { user, session } = payload;
+    if (session) setSession(session);
+    localStorage.setItem('userEmail', user.email);
 };

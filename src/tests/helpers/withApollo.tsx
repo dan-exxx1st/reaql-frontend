@@ -15,7 +15,11 @@ const mountWithApollo = (children: ReactElement) => {
 };
 
 const shallowWithApolloAndStyled = (children: any) => {
-    return shallow(<MockedProvider mocks={mocks}>{children}</MockedProvider>);
+    return shallow(
+        <MockedProvider mocks={mocks}>
+            <ThemeProvider theme={themes}>{children}</ThemeProvider>
+        </MockedProvider>
+    );
 };
 
 const mountWithApolloAndStyled = (children: any) => {

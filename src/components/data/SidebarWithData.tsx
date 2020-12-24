@@ -20,27 +20,29 @@ const SideBarWithData: FC<ISideBarWithDataProps> = (props) => {
     const dialogs = data?.dialogs;
 
     const subscribeToNewDialogs = () => {
-        return subscribeToMore({
-            document: DIALOG_CREATED,
-            variables: { userId: UserState?.user?.id },
-            updateQuery: (
-                prev,
-                {
-                    subscriptionData,
-                }: { subscriptionData: { data: Subscription } }
-            ) => {
-                if (!subscriptionData.data) return prev;
+        if (UserState && UserState.user) {
+            return subscribeToMore({
+                document: DIALOG_CREATED,
+                variables: { userId: UserState.user.id },
+                updateQuery: (
+                    prev,
+                    {
+                        subscriptionData,
+                    }: { subscriptionData: { data: Subscription } }
+                ) => {
+                    if (!subscriptionData.data) return prev;
 
-                const newDialogItem = subscriptionData.data.dialogCreated;
+                    const newDialogItem = subscriptionData.data.dialogCreated;
 
-                const newCache = {
-                    ...prev,
-                    dialogs: [...prev.dialogs, newDialogItem],
-                };
+                    const newCache = {
+                        ...prev,
+                        dialogs: [...prev.dialogs, newDialogItem],
+                    };
 
-                return newCache;
-            },
-        });
+                    return newCache;
+                },
+            });
+        }
     };
 
     return (
