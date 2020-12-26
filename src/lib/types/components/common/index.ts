@@ -43,6 +43,7 @@ export interface IMessageListProps {
 }
 
 export interface IDialogListProps {
+    dialogFilter: string;
     dialogs?: Maybe<Dialog[]>;
     className?: string;
 }

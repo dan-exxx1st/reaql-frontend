@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import { MockedProvider } from '@apollo/client/testing';
 import { shallow, mount } from 'enzyme';
 
-import mocks from 'tests/__mocks__/graphql';
+import { mocks } from 'tests/__mocks__/graphql';
 import themes from 'helpers/styled';
 import { ThemeProvider } from 'styled-components';
 

@@ -8,7 +8,8 @@ import {
 import { StyledDialogListWrapper, StyledDialogListItem } from './style';
 import { UserContext } from 'helpers/contexts/userContext';
 
-const DialogList: FC<IDialogListProps> = ({ dialogs, ...otherProps }) => {
+const DialogList: FC<IDialogListProps> = (props) => {
+    const { dialogs, dialogFilter, ...otherProps } = props;
     const { state } = useContext(UserContext);
 
     return (
@@ -24,9 +25,20 @@ const DialogList: FC<IDialogListProps> = ({ dialogs, ...otherProps }) => {
                         group,
                     } = dialog;
 
-                    const filteredUsers = users.filter(
+                    const excludeCurrentUser = users.filter(
                         (user) => user?.id !== state?.user?.id
                     );
+
+                    const filteredUsers = dialogFilter
+                        ? excludeCurrentUser.filter(
+                              (user) =>
+                                  `${user?.name} ${user?.surname}`
+                                      .toLowerCase()
+                                      .indexOf(dialogFilter.toLowerCase()) !==
+                                  -1
+                          )
+                        : excludeCurrentUser;
+
                     if (filteredUsers.length == 1 && users[0]) {
                         const userDialogProps = dialogProps.find(
                             (props) => props?.user.id === state?.user?.id

@@ -1,5 +1,4 @@
 import { AuthMocks } from './auth';
+import { DialogsMock } from './dialogs';
 
-const mocks = [...AuthMocks];
-
-export default mocks;
+export const mocks = [...AuthMocks, ...DialogsMock];

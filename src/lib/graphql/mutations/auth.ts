@@ -1,4 +1,5 @@
 import { gql } from '@apollo/client';
+import { USER_FRAGMENT } from '../fragments/user';
 
 export const SIGN_UP = gql`
     mutation CreateUser(
@@ -16,10 +17,7 @@ export const SIGN_UP = gql`
             }
         ) {
             user {
-                id
-                email
-                name
-                surname
+                ...UserFragment
             }
             session {
                 id
@@ -28,6 +26,7 @@ export const SIGN_UP = gql`
             }
         }
     }
+    ${USER_FRAGMENT}
 `;
 
 export const SIGN_IN = gql`
@@ -44,10 +43,7 @@ export const SIGN_IN = gql`
             }
         ) {
             user {
-                id
-                email
-                name
-                surname
+                ...UserFragment
             }
             session {
                 id
@@ -56,6 +52,8 @@ export const SIGN_IN = gql`
             }
         }
     }
+
+    ${USER_FRAGMENT}
 `;
 
 export const REFRESH_SESSION = gql`
