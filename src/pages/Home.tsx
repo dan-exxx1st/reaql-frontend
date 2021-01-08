@@ -16,16 +16,13 @@ import {
 import { UserSearchModal } from 'components/common';
 import { SideBarWithData } from 'components/data';
 import withUserLoad from 'components/hoc/withUserLoad';
+import { getDialogIdFromSearch } from 'helpers';
 
 const HomePage = () => {
     const [searchUserOpened, setSearchUserOpened] = useState(false);
     const { search } = useLocation();
 
-    const params = parse(search);
-
-    const dialogId = Object.entries(params)
-        .map(([key, value]) => key.indexOf('dialog') !== -1 && value)
-        .toString();
+    const dialogId = getDialogIdFromSearch(search);
 
     return (
         <>

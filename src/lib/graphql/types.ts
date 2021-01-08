@@ -54,6 +54,16 @@ export type DialogProps = {
     lastMessageStatus?: Maybe<Message_Statuses>;
 };
 
+export type Message = {
+    __typename?: 'Message';
+    id: Scalars['ID'];
+    user: User;
+    dialog: Dialog;
+    text: Scalars['String'];
+    messageDate: Scalars['String'];
+    messageStatus?: Maybe<Message_Statuses>;
+};
+
 export type UserAndSession = {
     __typename?: 'UserAndSession';
     user: User;
@@ -66,6 +76,7 @@ export type Query = {
     searchUsers: Array<Maybe<User>>;
     dialog: Dialog;
     dialogs: Array<Dialog>;
+    messages: Array<Maybe<Message>>;
 };
 
 export type QueryUserArgs = {
@@ -83,6 +94,10 @@ export type QueryDialogArgs = {
 
 export type QueryDialogsArgs = {
     userId: Scalars['String'];
+};
+
+export type QueryMessagesArgs = {
+    dialogId: Scalars['String'];
 };
 
 export type SignUpInput = {
@@ -103,12 +118,19 @@ export type CreateDialogInput = {
     role: Dialog_User_Roles;
 };
 
+export type CreateMessageInput = {
+    dialogId: Scalars['String'];
+    userId: Scalars['String'];
+    text?: Maybe<Scalars['String']>;
+};
+
 export type Mutation = {
     __typename?: 'Mutation';
     signUp: UserAndSession;
     signIn: UserAndSession;
     refreshSession: Session;
-    createDialog?: Maybe<Dialog>;
+    createDialog: Dialog;
+    createMessage: Message;
 };
 
 export type MutationSignUpArgs = {
@@ -125,6 +147,10 @@ export type MutationRefreshSessionArgs = {
 
 export type MutationCreateDialogArgs = {
     input: Array<Maybe<CreateDialogInput>>;
+};
+
+export type MutationCreateMessageArgs = {
+    input?: Maybe<CreateMessageInput>;
 };
 
 export type Subscription = {

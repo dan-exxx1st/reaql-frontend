@@ -14,7 +14,7 @@ const withUserLoad = (Component: FC) => (props: any) => {
     const [getUser, { data, loading }] = useLazyQuery<Query>(GET_USER);
 
     useEffect(() => {
-        if (auth) {
+        if (auth && !(state && state.user)) {
             const userEmail = localStorage.getItem('userEmail');
 
             if (!loading) {

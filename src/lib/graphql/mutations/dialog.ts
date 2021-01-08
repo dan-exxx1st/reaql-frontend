@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import gql from 'graphql-tag';
 
 export const CREATE_DIALOG_MUTATION = gql`
     mutation createDialog($input: [CreateDialogInput]!) {

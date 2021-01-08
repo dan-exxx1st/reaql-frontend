@@ -1,35 +1,11 @@
-import { useState, useEffect } from 'react';
+import { parse } from 'querystring';
 
-export function useLoaded({ src }: { src?: HTMLImageElement['src'] }) {
-    const [loaded, setLoaded] = useState('false');
+export function getDialogIdFromSearch(search: string) {
+    const params = parse(search);
 
-    useEffect(() => {
-        if (!src) {
-            return undefined;
-        }
+    const dialogId = Object.entries(params)
+        .map(([key, value]) => key.indexOf('dialog') !== -1 && value)
+        .toString();
 
-        setLoaded('loading');
-
-        let active = true;
-        const image = new Image();
-        image.src = src;
-        image.onload = () => {
-            if (!active) {
-                return;
-            }
-            setLoaded('loaded');
-        };
-        image.onerror = () => {
-            if (!active) {
-                return;
-            }
-            setLoaded('error');
-        };
-
-        return () => {
-            active = false;
-        };
-    }, [src]);
-
-    return loaded;
+    return dialogId;
 }

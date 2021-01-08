@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import gql from 'graphql-tag';
 import { USER_FRAGMENT } from '../fragments/user';
 
 export const SIGN_UP = gql`
