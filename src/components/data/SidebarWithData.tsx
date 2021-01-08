@@ -1,4 +1,4 @@
-import React, { FC, useContext } from 'react';
+import React, { FC, useContext, useCallback } from 'react';
 import { useQuery } from '@apollo/client';
 
 import { ISideBarWithDataProps } from 'lib/types/components/data';
@@ -19,7 +19,7 @@ const SideBarWithData: FC<ISideBarWithDataProps> = (props) => {
 
     const dialogs = data?.dialogs;
 
-    const subscribeToNewDialogs = () => {
+    const subscribeToNewDialogs = useCallback(() => {
         if (UserState && UserState.user) {
             return subscribeToMore({
                 document: DIALOG_CREATED,
@@ -43,7 +43,7 @@ const SideBarWithData: FC<ISideBarWithDataProps> = (props) => {
                 },
             });
         }
-    };
+    }, [UserState, subscribeToMore]);
 
     return (
         <SideBar

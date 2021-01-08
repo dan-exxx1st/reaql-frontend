@@ -1,8 +1,8 @@
-import { gql } from '@apollo/client';
+import gql from 'graphql-tag';
 import { DIALOG_DATA_FRAGMENT } from '../fragments/dialog';
 
 export const GET_DIALOGS = gql`
-    query GET_DIALOGS($userId: String!) {
+    query GetDialogs($userId: String!) {
         dialogs(userId: $userId) {
             ...DialogFragment
         }
@@ -12,7 +12,7 @@ export const GET_DIALOGS = gql`
 `;
 
 export const GET_DIALOG = gql`
-    query GET_DIALOG($dialogId: String!) {
+    query GetDialog($dialogId: String!) {
         dialog(dialogId: $dialogId) {
             ...DialogFragment
         }

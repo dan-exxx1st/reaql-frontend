@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import gql from 'graphql-tag';
 
 export const DIALOG_DATA_FRAGMENT = gql`
     fragment DialogFragment on Dialog {

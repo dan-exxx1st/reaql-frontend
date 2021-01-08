@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
 import {
     StyledSidebarWrapper,
@@ -10,6 +10,7 @@ import {
 import { ISideBarProps } from 'lib/types/components/common';
 
 const SideBar: FC<ISideBarProps> = (props) => {
+    const [dialogFilter, setDialogFilter] = useState('');
     const { setSearchUserOpened, dialogs, subscribeToNewDialogs } = props;
 
     useEffect(() => {
@@ -27,8 +28,15 @@ const SideBar: FC<ISideBarProps> = (props) => {
                 icon="search"
                 placeholder="Search"
                 width="100%"
+                value={dialogFilter}
+                onChange={setDialogFilter}
             />
-            {dialogs ? <StyledSidebarDialogs dialogs={dialogs} /> : null}
+            {dialogs ? (
+                <StyledSidebarDialogs
+                    dialogFilter={dialogFilter}
+                    dialogs={dialogs}
+                />
+            ) : null}
         </StyledSidebarWrapper>
     );
 };

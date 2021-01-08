@@ -1,13 +1,18 @@
 import React, { FC, useEffect, useState } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
+
 import StyledDialogListItem, {
     StyledDialogItemAvatarWrapper,
     StyledDialogItemCircle,
     StyledDialogItemRightWrapper,
 } from './style';
+
 import { Wrapper, Avatar, Typography, CheckMark } from 'components/UI';
+
 import { IDialogsItemProps } from 'lib/types/components/common';
 import { Message_Statuses } from 'lib/graphql/types';
-import { useHistory } from 'react-router-dom';
+
+import { getDialogIdFromSearch } from 'helpers';
 
 const DialogItem: FC<IDialogsItemProps> = (props) => {
     const {
@@ -27,8 +32,16 @@ const DialogItem: FC<IDialogsItemProps> = (props) => {
     const [isActiveCheckMark, setIsActiveCheckMark] = useState(false);
     const [undreadMessageCountText, setUnreadMessageCountText] = useState('');
 
+    const { search } = useLocation();
+
     const _handleClick = () => {
-        history.push(`?dialog=${id}`);
+        const dialogId = getDialogIdFromSearch(search);
+        if (dialogId !== id) {
+            history.push(`?dialog=${id}`);
+            return;
+        }
+
+        history.push('/home');
     };
 
     useEffect(() => {

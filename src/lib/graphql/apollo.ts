@@ -9,9 +9,8 @@ import {
 } from '@apollo/client';
 import { WebSocketLink } from '@apollo/client/link/ws';
 import { getMainDefinition } from '@apollo/client/utilities';
-
-import { onError } from 'apollo-link-error';
 import { setContext } from '@apollo/client/link/context';
+import { onError } from '@apollo/client/link/error';
 
 import {
     clearSession,
@@ -67,8 +66,8 @@ export function CreateApolloClient() {
                 variables: { refreshToken },
             })
             .then((response) => {
-                const session = response.data.refreshSession;
-                setSession(session);
+                const session = response?.data?.refreshSession;
+                session && setSession(session);
                 return session;
             });
     };
