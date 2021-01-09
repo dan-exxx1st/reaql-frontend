@@ -1,38 +1,46 @@
 import React, { ReactElement } from 'react';
-import { MockedProvider } from '@apollo/client/testing';
+import { MockLink } from '@apollo/client/testing';
 import { shallow, mount } from 'enzyme';
 
 import { mocks } from 'tests/__mocks__/graphql';
 import themes from 'helpers/styled';
 import { ThemeProvider } from 'styled-components';
-
-const shallowWithApollo = (children: ReactElement) => {
-    return shallow(<MockedProvider mocks={mocks}>{children}</MockedProvider>);
-};
-
-const mountWithApollo = (children: ReactElement) => {
-    return mount(<MockedProvider mocks={mocks}>{children}</MockedProvider>);
-};
+import {
+    ApolloClient,
+    InMemoryCache,
+    ApolloContextValue,
+} from '@apollo/client';
 
 const shallowWithApolloAndStyled = (children: any) => {
-    return shallow(
-        <MockedProvider mocks={mocks}>
-            <ThemeProvider theme={themes}>{children}</ThemeProvider>
-        </MockedProvider>
-    );
+    const client = new ApolloClient({
+        cache: new InMemoryCache({ addTypename: true }),
+        link: new MockLink(mocks, true),
+    });
+    Object.defineProperty(React, Symbol.for('__APOLLO_CONTEXT__'), {
+        value: React.createContext<ApolloContextValue>({
+            client,
+        }),
+        enumerable: false,
+        configurable: true,
+        writable: false,
+    });
+    return shallow(<ThemeProvider theme={themes}>{children}</ThemeProvider>);
 };
 
 const mountWithApolloAndStyled = (children: any) => {
-    return mount(
-        <MockedProvider mocks={mocks}>
-            <ThemeProvider theme={themes}>{children}</ThemeProvider>
-        </MockedProvider>
-    );
+    const client = new ApolloClient({
+        cache: new InMemoryCache({ addTypename: true }),
+        link: new MockLink(mocks, true),
+    });
+    Object.defineProperty(React, Symbol.for('__APOLLO_CONTEXT__'), {
+        value: React.createContext<ApolloContextValue>({
+            client,
+        }),
+        enumerable: false,
+        configurable: true,
+        writable: false,
+    });
+    return mount(<ThemeProvider theme={themes}>{children}</ThemeProvider>);
 };
 
-export {
-    shallowWithApollo,
-    mountWithApollo,
-    shallowWithApolloAndStyled,
-    mountWithApolloAndStyled,
-};
+export { shallowWithApolloAndStyled, mountWithApolloAndStyled };

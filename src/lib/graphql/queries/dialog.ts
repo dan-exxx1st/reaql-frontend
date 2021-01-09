@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 import { DIALOG_DATA_FRAGMENT } from '../fragments/dialog';
 
-export const GET_DIALOGS = gql`
+export const GET_DIALOGS_QUERY = gql`
     query GetDialogs($userId: String!) {
         dialogs(userId: $userId) {
             ...DialogFragment
