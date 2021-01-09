@@ -1,20 +1,32 @@
-import { GET_DIALOG } from 'lib/graphql/queries/dialog';
+import { GET_DIALOGS_QUERY } from 'lib/graphql/queries/dialog';
+import { DIALOG_CREATED } from 'lib/graphql/subscriptions/dialog';
 import { DialogsMockData } from '../data/graphql';
 
 export const DialogsMock = [
     {
         request: {
-            query: GET_DIALOG,
+            query: GET_DIALOGS_QUERY,
             variables: {
-                dialogId: '1',
+                userId: '1',
             },
         },
         result: () => {
             return {
                 data: {
-                    dialog: DialogsMockData[0],
+                    dialogs: DialogsMockData,
                 },
             };
+        },
+    },
+    {
+        request: {
+            query: DIALOG_CREATED,
+            variables: {
+                userId: '1',
+            },
+        },
+        result: () => {
+            return {};
         },
     },
 ];

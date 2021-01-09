@@ -5,6 +5,7 @@ const createdAt = String(new Date()),
 
 export const UsersMockData: User[] = [
     {
+        __typename: 'User',
         id: '1',
         name: 'Test',
         surname: 'User1',
@@ -14,6 +15,7 @@ export const UsersMockData: User[] = [
         updatedAt,
     },
     {
+        __typename: 'User',
         id: '2',
         name: 'Test',
         surname: 'User2',
@@ -23,6 +25,7 @@ export const UsersMockData: User[] = [
         updatedAt,
     },
     {
+        __typename: 'User',
         id: '3',
         name: 'Test',
         surname: 'User3',
@@ -32,6 +35,7 @@ export const UsersMockData: User[] = [
         updatedAt,
     },
     {
+        __typename: 'User',
         id: '4',
         name: 'Test',
         surname: 'User4',
