@@ -1,16 +1,37 @@
-import React, { FC } from 'react';
-import { IMessageListProps } from 'lib/types/components/common';
+import React, { FC, useEffect } from 'react';
+
 import { StyledMessageListItem, StyledMessageListWrapper } from './style';
 
-const MessageList: FC<IMessageListProps> = ({ messages, className }) => {
-    return (
-        <StyledMessageListWrapper className={className}>
-            {messages &&
-                messages.map((message) => (
-                    <StyledMessageListItem key={message.id} {...message} />
-                ))}
-        </StyledMessageListWrapper>
-    );
+import { IMessageListProps } from 'lib/types/components/common';
+
+const MessageList: FC<IMessageListProps> = ({ className, ...props }) => {
+    const { data, loading, subscribeToNewMessages } = props;
+
+    const messages = data?.messages;
+
+    useEffect(() => {
+        if (subscribeToNewMessages) {
+            subscribeToNewMessages();
+        }
+    }, [subscribeToNewMessages]);
+
+    if (!loading && messages) {
+        return (
+            <StyledMessageListWrapper className={className}>
+                {messages.map(
+                    (message) =>
+                        message && (
+                            <StyledMessageListItem
+                                key={message.id}
+                                {...message}
+                            />
+                        )
+                )}
+            </StyledMessageListWrapper>
+        );
+    }
+
+    return <div>Loading...</div>;
 };
 
 export default MessageList;

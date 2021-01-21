@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { Wrapper } from 'components/UI';
-import { DialogHeader, DialogTextField, MessageList } from 'components/common';
+import { DialogHeader, DialogTextField } from 'components/common';
 
 export const StyledHomeWrapper = styled(Wrapper)`
     background: ${({ theme }) => theme.wc};
@@ -35,18 +35,17 @@ export const StyledHomeDialogContentWrapper = styled(Wrapper)`
 `;
 
 export const StyledHomeDialogMessageWrapper = styled(Wrapper)`
-    width: calc(100% - 80px);
-    height: calc(100% - 130px);
+    width: calc(100% - 45px);
+    height: calc(100% - 110px);
     position: absolute;
     top: 20px;
     left: 20px;
     background: ${({ theme }) => theme.wc};
     border-radius: 3px;
-    padding: 20px 20px 0 20px;
+    padding-left: 5px;
+    padding-right: 0;
     flex-direction: column-reverse;
 `;
-
-export const StyledMessageList = styled(MessageList)``;
 
 export const StyledHomeDialogTextField = styled(DialogTextField)`
     width: 100%;

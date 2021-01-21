@@ -1,8 +1,6 @@
 import {
     ApolloClient,
-    ApolloLink,
     from,
-    fromPromise,
     HttpLink,
     InMemoryCache,
     split,
@@ -10,16 +8,8 @@ import {
 import { WebSocketLink } from '@apollo/client/link/ws';
 import { getMainDefinition } from '@apollo/client/utilities';
 import { setContext } from '@apollo/client/link/context';
-import { onError } from '@apollo/client/link/error';
 
-import {
-    clearSession,
-    getAuthTokens,
-    setSession,
-} from '../../helpers/authHelper';
-
-import { REFRESH_SESSION } from './mutations/auth';
-import { Mutation } from './types';
+import { getAuthTokens } from '../../helpers/authHelper';
 
 const authLink = setContext((_, { headers }) => {
     // get the authentication token from local storage if it exists
@@ -57,56 +47,8 @@ const splitLink = split(
 );
 
 export function CreateApolloClient() {
-    const getNewToken = () => {
-        const apolloClient = client;
-        const { refreshToken } = getAuthTokens();
-        return apolloClient
-            .query<Mutation>({
-                query: REFRESH_SESSION,
-                variables: { refreshToken },
-            })
-            .then((response) => {
-                const session = response?.data?.refreshSession;
-                session && setSession(session);
-                return session;
-            });
-    };
-
-    const errorLink = onError(({ graphQLErrors, operation, forward }): any => {
-        if (graphQLErrors) {
-            for (const err of graphQLErrors) {
-                switch (err.extensions?.code) {
-                    case 'UNAUTHENTICATED':
-                        return fromPromise(
-                            getNewToken().catch(() => {
-                                clearSession();
-                                return;
-                            })
-                        )
-                            .filter((value) => Boolean(value))
-                            .flatMap(function (session): any {
-                                if (session) {
-                                    const { accessToken } = session;
-                                    const oldHeaders = operation.getContext()
-                                        .headers;
-                                    // modify the operation context with a new token
-                                    operation.setContext({
-                                        headers: {
-                                            ...oldHeaders,
-                                            authorization: `Bearer ${accessToken}`,
-                                        },
-                                    });
-
-                                    // retry the request, returning the new observable
-                                    return forward(operation);
-                                }
-                            });
-                }
-            }
-        }
-    });
     const client = new ApolloClient({
-        link: from([(errorLink as unknown) as ApolloLink, authLink, splitLink]),
+        link: from([authLink, splitLink]),
         cache: new InMemoryCache(),
     });
 

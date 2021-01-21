@@ -1,8 +1,11 @@
 import gql from 'graphql-tag';
-import { DIALOG_DATA_FRAGMENT } from '../fragments/dialog';
+import {
+    DIALOG_DATA_FRAGMENT,
+    MESSAGE_DATA_FRAGMENT,
+} from '../fragments/dialog';
 
-export const GET_DIALOGS_QUERY = gql`
-    query GetDialogs($userId: String!) {
+export const DIALOGS = gql`
+    query Dialogs($userId: String!) {
         dialogs(userId: $userId) {
             ...DialogFragment
         }
@@ -11,12 +14,22 @@ export const GET_DIALOGS_QUERY = gql`
     ${DIALOG_DATA_FRAGMENT}
 `;
 
-export const GET_DIALOG = gql`
-    query GetDialog($dialogId: String!) {
+export const DIALOG = gql`
+    query Dialogs($dialogId: String!) {
         dialog(dialogId: $dialogId) {
             ...DialogFragment
         }
     }
 
     ${DIALOG_DATA_FRAGMENT}
+`;
+
+export const MESSAGES = gql`
+    query Messages($dialogId: String!) {
+        messages(dialogId: $dialogId) {
+            ...MessageFragment
+        }
+    }
+
+    ${MESSAGE_DATA_FRAGMENT}
 `;

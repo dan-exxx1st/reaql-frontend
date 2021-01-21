@@ -21,3 +21,26 @@ export const DIALOG_DATA_FRAGMENT = gql`
         }
     }
 `;
+
+export const MESSAGE_DATA_FRAGMENT = gql`
+    fragment MessageFragment on Message {
+        id
+        text
+        messageDate
+        messageStatus
+        user {
+            name
+            surname
+        }
+        dialog {
+            id
+            dialogProps {
+                id
+                user {
+                    id
+                    name
+                }
+            }
+        }
+    }
+`;

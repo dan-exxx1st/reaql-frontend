@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 
 import { ISideBarWithDataProps } from 'lib/types/components/data';
 import { Query, Subscription } from 'lib/graphql/types';
-import { GET_DIALOGS_QUERY } from 'lib/graphql/queries/dialog';
+import { DIALOGS } from 'lib/graphql/queries/dialog';
 
 import { UserContext } from 'helpers/contexts/userContext';
 
@@ -13,11 +13,9 @@ import { DIALOG_CREATED } from 'lib/graphql/subscriptions/dialog';
 const SideBarWithData: FC<ISideBarWithDataProps> = (props) => {
     const { state: UserState } = useContext(UserContext);
 
-    const { data, subscribeToMore } = useQuery<Query>(GET_DIALOGS_QUERY, {
+    const { subscribeToMore, ...result } = useQuery<Query>(DIALOGS, {
         variables: { userId: UserState?.user?.id },
     });
-
-    const dialogs = data?.dialogs;
 
     const subscribeToNewDialogs = useCallback(() => {
         if (UserState && UserState.user) {
@@ -48,7 +46,7 @@ const SideBarWithData: FC<ISideBarWithDataProps> = (props) => {
     return (
         <SideBar
             {...props}
-            dialogs={dialogs}
+            {...result}
             subscribeToNewDialogs={subscribeToNewDialogs}
         />
     );

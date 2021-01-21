@@ -1,5 +1,8 @@
 import gql from 'graphql-tag';
-import { DIALOG_DATA_FRAGMENT } from '../fragments/dialog';
+import {
+    DIALOG_DATA_FRAGMENT,
+    MESSAGE_DATA_FRAGMENT,
+} from '../fragments/dialog';
 
 export const DIALOG_CREATED = gql`
     subscription DIALOG_CREATED($userId: String!) {
@@ -8,4 +11,14 @@ export const DIALOG_CREATED = gql`
         }
     }
     ${DIALOG_DATA_FRAGMENT}
+`;
+
+export const MESSAGE_CREATED = gql`
+    subscription MESSAGE_CREATED($dialogId: String!) {
+        messageCreated(dialogId: $dialogId) {
+            ...MessageFragment
+        }
+    }
+
+    ${MESSAGE_DATA_FRAGMENT}
 `;

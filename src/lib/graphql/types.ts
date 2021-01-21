@@ -76,7 +76,7 @@ export type Query = {
     searchUsers: Array<Maybe<User>>;
     dialog: Dialog;
     dialogs: Array<Dialog>;
-    messages: Array<Maybe<Message>>;
+    messages: Array<Message>;
 };
 
 export type QueryUserArgs = {
@@ -156,10 +156,15 @@ export type MutationCreateMessageArgs = {
 export type Subscription = {
     __typename?: 'Subscription';
     dialogCreated: Dialog;
+    messageCreated: Message;
 };
 
 export type SubscriptionDialogCreatedArgs = {
     userId: Scalars['String'];
+};
+
+export type SubscriptionMessageCreatedArgs = {
+    dialogId: Scalars['String'];
 };
 
 export enum Dialog_User_Roles {
