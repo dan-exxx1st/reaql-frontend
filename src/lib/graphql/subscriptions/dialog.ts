@@ -13,6 +13,16 @@ export const DIALOG_CREATED = gql`
     ${DIALOG_DATA_FRAGMENT}
 `;
 
+export const DIALOG_UPDATED = gql`
+    subscription DIALOG_UPDATED($dialogId: String!) {
+        dialogUpdated(dialogId: $dialogId) {
+            id
+            lastMessage
+            lastMessageDate
+        }
+    }
+`;
+
 export const MESSAGE_CREATED = gql`
     subscription MESSAGE_CREATED($dialogId: String!) {
         messageCreated(dialogId: $dialogId) {

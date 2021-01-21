@@ -1,4 +1,4 @@
-import React, { FC, useContext, useCallback } from 'react';
+import React, { FC, useContext } from 'react';
 import { useQuery } from '@apollo/client';
 
 import { ISideBarWithDataProps } from 'lib/types/components/data';
@@ -17,7 +17,7 @@ const SideBarWithData: FC<ISideBarWithDataProps> = (props) => {
         variables: { userId: UserState?.user?.id },
     });
 
-    const subscribeToNewDialogs = useCallback(() => {
+    const subscribeToNewDialogs = () => {
         if (UserState && UserState.user) {
             return subscribeToMore({
                 document: DIALOG_CREATED,
@@ -31,17 +31,19 @@ const SideBarWithData: FC<ISideBarWithDataProps> = (props) => {
                     if (!subscriptionData.data) return prev;
 
                     const newDialogItem = subscriptionData.data.dialogCreated;
+                    const prevDialogs =
+                        prev && prev.dialogs ? prev.dialogs : [];
 
                     const newCache = {
                         ...prev,
-                        dialogs: [...prev.dialogs, newDialogItem],
+                        dialogs: [newDialogItem, ...prevDialogs],
                     };
 
                     return newCache;
                 },
             });
         }
-    }, [UserState, subscribeToMore]);
+    };
 
     return (
         <SideBar

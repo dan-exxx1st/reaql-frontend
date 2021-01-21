@@ -22,6 +22,13 @@ export const DIALOG_DATA_FRAGMENT = gql`
     }
 `;
 
+export const DIALOG_UPDATED_FRAGMENT = gql`
+    fragment DialogUpdatedFragment on Dialog {
+        lastMessage
+        lastMessageDate
+    }
+`;
+
 export const MESSAGE_DATA_FRAGMENT = gql`
     fragment MessageFragment on Message {
         id

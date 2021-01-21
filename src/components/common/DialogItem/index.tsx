@@ -1,5 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
+import { useSubscription } from '@apollo/client';
 
 import StyledDialogListItem, {
     StyledDialogItemAvatarWrapper,
@@ -10,9 +11,10 @@ import StyledDialogListItem, {
 import { Wrapper, Avatar, Typography, CheckMark } from 'components/UI';
 
 import { IDialogsItemProps } from 'lib/types/components/common';
-import { Message_Statuses } from 'lib/graphql/types';
+import { Message_Statuses, Subscription } from 'lib/graphql/types';
 
 import { getDialogIdFromSearch } from 'helpers';
+import { DIALOG_UPDATED } from 'lib/graphql/subscriptions/dialog';
 
 const DialogItem: FC<IDialogsItemProps> = (props) => {
     const {
@@ -27,12 +29,21 @@ const DialogItem: FC<IDialogsItemProps> = (props) => {
     } = props;
 
     const history = useHistory();
+    const { search } = useLocation();
+
+    const { data, loading } = useSubscription<Subscription>(DIALOG_UPDATED, {
+        variables: {
+            dialogId: id,
+        },
+    });
 
     const [isDoubleCheckMark, setIsDoubleCheckMark] = useState(false);
     const [isActiveCheckMark, setIsActiveCheckMark] = useState(false);
     const [undreadMessageCountText, setUnreadMessageCountText] = useState('');
-
-    const { search } = useLocation();
+    const [lastMessageValue, setLastMessageValue] = useState({
+        text: '',
+        date: '',
+    });
 
     const _handleClick = () => {
         const dialogId = getDialogIdFromSearch(search);
@@ -45,6 +56,21 @@ const DialogItem: FC<IDialogsItemProps> = (props) => {
     };
 
     useEffect(() => {
+        if (data?.dialogUpdated) {
+            const {
+                lastMessage: newLastMessage,
+                lastMessageDate: newLastMessageDate,
+            } = data.dialogUpdated;
+            setLastMessageValue({
+                text: newLastMessage ? newLastMessage : '',
+                date: newLastMessageDate ? newLastMessageDate : '',
+            });
+        } else if (!data) {
+            setLastMessageValue({
+                text: lastMessage ? lastMessage : '',
+                date: lastMessageDate ? lastMessageDate : '',
+            });
+        }
         if (lastMessageStatus) {
             switch (lastMessageStatus) {
                 case Message_Statuses.Sended: {
@@ -72,7 +98,15 @@ const DialogItem: FC<IDialogsItemProps> = (props) => {
                 setUnreadMessageCountText('9+');
             }
         }
-    }, [lastMessageStatus, unreadMessages]);
+    }, [
+        data,
+        id,
+        lastMessage,
+        lastMessageDate,
+        lastMessageStatus,
+        loading,
+        unreadMessages,
+    ]);
 
     return (
         <StyledDialogListItem flexWrap="wrap" onClick={_handleClick}>
@@ -90,7 +124,7 @@ const DialogItem: FC<IDialogsItemProps> = (props) => {
                             {`${name} ${surname}`}
                         </Typography>
                         <Typography variant="caption1" color="dsc">
-                            {lastMessage}
+                            {lastMessageValue.text}
                         </Typography>
                     </Wrapper>
                 </Wrapper>
@@ -101,7 +135,7 @@ const DialogItem: FC<IDialogsItemProps> = (props) => {
                     alignItems="flex-end"
                 >
                     <Typography variant="caption1" color="dgc">
-                        {lastMessageDate?.toString()}
+                        {lastMessageValue.date}
                     </Typography>
 
                     <Wrapper>

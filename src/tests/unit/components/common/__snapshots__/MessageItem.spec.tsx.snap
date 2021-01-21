@@ -135,7 +135,7 @@ exports[`<MessageItem /> Snapshots Should render correctly 1`] = `
       <p
         className="c6 c7"
       >
-        Test User
+        Test User1
       </p>
       <p
         className="c8 c9"
@@ -188,7 +188,7 @@ exports[`<MessageItem /> Snapshots Should render correctly with readed message s
   margin: 0;
 }
 
-.c12 {
+.c10 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 14px;
@@ -235,18 +235,8 @@ exports[`<MessageItem /> Snapshots Should render correctly with readed message s
   margin: 0;
 }
 
-.c10 {
-  fill: #00ADFF;
-  width: 20px;
-  height: 13px;
-}
-
 .c3 {
   margin-right: 15px;
-}
-
-.c11 {
-  margin-left: 10px;
 }
 
 .c7 {
@@ -258,7 +248,7 @@ exports[`<MessageItem /> Snapshots Should render correctly with readed message s
   color: #A5A5A5;
 }
 
-.c13 {
+.c11 {
   color: #000000;
 }
 
@@ -297,23 +287,16 @@ exports[`<MessageItem /> Snapshots Should render correctly with readed message s
       <p
         className="c6 c7"
       >
-        Test User
+        Test User1
       </p>
       <p
         className="c8 c9"
       >
         12:00 am
       </p>
-      <svg
-        className="c10 c11"
-      >
-        <path
-          d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
-        />
-      </svg>
     </div>
     <p
-      className="c12 c13"
+      className="c10 c11"
     >
       Test message
     </p>
@@ -357,7 +340,7 @@ exports[`<MessageItem /> Snapshots Should render correctly with received message
   margin: 0;
 }
 
-.c12 {
+.c10 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 14px;
@@ -404,18 +387,8 @@ exports[`<MessageItem /> Snapshots Should render correctly with received message
   margin: 0;
 }
 
-.c10 {
-  fill: #A5A5A5;
-  width: 20px;
-  height: 13px;
-}
-
 .c3 {
   margin-right: 15px;
-}
-
-.c11 {
-  margin-left: 10px;
 }
 
 .c7 {
@@ -427,7 +400,7 @@ exports[`<MessageItem /> Snapshots Should render correctly with received message
   color: #A5A5A5;
 }
 
-.c13 {
+.c11 {
   color: #000000;
 }
 
@@ -466,23 +439,16 @@ exports[`<MessageItem /> Snapshots Should render correctly with received message
       <p
         className="c6 c7"
       >
-        Test User
+        Test User1
       </p>
       <p
         className="c8 c9"
       >
         12:00 am
       </p>
-      <svg
-        className="c10 c11"
-      >
-        <path
-          d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
-        />
-      </svg>
     </div>
     <p
-      className="c12 c13"
+      className="c10 c11"
     >
       Test message
     </p>
@@ -526,7 +492,7 @@ exports[`<MessageItem /> Snapshots Should render correctly with sended message s
   margin: 0;
 }
 
-.c12 {
+.c10 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 14px;
@@ -573,18 +539,8 @@ exports[`<MessageItem /> Snapshots Should render correctly with sended message s
   margin: 0;
 }
 
-.c10 {
-  fill: #A5A5A5;
-  width: 20px;
-  height: 13px;
-}
-
 .c3 {
   margin-right: 15px;
-}
-
-.c11 {
-  margin-left: 10px;
 }
 
 .c7 {
@@ -596,7 +552,7 @@ exports[`<MessageItem /> Snapshots Should render correctly with sended message s
   color: #A5A5A5;
 }
 
-.c13 {
+.c11 {
   color: #000000;
 }
 
@@ -635,23 +591,16 @@ exports[`<MessageItem /> Snapshots Should render correctly with sended message s
       <p
         className="c6 c7"
       >
-        Test User
+        Test User1
       </p>
       <p
         className="c8 c9"
       >
         12:00 am
       </p>
-      <svg
-        className="c10 c11"
-      >
-        <path
-          d="M5.67738 10.2586L14.7785 0L16 1.37556L5.67738 13L0.868774 7.58495L2.09888 6.21908L5.67738 10.2586Z"
-        />
-      </svg>
     </div>
     <p
-      className="c12 c13"
+      className="c10 c11"
     >
       Test message
     </p>

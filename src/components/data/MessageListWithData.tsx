@@ -32,11 +32,10 @@ const MessageListWithData: FC<IProps> = ({ dialogId, ...otherProps }) => {
                 if (!subscriptionData) return prev;
 
                 const newMessage = subscriptionData.data.messageCreated;
-
-                console.log(newMessage);
+                const prevMessages = prev && prev.messages ? prev.messages : [];
 
                 return Object.assign({}, prev, {
-                    messages: [newMessage, ...prev.messages],
+                    messages: [newMessage, ...prevMessages],
                 });
             },
         });

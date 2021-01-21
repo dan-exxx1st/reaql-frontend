@@ -10,9 +10,12 @@ const MessageList: FC<IMessageListProps> = ({ className, ...props }) => {
     const messages = data?.messages;
 
     useEffect(() => {
+        let unsubscribe: any;
         if (subscribeToNewMessages) {
-            subscribeToNewMessages();
+            unsubscribe = subscribeToNewMessages();
         }
+
+        return () => unsubscribe();
     }, [subscribeToNewMessages]);
 
     if (!loading && messages) {

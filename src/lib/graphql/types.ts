@@ -156,11 +156,16 @@ export type MutationCreateMessageArgs = {
 export type Subscription = {
     __typename?: 'Subscription';
     dialogCreated: Dialog;
+    dialogUpdated: Dialog;
     messageCreated: Message;
 };
 
 export type SubscriptionDialogCreatedArgs = {
     userId: Scalars['String'];
+};
+
+export type SubscriptionDialogUpdatedArgs = {
+    dialogId: Scalars['String'];
 };
 
 export type SubscriptionMessageCreatedArgs = {
