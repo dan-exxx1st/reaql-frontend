@@ -1,46 +1,25 @@
-import React, { ReactElement } from 'react';
-import { MockLink } from '@apollo/client/testing';
+import React from 'react';
+import { MockedProvider } from '@apollo/client/testing';
 import { shallow, mount } from 'enzyme';
 
 import { mocks } from 'tests/__mocks__/graphql';
 import themes from 'helpers/styled';
 import { ThemeProvider } from 'styled-components';
-import {
-    ApolloClient,
-    InMemoryCache,
-    ApolloContextValue,
-} from '@apollo/client';
 
 const shallowWithApolloAndStyled = (children: any) => {
-    const client = new ApolloClient({
-        cache: new InMemoryCache({ addTypename: true }),
-        link: new MockLink(mocks, true),
-    });
-    Object.defineProperty(React, Symbol.for('__APOLLO_CONTEXT__'), {
-        value: React.createContext<ApolloContextValue>({
-            client,
-        }),
-        enumerable: false,
-        configurable: true,
-        writable: false,
-    });
-    return shallow(<ThemeProvider theme={themes}>{children}</ThemeProvider>);
+    return shallow(
+        <MockedProvider mocks={mocks}>
+            <ThemeProvider theme={themes}>{children}</ThemeProvider>
+        </MockedProvider>
+    );
 };
 
 const mountWithApolloAndStyled = (children: any) => {
-    const client = new ApolloClient({
-        cache: new InMemoryCache({ addTypename: true }),
-        link: new MockLink(mocks, true),
-    });
-    Object.defineProperty(React, Symbol.for('__APOLLO_CONTEXT__'), {
-        value: React.createContext<ApolloContextValue>({
-            client,
-        }),
-        enumerable: false,
-        configurable: true,
-        writable: false,
-    });
-    return mount(<ThemeProvider theme={themes}>{children}</ThemeProvider>);
+    return mount(
+        <MockedProvider mocks={mocks}>
+            <ThemeProvider theme={themes}>{children}</ThemeProvider>
+        </MockedProvider>
+    );
 };
 
 export { shallowWithApolloAndStyled, mountWithApolloAndStyled };

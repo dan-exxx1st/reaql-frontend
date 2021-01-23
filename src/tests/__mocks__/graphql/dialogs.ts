@@ -31,6 +31,9 @@ export const DialogsMock = [
         result: () => {
             return {};
         },
+        newData: () => {
+            return {};
+        },
     },
     {
         request: {
