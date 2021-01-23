@@ -1,55 +1,78 @@
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { Redirect } from 'react-router-dom';
+import { useLazyQuery } from '@apollo/client';
+
+import DialogPage from './Dialog';
 
 import {
     StyledHomeDialog,
-    StyledHomeDialogContentWrapper,
-    StyledHomeDialogHeader,
-    StyledHomeDialogMessageWrapper,
-    StyledHomeDialogTextField,
     StyledHomeSearchUserModalWrapper,
     StyledHomeWrapper,
-    StyledMessageList,
 } from './styles/Home';
 
 import { UserSearchModal } from 'components/common';
 import { SideBarWithData } from 'components/data';
-import withUserLoad from 'components/hoc/withUserLoad';
-import { getDialogIdFromSearch } from 'helpers';
+import { UserContext, SAVE_USER } from 'helpers/contexts/userContext';
+import { GET_USER } from 'lib/graphql/queries/user';
+import { CheckAuth } from 'helpers/authHelper';
 
 const HomePage = () => {
+    const isAuth = CheckAuth();
+    const { state, dispatch } = useContext(UserContext);
+    const userEmail = localStorage.getItem('userEmail');
+
+    const [loadUser, { data, loading, error }] = useLazyQuery(GET_USER);
+
+    useEffect(() => {
+        if (!state || (!state.user && isAuth)) {
+            if (!data && !loading && !error) {
+                loadUser({
+                    variables: {
+                        email: userEmail,
+                    },
+                });
+            }
+            if (data && !loading && !error) {
+                if (dispatch) {
+                    dispatch({
+                        type: SAVE_USER,
+                        payload: { user: data.user },
+                    });
+                }
+            }
+        }
+    }, [data, dispatch, error, isAuth, loadUser, loading, state, userEmail]);
+
     const [searchUserOpened, setSearchUserOpened] = useState(false);
-    const { search } = useLocation();
+    if (isAuth) {
+        if (!loading && !error && state && state.user) {
+            return (
+                <>
+                    {searchUserOpened && (
+                        <StyledHomeSearchUserModalWrapper>
+                            <UserSearchModal
+                                setSearchUserOpened={setSearchUserOpened}
+                                searchUserOpened={searchUserOpened}
+                            />
+                        </StyledHomeSearchUserModalWrapper>
+                    )}
+                    <StyledHomeWrapper>
+                        <SideBarWithData
+                            setSearchUserOpened={setSearchUserOpened}
+                        />
 
-    const dialogId = getDialogIdFromSearch(search);
+                        <StyledHomeDialog>
+                            <DialogPage />
+                        </StyledHomeDialog>
+                    </StyledHomeWrapper>
+                </>
+            );
+        } else {
+            return <div>Loading ...</div>;
+        }
+    }
 
-    return (
-        <>
-            {searchUserOpened && (
-                <StyledHomeSearchUserModalWrapper>
-                    <UserSearchModal
-                        setSearchUserOpened={setSearchUserOpened}
-                        searchUserOpened={searchUserOpened}
-                    />
-                </StyledHomeSearchUserModalWrapper>
-            )}
-            <StyledHomeWrapper>
-                <SideBarWithData setSearchUserOpened={setSearchUserOpened} />
-
-                {dialogId && (
-                    <StyledHomeDialog>
-                        <StyledHomeDialogHeader />
-                        <StyledHomeDialogContentWrapper>
-                            <StyledHomeDialogMessageWrapper>
-                                <StyledMessageList />
-                            </StyledHomeDialogMessageWrapper>
-                            <StyledHomeDialogTextField />
-                        </StyledHomeDialogContentWrapper>
-                    </StyledHomeDialog>
-                )}
-            </StyledHomeWrapper>
-        </>
-    );
+    return <Redirect to="/signin" />;
 };
 
-export default withUserLoad(HomePage);
+export default HomePage;

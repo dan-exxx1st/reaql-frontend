@@ -167,6 +167,7 @@ exports[`<DialogTextField /> Snapshots Should render correctly 1`] = `
       alt="Send message icon"
       className="c9"
       draggable={false}
+      onClick={[Function]}
       src="SendMessage.svg"
     />
   </div>

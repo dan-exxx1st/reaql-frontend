@@ -1,7 +1,4 @@
-import React, { FC, useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-import { decode } from 'querystring';
+import React, { FC, useContext, useState } from 'react';
 
 import { Typography, Wrapper } from 'components/UI';
 import { MessageSearch } from '..';
@@ -9,32 +6,39 @@ import { MessageSearch } from '..';
 import { StyledAvatar, StyledCircle, StyledDialogHeader } from './style';
 
 import { IDialogHeaderProps } from 'lib/types/components/common';
+import { useQuery } from '@apollo/client';
 import { Query } from 'lib/graphql/types';
-import { GET_DIALOG } from 'lib/graphql/queries/dialog';
+import { DIALOG } from 'lib/graphql/queries/dialog';
+import { UserContext } from 'helpers/contexts/userContext';
 
-const DialogHeader: FC<IDialogHeaderProps> = ({ className }) => {
+const DialogHeader: FC<IDialogHeaderProps> = ({ className, dialogId }) => {
     const [isShowMessageSearch, setIsShowMessageSearch] = useState(false);
-
-    const history = useHistory();
-    const dialogId = decode(history.location.search)['?dialog'];
-
-    const { data } = useQuery<Query>(GET_DIALOG, {
-        variables: { dialogId },
-    });
+    const { state } = useContext(UserContext);
 
     const _handleToggleMessageSearch = () => {
         setIsShowMessageSearch(!isShowMessageSearch);
     };
 
-    if (data && data.dialog) {
+    const { data, loading } = useQuery<Query>(DIALOG, {
+        variables: {
+            dialogId,
+        },
+        fetchPolicy: 'no-cache',
+    });
+
+    if (data && data.dialog && !loading && state && state.user) {
+        const { user } = state;
         const {
             dialog: { users, group },
         } = data;
+        const otherUser = users.filter(
+            (dialogUser) => dialogUser?.id !== user.id
+        );
         const name =
-            !group && users[0]
-                ? `${users[0].name} ${users[0].surname}`
+            !group && otherUser[0]
+                ? `${otherUser[0].name} ${otherUser[0].surname}`
                 : 'group!!!'; //!SERVER
-        const avatar = !group && users[0] ? users[0].avatar : ''; //!SERVER
+        const avatar = !group && otherUser[0] ? otherUser[0].avatar : ''; //!SERVER
 
         return (
             <StyledDialogHeader

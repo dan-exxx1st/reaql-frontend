@@ -8,7 +8,7 @@ describe('<MessageList />', () => {
     describe('Snapshots', () => {
         it('Should render correctly', () => {
             const wrapper = mountWithApolloAndStyled(
-                <MessageList messages={MessageListData} />
+                <MessageList data={{ messages: MessageListData }} />
             );
 
             expect(wrapper).toMatchSnapshot();

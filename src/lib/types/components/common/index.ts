@@ -1,15 +1,6 @@
-import { SendedMessage } from 'lib/types';
 import Theme from 'helpers/styled';
-import { Dialog, Maybe, Message_Statuses } from 'lib/graphql/types';
+import { Dialog, Maybe, Message, Message_Statuses } from 'lib/graphql/types';
 import { ISideBarWithDataProps } from '../data';
-
-export type MessageType = {
-    id: string;
-    user_name: string;
-    message_date?: any;
-    message_text?: string;
-    message_status?: SendedMessage;
-};
 
 export interface IUserHeaderProps {
     className?: string;
@@ -22,7 +13,7 @@ export interface IMessageSearchProps {
     onChange?: (value: string) => void;
 }
 
-export interface IMessageItemProps extends MessageType {
+export interface IMessageItemProps extends Message {
     className?: string;
 }
 
@@ -38,7 +29,11 @@ export interface IDialogsItemProps {
 }
 
 export interface IMessageListProps {
-    messages?: IMessageItemProps[];
+    data?: {
+        messages: Message[];
+    };
+    loading?: boolean;
+    subscribeToNewMessages?: () => void;
     className?: string;
 }
 
@@ -54,6 +49,7 @@ export interface IDialogTextFieldProps {
 
 export interface IDialogHeaderProps {
     className?: string;
+    dialogId: string;
 }
 
 export interface ISignUpFormProps {
@@ -75,6 +71,9 @@ export interface ISignInFormProps {
 }
 
 export interface ISideBarProps extends ISideBarWithDataProps {
-    dialogs?: Dialog[];
+    data?: {
+        dialogs: Dialog[];
+    };
+    loading: boolean;
     subscribeToNewDialogs?: () => void;
 }

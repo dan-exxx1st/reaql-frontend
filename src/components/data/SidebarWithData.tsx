@@ -1,9 +1,9 @@
-import React, { FC, useContext, useCallback } from 'react';
+import React, { FC, useContext } from 'react';
 import { useQuery } from '@apollo/client';
 
 import { ISideBarWithDataProps } from 'lib/types/components/data';
 import { Query, Subscription } from 'lib/graphql/types';
-import { GET_DIALOGS_QUERY } from 'lib/graphql/queries/dialog';
+import { DIALOGS } from 'lib/graphql/queries/dialog';
 
 import { UserContext } from 'helpers/contexts/userContext';
 
@@ -13,13 +13,11 @@ import { DIALOG_CREATED } from 'lib/graphql/subscriptions/dialog';
 const SideBarWithData: FC<ISideBarWithDataProps> = (props) => {
     const { state: UserState } = useContext(UserContext);
 
-    const { data, subscribeToMore } = useQuery<Query>(GET_DIALOGS_QUERY, {
+    const { subscribeToMore, ...result } = useQuery<Query>(DIALOGS, {
         variables: { userId: UserState?.user?.id },
     });
 
-    const dialogs = data?.dialogs;
-
-    const subscribeToNewDialogs = useCallback(() => {
+    const subscribeToNewDialogs = () => {
         if (UserState && UserState.user) {
             return subscribeToMore({
                 document: DIALOG_CREATED,
@@ -33,22 +31,24 @@ const SideBarWithData: FC<ISideBarWithDataProps> = (props) => {
                     if (!subscriptionData.data) return prev;
 
                     const newDialogItem = subscriptionData.data.dialogCreated;
+                    const prevDialogs =
+                        prev && prev.dialogs ? prev.dialogs : [];
 
                     const newCache = {
                         ...prev,
-                        dialogs: [...prev.dialogs, newDialogItem],
+                        dialogs: [newDialogItem, ...prevDialogs],
                     };
 
                     return newCache;
                 },
             });
         }
-    }, [UserState, subscribeToMore]);
+    };
 
     return (
         <SideBar
             {...props}
-            dialogs={dialogs}
+            {...result}
             subscribeToNewDialogs={subscribeToNewDialogs}
         />
     );

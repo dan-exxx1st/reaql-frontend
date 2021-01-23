@@ -11,10 +11,15 @@ import { ISideBarProps } from 'lib/types/components/common';
 
 const SideBar: FC<ISideBarProps> = (props) => {
     const [dialogFilter, setDialogFilter] = useState('');
-    const { setSearchUserOpened, dialogs, subscribeToNewDialogs } = props;
+    const { setSearchUserOpened, data, loading, subscribeToNewDialogs } = props;
 
     useEffect(() => {
-        if (subscribeToNewDialogs) subscribeToNewDialogs();
+        let unsubscribe: any;
+        if (subscribeToNewDialogs) {
+            unsubscribe = subscribeToNewDialogs();
+        }
+
+        return () => unsubscribe();
     }, [subscribeToNewDialogs]);
 
     return (
@@ -31,10 +36,10 @@ const SideBar: FC<ISideBarProps> = (props) => {
                 value={dialogFilter}
                 onChange={setDialogFilter}
             />
-            {dialogs ? (
+            {!loading && data && data.dialogs ? (
                 <StyledSidebarDialogs
                     dialogFilter={dialogFilter}
-                    dialogs={dialogs}
+                    dialogs={data.dialogs}
                 />
             ) : null}
         </StyledSidebarWrapper>

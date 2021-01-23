@@ -16,7 +16,7 @@ describe('<MessageItem />', () => {
 
         it('Should render correctly with sended message status', () => {
             const wrapper = mountWithApolloAndStyled(
-                <MessageItem {...MessageItemData} message_status="sended" />
+                <MessageItem {...MessageItemData} />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -24,7 +24,7 @@ describe('<MessageItem />', () => {
 
         it('Should render correctly with received message status', () => {
             const wrapper = mountWithApolloAndStyled(
-                <MessageItem {...MessageItemData} message_status="received" />
+                <MessageItem {...MessageItemData} />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -32,7 +32,7 @@ describe('<MessageItem />', () => {
 
         it('Should render correctly with readed message status', () => {
             const wrapper = mountWithApolloAndStyled(
-                <MessageItem {...MessageItemData} message_status="readed" />
+                <MessageItem {...MessageItemData} />
             );
 
             expect(wrapper).toMatchSnapshot();

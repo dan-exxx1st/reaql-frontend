@@ -39,7 +39,7 @@ const DialogList: FC<IDialogListProps> = (props) => {
                           )
                         : excludeCurrentUser;
 
-                    if (filteredUsers.length == 1 && users[0]) {
+                    if (filteredUsers.length == 1 && excludeCurrentUser[0]) {
                         const userDialogProps = dialogProps.find(
                             (props) => props?.user.id === state?.user?.id
                         );
@@ -52,7 +52,7 @@ const DialogList: FC<IDialogListProps> = (props) => {
                                 name,
                                 surname,
                                 avatar: UserAvatar,
-                            } = users[0];
+                            } = excludeCurrentUser[0];
 
                             const avatar = !group ? UserAvatar : '';
 

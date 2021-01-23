@@ -1,4 +1,7 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useContext, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+
 import {
     StyledAddFileIcon,
     StyledDialogTextField,
@@ -10,6 +13,10 @@ import {
 } from './style';
 
 import { IDialogTextFieldProps } from 'lib/types/components/common';
+import { Mutation } from 'lib/graphql/types';
+import { CREATE_MESSAGE } from 'lib/graphql/mutations/dialog';
+import { getDialogIdFromSearch } from 'helpers';
+import { UserContext } from 'helpers/contexts/userContext';
 
 import SmileIcon from 'assets/images/icons/Smile.svg';
 import MicrophoneIcon from 'assets/images/icons/Microphone.svg';
@@ -18,6 +25,24 @@ import SendMessageIcon from 'assets/images/icons/SendMessage.svg';
 
 const DialogTextField: FC<IDialogTextFieldProps> = ({ className }) => {
     const [textFieldValue, setTextFieldValue] = useState('');
+    const [createMessage] = useMutation<Mutation>(CREATE_MESSAGE);
+
+    const location = useLocation();
+    const dialogId = getDialogIdFromSearch(location.search);
+
+    const { state: UserState } = useContext(UserContext);
+
+    const _handleSendMessage = () => {
+        createMessage({
+            variables: {
+                dialogId,
+                userId: UserState?.user?.id,
+                text: textFieldValue,
+            },
+        });
+
+        setTextFieldValue('');
+    };
 
     return (
         <StyledDialogTextField className={className}>
@@ -48,6 +73,7 @@ const DialogTextField: FC<IDialogTextFieldProps> = ({ className }) => {
                     src={SendMessageIcon}
                     alt="Send message icon"
                     draggable={false}
+                    onClick={_handleSendMessage}
                 />
             </StyledRightIconsWrapper>
         </StyledDialogTextField>

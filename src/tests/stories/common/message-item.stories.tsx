@@ -6,8 +6,8 @@ import { MessageItemData } from 'tests/__mocks__/data/unit';
 storiesOf('Common/ Message item', module)
     .add('default', () => <MessageItem {...MessageItemData} />)
     .add('with sended message status', () => (
-        <MessageItem message_status="sended" {...MessageItemData} />
+        <MessageItem {...MessageItemData} />
     ))
     .add('with readed message status', () => (
-        <MessageItem message_status="readed" {...MessageItemData} />
+        <MessageItem {...MessageItemData} />
     ));
