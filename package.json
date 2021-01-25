@@ -18,6 +18,7 @@
         "bfj": "^7.0.2",
         "camelcase": "^6.1.0",
         "case-sensitive-paths-webpack-plugin": "2.3.0",
+        "cross-env": "^7.0.3",
         "css-loader": "4.3.0",
         "date-fns": "^2.16.1",
         "dotenv": "8.2.0",
@@ -74,7 +75,7 @@
     },
     "scripts": {
         "start": "node scripts/start.js",
-        "build": "node scripts/build.js",
+        "build": "cross-env REACT_APP_BACKEND_URL=reaql-backend.herokuapp.com/graphql node scripts/build.js",
         "test": "NODE_PATH=./src jest",
         "test:watch": "NODE_PATH=./src jest --watchAll",
         "test:coverage": "NODE_PATH=./src jest --runInBand --coverage --collectCoverageFrom=src/**/*.{ts,tsx} --collectCoverageFrom=!src/**/*.stories.{ts,tsx} --collectCoverageFrom=!src/lib/**/* --collectCoverageFrom=!src/config/**/* --collectCoverageFrom=!src/lib --collectCoverageFrom=!src/**/*.{types,d}.{ts,tsx}",
@@ -83,7 +84,9 @@
         "build-storybook": "build-storybook -s public",
         "lint": "eslint \"src/**/*.{ts,tsx}\" --fix",
         "pretify": "prettier --config=./.prettierrc --write ./src",
-        "codegen": "graphql-codegen"
+        "codegen": "graphql-codegen",
+        "serve": " serve -s build -p ${PORT:=3000}",
+        "heroku-prebuild": "npm install -g serve"
     },
     "eslintConfig": {
         "extends": [
@@ -124,7 +127,6 @@
         "@types/react-router-dom": "^5.1.6",
         "@types/styled-components": "^5.1.4",
         "concurrently": "^5.3.0",
-        "cross-env": "^7.0.3",
         "enzyme": "^3.11.0",
         "enzyme-adapter-react-16": "^1.15.5",
         "enzyme-to-json": "^3.6.1",
