@@ -29,11 +29,11 @@ const API_URL =
         : 'localhost:8080/graphql';
 
 const httpLink = new HttpLink({
-    uri: `http://${API_URL}`,
+    uri: `https://${API_URL}`,
 });
 
 const wsLink = new WebSocketLink({
-    uri: `ws://${API_URL}`,
+    uri: `wss://${API_URL}`,
     options: {
         reconnect: true,
     },
