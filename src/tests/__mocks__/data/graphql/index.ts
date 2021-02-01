@@ -1,6 +1,9 @@
 import { Dialog, DialogProps, Dialog_User_Roles } from 'lib/graphql/types';
 import { UsersMockData } from '../users';
 
+const updatedAt = String(new Date()),
+    createdAt = String(new Date());
+
 export const DialogPropsMockData: DialogProps[] = [
     {
         __typename: 'DialogProps',
@@ -9,6 +12,8 @@ export const DialogPropsMockData: DialogProps[] = [
         userRole: Dialog_User_Roles.Admin,
         unreadMessages: 0,
         lastMessageStatus: null,
+        updatedAt,
+        createdAt,
     },
     {
         __typename: 'DialogProps',
@@ -17,6 +22,8 @@ export const DialogPropsMockData: DialogProps[] = [
         userRole: Dialog_User_Roles.User,
         unreadMessages: 0,
         lastMessageStatus: null,
+        updatedAt,
+        createdAt,
     },
     {
         __typename: 'DialogProps',
@@ -25,6 +32,8 @@ export const DialogPropsMockData: DialogProps[] = [
         userRole: Dialog_User_Roles.Admin,
         unreadMessages: 0,
         lastMessageStatus: null,
+        updatedAt,
+        createdAt,
     },
     {
         __typename: 'DialogProps',
@@ -33,6 +42,8 @@ export const DialogPropsMockData: DialogProps[] = [
         userRole: Dialog_User_Roles.User,
         unreadMessages: 0,
         lastMessageStatus: null,
+        updatedAt,
+        createdAt,
     },
 ];
 
@@ -45,6 +56,8 @@ export const DialogsMockData: Dialog[] = [
         users: [UsersMockData[0], UsersMockData[1]],
         dialogProps: [DialogPropsMockData[0], DialogPropsMockData[1]],
         group: false,
+        updatedAt,
+        createdAt,
     },
     {
         __typename: 'Dialog',
@@ -54,5 +67,7 @@ export const DialogsMockData: Dialog[] = [
         group: false,
         lastMessage: 'Test last message',
         lastMessageDate: String(new Date()),
+        updatedAt,
+        createdAt,
     },
 ];
