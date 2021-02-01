@@ -19,6 +19,7 @@ export const DIALOG_UPDATED = gql`
             id
             lastMessage
             lastMessageDate
+            updatedAt
         }
     }
 `;

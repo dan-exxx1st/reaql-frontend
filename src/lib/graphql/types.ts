@@ -43,6 +43,8 @@ export type Dialog = {
     lastMessage?: Maybe<Scalars['String']>;
     lastMessageDate?: Maybe<Scalars['String']>;
     group: Scalars['Boolean'];
+    createdAt: Scalars['String'];
+    updatedAt: Scalars['String'];
 };
 
 export type DialogProps = {
@@ -52,6 +54,8 @@ export type DialogProps = {
     userRole: Dialog_User_Roles;
     unreadMessages?: Maybe<Scalars['Int']>;
     lastMessageStatus?: Maybe<Message_Statuses>;
+    createdAt: Scalars['String'];
+    updatedAt: Scalars['String'];
 };
 
 export type Message = {

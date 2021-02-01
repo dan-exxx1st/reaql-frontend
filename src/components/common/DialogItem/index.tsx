@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-import { useSubscription } from '@apollo/client';
+import { useApolloClient, useSubscription } from '@apollo/client';
 
 import StyledDialogListItem, {
     StyledDialogItemAvatarWrapper,
@@ -15,6 +15,7 @@ import { Message_Statuses, Subscription } from 'lib/graphql/types';
 
 import { getDialogIdFromSearch } from 'helpers';
 import { DIALOG_UPDATED } from 'lib/graphql/subscriptions/dialog';
+import { DIALOG_DATA_UPDATE } from 'lib/graphql/fragments/dialog';
 
 const DialogItem: FC<IDialogsItemProps> = (props) => {
     const {
@@ -30,10 +31,26 @@ const DialogItem: FC<IDialogsItemProps> = (props) => {
 
     const history = useHistory();
     const { search } = useLocation();
+    const client = useApolloClient();
 
     const { data, loading } = useSubscription<Subscription>(DIALOG_UPDATED, {
         variables: {
             dialogId: id,
+        },
+        onSubscriptionData({ subscriptionData }) {
+            if (subscriptionData.data && subscriptionData.data.dialogUpdated) {
+                const { dialogUpdated } = subscriptionData.data;
+
+                client.writeFragment({
+                    id: `Dialog:${id}`,
+                    fragment: DIALOG_DATA_UPDATE,
+                    data: {
+                        lastMessage: dialogUpdated.lastMessage,
+                        lastMessageDate: dialogUpdated.lastMessageDate,
+                        updatedAt: dialogUpdated.updatedAt,
+                    },
+                });
+            }
         },
     });
 
@@ -56,21 +73,10 @@ const DialogItem: FC<IDialogsItemProps> = (props) => {
     };
 
     useEffect(() => {
-        if (data?.dialogUpdated) {
-            const {
-                lastMessage: newLastMessage,
-                lastMessageDate: newLastMessageDate,
-            } = data.dialogUpdated;
-            setLastMessageValue({
-                text: newLastMessage ? newLastMessage : '',
-                date: newLastMessageDate ? newLastMessageDate : '',
-            });
-        } else if (!data) {
-            setLastMessageValue({
-                text: lastMessage ? lastMessage : '',
-                date: lastMessageDate ? lastMessageDate : '',
-            });
-        }
+        setLastMessageValue({
+            text: lastMessage || '',
+            date: lastMessageDate || '',
+        });
         if (lastMessageStatus) {
             switch (lastMessageStatus) {
                 case Message_Statuses.Sended: {
@@ -99,6 +105,7 @@ const DialogItem: FC<IDialogsItemProps> = (props) => {
             }
         }
     }, [
+        client,
         data,
         id,
         lastMessage,

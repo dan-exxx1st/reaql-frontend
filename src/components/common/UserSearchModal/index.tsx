@@ -34,7 +34,9 @@ const UserSearchModal: FC<IProps> = (props) => {
     const modalRef = useRef(null);
     const [searchEmail, setSearchEmail] = useState('');
 
-    const [getUsers, { data }] = useLazyQuery<Query>(SEARCH_USERS);
+    const [getUsers, { data }] = useLazyQuery<Query>(SEARCH_USERS, {
+        fetchPolicy: 'no-cache',
+    });
     const [createDialog, { error: CreateDialogError }] = useMutation<Mutation>(
         CREATE_DIALOG_MUTATION
     );

@@ -17,6 +17,7 @@ const MessageListWithData: FC<IProps> = ({ dialogId, ...otherProps }) => {
         variables: {
             dialogId,
         },
+        pollInterval: 60000,
     });
 
     const subscribeToNewMessages = () =>

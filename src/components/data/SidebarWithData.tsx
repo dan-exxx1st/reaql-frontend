@@ -15,6 +15,7 @@ const SideBarWithData: FC<ISideBarWithDataProps> = (props) => {
 
     const { subscribeToMore, ...result } = useQuery<Query>(DIALOGS, {
         variables: { userId: UserState?.user?.id },
+        pollInterval: 60000,
     });
 
     const subscribeToNewDialogs = () => {

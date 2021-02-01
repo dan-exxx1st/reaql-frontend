@@ -13,19 +13,14 @@ export const DIALOG_DATA_FRAGMENT = gql`
             avatar
         }
         dialogProps {
+            id
             user {
                 id
             }
             unreadMessages
             lastMessageStatus
         }
-    }
-`;
-
-export const DIALOG_UPDATED_FRAGMENT = gql`
-    fragment DialogUpdatedFragment on Dialog {
-        lastMessage
-        lastMessageDate
+        updatedAt
     }
 `;
 
@@ -36,6 +31,7 @@ export const MESSAGE_DATA_FRAGMENT = gql`
         messageDate
         messageStatus
         user {
+            id
             name
             surname
         }
@@ -49,5 +45,13 @@ export const MESSAGE_DATA_FRAGMENT = gql`
                 }
             }
         }
+    }
+`;
+
+export const DIALOG_DATA_UPDATE = gql`
+    fragment DialogMessageUpdate on Dialog {
+        lastMessage
+        lastMessageDate
+        updatedAt
     }
 `;

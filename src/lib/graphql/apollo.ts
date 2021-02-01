@@ -27,13 +27,21 @@ const API_URL =
     process.env.NODE_ENV === 'production'
         ? process.env.REACT_APP_BACKEND_URL
         : 'localhost:8080/graphql';
+const httpUrl =
+    process.env.NODE_ENV === 'production'
+        ? `https://${API_URL}`
+        : `http://${API_URL}`;
+const wsUrl =
+    process.env.NODE_ENV === 'production'
+        ? `wss://${API_URL}`
+        : `ws://${API_URL}`;
 
 const httpLink = new HttpLink({
-    uri: `https://${API_URL}`,
+    uri: httpUrl,
 });
 
 const wsLink = new WebSocketLink({
-    uri: `wss://${API_URL}`,
+    uri: wsUrl,
     options: {
         reconnect: true,
     },

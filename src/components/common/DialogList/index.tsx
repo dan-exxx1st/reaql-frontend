@@ -12,10 +12,20 @@ const DialogList: FC<IDialogListProps> = (props) => {
     const { dialogs, dialogFilter, ...otherProps } = props;
     const { state } = useContext(UserContext);
 
+    const dialogSorts =
+        dialogs &&
+        dialogs
+            .slice()
+            .sort(
+                (a, b) =>
+                    new Date(b.updatedAt).getTime() -
+                    new Date(a.updatedAt).getTime()
+            );
+
     return (
         <StyledDialogListWrapper {...otherProps}>
-            {dialogs &&
-                dialogs.map((dialog) => {
+            {dialogSorts &&
+                dialogSorts.map((dialog) => {
                     const {
                         id,
                         users,
