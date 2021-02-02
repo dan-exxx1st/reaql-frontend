@@ -1,6 +1,10 @@
 import React, { FC, useEffect } from 'react';
 
-import { StyledMessageListItem, StyledMessageListWrapper } from './style';
+import {
+    StyledMessageListItem,
+    StyledMessageListWrapper,
+    StyledMessagesWrapper,
+} from './style';
 
 import { IMessageListProps } from 'lib/types/components/common';
 
@@ -21,15 +25,17 @@ const MessageList: FC<IMessageListProps> = ({ className, ...props }) => {
     if (!loading && messages) {
         return (
             <StyledMessageListWrapper className={className}>
-                {messages.map(
-                    (message) =>
-                        message && (
-                            <StyledMessageListItem
-                                key={message.id}
-                                {...message}
-                            />
-                        )
-                )}
+                <StyledMessagesWrapper>
+                    {messages.map(
+                        (message) =>
+                            message && (
+                                <StyledMessageListItem
+                                    key={message.id}
+                                    {...message}
+                                />
+                            )
+                    )}
+                </StyledMessagesWrapper>
             </StyledMessageListWrapper>
         );
     }
