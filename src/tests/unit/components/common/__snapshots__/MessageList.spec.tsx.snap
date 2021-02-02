@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MessageList /> Snapshots Should render correctly 1`] = `
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10,7 +10,7 @@ exports[`<MessageList /> Snapshots Should render correctly 1`] = `
   height: 40px;
 }
 
-.c8 {
+.c9 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -23,7 +23,7 @@ exports[`<MessageList /> Snapshots Should render correctly 1`] = `
   margin: 0;
 }
 
-.c10 {
+.c11 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -36,7 +36,7 @@ exports[`<MessageList /> Snapshots Should render correctly 1`] = `
   margin: 0;
 }
 
-.c12 {
+.c13 {
   font-family: 'Roboto',sans-serif;
   font-weight: normal;
   font-size: 14px;
@@ -73,7 +73,7 @@ exports[`<MessageList /> Snapshots Should render correctly 1`] = `
   height: auto;
 }
 
-.c3 {
+.c4 {
   outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -83,24 +83,25 @@ exports[`<MessageList /> Snapshots Should render correctly 1`] = `
   margin: 0;
 }
 
-.c5 {
+.c6 {
   margin-right: 15px;
 }
 
-.c9 {
+.c10 {
   margin-right: 10px;
   color: #252525;
 }
 
-.c11 {
+.c12 {
   color: #A5A5A5;
 }
 
-.c13 {
+.c14 {
   color: #000000;
+  word-break: break-all;
 }
 
-.c6 {
+.c7 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -108,10 +109,9 @@ exports[`<MessageList /> Snapshots Should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 40px;
 }
 
-.c7 {
+.c8 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -119,30 +119,47 @@ exports[`<MessageList /> Snapshots Should render correctly 1`] = `
 }
 
 .c1 {
+  width: calc(100% - 45px);
+  height: calc(100% - 110px);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #FAFAFA;
+  border-radius: 3px;
+  padding-left: 5px;
+  padding-right: 0;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.c3 {
+  margin: 7.5px 0;
+}
+
+.c2 {
   -webkit-flex-direction: column-reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
   overflow-y: scroll;
-  width: 100%;
-  padding-bottom: 10px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-.c1::-webkit-scrollbar-track {
+.c2::-webkit-scrollbar-track {
   background-color: #FAFAFA;
 }
 
-.c1::-webkit-scrollbar-thumb {
+.c2::-webkit-scrollbar-thumb {
   border-radius: 2px;
   background-color: #E5E5E5;
   height: 100px;
 }
 
-.c1::-webkit-scrollbar {
+.c2::-webkit-scrollbar {
   width: 7px;
-}
-
-.c2 {
-  margin-bottom: 20px;
 }
 
 <div
@@ -151,33 +168,37 @@ exports[`<MessageList /> Snapshots Should render correctly 1`] = `
   <div
     className="c0 c2"
   >
-    <img
-      alt="Icon component"
-      className="c3 c4 c5"
-      src="Person.svg"
-    />
     <div
-      className="c0 c6"
+      className="c0 c3"
     >
+      <img
+        alt="Icon component"
+        className="c4 c5 c6"
+        src="Person.svg"
+      />
       <div
         className="c0 c7"
       >
-        <p
-          className="c8 c9"
+        <div
+          className="c0 c8"
         >
-          Test User1
-        </p>
+          <p
+            className="c9 c10"
+          >
+            Test User1
+          </p>
+          <p
+            className="c11 c12"
+          >
+            12:00 am
+          </p>
+        </div>
         <p
-          className="c10 c11"
+          className="c13 c14"
         >
-          12:00 am
+          Test message
         </p>
       </div>
-      <p
-        className="c12 c13"
-      >
-        Test message
-      </p>
     </div>
   </div>
 </div>

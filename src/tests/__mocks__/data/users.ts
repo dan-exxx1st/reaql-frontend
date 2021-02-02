@@ -13,6 +13,7 @@ export const UsersMockData: User[] = [
         avatar: '',
         createdAt,
         updatedAt,
+        online: '',
     },
     {
         __typename: 'User',
@@ -23,6 +24,7 @@ export const UsersMockData: User[] = [
         avatar: '',
         createdAt,
         updatedAt,
+        online: '',
     },
     {
         __typename: 'User',
@@ -33,6 +35,7 @@ export const UsersMockData: User[] = [
         avatar: '',
         createdAt,
         updatedAt,
+        online: '',
     },
     {
         __typename: 'User',
@@ -43,5 +46,6 @@ export const UsersMockData: User[] = [
         avatar: '',
         createdAt,
         updatedAt,
+        online: '',
     },
 ];

@@ -98,6 +98,7 @@ exports[`<MessageItem /> Snapshots Should render correctly 1`] = `
 
 .c11 {
   color: #000000;
+  word-break: break-all;
 }
 
 .c4 {
@@ -108,7 +109,6 @@ exports[`<MessageItem /> Snapshots Should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 40px;
 }
 
 .c5 {
@@ -250,6 +250,7 @@ exports[`<MessageItem /> Snapshots Should render correctly with readed message s
 
 .c11 {
   color: #000000;
+  word-break: break-all;
 }
 
 .c4 {
@@ -260,7 +261,6 @@ exports[`<MessageItem /> Snapshots Should render correctly with readed message s
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 40px;
 }
 
 .c5 {
@@ -402,6 +402,7 @@ exports[`<MessageItem /> Snapshots Should render correctly with received message
 
 .c11 {
   color: #000000;
+  word-break: break-all;
 }
 
 .c4 {
@@ -412,7 +413,6 @@ exports[`<MessageItem /> Snapshots Should render correctly with received message
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 40px;
 }
 
 .c5 {
@@ -554,6 +554,7 @@ exports[`<MessageItem /> Snapshots Should render correctly with sended message s
 
 .c11 {
   color: #000000;
+  word-break: break-all;
 }
 
 .c4 {
@@ -564,7 +565,6 @@ exports[`<MessageItem /> Snapshots Should render correctly with sended message s
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 40px;
 }
 
 .c5 {
