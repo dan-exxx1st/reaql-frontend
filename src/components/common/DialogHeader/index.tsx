@@ -39,6 +39,7 @@ const DialogHeader: FC<IDialogHeaderProps> = ({ className, dialogId }) => {
                 ? `${otherUser[0].name} ${otherUser[0].surname}`
                 : 'group!!!'; //!SERVER
         const avatar = !group && otherUser[0] ? otherUser[0].avatar : ''; //!SERVER
+        const onlineStatus = !group && otherUser[0] ? otherUser[0].online : '';
 
         return (
             <StyledDialogHeader
@@ -60,7 +61,7 @@ const DialogHeader: FC<IDialogHeaderProps> = ({ className, dialogId }) => {
                                     {name}
                                 </Typography>
                                 <Typography variant="caption1" color="dgc">
-                                    Today at 3:30 pm
+                                    {onlineStatus}
                                 </Typography>
                             </Wrapper>
                         </Wrapper>

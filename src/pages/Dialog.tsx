@@ -5,7 +5,6 @@ import {
     StyledHomeDialogHeader,
     StyledHomeDialogContentWrapper,
     StyledHomeDialogTextField,
-    StyledHomeDialogMessageWrapper,
 } from './styles/Home';
 
 import { getDialogIdFromSearch } from 'helpers';
@@ -21,9 +20,7 @@ const DialogPage = () => {
                 <>
                     <StyledHomeDialogHeader dialogId={dialogId} />
                     <StyledHomeDialogContentWrapper>
-                        <StyledHomeDialogMessageWrapper>
-                            <MessageListWithData dialogId={dialogId} />
-                        </StyledHomeDialogMessageWrapper>
+                        <MessageListWithData dialogId={dialogId} />
                         <StyledHomeDialogTextField />
                     </StyledHomeDialogContentWrapper>
                 </>
