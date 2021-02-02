@@ -9,9 +9,18 @@ import {
 import { IMessageListProps } from 'lib/types/components/common';
 
 const MessageList: FC<IMessageListProps> = ({ className, ...props }) => {
-    const { data, loading, subscribeToNewMessages } = props;
+    const { data, loading, subscribeToNewMessages, filterValue } = props;
 
     const messages = data?.messages;
+
+    const filteredMessages =
+        filterValue && messages
+            ? messages.filter((message) =>
+                  message.text
+                      .toLowerCase()
+                      .includes(filterValue.toLocaleLowerCase())
+              )
+            : messages;
 
     useEffect(() => {
         let unsubscribe: any;
@@ -22,19 +31,20 @@ const MessageList: FC<IMessageListProps> = ({ className, ...props }) => {
         return () => unsubscribe();
     }, [subscribeToNewMessages]);
 
-    if (!loading && messages) {
+    if (!loading && filteredMessages) {
         return (
             <StyledMessageListWrapper className={className}>
                 <StyledMessagesWrapper>
-                    {messages.map(
-                        (message) =>
-                            message && (
-                                <StyledMessageListItem
-                                    key={message.id}
-                                    {...message}
-                                />
-                            )
-                    )}
+                    {filteredMessages &&
+                        filteredMessages.map(
+                            (message) =>
+                                message && (
+                                    <StyledMessageListItem
+                                        key={message.id}
+                                        {...message}
+                                    />
+                                )
+                        )}
                 </StyledMessagesWrapper>
             </StyledMessageListWrapper>
         );

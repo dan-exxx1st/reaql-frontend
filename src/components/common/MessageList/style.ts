@@ -24,6 +24,7 @@ export const StyledMessagesWrapper = styled(Wrapper)`
     flex-direction: column-reverse;
     overflow-y: scroll;
     justify-content: space-between;
+    width: 100%;
 
     ::-webkit-scrollbar-track {
         background-color: ${({ theme }) => theme.wc};

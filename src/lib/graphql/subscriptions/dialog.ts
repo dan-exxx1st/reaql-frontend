@@ -3,6 +3,7 @@ import {
     DIALOG_DATA_FRAGMENT,
     MESSAGE_DATA_FRAGMENT,
 } from '../fragments/dialog';
+import { USER_FRAGMENT } from '../fragments/user';
 
 export const DIALOG_CREATED = gql`
     subscription DIALOG_CREATED($userId: String!) {
@@ -11,6 +12,15 @@ export const DIALOG_CREATED = gql`
         }
     }
     ${DIALOG_DATA_FRAGMENT}
+`;
+
+export const DIALOG_ONLINE_STATUS = gql`
+    subscription DIALOG_ONLINE_STATUS($userId: String!) {
+        dialogOnlineUpdated(userId: $userId) {
+            ...UserFragment
+        }
+    }
+    ${USER_FRAGMENT}
 `;
 
 export const DIALOG_UPDATED = gql`

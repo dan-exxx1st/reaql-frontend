@@ -10,9 +10,14 @@ import { MESSAGE_CREATED } from 'lib/graphql/subscriptions/dialog';
 
 interface IProps {
     dialogId?: string;
+    filterValue?: string;
 }
 
-const MessageListWithData: FC<IProps> = ({ dialogId, ...otherProps }) => {
+const MessageListWithData: FC<IProps> = ({
+    dialogId,
+    filterValue,
+    ...otherProps
+}) => {
     const { subscribeToMore, ...result } = useQuery<Query>(MESSAGES, {
         variables: {
             dialogId,
@@ -44,6 +49,7 @@ const MessageListWithData: FC<IProps> = ({ dialogId, ...otherProps }) => {
     return (
         <MessageList
             subscribeToNewMessages={subscribeToNewMessages}
+            filterValue={filterValue}
             {...otherProps}
             {...result}
         />

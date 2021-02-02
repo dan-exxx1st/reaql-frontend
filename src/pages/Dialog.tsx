@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import {
@@ -13,14 +13,22 @@ import { MessageListWithData } from 'components/data';
 const DialogPage = () => {
     const { search } = useLocation();
     const dialogId = getDialogIdFromSearch(search);
+    const [filterValue, setFilterValue] = useState('');
 
     return (
         <>
             {dialogId ? (
                 <>
-                    <StyledHomeDialogHeader dialogId={dialogId} />
+                    <StyledHomeDialogHeader
+                        dialogId={dialogId}
+                        messageFilter={setFilterValue}
+                        filterValue={filterValue}
+                    />
                     <StyledHomeDialogContentWrapper>
-                        <MessageListWithData dialogId={dialogId} />
+                        <MessageListWithData
+                            dialogId={dialogId}
+                            filterValue={filterValue}
+                        />
                         <StyledHomeDialogTextField />
                     </StyledHomeDialogContentWrapper>
                 </>

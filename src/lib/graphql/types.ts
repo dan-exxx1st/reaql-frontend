@@ -175,6 +175,7 @@ export type Subscription = {
     dialogCreated: Dialog;
     dialogUpdated: Dialog;
     messageCreated: Message;
+    dialogOnlineUpdated: User;
 };
 
 export type SubscriptionDialogCreatedArgs = {
@@ -187,6 +188,10 @@ export type SubscriptionDialogUpdatedArgs = {
 
 export type SubscriptionMessageCreatedArgs = {
     dialogId: Scalars['String'];
+};
+
+export type SubscriptionDialogOnlineUpdatedArgs = {
+    userId: Scalars['String'];
 };
 
 export enum Dialog_User_Roles {
