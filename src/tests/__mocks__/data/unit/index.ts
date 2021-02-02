@@ -33,6 +33,8 @@ export const MessageItemData: Message = {
         updatedAt,
         createdAt,
     },
+    updatedAt,
+    createdAt,
 };
 
 export const MessageListData = [MessageItemData];

@@ -11,6 +11,7 @@ export const DIALOG_DATA_FRAGMENT = gql`
             name
             surname
             avatar
+            online
         }
         dialogProps {
             id
