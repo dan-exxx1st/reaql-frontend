@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import {
     StyledHomeDialogHeader,
     StyledHomeDialogContentWrapper,
     StyledHomeDialogTextField,
-    StyledHomeDialogMessageWrapper,
 } from './styles/Home';
 
 import { getDialogIdFromSearch } from 'helpers';
@@ -14,16 +13,22 @@ import { MessageListWithData } from 'components/data';
 const DialogPage = () => {
     const { search } = useLocation();
     const dialogId = getDialogIdFromSearch(search);
+    const [filterValue, setFilterValue] = useState('');
 
     return (
         <>
             {dialogId ? (
                 <>
-                    <StyledHomeDialogHeader dialogId={dialogId} />
+                    <StyledHomeDialogHeader
+                        dialogId={dialogId}
+                        messageFilter={setFilterValue}
+                        filterValue={filterValue}
+                    />
                     <StyledHomeDialogContentWrapper>
-                        <StyledHomeDialogMessageWrapper>
-                            <MessageListWithData dialogId={dialogId} />
-                        </StyledHomeDialogMessageWrapper>
+                        <MessageListWithData
+                            dialogId={dialogId}
+                            filterValue={filterValue}
+                        />
                         <StyledHomeDialogTextField />
                     </StyledHomeDialogContentWrapper>
                 </>

@@ -1,5 +1,6 @@
 import Theme from 'helpers/styled';
 import { Dialog, Maybe, Message, Message_Statuses } from 'lib/graphql/types';
+import { Dispatch, SetStateAction } from 'react';
 import { ISideBarWithDataProps } from '../data';
 
 export interface IUserHeaderProps {
@@ -10,7 +11,7 @@ export interface IUserHeaderProps {
 export interface IMessageSearchProps {
     onClick?: () => void;
     value?: string;
-    onChange?: (value: string) => void;
+    messageFilter?: (value: string) => void | Dispatch<SetStateAction<string>>;
 }
 
 export interface IMessageItemProps extends Message {
@@ -35,6 +36,7 @@ export interface IMessageListProps {
     loading?: boolean;
     subscribeToNewMessages?: () => void;
     className?: string;
+    filterValue?: string;
 }
 
 export interface IDialogListProps {
@@ -49,7 +51,11 @@ export interface IDialogTextFieldProps {
 
 export interface IDialogHeaderProps {
     className?: string;
-    dialogId: string;
+    messageFilter?: Dispatch<SetStateAction<string>>;
+    filterValue?: string;
+    name: string;
+    onlineStatus?: string | null;
+    avatar?: string;
 }
 
 export interface ISignUpFormProps {

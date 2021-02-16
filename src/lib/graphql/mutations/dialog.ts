@@ -10,6 +10,7 @@ export const CREATE_DIALOG_MUTATION = gql`
                 email
                 name
                 surname
+                online
             }
             dialogProps {
                 id

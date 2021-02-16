@@ -20,6 +20,7 @@ export const StyledMessageTime = styled(Typography)`
 
 export const StyledMessageText = styled(Typography)`
     color: #000000;
+    word-break: break-all;
 `;
 
 export const StyledMessageItem = styled(Wrapper)``;
@@ -27,7 +28,6 @@ export const StyledMessageItem = styled(Wrapper)``;
 export const StyledMessageBodyWrapper = styled(Wrapper)`
     flex-direction: column;
     justify-content: space-between;
-    height: 40px;
 `;
 
 export const StyledMessageTopWrapper = styled(Wrapper)`

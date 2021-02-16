@@ -1,4 +1,5 @@
 import gql from 'graphql-tag';
+import { USER_FRAGMENT } from './user';
 
 export const DIALOG_DATA_FRAGMENT = gql`
     fragment DialogFragment on Dialog {
@@ -7,10 +8,7 @@ export const DIALOG_DATA_FRAGMENT = gql`
         lastMessageDate
         group
         users {
-            id
-            name
-            surname
-            avatar
+            ...UserFragment
         }
         dialogProps {
             id
@@ -22,6 +20,8 @@ export const DIALOG_DATA_FRAGMENT = gql`
         }
         updatedAt
     }
+
+    ${USER_FRAGMENT}
 `;
 
 export const MESSAGE_DATA_FRAGMENT = gql`
@@ -31,9 +31,7 @@ export const MESSAGE_DATA_FRAGMENT = gql`
         messageDate
         messageStatus
         user {
-            id
-            name
-            surname
+            ...UserFragment
         }
         dialog {
             id
@@ -46,6 +44,8 @@ export const MESSAGE_DATA_FRAGMENT = gql`
             }
         }
     }
+
+    ${USER_FRAGMENT}
 `;
 
 export const DIALOG_DATA_UPDATE = gql`

@@ -7,5 +7,13 @@ export const USER_FRAGMENT = gql`
         name
         surname
         avatar
+        online
+    }
+`;
+
+export const UPDATE_ONLINE_STATUS = gql`
+    fragment UserOnline on User {
+        id
+        online
     }
 `;

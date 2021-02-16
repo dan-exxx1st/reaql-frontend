@@ -24,6 +24,7 @@ export type User = {
     avatar: Scalars['String'];
     createdAt: Scalars['String'];
     updatedAt: Scalars['String'];
+    online?: Maybe<Scalars['String']>;
 };
 
 export type Session = {
@@ -66,6 +67,8 @@ export type Message = {
     text: Scalars['String'];
     messageDate: Scalars['String'];
     messageStatus?: Maybe<Message_Statuses>;
+    createdAt: Scalars['String'];
+    updatedAt: Scalars['String'];
 };
 
 export type UserAndSession = {
@@ -128,6 +131,11 @@ export type CreateMessageInput = {
     text?: Maybe<Scalars['String']>;
 };
 
+export type UpdateOnlineStatusInput = {
+    userId: Scalars['String'];
+    status: Scalars['String'];
+};
+
 export type Mutation = {
     __typename?: 'Mutation';
     signUp: UserAndSession;
@@ -135,6 +143,7 @@ export type Mutation = {
     refreshSession: Session;
     createDialog: Dialog;
     createMessage: Message;
+    updateOnlineStatus: User;
 };
 
 export type MutationSignUpArgs = {
@@ -157,11 +166,16 @@ export type MutationCreateMessageArgs = {
     input?: Maybe<CreateMessageInput>;
 };
 
+export type MutationUpdateOnlineStatusArgs = {
+    input?: Maybe<UpdateOnlineStatusInput>;
+};
+
 export type Subscription = {
     __typename?: 'Subscription';
     dialogCreated: Dialog;
     dialogUpdated: Dialog;
     messageCreated: Message;
+    dialogOnlineUpdated: User;
 };
 
 export type SubscriptionDialogCreatedArgs = {
@@ -174,6 +188,10 @@ export type SubscriptionDialogUpdatedArgs = {
 
 export type SubscriptionMessageCreatedArgs = {
     dialogId: Scalars['String'];
+};
+
+export type SubscriptionDialogOnlineUpdatedArgs = {
+    userId: Scalars['String'];
 };
 
 export enum Dialog_User_Roles {

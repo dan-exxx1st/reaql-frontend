@@ -13,14 +13,15 @@ import { IMessageItemProps } from 'lib/types/components/common';
 import { Message_Statuses } from 'lib/graphql/types';
 
 const MessageItem: FC<IMessageItemProps> = (props) => {
-    const { messageStatus, text, user, messageDate, className } = props;
+    const { messageStatus, text, messageDate, className, user } = props;
+    const { avatar, name, surname } = user;
     return (
         <StyledMessageItem className={className}>
-            <StyledMessageAvatar alt="Desirae" />
+            <StyledMessageAvatar src={avatar} alt="Desirae" />
             <StyledMessageBodyWrapper>
                 <StyledMessageTopWrapper>
                     <StyledMessageUserName variant="body1">
-                        {`${user.name} ${user.surname}`}
+                        {`${name} ${surname}`}
                     </StyledMessageUserName>
                     <StyledMessageTime variant="caption1">
                         {messageDate}

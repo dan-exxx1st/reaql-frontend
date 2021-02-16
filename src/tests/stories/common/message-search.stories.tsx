@@ -5,5 +5,5 @@ import { MessageSearch } from 'components/common';
 storiesOf('Common/ Message search', module).add('default', () => {
     const [textValue, setTextValue] = useState('');
 
-    return <MessageSearch value={textValue} onChange={setTextValue} />;
+    return <MessageSearch value={textValue} messageFilter={setTextValue} />;
 });

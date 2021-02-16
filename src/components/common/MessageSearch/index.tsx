@@ -9,7 +9,7 @@ import { IMessageSearchProps } from 'lib/types/components/common';
 const MessageSearch: FC<IMessageSearchProps> = ({
     onClick,
     value,
-    onChange,
+    messageFilter,
 }) => {
     return (
         <StyledMessageSearchWrapper>
@@ -18,7 +18,7 @@ const MessageSearch: FC<IMessageSearchProps> = ({
                 color="secondary"
                 placeholder="Search message history"
                 value={value}
-                onChange={onChange}
+                onChange={messageFilter}
             />
             <StyledMessageSearchCancelButton
                 variant="filled"
