@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 import { Wrapper } from 'components/UI';
-import { DialogHeader, DialogTextField } from 'components/common';
+import { DialogTextField } from 'components/common';
+import { DialogHeaderWithData } from 'components/data';
 
 export const StyledHomeWrapper = styled(Wrapper)`
     background: ${({ theme }) => theme.wc};
@@ -20,7 +21,7 @@ export const StyledHomeDialog = styled(Wrapper)`
     width: 100%;
 `;
 
-export const StyledHomeDialogHeader = styled(DialogHeader)`
+export const StyledHomeDialogHeader = styled(DialogHeaderWithData)`
     padding: 20px;
     width: calc(100% - 40px);
 `;

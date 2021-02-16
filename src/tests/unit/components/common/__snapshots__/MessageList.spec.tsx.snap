@@ -128,9 +128,9 @@ exports[`<MessageList /> Snapshots Should render correctly 1`] = `
   border-radius: 3px;
   padding-left: 5px;
   padding-right: 0;
-  -webkit-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .c3 {
@@ -138,6 +138,10 @@ exports[`<MessageList /> Snapshots Should render correctly 1`] = `
 }
 
 .c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: column-reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
@@ -167,7 +171,7 @@ exports[`<MessageList /> Snapshots Should render correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c0 c2"
+    className="c2"
   >
     <div
       className="c0 c3"

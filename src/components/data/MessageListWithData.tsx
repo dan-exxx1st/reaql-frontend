@@ -40,9 +40,10 @@ const MessageListWithData: FC<IProps> = ({
                 const newMessage = subscriptionData.data.messageCreated;
                 const prevMessages = prev && prev.messages ? prev.messages : [];
 
-                return Object.assign({}, prev, {
+                return {
+                    ...prev,
                     messages: [newMessage, ...prevMessages],
-                });
+                };
             },
         });
 

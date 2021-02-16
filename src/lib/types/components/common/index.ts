@@ -51,9 +51,11 @@ export interface IDialogTextFieldProps {
 
 export interface IDialogHeaderProps {
     className?: string;
-    dialogId: string;
     messageFilter?: Dispatch<SetStateAction<string>>;
     filterValue?: string;
+    name: string;
+    onlineStatus?: string | null;
+    avatar?: string;
 }
 
 export interface ISignUpFormProps {

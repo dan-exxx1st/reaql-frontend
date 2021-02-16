@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import React, { useRef, FC, useEffect } from 'react';
 
 import {
     StyledMessageListItem,
@@ -10,6 +10,8 @@ import { IMessageListProps } from 'lib/types/components/common';
 
 const MessageList: FC<IMessageListProps> = ({ className, ...props }) => {
     const { data, loading, subscribeToNewMessages, filterValue } = props;
+
+    const divRef = useRef(<div></div>);
 
     const messages = data?.messages;
 
@@ -23,18 +25,27 @@ const MessageList: FC<IMessageListProps> = ({ className, ...props }) => {
             : messages;
 
     useEffect(() => {
+        const divRefCurrent =
+            divRef && divRef.current && (divRef as any).current;
+        if (divRefCurrent) {
+            const scrollTop: number = divRefCurrent.scrollTop;
+            if (scrollTop && scrollTop !== 0) {
+                divRefCurrent.scrollTop = 0;
+            }
+        }
+
         let unsubscribe: any;
         if (subscribeToNewMessages) {
             unsubscribe = subscribeToNewMessages();
         }
 
         return () => unsubscribe();
-    }, [subscribeToNewMessages]);
+    }, [divRef, subscribeToNewMessages]);
 
     if (!loading && filteredMessages) {
         return (
             <StyledMessageListWrapper className={className}>
-                <StyledMessagesWrapper>
+                <StyledMessagesWrapper ref={divRef}>
                     {filteredMessages &&
                         filteredMessages.map(
                             (message) =>

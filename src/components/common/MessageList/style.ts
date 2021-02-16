@@ -13,14 +13,15 @@ export const StyledMessageListWrapper = styled(Wrapper)`
     border-radius: 3px;
     padding-left: 5px;
     padding-right: 0;
-    flex-direction: column-reverse;
+    flex-direction: column;
 `;
 
 export const StyledMessageListItem = styled(MessageItem)`
     margin: 7.5px 0;
 `;
 
-export const StyledMessagesWrapper = styled(Wrapper)`
+export const StyledMessagesWrapper = styled.div<any>`
+    display: flex;
     flex-direction: column-reverse;
     overflow-y: scroll;
     justify-content: space-between;
