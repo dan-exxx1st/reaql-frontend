@@ -1,25 +1,18 @@
 import React from 'react';
+import { render } from 'react-dom';
+import { ThemeProvider } from 'styled-components';
 import { MockedProvider } from '@apollo/client/testing';
-import { shallow, mount } from 'enzyme';
 
 import { mocks } from 'tests/__mocks__/graphql';
 import themes from 'helpers/styled';
-import { ThemeProvider } from 'styled-components';
 
-const shallowWithApolloAndStyled = (children: any) => {
-    return shallow(
+const renderWithApollo = (children: any, container: HTMLElement) => {
+    return render(
         <MockedProvider mocks={mocks}>
             <ThemeProvider theme={themes}>{children}</ThemeProvider>
-        </MockedProvider>
+        </MockedProvider>,
+        container
     );
 };
 
-const mountWithApolloAndStyled = (children: any) => {
-    return mount(
-        <MockedProvider mocks={mocks}>
-            <ThemeProvider theme={themes}>{children}</ThemeProvider>
-        </MockedProvider>
-    );
-};
-
-export { shallowWithApolloAndStyled, mountWithApolloAndStyled };
+export { renderWithApollo };

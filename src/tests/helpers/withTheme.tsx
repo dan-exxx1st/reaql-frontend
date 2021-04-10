@@ -1,17 +1,12 @@
 import React from 'react';
+import { render } from 'react-dom';
 import { ThemeProvider } from 'styled-components';
-
-import { shallow, mount } from 'enzyme';
 
 import themes from 'helpers/styled';
 import { ChildType } from '.';
 
-const shallowWithTheme = (children: ChildType) => {
-    return shallow(<ThemeProvider theme={themes}>{children}</ThemeProvider>);
+const renderWithTheme = (children: ChildType, container: HTMLElement) => {
+    return render(<ThemeProvider theme={themes}>{children}</ThemeProvider>, container);
 };
 
-const mountWithTheme = (children: ChildType) => {
-    return mount(<ThemeProvider theme={themes}>{children}</ThemeProvider>);
-};
-
-export { shallowWithTheme, mountWithTheme };
+export { renderWithTheme };

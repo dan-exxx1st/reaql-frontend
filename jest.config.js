@@ -11,4 +11,5 @@ module.exports = {
     },
     restoreMocks: true,
     resetMocks: true,
+    testEnvironment: 'jest-environment-jsdom-fifteen',
 };
