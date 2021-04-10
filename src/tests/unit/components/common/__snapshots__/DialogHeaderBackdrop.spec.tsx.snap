@@ -71,43 +71,43 @@ exports[`<DialogHeaderBackdrop /> Snapshots Should render correctly 1`] = `
 }
 
 <div
-  className="c0 c1"
+  class="c0 c1"
 >
   <div
-    className="c0 c2"
+    class="c0 c2"
   >
     <img
-      className="c3"
+      class="c3"
       src="BluePlus.svg"
     />
     <p
-      className="c4 c5"
+      class="c4 c5"
     >
       Add members
     </p>
   </div>
   <div
-    className="c0 c2"
+    class="c0 c2"
   >
     <img
-      className="c3"
+      class="c3"
       src="BlueSearch.svg"
     />
     <p
-      className="c4 c5"
+      class="c4 c5"
     >
       Search message history
     </p>
   </div>
   <div
-    className="c0 c2"
+    class="c0 c2"
   >
     <img
-      className="c3"
+      class="c3"
       src="BlueTrash.svg"
     />
     <p
-      className="c4 c5"
+      class="c4 c5"
     >
       Clear message history
     </p>

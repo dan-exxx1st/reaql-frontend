@@ -1,19 +1,21 @@
 import React from 'react';
-import { shallowWithTheme, mountWithTheme } from 'tests/helpers/withTheme';
+import { renderWithTheme } from 'tests/helpers/withTheme';
 import { Wrapper } from 'components/UI';
 
 describe('<Wrapper />', () => {
     describe('Snapshots', () => {
         it('Should render a wrapper correctly with default styles', () => {
-            const wrapper = shallowWithTheme(
-                <Wrapper>Correctly wraper</Wrapper>
-            );
-            expect(wrapper).toMatchSnapshot();
+            const {
+                container: { firstChild },
+            } = renderWithTheme(<Wrapper>Correctly wraper</Wrapper>);
+            expect(firstChild).toMatchSnapshot();
         });
     });
 
     it('Should have a correctly style rules', () => {
-        const wrapper = mountWithTheme(
+        const {
+            container: { firstChild },
+        } = renderWithTheme(
             <Wrapper
                 flexDirection="column"
                 justifyContent="center"
@@ -25,12 +27,19 @@ describe('<Wrapper />', () => {
                 Correctly wraper
             </Wrapper>
         );
+        const wrapper = firstChild;
 
+        expect(wrapper).toHaveStyleRule('margin', '5px');
+        expect(wrapper).toHaveStyleRule('padding', '15px');
         expect(wrapper).toHaveStyleRule('flex-direction', 'column');
+        expect(wrapper).toHaveStyleRule('justify-content', 'center');
     });
 
     it('Should have a correctly default style rules', () => {
-        const wrapper = mountWithTheme(<Wrapper>Correctly wraper</Wrapper>);
+        const {
+            container: { firstChild },
+        } = renderWithTheme(<Wrapper>Correctly wraper</Wrapper>);
+        const wrapper = firstChild;
 
         expect(wrapper).toHaveStyleRule('flex-direction', 'row');
         expect(wrapper).toHaveStyleRule('justify-content', 'flex-start');

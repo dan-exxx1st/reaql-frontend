@@ -34,7 +34,7 @@ const MessageList: FC<IMessageListProps> = ({ className, ...props }) => {
             }
         }
 
-        let unsubscribe: any;
+        let unsubscribe: any = () => {};
         if (subscribeToNewMessages) {
             unsubscribe = subscribeToNewMessages();
         }

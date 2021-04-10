@@ -13,7 +13,7 @@ exports[`<Icon /> Snapshots Should render animal icon 1`] = `
 
 <img
   alt="Icon component"
-  className="c0"
+  class="c0"
   src="Animal.svg"
 />
 `;
@@ -31,7 +31,7 @@ exports[`<Icon /> Snapshots Should render food icon 1`] = `
 
 <img
   alt="Icon component"
-  className="c0"
+  class="c0"
   src="Food.svg"
 />
 `;
@@ -49,7 +49,7 @@ exports[`<Icon /> Snapshots Should render newChat icon 1`] = `
 
 <img
   alt="Icon component"
-  className="c0"
+  class="c0"
   src="NewChat.svg"
 />
 `;
@@ -67,7 +67,7 @@ exports[`<Icon /> Snapshots Should render people icon 1`] = `
 
 <img
   alt="Icon component"
-  className="c0"
+  class="c0"
   src="People.svg"
 />
 `;
@@ -85,7 +85,7 @@ exports[`<Icon /> Snapshots Should render person icon 1`] = `
 
 <img
   alt="Icon component"
-  className="c0"
+  class="c0"
   src="Person.svg"
 />
 `;
@@ -103,7 +103,7 @@ exports[`<Icon /> Snapshots Should render search icon 1`] = `
 
 <img
   alt="Icon component"
-  className="c0"
+  class="c0"
   src="SearchIcon.svg"
 />
 `;
@@ -121,7 +121,7 @@ exports[`<Icon /> Snapshots Should render threeDotsGrey icon 1`] = `
 
 <img
   alt="Icon component"
-  className="c0"
+  class="c0"
   src="ThreeDotsGray.svg"
 />
 `;
@@ -139,7 +139,7 @@ exports[`<Icon /> Snapshots Should render threeDotsWhite icon 1`] = `
 
 <img
   alt="Icon component"
-  className="c0"
+  class="c0"
   src="ThreeDotsWhite.svg"
 />
 `;

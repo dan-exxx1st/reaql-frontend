@@ -1,13 +1,15 @@
 import React from 'react';
 import { DialogHeaderBackdrop } from 'components/common';
-import { mountWithApolloAndStyled } from 'tests/helpers/withApollo';
+import { renderWithApollo } from 'tests/helpers/withApollo';
 
 describe('<DialogHeaderBackdrop />', () => {
     describe('Snapshots', () => {
         it('Should render correctly', () => {
-            const wrapper = mountWithApolloAndStyled(<DialogHeaderBackdrop />);
+            const {
+                container: { firstChild },
+            } = renderWithApollo(<DialogHeaderBackdrop />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(firstChild).toMatchSnapshot();
         });
     });
 });

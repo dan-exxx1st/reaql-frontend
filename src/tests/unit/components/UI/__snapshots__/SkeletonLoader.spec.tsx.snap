@@ -13,7 +13,7 @@ exports[`<SkeletonLoader /> Snapshots Should render correctly for avatar with cu
 }
 
 <div
-  className="c0"
+  class="c0"
   height="30px"
   width="30px"
 />
@@ -32,7 +32,7 @@ exports[`<SkeletonLoader /> Snapshots Should render correctly for avatar with de
 }
 
 <div
-  className="c0"
+  class="c0"
 />
 `;
 
@@ -48,7 +48,7 @@ exports[`<SkeletonLoader /> Snapshots Should render correctly for block with def
 }
 
 <div
-  className="c0"
+  class="c0"
 />
 `;
 
@@ -64,7 +64,7 @@ exports[`<SkeletonLoader /> Snapshots Should render correctly for block with def
 }
 
 <div
-  className="c0"
+  class="c0"
   height="30px"
   width="30px"
 />

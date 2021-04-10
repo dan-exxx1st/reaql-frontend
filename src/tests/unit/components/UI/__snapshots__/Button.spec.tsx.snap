@@ -29,10 +29,10 @@ exports[`<Button /> Snapshots Primary filled button without effects 1`] = `
 }
 
 <button
-  className="c0"
+  class="c0"
 >
   <p
-    className="c1"
+    class="c1"
   >
     button
   </p>
@@ -69,10 +69,10 @@ exports[`<Button /> Snapshots Primary outlined button without effects 1`] = `
 }
 
 <button
-  className="c0"
+  class="c0"
 >
   <p
-    className="c1"
+    class="c1"
   >
     button
   </p>
@@ -108,10 +108,10 @@ exports[`<Button /> Snapshots Secondary filled button without effects 1`] = `
 }
 
 <button
-  className="c0"
+  class="c0"
 >
   <p
-    className="c1"
+    class="c1"
   >
     button
   </p>
@@ -148,10 +148,10 @@ exports[`<Button /> Snapshots Secondary outlined button without effects 1`] = `
 }
 
 <button
-  className="c0"
+  class="c0"
 >
   <p
-    className="c1"
+    class="c1"
   >
     button
   </p>

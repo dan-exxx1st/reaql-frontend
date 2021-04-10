@@ -127,47 +127,45 @@ exports[`<DialogTextField /> Snapshots Should render correctly 1`] = `
 }
 
 <div
-  className="c0 c1"
+  class="c0 c1"
 >
   <img
     alt="Smile icon"
-    className="c2"
-    draggable={false}
+    class="c2"
+    draggable="false"
     src="Smile.svg"
   />
   <div
-    className="c3 c4"
+    class="c3 c4"
   >
     <input
-      className="c5"
+      class="c5"
       color="secondary"
-      maxLength={255}
-      onChange={[Function]}
+      maxlength="255"
       placeholder="Write you message..."
       type="text"
       value=""
     />
   </div>
   <div
-    className="c0 c6"
+    class="c0 c6"
   >
     <img
       alt="Microphone icon"
-      className="c7"
-      draggable={false}
+      class="c7"
+      draggable="false"
       src="Microphone.svg"
     />
     <img
       alt="Add file icon"
-      className="c8"
-      draggable={false}
+      class="c8"
+      draggable="false"
       src="AddFile.svg"
     />
     <img
       alt="Send message icon"
-      className="c9"
-      draggable={false}
-      onClick={[Function]}
+      class="c9"
+      draggable="false"
       src="SendMessage.svg"
     />
   </div>

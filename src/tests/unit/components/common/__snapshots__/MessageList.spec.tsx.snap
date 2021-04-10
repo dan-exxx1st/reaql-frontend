@@ -168,38 +168,38 @@ exports[`<MessageList /> Snapshots Should render correctly 1`] = `
 }
 
 <div
-  className="c0 c1"
+  class="c0 c1"
 >
   <div
-    className="c2"
+    class="c2"
   >
     <div
-      className="c0 c3"
+      class="c0 c3"
     >
       <img
         alt="Icon component"
-        className="c4 c5 c6"
+        class="c4 c5 c6"
         src="Person.svg"
       />
       <div
-        className="c0 c7"
+        class="c0 c7"
       >
         <div
-          className="c0 c8"
+          class="c0 c8"
         >
           <p
-            className="c9 c10"
+            class="c9 c10"
           >
             Test User1
           </p>
           <p
-            className="c11 c12"
+            class="c11 c12"
           >
             12:00 am
           </p>
         </div>
         <p
-          className="c13 c14"
+          class="c13 c14"
         >
           Test message
         </p>
