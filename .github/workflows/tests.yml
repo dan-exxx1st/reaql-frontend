@@ -34,6 +34,8 @@ jobs:
               uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node }}
+            - name: Npm install
+              run: npm install
 
             - name: Node lint
               run: npm run lint
@@ -58,6 +60,8 @@ jobs:
               uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node }}
+            - name: Npm install
+              run: npm install
 
             - name: Node lint
               run: npm run lint
