@@ -1,4 +1,4 @@
-name: Testing
+name: Linting and testing
 
 on:
     pull_request:
@@ -13,26 +13,57 @@ on:
             - '**.yml'
 
 jobs:
-    testing:
+    linting:
         runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node: ['14', '15.5.0']
 
         steps:
             - name: Checkout repository
               uses: actions/checkout@v2
 
+            - uses: actions/cache@v2
+              with:
+                  path: |
+                      node_modules
+                      */*/node_modules
+                  key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
             - name: Install required Node.js version
               uses: actions/setup-node@v2
               with:
-                  node-version: '14.5.0'
+                  node-version: ${{ matrix.node }}
 
-            - name: Npm install
-              run: npm i
+            - name: Node lint
+              run: npm run lint
+    testing:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node: ['14', '15.5.0']
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+
+            - uses: actions/cache@v2
+              with:
+                  path: |
+                      node_modules
+                      */*/node_modules
+                  key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
+            - name: Install required Node.js version
+              uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ matrix.node }}
 
             - name: Node lint
               run: npm run lint
 
             - name: Node test
               env:
-                  NODE_ENV: test
-
+                  NODE_ENV: tes
               run: npm run test
+        needs: ['linting']
