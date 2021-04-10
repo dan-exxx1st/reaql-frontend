@@ -14,7 +14,7 @@ exports[`<Typography /> Typography variant body-2 1`] = `
 }
 
 <p
-  className="c0"
+  class="c0"
 >
   Body 2
 </p>

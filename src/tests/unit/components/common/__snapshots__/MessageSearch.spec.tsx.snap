@@ -114,25 +114,25 @@ exports[`<MessageSearch /> Snapshots Should render correctly 1`] = `
 }
 
 <div
-  className="c0 c1"
+  class="c0 c1"
 >
   <div
-    className="c2 c3"
+    class="c2 c3"
   >
     <input
-      className="c4"
+      class="c4"
       color="secondary"
-      maxLength={255}
-      onChange={[Function]}
+      maxlength="255"
       placeholder="Search message history"
       type="text"
+      value=""
     />
   </div>
   <button
-    className="c5"
+    class="c5"
   >
     <p
-      className="c6"
+      class="c6"
     >
       Cancel
     </p>

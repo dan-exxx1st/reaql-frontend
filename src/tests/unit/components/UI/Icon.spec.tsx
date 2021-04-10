@@ -1,48 +1,72 @@
 import React from 'react';
-import { mountWithTheme } from 'tests/helpers/withTheme';
+import { renderWithTheme } from 'tests/helpers/withTheme';
 
 import { Icon } from 'components/UI';
 
 describe('<Icon />', () => {
     describe('Snapshots', () => {
         it('Should render person icon', () => {
-            const wrapper = mountWithTheme(<Icon iconName="person" />);
-            expect(wrapper).toMatchSnapshot();
+            const {
+                container: { firstChild },
+            } = renderWithTheme(<Icon iconName="person" />);
+
+            expect(firstChild).toMatchSnapshot();
         });
 
         it('Should render animal icon', () => {
-            const wrapper = mountWithTheme(<Icon iconName="animal" />);
-            expect(wrapper).toMatchSnapshot();
+            const {
+                container: { firstChild },
+            } = renderWithTheme(<Icon iconName="animal" />);
+
+            expect(firstChild).toMatchSnapshot();
         });
 
         it('Should render food icon', () => {
-            const wrapper = mountWithTheme(<Icon iconName="food" />);
-            expect(wrapper).toMatchSnapshot();
+            const {
+                container: { firstChild },
+            } = renderWithTheme(<Icon iconName="food" />);
+
+            expect(firstChild).toMatchSnapshot();
         });
 
         it('Should render people icon', () => {
-            const wrapper = mountWithTheme(<Icon iconName="people" />);
-            expect(wrapper).toMatchSnapshot();
+            const {
+                container: { firstChild },
+            } = renderWithTheme(<Icon iconName="people" />);
+
+            expect(firstChild).toMatchSnapshot();
         });
 
         it('Should render search icon', () => {
-            const wrapper = mountWithTheme(<Icon iconName="search" />);
-            expect(wrapper).toMatchSnapshot();
+            const {
+                container: { firstChild },
+            } = renderWithTheme(<Icon iconName="search" />);
+
+            expect(firstChild).toMatchSnapshot();
         });
 
         it('Should render newChat icon', () => {
-            const wrapper = mountWithTheme(<Icon iconName="newChat" />);
-            expect(wrapper).toMatchSnapshot();
+            const {
+                container: { firstChild },
+            } = renderWithTheme(<Icon iconName="newChat" />);
+
+            expect(firstChild).toMatchSnapshot();
         });
 
         it('Should render threeDotsWhite icon', () => {
-            const wrapper = mountWithTheme(<Icon iconName="threeDotsWhite" />);
-            expect(wrapper).toMatchSnapshot();
+            const {
+                container: { firstChild },
+            } = renderWithTheme(<Icon iconName="threeDotsWhite" />);
+
+            expect(firstChild).toMatchSnapshot();
         });
 
         it('Should render threeDotsGrey icon', () => {
-            const wrapper = mountWithTheme(<Icon iconName="threeDotsGrey" />);
-            expect(wrapper).toMatchSnapshot();
+            const {
+                container: { firstChild },
+            } = renderWithTheme(<Icon iconName="threeDotsGrey" />);
+
+            expect(firstChild).toMatchSnapshot();
         });
     });
 });

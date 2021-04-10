@@ -22,7 +22,7 @@ exports[`<Avatar /> Snapshots Avatar with a image 1`] = `
 }
 
 <div
-  className="c0 c1"
+  class="c0 c1"
 />
 `;
 
@@ -48,7 +48,7 @@ exports[`<Avatar /> Snapshots Avatar without a image 1`] = `
 
 <img
   alt="Icon component"
-  className="c0 c1"
+  class="c0 c1"
   src="Person.svg"
 />
 `;
