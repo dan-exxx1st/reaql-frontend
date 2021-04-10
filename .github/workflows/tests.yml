@@ -68,6 +68,6 @@ jobs:
 
             - name: Node test
               env:
-                  NODE_ENV: tes
+                  NODE_ENV: test
               run: npm run test
         needs: ['linting']
