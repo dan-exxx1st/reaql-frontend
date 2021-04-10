@@ -3,7 +3,7 @@ name: Deploy
 on:
     workflow_run:
         workflows:
-            - Testing
+            - Linting and testing
         types:
             - completed
 

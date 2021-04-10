@@ -1,6 +1,6 @@
 import React from 'react';
 import { DialogTextField } from 'components/common';
-import { mountWithApolloAndStyled } from 'tests/helpers/withApollo';
+import { renderWithApollo } from 'tests/helpers/withApollo';
 
 jest.mock('react-router-dom', () => ({
     useLocation: () => ({
@@ -12,9 +12,11 @@ jest.mock('react-router-dom', () => ({
 describe('<DialogTextField />', () => {
     describe('Snapshots', () => {
         it('Should render correctly', () => {
-            const wrapper = mountWithApolloAndStyled(<DialogTextField />);
+            const {
+                container: { firstChild },
+            } = renderWithApollo(<DialogTextField />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(firstChild).toMatchSnapshot();
         });
     });
 });

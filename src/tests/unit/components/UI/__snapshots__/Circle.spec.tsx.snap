@@ -62,12 +62,12 @@ exports[`<Circle /> Snapshots Should render circle with icon 1`] = `
 }
 
 <div
-  className="c0 c1"
+  class="c0 c1"
   color="secondary"
 >
   <img
     alt="Icon component"
-    className="c2 c3"
+    class="c2 c3"
     src="SearchIcon.svg"
   />
 </div>
@@ -120,7 +120,7 @@ exports[`<Circle /> Snapshots Should render circle with primary color 1`] = `
 }
 
 <div
-  className="c0 c1"
+  class="c0 c1"
   color="primary"
 >
   No icon or text in Circle!
@@ -174,7 +174,7 @@ exports[`<Circle /> Snapshots Should render circle with secondary color 1`] = `
 }
 
 <div
-  className="c0 c1"
+  class="c0 c1"
   color="secondary"
 >
   No icon or text in Circle!

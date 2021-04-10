@@ -13,7 +13,7 @@ export const StyledMessageListWrapper = styled(Wrapper)`
     border-radius: 3px;
     padding-left: 5px;
     padding-right: 0;
-    flex-direction: column;
+    flex-direction: column-reverse;
 `;
 
 export const StyledMessageListItem = styled(MessageItem)`

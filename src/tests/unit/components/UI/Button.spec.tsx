@@ -1,16 +1,20 @@
 import React from 'react';
+import { fireEvent, screen } from '@testing-library/react';
 import { Button } from 'components/UI';
 import { colorTheme } from 'helpers/styled';
-import { mountWithTheme } from 'tests/helpers/withTheme';
+import { renderWithTheme } from 'tests/helpers/withTheme';
 
 describe('<Button />', () => {
     describe('Snapshots', () => {
         it('Primary filled button without effects', () => {
-            const wrapper = mountWithTheme(
+            const {
+                container: { firstChild },
+            } = renderWithTheme(
                 <Button variant="filled" color="primary">
                     button
                 </Button>
             );
+            const wrapper = firstChild;
 
             expect(wrapper).toMatchSnapshot();
             expect(wrapper).toHaveStyleRule('background', colorTheme.pc);
@@ -18,11 +22,15 @@ describe('<Button />', () => {
         });
 
         it('Primary outlined button without effects', () => {
-            const wrapper = mountWithTheme(
+            const {
+                container: { firstChild },
+            } = renderWithTheme(
                 <Button variant="outlined" color="primary">
                     button
                 </Button>
             );
+            const wrapper = firstChild;
+
             expect(wrapper).toMatchSnapshot();
             expect(wrapper).toHaveStyleRule('background', 'none');
             expect(wrapper).toHaveStyleRule('color', colorTheme.pc);
@@ -33,11 +41,14 @@ describe('<Button />', () => {
         });
 
         it('Secondary filled button without effects', () => {
-            const wrapper = mountWithTheme(
+            const {
+                container: { firstChild },
+            } = renderWithTheme(
                 <Button variant="filled" color="secondary">
                     button
                 </Button>
             );
+            const wrapper = firstChild;
             expect(wrapper).toMatchSnapshot();
             expect(wrapper).toHaveStyleRule('background', colorTheme.sc);
             expect(wrapper).toHaveStyleRule('color', colorTheme.dgc);
@@ -45,11 +56,14 @@ describe('<Button />', () => {
         });
 
         it('Secondary outlined button without effects', () => {
-            const wrapper = mountWithTheme(
+            const {
+                container: { firstChild },
+            } = renderWithTheme(
                 <Button variant="outlined" color="secondary">
                     button
                 </Button>
             );
+            const wrapper = firstChild;
 
             expect(wrapper).toHaveStyleRule('background', 'none');
             expect(wrapper).toHaveStyleRule(
@@ -62,17 +76,20 @@ describe('<Button />', () => {
     });
 
     it('Button should render text which passed to props', () => {
-        const wrapper = mountWithTheme(
+        const {
+            container: { firstChild },
+        } = renderWithTheme(
             <Button variant="filled" color="primary">
                 Default button
             </Button>
         );
-        expect(wrapper).toHaveStyleRule('background', colorTheme.pc);
+        expect(firstChild).toHaveStyleRule('background', colorTheme.pc);
+        expect(firstChild?.textContent).toBe('Default button');
     });
 
     it('Button should use onClick event', () => {
         const mockFunction = jest.fn();
-        const wrapper = mountWithTheme(
+        renderWithTheme(
             <Button
                 variant="filled"
                 color="primary"
@@ -82,7 +99,8 @@ describe('<Button />', () => {
                 Should click
             </Button>
         );
-        wrapper.simulate('click');
+        fireEvent.click(screen.getByRole('button'));
+
         expect(mockFunction).toBeCalled();
     });
 });

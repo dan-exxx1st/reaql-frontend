@@ -42,15 +42,15 @@ exports[`<TextField /> Snapshots Primary text field with custom width and height
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <input
-    className="c1"
+    class="c1"
     color="secondary"
     height="25px"
-    maxLength={255}
-    onChange={[Function]}
+    maxlength="255"
     type="text"
+    value=""
     width="25px"
   />
 </div>
@@ -108,18 +108,18 @@ exports[`<TextField /> Snapshots Primary text field with icon 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <input
-    className="c1"
+    class="c1"
     color="secondary"
-    maxLength={255}
-    onChange={[Function]}
+    maxlength="255"
     type="text"
+    value=""
   />
   <img
     alt="Icon component"
-    className="c2"
+    class="c2"
     src="SearchIcon.svg"
   />
 </div>
@@ -167,13 +167,12 @@ exports[`<TextField /> Snapshots Primary text field with large size  1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <input
-    className="c1"
+    class="c1"
     color="primary"
-    maxLength={255}
-    onChange={[Function]}
+    maxlength="255"
     type="text"
     value="TextField snapshot"
   />
@@ -222,13 +221,12 @@ exports[`<TextField /> Snapshots Primary text field with medium size 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <input
-    className="c1"
+    class="c1"
     color="primary"
-    maxLength={255}
-    onChange={[Function]}
+    maxlength="255"
     type="text"
     value="TextField snapshot"
   />
@@ -277,13 +275,12 @@ exports[`<TextField /> Snapshots Primary text field with small size  1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <input
-    className="c1"
+    class="c1"
     color="primary"
-    maxLength={255}
-    onChange={[Function]}
+    maxlength="255"
     type="text"
     value="TextField snapshot"
   />
@@ -332,13 +329,12 @@ exports[`<TextField /> Snapshots Secondary text field with large size 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <input
-    className="c1"
+    class="c1"
     color="secondary"
-    maxLength={255}
-    onChange={[Function]}
+    maxlength="255"
     type="text"
     value="TextField snapshot"
   />
@@ -387,13 +383,12 @@ exports[`<TextField /> Snapshots Secondary text field with medium size 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <input
-    className="c1"
+    class="c1"
     color="secondary"
-    maxLength={255}
-    onChange={[Function]}
+    maxlength="255"
     type="text"
     value="TextField snapshot"
   />
@@ -442,13 +437,12 @@ exports[`<TextField /> Snapshots Secondary text field with small size 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <input
-    className="c1"
+    class="c1"
     color="secondary"
-    maxLength={255}
-    onChange={[Function]}
+    maxlength="255"
     type="text"
     value="TextField snapshot"
   />
