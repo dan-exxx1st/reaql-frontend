@@ -119,32 +119,32 @@ exports[`<MessageItem /> Snapshots Should render correctly 1`] = `
 }
 
 <div
-  className="c0 "
+  class="c0 "
 >
   <img
     alt="Icon component"
-    className="c1 c2 c3"
+    class="c1 c2 c3"
     src="Person.svg"
   />
   <div
-    className="c0 c4"
+    class="c0 c4"
   >
     <div
-      className="c0 c5"
+      class="c0 c5"
     >
       <p
-        className="c6 c7"
+        class="c6 c7"
       >
         Test User1
       </p>
       <p
-        className="c8 c9"
+        class="c8 c9"
       >
         12:00 am
       </p>
     </div>
     <p
-      className="c10 c11"
+      class="c10 c11"
     >
       Test message
     </p>
@@ -271,32 +271,32 @@ exports[`<MessageItem /> Snapshots Should render correctly with readed message s
 }
 
 <div
-  className="c0 "
+  class="c0 "
 >
   <img
     alt="Icon component"
-    className="c1 c2 c3"
+    class="c1 c2 c3"
     src="Person.svg"
   />
   <div
-    className="c0 c4"
+    class="c0 c4"
   >
     <div
-      className="c0 c5"
+      class="c0 c5"
     >
       <p
-        className="c6 c7"
+        class="c6 c7"
       >
         Test User1
       </p>
       <p
-        className="c8 c9"
+        class="c8 c9"
       >
         12:00 am
       </p>
     </div>
     <p
-      className="c10 c11"
+      class="c10 c11"
     >
       Test message
     </p>
@@ -423,32 +423,32 @@ exports[`<MessageItem /> Snapshots Should render correctly with received message
 }
 
 <div
-  className="c0 "
+  class="c0 "
 >
   <img
     alt="Icon component"
-    className="c1 c2 c3"
+    class="c1 c2 c3"
     src="Person.svg"
   />
   <div
-    className="c0 c4"
+    class="c0 c4"
   >
     <div
-      className="c0 c5"
+      class="c0 c5"
     >
       <p
-        className="c6 c7"
+        class="c6 c7"
       >
         Test User1
       </p>
       <p
-        className="c8 c9"
+        class="c8 c9"
       >
         12:00 am
       </p>
     </div>
     <p
-      className="c10 c11"
+      class="c10 c11"
     >
       Test message
     </p>
@@ -575,32 +575,32 @@ exports[`<MessageItem /> Snapshots Should render correctly with sended message s
 }
 
 <div
-  className="c0 "
+  class="c0 "
 >
   <img
     alt="Icon component"
-    className="c1 c2 c3"
+    class="c1 c2 c3"
     src="Person.svg"
   />
   <div
-    className="c0 c4"
+    class="c0 c4"
   >
     <div
-      className="c0 c5"
+      class="c0 c5"
     >
       <p
-        className="c6 c7"
+        class="c6 c7"
       >
         Test User1
       </p>
       <p
-        className="c8 c9"
+        class="c8 c9"
       >
         12:00 am
       </p>
     </div>
     <p
-      className="c10 c11"
+      class="c10 c11"
     >
       Test message
     </p>

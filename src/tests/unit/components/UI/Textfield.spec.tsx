@@ -1,79 +1,103 @@
 import React from 'react';
+import { fireEvent, screen } from '@testing-library/react';
 import { TextField } from 'components/UI';
-import { mountWithTheme, shallowWithTheme } from 'tests/helpers/withTheme';
+import { renderWithTheme } from 'tests/helpers/withTheme';
 
 describe('<TextField />', () => {
     describe('Snapshots', () => {
         it('Primary text field with large size ', () => {
-            const wrapper = mountWithTheme(
+            const {
+                container: { firstChild },
+            } = renderWithTheme(
                 <TextField
                     color="primary"
                     fieldSize="large"
                     value="TextField snapshot"
                 />
             );
-            expect(wrapper).toMatchSnapshot();
+
+            expect(firstChild).toMatchSnapshot();
         });
         it('Primary text field with medium size', () => {
-            const wrapper = mountWithTheme(
+            const {
+                container: { firstChild },
+            } = renderWithTheme(
                 <TextField
                     color="primary"
                     fieldSize="medium"
                     value="TextField snapshot"
                 />
             );
-            expect(wrapper).toMatchSnapshot();
+
+            expect(firstChild).toMatchSnapshot();
         });
         it('Primary text field with small size ', () => {
-            const wrapper = mountWithTheme(
+            const {
+                container: { firstChild },
+            } = renderWithTheme(
                 <TextField
                     color="primary"
                     fieldSize="small"
                     value="TextField snapshot"
                 />
             );
-            expect(wrapper).toMatchSnapshot();
+
+            expect(firstChild).toMatchSnapshot();
         });
         it('Secondary text field with large size', () => {
-            const wrapper = mountWithTheme(
+            const {
+                container: { firstChild },
+            } = renderWithTheme(
                 <TextField
                     color="secondary"
                     fieldSize="large"
                     value="TextField snapshot"
                 />
             );
-            expect(wrapper).toMatchSnapshot();
+
+            expect(firstChild).toMatchSnapshot();
         });
         it('Secondary text field with medium size', () => {
-            const wrapper = mountWithTheme(
+            const {
+                container: { firstChild },
+            } = renderWithTheme(
                 <TextField
                     color="secondary"
                     fieldSize="medium"
                     value="TextField snapshot"
                 />
             );
-            expect(wrapper).toMatchSnapshot();
+
+            expect(firstChild).toMatchSnapshot();
         });
         it('Secondary text field with small size', () => {
-            const wrapper = mountWithTheme(
+            const {
+                container: { firstChild },
+            } = renderWithTheme(
                 <TextField
                     color="secondary"
                     fieldSize="small"
                     value="TextField snapshot"
                 />
             );
-            expect(wrapper).toMatchSnapshot();
+
+            expect(firstChild).toMatchSnapshot();
         });
 
         it('Primary text field with icon', () => {
-            const wrapper = mountWithTheme(
+            const {
+                container: { firstChild },
+            } = renderWithTheme(
                 <TextField color="secondary" fieldSize="small" icon="search" />
             );
-            expect(wrapper).toMatchSnapshot();
+
+            expect(firstChild).toMatchSnapshot();
         });
 
         it('Primary text field with custom width and height', () => {
-            const wrapper = mountWithTheme(
+            const {
+                container: { firstChild },
+            } = renderWithTheme(
                 <TextField
                     color="secondary"
                     fieldSize="small"
@@ -81,17 +105,19 @@ describe('<TextField />', () => {
                     height="25px"
                 />
             );
-            expect(wrapper).toMatchSnapshot();
+
+            expect(firstChild).toMatchSnapshot();
         });
     });
 
     it('Should change value in text field', () => {
         let wrapperValue = 'Initial value';
+        const changedValue = 'Changed value';
         const changeValue = (value: string) => {
             wrapperValue = value;
         };
 
-        const wrapper = shallowWithTheme(
+        renderWithTheme(
             <TextField
                 color="primary"
                 fieldSize="small"
@@ -100,22 +126,12 @@ describe('<TextField />', () => {
             />
         );
 
-        wrapper.dive().find('TextField').simulate('change', 'Changed value');
-        expect(wrapperValue).toEqual('Changed value');
-    });
+        fireEvent.change(screen.getByRole('textbox'), {
+            target: {
+                value: changedValue,
+            },
+        });
 
-    it('Should called change event', () => {
-        const changeEvent = jest.fn();
-
-        const wrapper = shallowWithTheme(
-            <TextField
-                color="primary"
-                fieldSize="small"
-                onChange={changeEvent}
-            />
-        );
-
-        wrapper.dive().find('TextField').simulate('change');
-        expect(changeEvent).toBeCalledTimes(1);
+        expect(wrapperValue).toBe(changedValue);
     });
 });

@@ -1,34 +1,24 @@
 import React from 'react';
+import { fireEvent, screen } from '@testing-library/react';
 import { MessageSearch } from 'components/common';
-import {
-    mountWithApolloAndStyled,
-    shallowWithApolloAndStyled,
-} from 'tests/helpers/withApollo';
+import { renderWithApollo } from 'tests/helpers/withApollo';
 
 describe('<MessageSearch />', () => {
     describe('Snapshots', () => {
         it('Should render correctly', () => {
-            const wrapper = mountWithApolloAndStyled(<MessageSearch />);
+            const {
+                container: { firstChild },
+            } = renderWithApollo(<MessageSearch />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(firstChild).toMatchSnapshot();
         });
     });
 
     it('Should use onClick event', () => {
         const onClickEvent = jest.fn();
-        const wrapper = shallowWithApolloAndStyled(
-            <MessageSearch onClick={onClickEvent} />
-        );
+        renderWithApollo(<MessageSearch onClick={onClickEvent} />);
 
-        wrapper
-            .dive()
-            .dive()
-            .dive()
-            .dive()
-            .dive()
-            .dive()
-            .find('Styled(Styled(Button))')
-            .simulate('click');
+        fireEvent.click(screen.getByRole('button'));
 
         expect(onClickEvent).toHaveBeenCalledTimes(1);
     });

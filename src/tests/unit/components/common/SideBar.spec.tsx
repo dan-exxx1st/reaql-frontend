@@ -1,12 +1,12 @@
-import React from 'react';
-import { ReactWrapper } from 'enzyme';
+import '@babel/polyfill';
 
+import React from 'react';
+import { act, screen } from '@testing-library/react';
 import SideBarWithData from 'components/data/SidebarWithData';
 
 import { UserContextProvider } from 'helpers/contexts/userContext';
-import { mountWithApolloAndStyled } from 'tests/helpers/withApollo';
+import { renderWithApollo } from 'tests/helpers/withApollo';
 import { UsersMockData } from 'tests/__mocks__/data/users';
-import { DialogsMockData } from 'tests/__mocks__/data/graphql';
 
 jest.mock('react-router-dom', () => ({
     useLocation: () => ({
@@ -15,41 +15,25 @@ jest.mock('react-router-dom', () => ({
     useHistory: () => ({}),
 }));
 
-console.error = (err: string) => {
-    if (
-        err.indexOf(
-            'Warning: An update to SideBarWithData inside a test was not wrapped in act'
-        ) !== -1
-    ) {
-        return console.error(err);
-    }
-};
-
 describe('<SideBar />', () => {
-    let wrapper: ReactWrapper;
-    beforeEach(() => {
-        const userReducer = {
-            state: {
-                user: UsersMockData[0],
-            },
-        };
-        wrapper = mountWithApolloAndStyled(
-            <UserContextProvider value={userReducer}>
-                <SideBarWithData />
-            </UserContextProvider>
-        );
-    });
+    const userReducer = {
+        state: {
+            user: UsersMockData[0],
+        },
+    };
 
     it('should render <DialogList /> correctly', async () => {
-        await new Promise((resolve) => setTimeout(resolve, 0));
-        wrapper?.update();
-        const dialogList = wrapper?.find('Styled(DialogList)');
-        const typeographys = dialogList
-            ?.find('Styled(DialogItem)')
-            .find('Styled(Typography)');
+        await act(async () => {
+            renderWithApollo(
+                <UserContextProvider value={userReducer}>
+                    <SideBarWithData />
+                </UserContextProvider>
+            );
+            await new Promise((resolve) => setTimeout(resolve, 0));
+        });
 
-        expect(typeographys.get(0).props.children).toEqual('Test User2');
-        expect(typeographys.get(1).props.children).toEqual('test');
-        expect(typeographys.get(2).props.children).toEqual('21.01.2020');
+        expect(screen.getByText('Test User2')).toBeDefined();
+        expect(screen.getByText('test')).toBeDefined();
+        expect(screen.getByText('21.01.2020')).toBeDefined();
     });
 });

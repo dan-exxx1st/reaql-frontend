@@ -1,20 +1,22 @@
 import React from 'react';
+import { screen } from '@testing-library/react';
 import { Typography } from 'components/UI';
-import { mountWithTheme, shallowWithTheme } from 'tests/helpers/withTheme';
+import { renderWithTheme } from 'tests/helpers/withTheme';
 
 describe('<Typography />', () => {
     it('Typography variant body-2', () => {
-        const wrapper = mountWithTheme(
-            <Typography variant="body2">Body 2</Typography>
-        );
-        expect(wrapper).toMatchSnapshot();
+        const {
+            container: { firstChild },
+        } = renderWithTheme(<Typography variant="body2">Body 2</Typography>);
+        expect(firstChild).toMatchSnapshot();
     });
 
     it('should render passed text', () => {
         const bodyTwoText = 'Body 2 text';
-        const wrapper = shallowWithTheme(
-            <Typography variant="body2">{bodyTwoText}</Typography>
+        renderWithTheme(<Typography variant="body2">{bodyTwoText}</Typography>);
+
+        expect(screen.getByText(bodyTwoText).firstChild?.textContent).toBe(
+            bodyTwoText
         );
-        expect(wrapper.childAt(0).props().children).toEqual(bodyTwoText);
     });
 });

@@ -8,7 +8,7 @@ exports[`<CheckMark /> Snapshots Should render with active marks 1`] = `
 }
 
 <svg
-  className="c0"
+  class="c0"
 >
   <path
     d="M5.67738 10.2586L14.7785 0L16 1.37556L5.67738 13L0.868774 7.58495L2.09888 6.21908L5.67738 10.2586Z"
@@ -24,7 +24,7 @@ exports[`<CheckMark /> Snapshots Should render with active marks and isDouble 1`
 }
 
 <svg
-  className="c0"
+  class="c0"
 >
   <path
     d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
@@ -40,7 +40,7 @@ exports[`<CheckMark /> Snapshots Should render with inactive marks 1`] = `
 }
 
 <svg
-  className="c0"
+  class="c0"
 >
   <path
     d="M5.67738 10.2586L14.7785 0L16 1.37556L5.67738 13L0.868774 7.58495L2.09888 6.21908L5.67738 10.2586Z"
@@ -56,7 +56,7 @@ exports[`<CheckMark /> Snapshots Should render with inactive marks and isDouble 
 }
 
 <svg
-  className="c0"
+  class="c0"
 >
   <path
     d="M0 7.58495L4.8086 13L6.02151 11.6244L1.22151 6.21908L0 7.58495ZM18.7785 0L9.67742 10.2586L6.09893 6.21908L4.86882 7.58495L9.67742 13L20 1.37556L18.7785 0ZM15.1312 1.37556L13.9183 0L8.45591 6.15127L9.67742 7.51714L15.1312 1.37556Z"
