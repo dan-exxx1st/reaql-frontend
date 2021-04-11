@@ -23,7 +23,6 @@ const DialogHeaderWithData: FC<IProps> = ({ dialogId, ...otherProps }) => {
         variables: {
             dialogId,
         },
-        fetchPolicy: 'no-cache',
     });
 
     const otherUser =
