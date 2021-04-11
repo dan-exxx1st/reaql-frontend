@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SystemMessage /> Should render a success message correctly 1`] = `
+.c2 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  color: #000000;
+  margin: 0;
+}
+
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
+  padding: 15px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-shadow: 0px 3px 7px 6px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  width: 250px;
+  background: #4caf50;
+}
+
+.c3 {
+  color: #FAFAFA;
+  font-weight: 500;
+  -webkit-letter-spacing: 1.1px;
+  -moz-letter-spacing: 1.1px;
+  -ms-letter-spacing: 1.1px;
+  letter-spacing: 1.1px;
+}
+
+<div
+  class="c0 c1 test-class"
+>
+  <p
+    class="c2 c3"
+  >
+    Test msg
+  </p>
+</div>
+`;
+
+exports[`<SystemMessage /> Should render a warning message correctly 1`] = `
+.c2 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  color: #000000;
+  margin: 0;
+}
+
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
+  padding: 15px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-shadow: 0px 3px 7px 6px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  width: 250px;
+  background: #ff9800;
+}
+
+.c3 {
+  color: #FAFAFA;
+  font-weight: 500;
+  -webkit-letter-spacing: 1.1px;
+  -moz-letter-spacing: 1.1px;
+  -ms-letter-spacing: 1.1px;
+  letter-spacing: 1.1px;
+}
+
+<div
+  class="c0 c1"
+>
+  <p
+    class="c2 c3"
+  >
+    Test msg
+  </p>
+</div>
+`;
+
+exports[`<SystemMessage /> Should render an error message correctly 1`] = `
+.c2 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  color: #000000;
+  margin: 0;
+}
+
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
+  padding: 15px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-shadow: 0px 3px 7px 6px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  width: 250px;
+  background: #f44336;
+}
+
+.c3 {
+  color: #FAFAFA;
+  font-weight: 500;
+  -webkit-letter-spacing: 1.1px;
+  -moz-letter-spacing: 1.1px;
+  -ms-letter-spacing: 1.1px;
+  letter-spacing: 1.1px;
+}
+
+<div
+  class="c0 c1"
+>
+  <p
+    class="c2 c3"
+  >
+    Test msg
+  </p>
+</div>
+`;
+
+exports[`<SystemMessage /> Should render an info message correctly 1`] = `
+.c2 {
+  font-family: 'Roboto',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-letter-spacing: 0.25px;
+  -moz-letter-spacing: 0.25px;
+  -ms-letter-spacing: 0.25px;
+  letter-spacing: 0.25px;
+  color: #000000;
+  margin: 0;
+}
+
+.c0 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.c1 {
+  padding: 15px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-shadow: 0px 3px 7px 6px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  width: 250px;
+  background: #2196f3;
+}
+
+.c3 {
+  color: #FAFAFA;
+  font-weight: 500;
+  -webkit-letter-spacing: 1.1px;
+  -moz-letter-spacing: 1.1px;
+  -ms-letter-spacing: 1.1px;
+  letter-spacing: 1.1px;
+}
+
+<div
+  class="c0 c1"
+>
+  <p
+    class="c2 c3"
+  >
+    Test msg
+  </p>
+</div>
+`;

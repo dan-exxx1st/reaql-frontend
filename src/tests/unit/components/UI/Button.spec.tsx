@@ -31,13 +31,13 @@ describe('<Button />', () => {
             );
             const wrapper = firstChild;
 
-            expect(wrapper).toMatchSnapshot();
             expect(wrapper).toHaveStyleRule('background', 'none');
             expect(wrapper).toHaveStyleRule('color', colorTheme.pc);
             expect(wrapper).toHaveStyleRule(
                 'border',
                 `1px solid ${colorTheme.pc}`
             );
+            expect(wrapper).toMatchSnapshot();
         });
 
         it('Secondary filled button without effects', () => {

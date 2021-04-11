@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Icon /> Snapshots Should render animal icon 1`] = `
+exports[`<Icon /> Snapshots Should render a bluePlus icon correctly 1`] = `
 .c0 {
   outline: none;
   -webkit-user-select: none;
@@ -14,11 +14,11 @@ exports[`<Icon /> Snapshots Should render animal icon 1`] = `
 <img
   alt="Icon component"
   class="c0"
-  src="Animal.svg"
+  src="BluePlus.svg"
 />
 `;
 
-exports[`<Icon /> Snapshots Should render food icon 1`] = `
+exports[`<Icon /> Snapshots Should render a food icon correctly 1`] = `
 .c0 {
   outline: none;
   -webkit-user-select: none;
@@ -36,7 +36,7 @@ exports[`<Icon /> Snapshots Should render food icon 1`] = `
 />
 `;
 
-exports[`<Icon /> Snapshots Should render newChat icon 1`] = `
+exports[`<Icon /> Snapshots Should render a newChat icon correctly 1`] = `
 .c0 {
   outline: none;
   -webkit-user-select: none;
@@ -54,7 +54,7 @@ exports[`<Icon /> Snapshots Should render newChat icon 1`] = `
 />
 `;
 
-exports[`<Icon /> Snapshots Should render people icon 1`] = `
+exports[`<Icon /> Snapshots Should render a people icon correctly 1`] = `
 .c0 {
   outline: none;
   -webkit-user-select: none;
@@ -72,7 +72,7 @@ exports[`<Icon /> Snapshots Should render people icon 1`] = `
 />
 `;
 
-exports[`<Icon /> Snapshots Should render person icon 1`] = `
+exports[`<Icon /> Snapshots Should render a person icon correctly 1`] = `
 .c0 {
   outline: none;
   -webkit-user-select: none;
@@ -90,7 +90,7 @@ exports[`<Icon /> Snapshots Should render person icon 1`] = `
 />
 `;
 
-exports[`<Icon /> Snapshots Should render search icon 1`] = `
+exports[`<Icon /> Snapshots Should render a search icon correctly 1`] = `
 .c0 {
   outline: none;
   -webkit-user-select: none;
@@ -108,7 +108,7 @@ exports[`<Icon /> Snapshots Should render search icon 1`] = `
 />
 `;
 
-exports[`<Icon /> Snapshots Should render threeDotsGrey icon 1`] = `
+exports[`<Icon /> Snapshots Should render a threeDotsGrey icon correctly 1`] = `
 .c0 {
   outline: none;
   -webkit-user-select: none;
@@ -126,7 +126,7 @@ exports[`<Icon /> Snapshots Should render threeDotsGrey icon 1`] = `
 />
 `;
 
-exports[`<Icon /> Snapshots Should render threeDotsWhite icon 1`] = `
+exports[`<Icon /> Snapshots Should render a threeDotsWhite icon  correctly 1`] = `
 .c0 {
   outline: none;
   -webkit-user-select: none;
@@ -141,5 +141,23 @@ exports[`<Icon /> Snapshots Should render threeDotsWhite icon 1`] = `
   alt="Icon component"
   class="c0"
   src="ThreeDotsWhite.svg"
+/>
+`;
+
+exports[`<Icon /> Snapshots Should render an animal icon correctly 1`] = `
+.c0 {
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+
+<img
+  alt="Icon component"
+  class="c0"
+  src="Animal.svg"
 />
 `;

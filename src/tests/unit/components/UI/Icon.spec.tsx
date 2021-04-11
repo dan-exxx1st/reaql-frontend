@@ -5,7 +5,7 @@ import { Icon } from 'components/UI';
 
 describe('<Icon />', () => {
     describe('Snapshots', () => {
-        it('Should render person icon', () => {
+        it('Should render a person icon correctly', () => {
             const {
                 container: { firstChild },
             } = renderWithTheme(<Icon iconName="person" />);
@@ -13,7 +13,7 @@ describe('<Icon />', () => {
             expect(firstChild).toMatchSnapshot();
         });
 
-        it('Should render animal icon', () => {
+        it('Should render an animal icon correctly', () => {
             const {
                 container: { firstChild },
             } = renderWithTheme(<Icon iconName="animal" />);
@@ -21,7 +21,7 @@ describe('<Icon />', () => {
             expect(firstChild).toMatchSnapshot();
         });
 
-        it('Should render food icon', () => {
+        it('Should render a food icon correctly', () => {
             const {
                 container: { firstChild },
             } = renderWithTheme(<Icon iconName="food" />);
@@ -29,7 +29,7 @@ describe('<Icon />', () => {
             expect(firstChild).toMatchSnapshot();
         });
 
-        it('Should render people icon', () => {
+        it('Should render a people icon correctly', () => {
             const {
                 container: { firstChild },
             } = renderWithTheme(<Icon iconName="people" />);
@@ -37,7 +37,7 @@ describe('<Icon />', () => {
             expect(firstChild).toMatchSnapshot();
         });
 
-        it('Should render search icon', () => {
+        it('Should render a search icon correctly', () => {
             const {
                 container: { firstChild },
             } = renderWithTheme(<Icon iconName="search" />);
@@ -45,7 +45,7 @@ describe('<Icon />', () => {
             expect(firstChild).toMatchSnapshot();
         });
 
-        it('Should render newChat icon', () => {
+        it('Should render a newChat icon correctly', () => {
             const {
                 container: { firstChild },
             } = renderWithTheme(<Icon iconName="newChat" />);
@@ -53,7 +53,7 @@ describe('<Icon />', () => {
             expect(firstChild).toMatchSnapshot();
         });
 
-        it('Should render threeDotsWhite icon', () => {
+        it('Should render a threeDotsWhite icon  correctly', () => {
             const {
                 container: { firstChild },
             } = renderWithTheme(<Icon iconName="threeDotsWhite" />);
@@ -61,10 +61,18 @@ describe('<Icon />', () => {
             expect(firstChild).toMatchSnapshot();
         });
 
-        it('Should render threeDotsGrey icon', () => {
+        it('Should render a threeDotsGrey icon correctly', () => {
             const {
                 container: { firstChild },
             } = renderWithTheme(<Icon iconName="threeDotsGrey" />);
+
+            expect(firstChild).toMatchSnapshot();
+        });
+
+        it('Should render a bluePlus icon correctly', () => {
+            const {
+                container: { firstChild },
+            } = renderWithTheme(<Icon iconName="bluePlus" />);
 
             expect(firstChild).toMatchSnapshot();
         });

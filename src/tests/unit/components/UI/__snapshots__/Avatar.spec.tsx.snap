@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Avatar /> Snapshots Avatar with a image 1`] = `
+exports[`<Avatar /> Snapshots Avatar with a loading indicator 1`] = `
 .c0 {
   width: 40px;
   height: 40px;
@@ -22,7 +22,31 @@ exports[`<Avatar /> Snapshots Avatar with a image 1`] = `
 }
 
 <div
-  class="c0 c1"
+  class="c0 c1 custom-class"
+/>
+`;
+
+exports[`<Avatar /> Snapshots Avatar with an image 1`] = `
+.c0 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+<img
+  alt="Avatar with image"
+  class="c0 c1 custom-class"
+  loading="lazy"
+  src="https://yandex.ru/images/search?text=foto&pos=3&img_url=https%3A%2F%2Fget.wallhere.com%2Fphoto%2F2700x1800-px-building-castle-forest-Hohenzollern-landscape-1077207.jpg&rpt=simage"
 />
 `;
 

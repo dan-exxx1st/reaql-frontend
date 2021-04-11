@@ -110,7 +110,7 @@ describe('<TextField />', () => {
         });
     });
 
-    it('Should change value in text field', () => {
+    it('Should change a value in text field', () => {
         let wrapperValue = 'Initial value';
         const changedValue = 'Changed value';
         const changeValue = (value: string) => {

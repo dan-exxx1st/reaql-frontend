@@ -13,9 +13,7 @@ const TextField: FC<ITextFieldProps> = ({
     ...otherProps
 }) => {
     const _handleOnChange = (event: any) => {
-        if (onChange) {
-            onChange(event.target.value);
-        }
+        onChange && onChange(event.target.value);
     };
     return (
         <StyledWrapper className={className} withIcon={icon}>
