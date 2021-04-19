@@ -1,7 +1,7 @@
 import React, { FC, useContext } from 'react';
 
 import { StyledAvatar, StyledUserHeader, StyledCircle } from './style';
-import { Typography, Wrapper } from 'components/UI';
+import { Spinner, Typography, Wrapper } from 'components/UI';
 import { IUserHeaderProps } from 'lib/types/components/common';
 
 import { UserContext } from 'helpers/contexts/userContext';
@@ -47,7 +47,7 @@ const UserHeader: FC<IUserHeaderProps> = ({
             </StyledUserHeader>
         );
     }
-    return <div>Loading ...</div>;
+    return <Spinner />;
 };
 
 export default UserHeader;

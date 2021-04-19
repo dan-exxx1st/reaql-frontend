@@ -17,6 +17,7 @@ import { GET_USER } from 'lib/graphql/queries/user';
 import { CheckAuth } from 'helpers/authHelper';
 import { UPDATE_ONLINE_STATUS } from 'lib/graphql/mutations/user';
 import { Mutation } from 'lib/graphql/types';
+import { Spinner } from 'components/UI';
 
 const HomePage = () => {
     const isAuth = CheckAuth();
@@ -96,7 +97,7 @@ const HomePage = () => {
                 </>
             );
         } else {
-            return <div>Loading ...</div>;
+            return <Spinner size="100px" />;
         }
     }
 

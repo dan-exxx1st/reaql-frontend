@@ -1,4 +1,4 @@
-import React, { FC, useContext, useState } from 'react';
+import React, { FC, KeyboardEvent, useContext, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
@@ -44,8 +44,15 @@ const DialogTextField: FC<IDialogTextFieldProps> = ({ className }) => {
         setTextFieldValue('');
     };
 
+    const _handleKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
+        if (e.code === 'Enter') _handleSendMessage();
+    };
+
     return (
-        <StyledDialogTextField className={className}>
+        <StyledDialogTextField
+            className={className}
+            onKeyPress={_handleKeyPress}
+        >
             <StyledEmojiIcon
                 src={SmileIcon}
                 alt="Smile icon"

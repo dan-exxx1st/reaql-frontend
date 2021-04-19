@@ -119,22 +119,32 @@ exports[`<MessageList /> Snapshots Should render correctly 1`] = `
 }
 
 .c1 {
-  width: calc(100% - 45px);
-  height: calc(100% - 110px);
-  position: absolute;
-  top: 20px;
-  left: 20px;
   background: #FAFAFA;
   border-radius: 3px;
-  padding-left: 5px;
-  padding-right: 0;
+  width: 100%;
   -webkit-flex-direction: column-reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.c1::-webkit-scrollbar-track {
+  background-color: #FAFAFA;
+}
+
+.c1::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #E5E5E5;
+  height: 100px;
+}
+
+.c1::-webkit-scrollbar {
+  width: 7px;
 }
 
 .c3 {
-  margin: 7.5px 0;
+  margin: 10px;
 }
 
 .c2 {
@@ -145,26 +155,11 @@ exports[`<MessageList /> Snapshots Should render correctly 1`] = `
   -webkit-flex-direction: column-reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
-  overflow-y: scroll;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-}
-
-.c2::-webkit-scrollbar-track {
-  background-color: #FAFAFA;
-}
-
-.c2::-webkit-scrollbar-thumb {
-  border-radius: 2px;
-  background-color: #E5E5E5;
-  height: 100px;
-}
-
-.c2::-webkit-scrollbar {
-  width: 7px;
 }
 
 <div

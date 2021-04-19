@@ -9,3 +9,4 @@ export { default as CheckMark } from './CheckMark';
 export { default as Icon } from './Icon';
 export { default as CheckBox } from './CheckBox';
 export { default as SystemMessage } from './SystemMessage';
+export { default as Spinner } from './Spinner';

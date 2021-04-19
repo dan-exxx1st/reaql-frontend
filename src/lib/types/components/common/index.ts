@@ -56,6 +56,7 @@ export interface IDialogHeaderProps {
     name: string;
     onlineStatus?: string | null;
     avatar?: string;
+    loading?: boolean;
 }
 
 export interface ISignUpFormProps {

@@ -12,6 +12,7 @@ import { StyledIndexWrapper } from 'helpers/styled/MainPageStyle';
 import Theme from 'helpers/styled';
 
 import Router from 'pages/Router';
+import { Spinner } from 'components/UI';
 
 const App = () => {
     const apolloClient = CreateApolloClient();
@@ -23,7 +24,7 @@ const App = () => {
             <ThemeProvider theme={Theme}>
                 <StyledIndexWrapper>
                     <UserContextProvider value={userReducer}>
-                        <Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={<Spinner size="100px" />}>
                             <Router />
                         </Suspense>
                     </UserContextProvider>

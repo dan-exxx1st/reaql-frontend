@@ -27,7 +27,7 @@ export const StyledHomeDialogHeader = styled(DialogHeaderWithData)`
 `;
 
 export const StyledHomeDialogContentWrapper = styled(Wrapper)`
-    flex-direction: column-reverse;
+    flex-direction: column;
     background: ${({ theme }) => theme.lbc};
     width: calc(100% - 40px);
     height: calc(100vh - 160px);

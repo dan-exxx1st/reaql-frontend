@@ -7,6 +7,7 @@ import {
 } from './style';
 
 import { IMessageListProps } from 'lib/types/components/common';
+import { Spinner } from 'components/UI';
 
 const MessageList: FC<IMessageListProps> = ({ className, ...props }) => {
     const { data, loading, subscribeToNewMessages, filterValue } = props;
@@ -35,6 +36,7 @@ const MessageList: FC<IMessageListProps> = ({ className, ...props }) => {
         }
 
         let unsubscribe: any = () => {};
+
         if (subscribeToNewMessages) {
             unsubscribe = subscribeToNewMessages();
         }
@@ -61,7 +63,7 @@ const MessageList: FC<IMessageListProps> = ({ className, ...props }) => {
         );
     }
 
-    return <div>Loading...</div>;
+    return <Spinner />;
 };
 
 export default MessageList;

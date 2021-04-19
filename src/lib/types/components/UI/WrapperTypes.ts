@@ -1,3 +1,5 @@
+import { KeyboardEventHandler } from 'react';
+
 type FlexWrap = 'wrap' | 'nowrap' | 'wrap-reverse';
 type DefaultAligns = 'flex-start' | 'flex-end' | 'center' | 'inherit';
 
@@ -27,4 +29,5 @@ export interface IWrapperProps {
     height?: string;
     padding?: string;
     onClick?: () => void;
+    onKeyPress?: KeyboardEventHandler<HTMLDivElement>;
 }

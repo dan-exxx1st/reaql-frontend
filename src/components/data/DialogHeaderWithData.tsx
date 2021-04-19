@@ -8,6 +8,7 @@ import { UserContext } from 'helpers/contexts/userContext';
 import { DIALOG } from 'lib/graphql/queries/dialog';
 import { DIALOG_ONLINE_STATUS } from 'lib/graphql/subscriptions/dialog';
 import { Query, Subscription } from 'lib/graphql/types';
+import { Spinner } from 'components/UI';
 
 interface IProps {
     className?: string;
@@ -42,7 +43,7 @@ const DialogHeaderWithData: FC<IProps> = ({ dialogId, ...otherProps }) => {
         }
     );
 
-    if (data && data.dialog && !loading && otherUser) {
+    if (data && data.dialog && otherUser) {
         const {
             dialog: { group },
         } = data;
@@ -63,12 +64,13 @@ const DialogHeaderWithData: FC<IProps> = ({ dialogId, ...otherProps }) => {
                 name={name}
                 avatar={avatar}
                 onlineStatus={onlineStatus}
+                loading={loading}
                 {...otherProps}
             />
         );
     }
 
-    return <div>Loading...</div>;
+    return <Spinner />;
 };
 
 export default DialogHeaderWithData;
