@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import { useLazyQuery, useMutation } from '@apollo/client';
 
 import DialogPage from './Dialog';
 
@@ -10,71 +9,67 @@ import {
     StyledHomeWrapper,
 } from './styles/Home';
 
-import { UserSearchModal } from 'components/common';
-import { SideBarWithData } from 'components/data';
-import { UserContext, SAVE_USER } from 'helpers/contexts/userContext';
-import { GET_USER } from 'lib/graphql/queries/user';
+import { SideBar, UserSearchModal } from 'components/common';
 import { CheckAuth } from 'helpers/authHelper';
-import { UPDATE_ONLINE_STATUS } from 'lib/graphql/mutations/user';
-import { Mutation } from 'lib/graphql/types';
 import { Spinner } from 'components/UI';
+import { useLoadUser, useUpdateOnlineStatus } from 'helpers/hooks/useUser';
+import { useLazyQuery } from '@apollo/client';
+import { Query, Subscription } from 'lib/graphql/types';
+import { DIALOGS } from 'lib/graphql/queries/dialog';
+import { DIALOG_CREATED } from 'lib/graphql/subscriptions/dialog';
 
 const HomePage = () => {
     const isAuth = CheckAuth();
-    const { state, dispatch } = useContext(UserContext);
-    const userEmail = localStorage.getItem('userEmail');
-
-    const [loadUser, { data, loading, error }] = useLazyQuery(GET_USER);
-    const [updateOnlineStatus] = useMutation<Mutation>(UPDATE_ONLINE_STATUS);
-
-    const updateStatus = useCallback(
-        (status: string) => {
-            updateOnlineStatus({
-                variables: {
-                    userId: state?.user?.id,
-                    status,
-                },
-            });
-        },
-        [state?.user?.id, updateOnlineStatus]
-    );
-
-    useEffect(() => {
-        if (isAuth && state && state.user && state.user.id) {
-            updateStatus('online');
-        }
-
-        window.addEventListener('beforeunload', () =>
-            updateStatus(String(new Date()))
-        );
-
-        return () =>
-            window.removeEventListener('beforeunload', () => updateStatus);
-    }, [isAuth, state, updateOnlineStatus, updateStatus]);
-
-    useEffect(() => {
-        if (!state || (!state.user && isAuth)) {
-            if (!data && !loading && !error) {
-                loadUser({
-                    variables: {
-                        email: userEmail,
-                    },
-                });
-            }
-            if (data && !loading && !error) {
-                if (dispatch) {
-                    dispatch({
-                        type: SAVE_USER,
-                        payload: { user: data.user },
-                    });
-                }
-            }
-        }
-    }, [data, dispatch, error, isAuth, loadUser, loading, state, userEmail]);
+    const { state } = useLoadUser();
+    useUpdateOnlineStatus();
 
     const [searchUserOpened, setSearchUserOpened] = useState(false);
+
+    const [getDialogs, { subscribeToMore, ...result }] = useLazyQuery<Query>(
+        DIALOGS,
+        {
+            pollInterval: 60000,
+        }
+    );
+
+    const subscribeToNewDialogs = () => {
+        if (state && state.user && subscribeToMore) {
+            return subscribeToMore({
+                document: DIALOG_CREATED,
+                variables: { userId: state.user.id },
+                updateQuery: (
+                    prev,
+                    {
+                        subscriptionData,
+                    }: { subscriptionData: { data: Subscription } }
+                ) => {
+                    if (!subscriptionData.data) return prev;
+
+                    const newDialogItem = subscriptionData.data.dialogCreated;
+                    const prevDialogs =
+                        prev && prev.dialogs ? prev.dialogs : [];
+
+                    const newCache = {
+                        ...prev,
+                        dialogs: [newDialogItem, ...prevDialogs],
+                    };
+
+                    return newCache;
+                },
+            });
+        }
+    };
+
+    useEffect(() => {
+        if (state && state.user && state.user.id) {
+            getDialogs({
+                variables: { userId: state?.user?.id },
+            });
+        }
+    }, [getDialogs, state]);
+
     if (isAuth) {
-        if (!loading && !error && state && state.user) {
+        if (state && state.user) {
             return (
                 <>
                     {searchUserOpened && (
@@ -86,8 +81,10 @@ const HomePage = () => {
                         </StyledHomeSearchUserModalWrapper>
                     )}
                     <StyledHomeWrapper>
-                        <SideBarWithData
+                        <SideBar
                             setSearchUserOpened={setSearchUserOpened}
+                            subscribeToNewDialogs={subscribeToNewDialogs}
+                            {...result}
                         />
 
                         <StyledHomeDialog>
