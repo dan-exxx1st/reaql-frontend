@@ -58,7 +58,7 @@ export const SIGN_IN = gql`
 
 export const REFRESH_SESSION = gql`
     mutation refreshSession($refreshToken: String!) {
-        refreshSession(refreshToken: $refreshTokenq) {
+        refreshSession(refreshToken: $refreshToken) {
             id
             accessToken
             refreshToken

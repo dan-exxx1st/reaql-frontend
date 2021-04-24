@@ -60,6 +60,8 @@ const HomePage = () => {
         }
     };
 
+    const _handleSearchUserOpened = (val: boolean) => setSearchUserOpened(val);
+
     useEffect(() => {
         if (state && state.user && state.user.id) {
             getDialogs({
@@ -75,14 +77,14 @@ const HomePage = () => {
                     {searchUserOpened && (
                         <StyledHomeSearchUserModalWrapper>
                             <UserSearchModal
-                                setSearchUserOpened={setSearchUserOpened}
+                                setSearchUserOpened={_handleSearchUserOpened}
                                 searchUserOpened={searchUserOpened}
                             />
                         </StyledHomeSearchUserModalWrapper>
                     )}
                     <StyledHomeWrapper>
                         <SideBar
-                            setSearchUserOpened={setSearchUserOpened}
+                            setSearchUserOpened={_handleSearchUserOpened}
                             subscribeToNewDialogs={subscribeToNewDialogs}
                             {...result}
                         />

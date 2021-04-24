@@ -82,5 +82,5 @@ export interface ISideBarProps {
     };
     loading: boolean;
     subscribeToNewDialogs?: () => void;
-    setSearchUserOpened: React.Dispatch<React.SetStateAction<boolean>> | void;
+    setSearchUserOpened: (val: boolean) => void;
 }

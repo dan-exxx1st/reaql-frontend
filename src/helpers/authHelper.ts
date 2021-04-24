@@ -14,7 +14,10 @@ export const CheckAuth = () => {
 export const getAuthTokens = () => {
     const session = localStorage.getItem('session');
     if (session) {
-        const { accessToken, refreshToken } = JSON.parse(session);
+        const {
+            accessToken,
+            refreshToken,
+        }: { accessToken: string; refreshToken: string } = JSON.parse(session);
 
         return { accessToken, refreshToken };
     } else {
@@ -22,17 +25,16 @@ export const getAuthTokens = () => {
     }
 };
 
-export const setSession = (session: Session) => {
+export const setSession = (session: {
+    refreshToken: string;
+    accessToken: string;
+}) => {
     const sessionData = {
         accessToken: session.accessToken,
         refreshToken: session.refreshToken,
     };
     const sessionString = JSON.stringify(sessionData);
     localStorage.setItem('session', sessionString);
-};
-
-export const clearSession = () => {
-    localStorage.removeItem('session');
 };
 
 export const setUserAndSession = (payload: {
@@ -42,4 +44,9 @@ export const setUserAndSession = (payload: {
     const { user, session } = payload;
     if (session) setSession(session);
     localStorage.setItem('userEmail', user.email);
+};
+
+export const clearSession = () => {
+    localStorage.clear();
+    window.location.reload();
 };
