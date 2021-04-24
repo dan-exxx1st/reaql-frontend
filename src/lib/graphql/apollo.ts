@@ -1,26 +1,86 @@
 import {
     ApolloClient,
     from,
+    fromPromise,
     HttpLink,
     InMemoryCache,
+    NormalizedCacheObject,
     split,
 } from '@apollo/client';
 import { WebSocketLink } from '@apollo/client/link/ws';
 import { getMainDefinition } from '@apollo/client/utilities';
 import { setContext } from '@apollo/client/link/context';
+import { onError } from '@apollo/client/link/error';
 
-import { getAuthTokens } from '../../helpers/authHelper';
+import {
+    clearSession,
+    getAuthTokens,
+    setSession,
+} from '../../helpers/authHelper';
+import { REFRESH_SESSION } from './mutations/auth';
+import { Session } from './types';
+
+let apolloClient: ApolloClient<NormalizedCacheObject>;
 
 const authLink = setContext((_, { headers }) => {
-    // get the authentication token from local storage if it exists
     const { accessToken } = getAuthTokens();
-    // return the headers to the context so httpLink can read them
     return {
         headers: {
             ...headers,
             authorization: accessToken ? `Bearer ${accessToken}` : '',
         },
     };
+});
+
+const errorLink = onError(({ graphQLErrors, operation, forward }) => {
+    if (graphQLErrors) {
+        for (const err of graphQLErrors) {
+            switch (err.extensions?.exception.status) {
+                case 401: {
+                    const refreshSession = async () => {
+                        let session: Session | undefined;
+                        const { refreshToken } = getAuthTokens();
+                        const result = await apolloClient.mutate({
+                            mutation: REFRESH_SESSION,
+                            variables: {
+                                refreshToken,
+                            },
+                        });
+                        if (result?.data?.refreshSession) {
+                            session = result.data.refreshSession;
+                            session && setSession(session);
+                        } else {
+                            clearSession();
+                        }
+                        return session;
+                    };
+
+                    return fromPromise(
+                        refreshSession().catch(() => {
+                            clearSession();
+                            return null;
+                        })
+                    )
+                        .filter((value) => Boolean(value))
+                        .flatMap((session) => {
+                            const oldHeaders = operation.getContext().headers;
+
+                            operation.setContext({
+                                headers: {
+                                    ...oldHeaders,
+                                    authorization: `Bearer ${session?.accessToken}`,
+                                },
+                            });
+                            return forward(operation);
+                        });
+                    break;
+                }
+                case 403: {
+                    clearSession();
+                }
+            }
+        }
+    }
 });
 
 const API_URL =
@@ -60,10 +120,10 @@ const splitLink = split(
 );
 
 export function CreateApolloClient() {
-    const client = new ApolloClient({
-        link: from([authLink, splitLink]),
+    apolloClient = new ApolloClient({
+        link: from([errorLink, authLink, splitLink]),
         cache: new InMemoryCache(),
     });
 
-    return client;
+    return apolloClient;
 }

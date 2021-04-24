@@ -79,3 +79,7 @@ export interface ISystemMessageProps {
     variant: 'success' | 'warning' | 'error' | 'info';
     className?: string;
 }
+
+export interface ISpinnerProps {
+    size?: string;
+}

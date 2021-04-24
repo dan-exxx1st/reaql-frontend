@@ -14,12 +14,13 @@ const SideBar: FC<ISideBarProps> = (props) => {
     const { setSearchUserOpened, data, loading, subscribeToNewDialogs } = props;
 
     useEffect(() => {
-        let unsubscribe: any;
+        let unsubscribe: unknown = () => {};
         if (subscribeToNewDialogs) {
-            unsubscribe = subscribeToNewDialogs();
+            const newUnsubscribe: unknown = subscribeToNewDialogs();
+            unsubscribe = newUnsubscribe || unsubscribe;
         }
 
-        return () => unsubscribe();
+        return () => unsubscribe instanceof Function && unsubscribe();
     }, [subscribeToNewDialogs]);
 
     return (

@@ -1,7 +1,6 @@
 import Theme from 'helpers/styled';
 import { Dialog, Maybe, Message, Message_Statuses } from 'lib/graphql/types';
 import { Dispatch, SetStateAction } from 'react';
-import { ISideBarWithDataProps } from '../data';
 
 export interface IUserHeaderProps {
     className?: string;
@@ -56,6 +55,7 @@ export interface IDialogHeaderProps {
     name: string;
     onlineStatus?: string | null;
     avatar?: string;
+    loading?: boolean;
 }
 
 export interface ISignUpFormProps {
@@ -76,10 +76,11 @@ export interface ISignInFormProps {
     }) => void;
 }
 
-export interface ISideBarProps extends ISideBarWithDataProps {
+export interface ISideBarProps {
     data?: {
         dialogs: Dialog[];
     };
     loading: boolean;
     subscribeToNewDialogs?: () => void;
+    setSearchUserOpened: (val: boolean) => void;
 }

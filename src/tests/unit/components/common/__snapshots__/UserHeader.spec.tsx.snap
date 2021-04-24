@@ -1,7 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<UserHeader /> Snapshots Should render correctly 1`] = `
-<div>
-  Loading ...
-</div>
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  width: 30px;
+  border: 2px solid transparent;
+  border-top-color: #00ADFF;
+  border-radius: 50%;
+  -webkit-animation: ieBkSD 2s linear infinite;
+  animation: ieBkSD 2s linear infinite;
+}
+
+.c0:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-top-color: #ffa700;
+  -webkit-animation: ieBkSD 3s linear infinite;
+  animation: ieBkSD 3s linear infinite;
+}
+
+<div
+  class="c0"
+/>
 `;

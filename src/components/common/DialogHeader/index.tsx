@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 
-import { Typography, Wrapper } from 'components/UI';
+import { Spinner, Typography, Wrapper } from 'components/UI';
 import { MessageSearch } from '..';
 
 import { StyledAvatar, StyledCircle, StyledDialogHeader } from './style';
@@ -15,6 +15,7 @@ const DialogHeader: FC<IDialogHeaderProps> = (props) => {
         className,
         messageFilter,
         filterValue,
+        loading,
     } = props;
 
     const [isShowMessageSearch, setIsShowMessageSearch] = useState(false);
@@ -37,32 +38,38 @@ const DialogHeader: FC<IDialogHeaderProps> = (props) => {
                 />
             ) : (
                 <>
-                    <Wrapper>
-                        <StyledAvatar src={avatar} />
-                        <Wrapper
-                            flexDirection="column"
-                            justifyContent="space-between"
-                            height="40px"
-                        >
-                            <Typography variant="body1" color="dc">
-                                {name}
-                            </Typography>
-                            <Typography variant="caption1" color="dgc">
-                                {onlineStatus}
-                            </Typography>
-                        </Wrapper>
-                    </Wrapper>
-                    <Wrapper>
-                        <StyledCircle
-                            color="secondary"
-                            iconName="search"
-                            onClick={_handleToggleMessageSearch}
-                        />
-                        <StyledCircle
-                            color="secondary"
-                            iconName="threeDotsGrey"
-                        />
-                    </Wrapper>
+                    {loading ? (
+                        <Spinner />
+                    ) : (
+                        <>
+                            <Wrapper>
+                                <StyledAvatar src={avatar} />
+                                <Wrapper
+                                    flexDirection="column"
+                                    justifyContent="space-between"
+                                    height="40px"
+                                >
+                                    <Typography variant="body1" color="dc">
+                                        {name}
+                                    </Typography>
+                                    <Typography variant="caption1" color="dgc">
+                                        {onlineStatus}
+                                    </Typography>
+                                </Wrapper>
+                            </Wrapper>
+                            <Wrapper>
+                                <StyledCircle
+                                    color="secondary"
+                                    iconName="search"
+                                    onClick={_handleToggleMessageSearch}
+                                />
+                                <StyledCircle
+                                    color="secondary"
+                                    iconName="threeDotsGrey"
+                                />
+                            </Wrapper>
+                        </>
+                    )}
                 </>
             )}
         </StyledDialogHeader>
