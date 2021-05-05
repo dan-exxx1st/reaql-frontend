@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { useQuery } from '@apollo/client';
 
 import { MessageList } from 'components/common';
@@ -7,6 +7,7 @@ import { MESSAGES } from 'lib/graphql/queries/dialog';
 import { Query, Subscription } from 'lib/graphql/types';
 
 import { MESSAGE_CREATED } from 'lib/graphql/subscriptions/dialog';
+import { messagesIsOver } from 'lib/graphql/apollo';
 
 interface IProps {
     dialogId?: string;
@@ -18,39 +19,45 @@ const MessageListWithData: FC<IProps> = ({
     filterValue,
     ...otherProps
 }) => {
+    const [from, setFrom] = useState(0);
+    const [fetchedMore, setFetchedMore] = useState(false);
     const { subscribeToMore, ...result } = useQuery<Query>(MESSAGES, {
         variables: {
             dialogId,
+            first: 20,
+            from,
         },
-        pollInterval: 60000,
+        notifyOnNetworkStatusChange: true,
     });
 
-    const subscribeToNewMessages = () =>
-        subscribeToMore({
+    const subscribeToNewMessages = () => {
+        return subscribeToMore({
             document: MESSAGE_CREATED,
             variables: { dialogId },
-            updateQuery: (
-                prev,
-                {
-                    subscriptionData,
-                }: { subscriptionData: { data: Subscription } }
-            ) => {
-                if (!subscriptionData) return prev;
-
-                const newMessage = subscriptionData.data.messageCreated;
-                const prevMessages = prev && prev.messages ? prev.messages : [];
-
-                return {
-                    ...prev,
-                    messages: [newMessage, ...prevMessages],
-                };
-            },
         });
+    };
+
+    const _handleLoadMore = () => {
+        const newFrom = from + 20;
+
+        if (!result?.loading && !messagesIsOver() && !fetchedMore) {
+            setFetchedMore(true);
+            result.fetchMore({
+                variables: {
+                    dialogId,
+                    first: 20,
+                    from: newFrom,
+                },
+            });
+            setFrom(newFrom);
+        }
+    };
 
     return (
         <MessageList
             subscribeToNewMessages={subscribeToNewMessages}
             filterValue={filterValue}
+            loadMore={_handleLoadMore}
             {...otherProps}
             {...result}
         />

@@ -1,18 +1,19 @@
-import React, { useRef, FC, useEffect } from 'react';
+import React, { FC, useEffect } from 'react';
 
-import {
-    StyledMessageListItem,
-    StyledMessageListWrapper,
-    StyledMessagesWrapper,
-} from './style';
+import { StyledMessageListItem } from './style';
 
 import { IMessageListProps } from 'lib/types/components/common';
 import { Spinner } from 'components/UI';
+import { ScrollableWrapper } from '..';
 
 const MessageList: FC<IMessageListProps> = ({ className, ...props }) => {
-    const { data, loading, subscribeToNewMessages, filterValue } = props;
-
-    const divRef = useRef(<div></div>);
+    const {
+        data,
+        loading,
+        subscribeToNewMessages,
+        filterValue,
+        loadMore,
+    } = props;
 
     const messages = data?.messages;
 
@@ -26,40 +27,29 @@ const MessageList: FC<IMessageListProps> = ({ className, ...props }) => {
             : messages;
 
     useEffect(() => {
-        const divRefCurrent =
-            divRef && divRef.current && (divRef as any).current;
-        if (divRefCurrent) {
-            const scrollTop: number = divRefCurrent.scrollTop;
-            if (scrollTop && scrollTop !== 0) {
-                divRefCurrent.scrollTop = 0;
-            }
-        }
-
-        let unsubscribe: any = () => {};
+        let unsubscribe = () => {};
 
         if (subscribeToNewMessages) {
             unsubscribe = subscribeToNewMessages();
         }
 
         return () => unsubscribe();
-    }, [divRef, subscribeToNewMessages]);
+    }, [loading, subscribeToNewMessages]);
 
     if (!loading && filteredMessages) {
         return (
-            <StyledMessageListWrapper className={className}>
-                <StyledMessagesWrapper ref={divRef}>
-                    {filteredMessages &&
-                        filteredMessages.map(
-                            (message) =>
-                                message && (
-                                    <StyledMessageListItem
-                                        key={message.id}
-                                        {...message}
-                                    />
-                                )
-                        )}
-                </StyledMessagesWrapper>
-            </StyledMessageListWrapper>
+            <ScrollableWrapper scrollEvent={loadMore} className={className}>
+                {filteredMessages &&
+                    filteredMessages.map(
+                        (message) =>
+                            message && (
+                                <StyledMessageListItem
+                                    key={message.id}
+                                    {...message}
+                                />
+                            )
+                    )}
+            </ScrollableWrapper>
         );
     }
 

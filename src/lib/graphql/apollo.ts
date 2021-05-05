@@ -4,6 +4,7 @@ import {
     fromPromise,
     HttpLink,
     InMemoryCache,
+    makeVar,
     NormalizedCacheObject,
     split,
 } from '@apollo/client';
@@ -18,9 +19,11 @@ import {
     setSession,
 } from '../../helpers/authHelper';
 import { REFRESH_SESSION } from './mutations/auth';
-import { Session } from './types';
+import { Message, Session } from './types';
 
 let apolloClient: ApolloClient<NormalizedCacheObject>;
+
+export const messagesIsOver = makeVar(false);
 
 const authLink = setContext((_, { headers }) => {
     const { accessToken } = getAuthTokens();
@@ -122,7 +125,31 @@ const splitLink = split(
 export function CreateApolloClient() {
     apolloClient = new ApolloClient({
         link: from([errorLink, authLink, splitLink]),
-        cache: new InMemoryCache(),
+        cache: new InMemoryCache({
+            typePolicies: {
+                Query: {
+                    fields: {
+                        messages: {
+                            keyArgs: ['dialogId'],
+                            merge(
+                                existing: Message[] = [],
+                                incoming: Message[]
+                            ) {
+                                const newMessages = incoming.filter(
+                                    (newMessage) =>
+                                        existing.indexOf(newMessage) === -1
+                                );
+                                console.log(incoming);
+
+                                const isOver = incoming.length < 20;
+                                messagesIsOver(isOver);
+                                return [...newMessages, ...existing];
+                            },
+                        },
+                    },
+                },
+            },
+        }),
     });
 
     return apolloClient;

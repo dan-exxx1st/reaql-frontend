@@ -22,7 +22,8 @@ const Typography: FC<ITypographyProps> = ({
     component,
     variant,
 }) => {
-    const Component: any = component || DefaultVariantMapping[variant];
+    const Component =
+        component || ((DefaultVariantMapping[variant] as unknown) as FC);
 
     return <Component className={className}>{children}</Component>;
 };

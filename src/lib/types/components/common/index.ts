@@ -32,8 +32,12 @@ export interface IMessageListProps {
     data?: {
         messages: Message[];
     };
+    previousData?: {
+        messages: Message[];
+    };
     loading?: boolean;
-    subscribeToNewMessages?: () => void;
+    subscribeToNewMessages?: () => () => void;
+    loadMore?: () => void;
     className?: string;
     filterValue?: string;
 }

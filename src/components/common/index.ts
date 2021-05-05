@@ -18,3 +18,4 @@ export { default as UserItem } from './UserItem';
 export { default as UserHeader } from './UserHeader';
 
 export { default as SideBar } from './SideBar';
+export { default as ScrollableWrapper } from './ScrollableWrapper';

@@ -25,8 +25,8 @@ export const DIALOG = gql`
 `;
 
 export const MESSAGES = gql`
-    query Messages($dialogId: String!) {
-        messages(dialogId: $dialogId) {
+    query Messages($dialogId: String!, $first: Int!, $from: Int!) {
+        messages(dialogId: $dialogId, first: $first, from: $from) {
             ...MessageFragment
         }
     }

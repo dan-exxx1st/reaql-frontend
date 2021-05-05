@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { ITextFieldProps } from 'lib/types/components/UI';
+import { IconName } from 'lib/types';
 
-export const StyledWrapper = styled.div<any>`
+export const StyledWrapper = styled.div<{ withIcon?: IconName }>`
     position: ${({ withIcon }) => (withIcon ? 'relative' : 'static')};
 `;
 

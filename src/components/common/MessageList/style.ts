@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-import { Wrapper } from 'components/UI';
 import { MessageItem } from '..';
 
-export const StyledMessageListWrapper = styled(Wrapper)`
+export const StyledMessageListWrapper = styled.div<any>`
     background: ${({ theme }) => theme.wc};
     border-radius: 3px;
     width: 100%;
+    height: 100%;
     flex-direction: column-reverse;
     overflow-y: auto;
 
@@ -29,11 +29,4 @@ export const StyledMessageListWrapper = styled(Wrapper)`
 
 export const StyledMessageListItem = styled(MessageItem)`
     margin: 10px;
-`;
-
-export const StyledMessagesWrapper = styled.div<any>`
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    width: 100%;
 `;

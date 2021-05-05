@@ -69,6 +69,7 @@ exports[`<DialogTextField /> Snapshots Should render correctly 1`] = `
 .c1 {
   max-width: 936px;
   position: relative;
+  margin-top: auto;
 }
 
 .c1 img {

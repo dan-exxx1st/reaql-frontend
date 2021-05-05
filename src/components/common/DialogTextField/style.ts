@@ -4,6 +4,7 @@ import { TextField, Wrapper } from 'components/UI';
 export const StyledDialogTextField = styled(Wrapper)`
     max-width: 936px;
     position: relative;
+    margin-top: auto;
 
     & img {
         cursor: pointer;
